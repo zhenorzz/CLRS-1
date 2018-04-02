@@ -1627,3 +1627,10 @@ blockquote cite {
     overflow-y: hidden;
     box-sizing: border-box;
 }
+
+/* li {
+    overflow-x: hidden;
+    overflow-y: hidden;
+} */
+
+/* If added these lines, the bulletin will gone */
