@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>6-2 Analysis of $d$-ary heaps :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-2/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1171,7 +1171,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/" title="6 Heapsort" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1293,7 +1293,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/problems/" title="Chap 6 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1336,7 +1336,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-2/" title="6-2 Analysis of $d$-ary heaps" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-2/" title="6-2 Analysis of $d$-ary heaps" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-2/">
         Problem 6-2
         
@@ -8374,56 +8374,133 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap06/Problems/6-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap06/'>6 Heapsort</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap06/problems/'>Chap 6 Problems</a> > 6-2 Analysis of $d$-ary heaps
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>6-2 Analysis of $d$-ary heaps</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>A <strong><em>$d$-ary heap</em></strong> is like a binary heap, but (with one possible exception) non-leaf nodes have $d$ children instead of $2$ children.</p>
+
+<p><strong>a.</strong> How would you represent a $d$-ary heap in an array?</p>
+
+<p><strong>b.</strong> What is the height of a $d$-ary heap of $n$ elements in terms of $n$ and $d$?</p>
+
+<p><strong>c.</strong> Give an efficient implementation of $\text{EXTRACT-MAX}$ in a $d$-ary max-heap. Analyze its running time in terms of $d$ and $n$.</p>
+
+<p><strong>d.</strong> Give an efficient implementation of $\text{INSERT}$ in a $d$-ary max-heap. Analyze its running time in terms of $d$ and $n$.</p>
+
+<p><strong>e.</strong> Give an efficient implementation of $\text{INCREASE-KEY}(A, i, k)$, which flags an error if $k &lt; A[i]$, but otherwise sets $A[i] = k$ and then updates the $d$-ary max-heap structure appropriately. Analyze its running time in terms of $d$ and $n$.</p>
+</blockquote>
+
+<p><strong>a.</strong> We can represent a $d$-ary heap in a $1$-dimensional array as follows. The root resides in $A[1]$, its $d$ children reside in order in $A[2]$ through $A[d + 1]$, their children reside in order in $A[d + 2]$ through $A[d^2 + d + 1]$, and so on. The following two procedures map a node with index $i$ to its parent and to its $j$ th child (for $1 \le j \le d$), respectively.</p>
+
+<pre><code class="language-cpp">d-ARY-PARENT(i)
+    return floor((i - 2) / d + 1)
+</code></pre>
+
+<pre><code class="language-cpp">d-ARY-CHILD(i, j)
+    return d(i - 1) + j + 1
+</code></pre>
+
+<p>To convince yourself that these procedures really work, verify that</p>
+
+<div>
+$$
+\text{$d$-ARY-PARENT($d$-ARY-CHILD($i, j$)) = $i$},
+$$
+</div>
+
+<p>for any $1 \le j \le d$. Notice that the binary heap procedures are a special case of the above procedures when $d = 2$.</p>
+
+<p><strong>b.</strong> Since each node has $d$ children, the height of a $d$-ary heap with $n$ nodes is $\Theta(\log_d n) = \Theta(\lg n / \lg d)$.</p>
+
+<p><strong>c.</strong> The procedure $\text{HEAP-EXTRACT-MAX}$ given in the text for binary heaps works fine for $d$-ary heaps too. The change needed to support $d$-ary heaps is in $\text{MAX-HEAPIFY}$, which must compare the argument node to all d children instead of just $2$ children. The running time of $\text{HEAP-EXTRACT-MAX}$ is still the running time for $\text{MAX-HEAPIFY}$, but that now takes worst-case time proportional to the product of the height of the heap by the number of children examined at each node (at most $d$), namely $\Theta(d \log_d n) = \Theta(d\lg n / \lg d)$.</p>
+
+<p><strong>d.</strong> The procedure $\text{MAX-HEAP-INSERT}$ given in the text for binary heaps works fine for $d$-ary heaps too, assuming that $\text{HEAP-INCREASE-KEY}$ works for $d$-ary heaps. The worst-case running time is still $\Theta(h)$, where $h$ is the height of the heap. (Since only parent pointers are followed, the number of children a node has is irrelevant.) For a $d$-ary heap, this is $\Theta(\log_d n) = \Theta(\lg n / \lg d)$.</p>
+
+<p><strong>e.</strong> The $\text{HEAP-INCREASE-KEY}$ procedure with two small changes works for $d$-ary heaps. First, because the problem specifies that the new key is given by the parameter $k$, change instances of the variable $key$ to $k$. Second, change calls of $\text{PARENT}$ to calls of $d\text{-ARY-PARENT}$ from part (a).</p>
+
+<p>In the worst case, the entire height of the tree must be traversed, so the worst-case running time is $\Theta(h) = \Theta(\log_d n) = \Theta(\lg n / \lg d)$.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9299,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9237,6 +9315,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9251,6 +9330,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9332,6 +9414,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9344,6 +9427,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9360,6 +9446,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9377,6 +9464,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14553,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-1/" title="6-1 Building a heap using insertion"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-3/" title="6-3 Young tableaus" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

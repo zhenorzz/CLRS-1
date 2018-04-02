@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>2-3 Correctness of Horner&#39;s rule :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap02/problems/2-3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -230,7 +230,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap02/" title="2 Getting Started" class="dd-item 
-        
+        parent
         
         
         ">
@@ -314,7 +314,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap02/problems/" title="Chap 2 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -376,7 +376,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap02/problems/2-3/" title="2-3 Correctness of Horner&#39;s rule" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap02/problems/2-3/" title="2-3 Correctness of Horner&#39;s rule" class="dd-item active">
         <a href="/CLRS/i-foundations/chap02/problems/2-3/">
         Problem 2-3
         
@@ -8374,56 +8374,165 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap02/Problems/2-3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap02/'>2 Getting Started</a> > <a href='/CLRS/i-foundations/chap02/problems/'>Chap 2 Problems</a> > 2-3 Correctness of Horner's rule
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>2-3 Correctness of Horner&#39;s rule</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>The following code fragment implements Horner&rsquo;s rule for evaluating a polynomial</p>
+
+<div>
+$$
+\begin{aligned}
+P(x) & = \sum_{k = 0}^n a_k x^k \\
+     & = a_0 + x(a_1 + x (a_2 + \cdots + x(a_{n - 1} + x a_n) \cdots)),
+\end{aligned}
+$$
+</div>
+
+<p>given the coefficients $a_0, a_1, \ldots, a_n$ and a value of $x$:</p>
+
+<pre><code class="language-cpp">    y = 0
+        for i = n down 0
+        y = ai + x * y
+</code></pre>
+
+<p><strong>a.</strong> In terms of $\Theta$-notation, what is the running time of this code fragment for Horner&rsquo;s rule?</p>
+
+<p><strong>b.</strong> Write pseudocode to implement the naive polynomial-evaluation algorithm that computes each term of the polynomial from scratch. What is the running time of this algorithm? How does it compare to Horner&rsquo;s rule</p>
+
+<p><strong>c.</strong> Consider the following loop invariant: At the start of each iteration of the <strong>for</strong> loop of lines 2-3,</p>
+
+<div>
+$$
+y = \sum_{k = 0}^{n - (i + 1)} a_{k + i + 1} x^k.
+$$
+</div>
+
+<p>Interpret a summation with no terms as equaling $0$. Following the structure of the loop invariant proof presented in this chapter, use this loop invariant to show that, at termination, $y = \sum_{k = 0}^n a_k x^k$.</p>
+
+<p><strong>d.</strong> Conclude by arguing that the given code fragment correctly evaluates a polynomial characterized by the coefficients $a_0, a_1, \ldots, a_n$.</p>
+</blockquote>
+
+<p><strong>a.</strong> $\Theta(n)$.</p>
+
+<p><strong>b.</strong></p>
+
+<pre><code class="language-cpp">NAIVE-HORNER()
+    y = 0
+    for k = 0 to n
+        temp = 1
+        for i = 1 to k
+            temp = temp * x
+            y = y + ai * m
+</code></pre>
+
+<p>The running time is $\Theta(n^2)$, because of the nested loop. It is obviously slower.</p>
+
+<p><strong>c.</strong>  <strong>Initialization:</strong> It is pretty trivial, since the summation has no terms which implies $y = 0$.</p>
+
+<p><strong>Maintenance:</strong> By using the loop invariant, in the end of the $i$-the iteration, we have</p>
+
+<div>
+$$
+\begin{aligned}
+y & = a_i + x \sum_{k = 0}^{n - (i + 1)} a_{k + i + 1} x^k \\
+  & = a_i x^0 + \sum_{k = 0}^{n - i - 1} a_{k + i + 1} x^{k + 1} \\
+  & = a_i x^0 \sum_{k = 1}^{n - i} a_{k + i} x^k \\
+  & = \sum_{k = 0}^{n - i} a_{k + i} x^k.
+\end{aligned}
+$$
+</div>
+
+<p><strong>Termination:</strong> The loop terminates at $i = -1$. If we substitute,</p>
+
+<div>
+$$
+y = \sum_{k = 0}^{n - i - 1} a_{k + i + 1} x^k = \sum_{k = 0}^n a_k x^k.
+$$
+</div>
+
+<p><strong>d.</strong>  The invariant of the loop is a sum that equals a polynomial with the given coefficients.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8564,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8579,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8554,6 +8664,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8569,6 +8680,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8618,6 +8732,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8630,6 +8745,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8663,6 +8781,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8678,6 +8797,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14585,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap02/problems/2-2/" title="2-2 Correctness of bubblesort"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap02/problems/2-4/" title="2-4 Inversions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14598,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>6.2 Maintaining the heap property :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap06/6.2/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1171,7 +1171,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/" title="6 Heapsort" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1216,7 +1216,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/6.2/" title="6.2 Maintaining the heap property" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/6.2/" title="6.2 Maintaining the heap property" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap06/6.2/">
         6.2 Maintaining the heap property
         
@@ -8374,56 +8374,179 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap06/6.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap06/'>6 Heapsort</a> > 6.2 Maintaining the heap property
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#6-2-1">6.2-1</a></li>
+<li><a href="#6-2-2">6.2-2</a></li>
+<li><a href="#6-2-3">6.2-3</a></li>
+<li><a href="#6-2-4">6.2-4</a></li>
+<li><a href="#6-2-5">6.2-5</a></li>
+<li><a href="#6-2-6">6.2-6</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>6.2 Maintaining the heap property</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="6-2-1">6.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Using figure 6.2 as a model, illustrate the operation of $\text{MAX-HEAPIFY}(A, 3)$ on the array $A = \langle 27, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9, 0 \rangle$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\begin{aligned}
+\langle 27, 17, 3,  16, 13, 10,1, 5, 7, 12, 4, 8, 9, 0 \rangle \\
+\langle 27, 17, 10, 16, 13, 3, 1, 5, 7, 12, 4, 8, 9, 0 \rangle \\
+\langle 27, 17, 10, 16, 13, 9, 1, 5, 7, 12, 4, 8, 3, 0 \rangle \\
+\end{aligned}
+$$
+</div>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="6-2-2">6.2-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Starting with the procedure $\text{MAX-HEAPIFY}$, write pseudocode for the procedure $\text{MIN-HEAPIFY}(A, i)$, which performs the corresponding manipulation on a min-heap. How does the running time of $\text{MIN-HEAPIFY}$ compare to that of $\text{MAX-HEAPIFY}$?</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<pre><code class="language-cpp">MIN-HEAPIFY(A, i)
+    l = LEFT(i)
+    r = RIGHT(i)
+    if l ≤ A.heap-size and A[l] &lt; A[i]
+        smallest = l
+    else smallest = i
+    if r ≤ A.heap-size and A[r] &lt; A[smallest]
+        smallest = r
+    if smallest != i
+        exchange A[i] with A[smallest]
+    MIN-HEAPIFY(A, smallest)
+</code></pre>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>The running time is the same. Actually, the algorithm is the same with the exceptions of two comparisons and some names.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<h2 id="6-2-3">6.2-3</h2>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<blockquote>
+<p>What is the effect of calling $\text{MAX-HEAPIFY}(A, i)$ when th element $A[i]$ is larger than its children?</p>
+</blockquote>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>No effect. The comparisons are carried out, $A[i]$ is found to be largest and the procedure just returns.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="6-2-4">6.2-4</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>What is the effect of calling $\text{MAX-HEAPIFY}(A, i)$ for $i &gt; A.heap\text-size / 2$?</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>No effect. In that case, it is a leaf. Both $\text{LEFT}$ and $\text{RIGHT}$ return values that fail the comparison with the heap size and i is stored in largest. Afterwards the procedure just returns</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<h2 id="6-2-5">6.2-5</h2>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<blockquote>
+<p>The code for $\text{MAX-HEAPIFY}$ is quite efficient in terms of constant factors, except possibly for the recursive call in line 10, which might cause some compilers to produce inefficient code. Write an efficient $\text{MAX-HEAPIFY}$ that uses an iterative control construct (a loop) instead of recursion.</p>
+</blockquote>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<pre><code class="language-cpp">MAX-HEAPIFY(A, i)
+    while true
+        left = LEFT(i)
+        right = RIGHT(i)
+        if left &lt; A.heap-size and A.nodes[left] &gt; A.nodes[i] 
+            largest = left
+        else largest = i
+        if right &lt; A.heap-size and A.nodes[right] &gt; A.nodes[largest]
+            largest = right
+        if largest == i
+            return
+        exchange A.nodes[i] with A.nodes[largest]
+        i = largest
+</code></pre>
+
+<h2 id="6-2-6">6.2-6</h2>
+
+<blockquote>
+<p>Show that the worst-case running time of $\text{MAX-HEAPIFY}$ on a heap of size $n$ is $\Omega(\lg n)$. ($\textit{Hint:}$ For a heap with $n$ nodes, give node values that cause $\text{MAX-HEAPIFY}$ to be called recursively at every node on a simple path from the root down to a leaf.)</p>
+</blockquote>
+
+<p>If you put a value at the root that is less than every value in the left and right subtrees, then $\text{MAX-HEAPIFY}$ will be called recursively until a leaf is reached. To make the recursive calls traverse the longest path to a leaf, choose values that make $\text{MAX-HEAPIFY}$ always recurse on the left child. It follows the left branch when the left child is greater than or equal to the right child, so putting $0$ at the root and $1$ at all the other nodes, for example, will accomplish that. With such values, $\text{MAX-HEAPIFY}$ will be called $h$ times (where $h$ is the heap height, which is the number of edges in the longest path from the root to a leaf), so its running time will be $\Theta(h)$ (since each call does $\Theta(1)$ work), which is $\Theta(\lg n)$. Since we have a case in which $\text{MAX-HEAPIFY}$&rsquo;s running time is $\Theta(\lg n)$, its worst-case running time is $\Omega(\lg n)$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9345,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9360,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9251,6 +9376,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9268,6 +9396,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9283,6 +9412,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14595,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap06/6.1/" title="6.1 Heaps"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap06/6.3/" title="6.3 Building a heap" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

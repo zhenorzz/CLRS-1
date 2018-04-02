@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>13.3 Insertion :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap13/13.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2835,7 +2835,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap13/" title="13 Red-Black Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2899,7 +2899,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap13/13.3/" title="13.3 Insertion" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap13/13.3/" title="13.3 Insertion" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap13/13.3/">
         13.3 Insertion
         
@@ -8374,56 +8374,189 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap13/13.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap13/'>13 Red-Black Trees</a> > 13.3 Insertion
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#13-3-1">13.3-1</a></li>
+<li><a href="#13-3-2">13.3-2</a></li>
+<li><a href="#13-3-3">13.3-3</a></li>
+<li><a href="#13-3-4">13.3-4</a></li>
+<li><a href="#13-3-5">13.3-5</a></li>
+<li><a href="#13-3-6">13.3-6</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>13.3 Insertion</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="13-3-1">13.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>In line 16 of $\text{RB-INSERT}$, we set the color of the newly inserted node $z$ to red. Observe that if we had chosen to set $z$&rsquo;s color to black, then property 4 of a red-black tree would not be violated. Why didn&rsquo;t we choose to set $z$&rsquo;s color to black?</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>If we chose to set the color of $z$ to black then we would be violating property 5 of being a red-black tree. Because any path from the root to a leaf under $z$ would have one more black node than the paths to the other leaves.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="13-3-2">13.3-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Show the red-black trees that result after successively inserting the keys $41, 38, 31, 12, 19, 8$ into an initially empty red-black tree.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<ul>
+<li><p>insert $41$:</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<p><img src="https://i.imgur.com/yzKIPiU.png?width=30rem" alt="" /></p></li>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<li><p>insert $38$:</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p><img src="https://i.imgur.com/ckLm7La.png?width=30rem" alt="" /></p></li>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<li><p>insert $31$:</p>
 
-<h1 id="more-informations">More Informations</h1>
+<p><img src="https://i.imgur.com/eWiDrLo.png?width=30rem" alt="" /></p></li>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<li><p>insert $12$:</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p><img src="https://i.imgur.com/74APx0Q.png?width=30rem" alt="" /></p></li>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<li><p>insert $19$:</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p><img src="https://i.imgur.com/Um7t4ox.png?width=30rem" alt="" /></p></li>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<li><p>insert $8$:</p>
+
+<p><img src="https://i.imgur.com/sKNgCIR.png?width=30rem" alt="" /></p></li>
+</ul>
+
+<h2 id="13-3-3">13.3-3</h2>
+
+<blockquote>
+<p>Suppose that the black-height of each of the subtrees $\alpha, \beta, \gamma, \delta, \epsilon$ in Figures 13.5 and 13.6 is $k$. Label each node in each figure with its black-height to verify that the indicated transformation preserves property 5.</p>
+</blockquote>
+
+<p>In Figure 13.5, nodes $A$, $B$, and $D$ have black-height $k + 1$ in all cases, because each of their subtrees has black-height $k$ and a black root. Node $C$ has black-height $k + 1$ on the left (because its red children have black-height $k + 1$) and black-height $k + 2$ on the right (because its black children have black-height $k + 1$).</p>
+
+<p><img src="https://i.imgur.com/z6S8WNw.png?width=40rem" alt="" /></p>
+
+<p>In Figure 13.6, nodes $A$, $B$, and $C$ have black-height $k + 1$ in all cases. At left and in the middle, each of $A$&rsquo;s and $B$&rsquo;s subtrees has black-height $k$ and a black root, while $C$ has one such subtree and a red child with black-height $k + 1$. At the right, each of $A$&rsquo;s and $C$&rsquo;s subtrees has black-height $k$ and a black root, while $B$&rsquo;s red children each have black-height $k + 1$.</p>
+
+<p><img src="https://i.imgur.com/xfqDlQs.png?width=40rem" alt="" /></p>
+
+<p>Property 5 is preserved by the transformations. We have shown above that the black-height is well-defined within the subtrees pictured, so property 5 is preserved within those subtrees. Property 5 is preserved for the tree containing the subtrees pictured, because every path through these subtrees to a leaf contributes $k + 2$ black nodes.</p>
+
+<h2 id="13-3-4">13.3-4</h2>
+
+<blockquote>
+<p>Professor Teach is concerned that $\text{RB-INSERT-FIXUP}$ might set $T.nil.color$ to $\text{RED}$, in which case the test in line 1 would not cause the loop to terminate when $z$ is the root. Show that the professor&rsquo;s concern is unfounded by arguing that $\text{RB-INSERT-FIXUP}$ never sets $T.nil.color$ to $\text{RED}$.</p>
+</blockquote>
+
+<p>Colors are set to red only in cases 1 and 3, and in both situations, it is $z.p.p$ that is reddened. If $z.p.p$ is the sentinel, then $z.p$ is the root. By part (b) of the loop invariant and line 1 of $\text{RB-INSERT-FIXUP}$, if $z.p$ is the root, then we have dropped out of the loop. The only subtlety is in case 2, where we set $z = z.p$ before coloring $z.p.p$ red. Because we rotate before the recoloring, the identity of $z.p.p$ is the same before and after case 2, so there&rsquo;s no problem.</p>
+
+<h2 id="13-3-5">13.3-5</h2>
+
+<blockquote>
+<p>Consider a red-black tree formed by inserting $n$ nodes with $\text{RB-INSERT}$. Argue that if $n &gt; 1$, the tree has at least one red node.</p>
+</blockquote>
+
+<ul>
+<li><strong>Case 1:</strong> $z$ and $z.p.p$ are $\text{RED}$, if the loop terminates, then $z$ could not be the root, thus $z$ is $\text{RED}$ after the fix up.</li>
+<li><strong>Case 2:</strong> $z$ and $z.p$ are $\text{RED}$, and after the rotation $z.p$ could not be the root, thus $z.p$ is $\text{RED}$ after the fix up.</li>
+<li><strong>Case 3:</strong> $z$ is $\text{RED}$ and $z$ could not be the root, thus $z$ is $\text{RED}$ after the fix up.</li>
+</ul>
+
+<p>Therefore, there is always at least one red node.</p>
+
+<h2 id="13-3-6">13.3-6</h2>
+
+<blockquote>
+<p>Suggest how to implement $\text{RB-INSERT}$ efficiently if the representation for red-black trees includes no storage for parent pointers.</p>
+</blockquote>
+
+<p>Use stack to record the path to the inserted node, then parent is the top element in the stack.</p>
+
+<ul>
+<li><strong>Case 1:</strong> we pop $z.p$ and $z.p.p$.</li>
+<li><strong>Case 2:</strong> we pop $z.p$ and $z.p.p$, then push $z.p.p$ and $z$.</li>
+<li><strong>Case 3:</strong> we pop $z.p$, $z.p.p$ and $z.p.p.p$, then push $z.p$.</li>
+</ul>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10085,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10100,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10453,6 +10590,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10467,6 +10605,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10499,6 +10640,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10516,6 +10658,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14608,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap13/13.2/" title="13.2 Rotations"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap13/13.4/" title="13.4 Deletion" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14621,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

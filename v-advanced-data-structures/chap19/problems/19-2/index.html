@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>19-2 Binomial trees and binomial heaps :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/v-advanced-data-structures/chap19/problems/19-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4157,7 +4157,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4349,7 +4349,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap19/" title="19 Fibonacci Heaps" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4452,7 +4452,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap19/problems/" title="Chap 19 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4495,7 +4495,7 @@
  
   
     
-      <li data-nav-id="/CLRS/v-advanced-data-structures/chap19/problems/19-2/" title="19-2 Binomial trees and binomial heaps" class="dd-item ">
+      <li data-nav-id="/CLRS/v-advanced-data-structures/chap19/problems/19-2/" title="19-2 Binomial trees and binomial heaps" class="dd-item active">
         <a href="/CLRS/v-advanced-data-structures/chap19/problems/19-2/">
         Problem 19-2
         
@@ -8374,56 +8374,147 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/V%20Advanced%20Data%20Structures/Chap19/Problems/19-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/v-advanced-data-structures/'>V Advanced Data Structures</a> > <a href='/CLRS/v-advanced-data-structures/chap19/'>19 Fibonacci Heaps</a> > <a href='/CLRS/v-advanced-data-structures/chap19/problems/'>Chap 19 Problems</a> > 19-2 Binomial trees and binomial heaps
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>19-2 Binomial trees and binomial heaps</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>The <strong><em>binomial tree</em></strong> $B_k$ is an ordered tree (see Section B.5.2) defined recursively. As shown in Figure 19.6(a), the binomial tree $B_0$ consists of a single node. The binomial tree $B_k$ consists of two binomial trees $B_{k - 1}$ that are linked together so that the root of one is the leftmost child of the root of the other. Figure 19.6(b) shows the binomial trees $B_0$ through $B_4$.</p>
+
+<p><strong>a.</strong> Show that for the binomial tree $B_k$,</p>
+
+<ol>
+<li>there are $2^k$ nodes,</li>
+<li>the height of the tree is $k$,</li>
+<li>there are exactly $\binom{k}{i}$ nodes at depth $i$ for $i = 0, 1, \ldots, k$, and</li>
+<li>the root has degree $k$, which is greater than that of any other node; moreover, as Figure 19.6(c) shows, if we number the children of the root from left to right by $k - 1, k - 2, \ldots, 0$, then child $i$ is the root of a subtree $B_i$.</li>
+</ol>
+
+<p>A <strong><em>binomial heap</em></strong> $H$ is a set of binomial trees that satisfies the following properties:</p>
+
+<ol>
+<li>Each node has a $key$ (like a Fibonacci heap).</li>
+<li>Each binomial tree in $H$ obeys the min-heap property.</li>
+<li>For any nonnegative integer $k$, there is at most one binomial tree in $H$ whose root has degree $k$.</li>
+</ol>
+
+<p><strong>b.</strong> Suppose that a binomial heap $H$ has a total of $n$ nodes. Discuss the relationship between the binomial trees that $H$ contains and the binary representation of $n$. Conclude that $H$ consists of at most $\lfloor \lg n \rfloor + 1$ binomial trees.</p>
+
+<p>Suppose that we represent a binomial heap as follows. The left-child, right-sibling scheme of Section 10.4 represents each binomial tree within a binomial heap. Each node contains its key; pointers to its parent, to its leftmost child, and to the sibling immediately to its right (these pointers are $\text{NIL}$ when appropriate); and its degree (as in Fibonacci heaps, how many children it has). The roots form a singly linked root list, ordered by the degrees of the roots (from low to high), and we access the binomial heap by a pointer to the first node on the root list.</p>
+
+<p><strong>c.</strong> Complete the description of how to represent a binomial heap (i.e., name the attributes, describe when attributes have the value $\text{NIL}$, and define how the root list is organized), and show how to implement the same seven operations on binomial heaps as this chapter implemented on Fibonacci heaps. Each operation should run in $O(\lg n)$ worst-case time, where $n$ is the number of nodes in the binomial heap (or in the case of the $\text{UNION}$ operation, in the two binomial heaps that are being united). The $\text{MAKE-HEAP}$ operation should take constant time.</p>
+
+<p><strong>d.</strong> Suppose that we were to implement only the mergeable-heap operations on a Fibonacci heap (i.e., we do not implement the $\text{DECREASE-KEY}$ or $\text{DELETE}$ operations). How would the trees in a Fibonacci heap resemble those in a binomial heap? How would they differ? Show that the maximum degree in an $n$-node Fibonacci heap would be at most $\lfloor \lg n\rfloor$.</p>
+
+<p><strong>e.</strong> Professor McGee has devised a new data structure based on Fibonacci heaps. A McGee heap has the same structure as a Fibonacci heap and supports just the mergeable-heap operations. The implementations of the operations are the same as for Fibonacci heaps, except that insertion and union consolidate the root list as their last step. What are the worst-case running times of operations on McGee heaps?</p>
+</blockquote>
+
+<p><strong>a.</strong></p>
+
+<ol>
+<li>$B_k$ consists of two binomial trees $B_{k - 1}$.</li>
+<li>The height of one $B_{k - 1}$ is increased by $1$.</li>
+<li>For $i = 0$, $\binom{k}{0} = 1$ and only root is at depth $0$. Suppose in $B_{k - 1}$, the number of nodes at depth $i$ is $\binom{k - 1}{i}$, in $B_k$, the number of nodes at depth $i$ is $\binom{k - 1}{i} + \binom{k - 1}{i - 1} = \binom{k}{i}$.</li>
+<li>The degree of the root increase by $1$.</li>
+</ol>
+
+<p><strong>b.</strong> Let $n.b$ denote the binary expansion of $n$. The fact that we can have at most one of each binomial tree corresponds to the fact that we can have at most $1$ as any digit of $n.b$. Since each binomial tree has a size which is a power of $2$, the binomial trees required to represent n nodes are uniquely determined. We include $B_k$ if and only if the $k$th position of $n.b$ is $1$. Since the binary representation of $n$ has at most $\lfloor \lg n \rfloor+ 1$ digits, this also bounds the number of trees which can be used to represent $n$ nodes.</p>
+
+<p><strong>c.</strong> Given a node $x$, let $x.key$, $x.p$, $x.c$, and $x.s$ represent the attributes key, parent, left-most child, and sibling to the right, respectively. The pointer attributes have value $\text{NIL}$ when no such node exists. The root list will be stored in a singly linked list.</p>
+
+<ul>
+<li><strong>MAKE-HEAP</strong> initialize an empty list for the root list and return a pointer to the head of the list, which contains $\text{NIL}$. This takes constant time. To insert: Let $x$ be a node with key $k$, to be inserted. Scan the root list to find the first $m$ such that $B_m$ is not one of the trees in the binomial heap. If there is no $B_0$, simply create a single root node $x$. Otherwise, union $x, B_0, B_1, \ldots, B_{m - 1}$ into a $B_m$ tree. Remove all root nodes of the unioned trees from the root list, and update it with the new root. Since each join operation is logarithmic in the height of the tree, the total time is $O(\lg n)$. $\text{MINIMUM}$ just scans the root list and returns the minimum in $O(\lg n)$, since the root list has size at most $O(\lg n)$.</li>
+<li><strong>EXTRACT-MIN:</strong> finds and deletes the minimum, then splits the tree Bm which contained the minimum into its component binomial trees $B_0, B_1, \ldots, B_{m - 1}$ in $O(\lg n)$ time. Finally, it unions each of these with any existing trees of the same size in $O(\lg n)$ time.</li>
+<li><strong>UNION:</strong> suppose we have two binomial heaps consisting of trees $B_{i_1}, B_{i_2}, \ldots, B_{i_k}$ and $B_{j_1}, B_{j_2}, \ldots, B_{j_m}$ respectively. Simply union  orresponding trees of the same size between the two heaps, then do another check and join any newly created trees which have caused additional duplicates. Note: we will perform at most one union on any fixed size of binomial tree so the total running time is still logarithmic in $n$, where we assume that $n$ is sum of the sizes of the trees which we are unioning.</li>
+<li><strong>DECREASE-KEY:</strong> simply swap the node whose key was decreased up the tree until it satisfies the min-heap property.</li>
+<li><strong>DELETE:</strong> note that every binomial tree consists of two copies of a smaller binomial tree, so we can write the procedure recursively. If the tree is a single node, simply delete it. If we wish to delete from $B_k$, first split the tree into its constituent copies of $B_{k - 1}$, and recursively call delete on the copy of $B_{k - 1}$ which contains $x$. If this results in two binomial trees of the same size, simply union them.</li>
+</ul>
+
+<p><strong>d.</strong> The Fibonacci heap will look like a binomial heap, except that multiple copies of a given binomial tree will be allowed. Since the only trees which will appear are binomial trees and $B_k$ has $2k$ nodes, we must have $2k \le n$, which implies $k \le \lfloor \lg n \rfloor$. Since the largest root of any binomial tree occurs at the root, and on $B_k$ it is degree $k$, this also bounds the largest degree of a node.</p>
+
+<p><strong>e.</strong> $\text{INSERT}$ and $\text{UNION}$ will no longer have amortized $O(1)$ running time because $\text{CONSOLIDATE}$ has runtime $O(\lg n)$. Even if no nodes are consolidated, the runtime is dominated by the check that all degrees are distinct.</p>
+
+<p>Since calling $\text{UNION}$ on a heap and a single node is the same as insertion, it must also have runtime $O(\lg n)$. The other operations remain unchanged.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11428,6 +11519,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11442,6 +11534,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11557,6 +11652,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11571,6 +11667,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11636,6 +11735,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11648,6 +11748,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11665,6 +11768,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11680,6 +11784,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14570,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/v-advanced-data-structures/chap19/problems/19-1/" title="19-1 Alternative implementation of deletion"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/v-advanced-data-structures/chap19/problems/19-3/" title="19-3 More Fibonacci-heap operations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14583,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

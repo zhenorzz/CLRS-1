@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>9-1 Largest $i$ numbers in sorted order :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-1/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1932,7 +1932,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/" title="9 Medians and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2016,7 +2016,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/problems/" title="Chap 9 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2040,7 +2040,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-1/" title="9-1 Largest $i$ numbers in sorted order" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-1/" title="9-1 Largest $i$ numbers in sorted order" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-1/">
         Problem 9-1
         
@@ -8374,56 +8374,120 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap09/Problems/9-1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap09/'>9 Medians and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap09/problems/'>Chap 9 Problems</a> > 9-1 Largest $i$ numbers in sorted order
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>9-1 Largest $i$ numbers in sorted order</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Given a set of $n$ numbers, we wish to find the $i$ largest in sorted order using a comparison-based algorithm. Find the algorithm that implements each of the following methods with the best asymptotic worst-case running time, and analyze the running times of the algorithms in terms of $n$ and $i$ .</p>
+
+<p><strong>a.</strong> Sort the numbers, and list the $i$ largest.</p>
+
+<p><strong>b.</strong> Build a max-priority queue from the numbers, and call $\text{EXTRACT-MAX}$ $i$ times.</p>
+
+<p><strong>c.</strong> Use an order-statistic algorithm to find the $i$th largest number, partition around that number, and sort the $i$ largest numbers.</p>
+</blockquote>
+
+<p>We assume that the numbers start out in an array.</p>
+
+<p><strong>a.</strong> Sort the numbers using merge sort or heapsort, which take $\Theta(n\lg n)$ worst-case time. (Don&rsquo;t use quicksort or insertion sort, which can take $\Theta(n^2)$ time.) Put the $i$ largest elements (directly accessible in the sorted array) into the output array, taking $\Theta(i)$ time.</p>
+
+<p>Total worst-case running time: $\Theta(n\lg n + i) = \Theta(n\lg n)$ (because $i \le n$).</p>
+
+<p><strong>b.</strong> Implement the priority queue as a heap. Build the heap using $\text{BUILD-HEAP}$, which takes $\Theta(n)$ time, then call $\text{HEAP-EXTRACT-MAX}$ $i$ times to get the $i$ largest elements, in $\Theta(i\lg n)$ worst-case time, and store them in reverse order of extraction in the output array. The worst-case extraction time is $\Theta(i\lg n)$ because</p>
+
+<ul>
+<li>$i$ extractions from a heap with $O(n)$ elements takes $i \cdot O(\lg n) = O(i\lg n)$ time, and</li>
+<li>half of the $i$ extractions are from a heap with $\ge n / 2$ elements, so those $i / 2$ extractions take $(i / 2)\Omega(\lg n / 2)) = \Omega(i\lg n)$ time in the worst case.</li>
+</ul>
+
+<p>Total worst-case running time: $\Theta(n + i\lg n)$.</p>
+
+<p><strong>c.</strong> Use the $\text{SELECT}$ algorithm of Section 9.3 to find the $i$th largest number in $\Theta(n)$ time. Partition around that number in $\Theta(n)$ time. Sort the i largest numbers in $\Theta(i\lg i)$ worst-case time (with merge sort or heapsort).</p>
+
+<p>Total worst-case running time: $\Theta(n + i\lg i)$.</p>
+
+<p>Note that method (c) is always asymptotically at least as good as the other two methods, and that method (b) is asymptotically at least as good as (a). (Comparing (c) to (b) is easy, but it is less obvious how to compare (c) and (b) to (a). (c) and (b) are asymptotically at least as good as (a) because $n$, $i\lg i$, and $i\lg n$ are all $O(n\lg n)$. The sum of two things that are $O(n\lg n)$ is also $O(n\lg n)$.)</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9286,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9301,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9802,6 +9870,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9817,6 +9886,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9866,6 +9938,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9878,6 +9951,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9895,6 +9969,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14540,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap09/problems/" title="Chap 9 Problems"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-2/" title="9-2 Weighted median" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

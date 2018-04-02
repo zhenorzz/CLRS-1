@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>17-1 Bit-reversed binary counter :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3909,7 +3909,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/" title="17 Amortized Analysis" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4012,7 +4012,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/" title="Chap 17 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4036,7 +4036,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-1/" title="17-1 Bit-reversed binary counter" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-1/" title="17-1 Bit-reversed binary counter" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-1/">
         Problem 17-1
         
@@ -8374,56 +8374,136 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap17/Problems/17-1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap17/'>17 Amortized Analysis</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/'>Chap 17 Problems</a> > 17-1 Bit-reversed binary counter
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>17-1 Bit-reversed binary counter</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Chapter 30 examines an important algorithm called the fast Fourier transform, or $\text{FFT}$. The first step of the $\text{FFT}$ algorithm performs a <strong><em>bit-reversal permutation</em></strong> on an input array $A[0..n - 1]$ whose length is $n = 2^k$ for some nonnegative integer $k$. This permutation swaps elements whose indices have binary representations that are the reverse of each other.</p>
+
+<p>We can express each index $a$ as a $k$-bit sequence $\langle a_{k - 1}, a_{k - 2}, \ldots, a_0 \rangle$, where $a = \sum_{i = 0}^{k - 1} a_i 2^i$. We define</p>
+
+<p>$\text{rev}_k(\langle a_{k - 1}, a_{k - 2}, \ldots, a_0 \rangle) = \langle a_0, a_1, \ldots, a_{k - 1} \rangle$;
+thus,</p>
+
+<div>
+$$
+\text{rev}_k(a) = \sum_{i = 0}^{k - 1} a_{k - i - 1} 2^i.
+$$
+</div>
+
+<p>For example, if $n = 16$ (or, equivalently, $k = 4$), then $\text{rev}_k(3) = 12$, since the $4$-bit representation of $3$ is $0011$, which when reversed gives $1100$, the $4$-bit representation of $12$.</p>
+
+<p><strong>a.</strong> Given a function $\text{rev}_k$ that runs in $\Theta(k)$ time, write an algorithm to perform the bit-reversal permutation on an array of length $n = 2^k$ in $O(nk)$ time.</p>
+
+<p>We can use an algorithm based on an amortized analysis to improve the running time of the bit-reversal permutation. We maintain a &ldquo;bit-reversed counter&rdquo; and a procedure $\text{BIT-REVERSED-INCREMENT}$ that, when given a bit-reversed-counter value $a$, produces $\text{rev}_k(\text{rev}_k(a) + 1)$. If $k = 4$, for example, and the bit-reversed counter starts at $0$, then successive calls to $\text{BIT-REVERSED-INCREMENT}$ produce the sequence</p>
+
+<div>
+$$
+0000, 1000, 0100, 1100, 0010, 1010, \ldots = 0, 8, 4, 12, 2, 10, \ldots.
+$$
+</div>
+
+<p><strong>b.</strong> Assume that the words in your computer store $k$-bit values and that in unit time, your computer can manipulate the binary values with operations such as shifting left or right by arbitrary amounts, bitwise-$\text{AND}$, bitwise-$\text{OR}$, etc. Describe an implementation of the $\text{BIT-REVERSED-INCREMENT}$ procedure that allows the bit-reversal permutation on an $n$-element array to be performed in a total of $O(n)$ time.</p>
+
+<p><strong>c.</strong> Suppose that you can shift a word left or right by only one bit in unit time. Is it still possible to implement an $O(n)$-time bit-reversal permutation?</p>
+</blockquote>
+
+<p><strong>a.</strong> Initialize a second array of length $n$ to all trues, then, going through the indices of the original array in any order, if the corresponding entry in the second array is true, then swap the element at the current index with the element at the bit-reversed position, and set the entry in the second array corresponding to the bit-reversed index equal to false. Since we are running $rev_k &lt; n$ times, the total runtime is $O(nk)$.</p>
+
+<p><strong>b.</strong> Doing a bit reversed increment is the same thing as adding a one to the leftmost position where all carries are going to the left instead of the right.</p>
+
+<pre><code class="language-cpp">BIT-REVERSED-INCREMENT(a)
+    let m be a 1 followed by k - 1 0s
+    while m bitwise-AND is not zero
+        a = a bitwise-XOR m
+        shift m right by 1
+    m bitwise-OR a
+</code></pre>
+
+<p>By a similar analysis to the binary counter (just look at the problem in a mirror), this $\text{BIT-REVERSED-INCREMENT}$ will take constant ammortized time. So, to perform the bit-reversed permutation, have a normal binary counter and a bit reversed counter, then, swap the values of the two counters and increment. Do not swap however if those pairs of elements have already been swapped, which can be kept track of in a auxiliary array.</p>
+
+<p><strong>c.</strong> The $\text{BIT-REVERSED-INCREMENT}$ procedure given in the previous part only uses single shifts to the right, not arbitrary shifts.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10812,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10746,6 +10827,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11246,6 +11330,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11261,6 +11346,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11326,6 +11414,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11338,6 +11427,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11355,6 +11445,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14556,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/" title="Chap 17 Problems"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-2/" title="17-2 Making binary search dynamic" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14569,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

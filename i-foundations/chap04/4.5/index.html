@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>4.5 The master method for solving recurrences :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap04/4.5/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -655,7 +655,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap04/" title="4 Divide-and-Conquer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -757,7 +757,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap04/4.5/" title="4.5 The master method for solving recurrences" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap04/4.5/" title="4.5 The master method for solving recurrences" class="dd-item active">
         <a href="/CLRS/i-foundations/chap04/4.5/">
         4.5 The master method for solving recurrences
         
@@ -8374,56 +8374,190 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap04/4.5.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap04/'>4 Divide-and-Conquer</a> > 4.5 The master method for solving recurrences
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#4-5-1">4.5-1</a></li>
+<li><a href="#4-5-2">4.5-2</a></li>
+<li><a href="#4-5-3">4.5.3</a></li>
+<li><a href="#4-5-4">4.5-4</a></li>
+<li><a href="#4-5-5-star">4.5-5 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>4.5 The master method for solving recurrences</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="4-5-1">4.5-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Use the master method to give tight asymptotic bounds for the following recurrences:</p>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p><strong>a.</strong> $T(n) = 2T(n / 4) + 1$.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p><strong>b.</strong> $T(n) = 2T(n / 4) + \sqrt n$.</p>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p><strong>c.</strong> $T(n) = 2T(n / 4) + n$.</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p><strong>d.</strong> $T(n) = 2T(n / 4) + n^2$.</p>
+</blockquote>
 
-<h1 id="getting-started">Getting Started</h1>
+<p><strong>a.</strong> $\Theta(n^{\log_4 2}) = \Theta(\sqrt n)$.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p><strong>b.</strong> $\Theta(n^{\log_4 2}\lg n) = \Theta(\sqrt n\lg n)$.</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p><strong>c.</strong> $\Theta(n)$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p><strong>d.</strong> $\Theta(n^2)$.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="4-5-2">4.5-2</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Professor Caesar wishes to develop a matrix-multiplication algorithm that is asymptotically faster than Strassen&rsquo;s algorithm. His algorithm will use the divide-and-conquer method, dividing each matrix into pieces of size $n / 4 \times n / 4$, and the divide and combine steps together will take $\Theta(n^2)$ time. He needs to determine how many subproblems his algorithm has to create in order to beat Strassen&rsquo;s algorithm. If his algorithm creates $a$ subproblems, then the recurrence for the running time $T(n)$ becomes $T(n) = aT(n / 4) + \Theta(n^2)$. What is the largest integer value of $a$ for which Professor Caesar&rsquo;s algorithm would be asymptotically faster than Strassen&rsquo;s algorithm?</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>We need to find the largest integer $a$ such that $\log_4 a &lt; \lg 7$. The answer is $a = 48$.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<h2 id="4-5-3">4.5.3</h2>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<blockquote>
+<p>Use the master method to show that the solution to the binary-search recurrence $T(n) = T(n / 2) + \Theta(1)$ is $T(n) = \Theta(\lg n)$. (See exercise 2.3-5 for a description of binary search.)</p>
+</blockquote>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<div>
+$$
+\begin{aligned}
+   a & = 1, b = 2, \\
+f(n) & = \Theta(n^{\log_2 1}) = \Theta(1), \\
+T(n) & = \Theta(\lg n).
+\end{aligned}
+$$
+</div>
+
+<h2 id="4-5-4">4.5-4</h2>
+
+<blockquote>
+<p>Can the master method be applied to the recurrence $T(n) = 4T(n / 2) + n^2\lg n$? Why or why not? Give an asymptotic upper bound for this recurrence.</p>
+</blockquote>
+
+<p>With $a = 4$, $b = 2$, we have $f(n) = n^2\lg n \ne O(n^{2 - \epsilon}) \ne \Omega(n^{2 - \epsilon})$, so we cannot apply the master method.</p>
+
+<p>We guess $T(n) \le cn^2\lg^2 n$,</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & \le 4T(n / 2) + n^2\lg n \\
+     & =   4c(n / 2)^2\lg^2(n / 2) + n^2\lg n \\
+     & =   cn^2\lg(n / 2)\lg n - cn^2\lg(n / 2)\lg 2 + n^2\lg n \\
+     & =   cn^2\lg^2 n - cn^2\lg n\lg 2 - cn^2\lg(n / 2) + n^2\lg n \\
+     & =   cn^2\lg^2 n + (1 - c)n^2\lg n - cn^2\lg(n / 2) & (c > 1) \\
+     & \le cn^2\lg^2 n - cn^2\lg(n / 2) \\
+     & \le cn^2\lg^2 n.
+\end{aligned}
+$$
+</div>
+
+<p>Exercise 4.6-2 is the general case for this.</p>
+
+<h2 id="4-5-5-star">4.5-5 $\star$</h2>
+
+<blockquote>
+<p>Consider the regularity condition $af(n / b) \ge cf(n)$ for some constant $c &lt; 1$, which is part of case 3 of the master theorem. Give an example of constants $a \ge 1$ and $b &gt; 1$ and a function $f(n)$ that satisfies all the conditions in case 3 of the master theorem, except the regularity condition.</p>
+</blockquote>
+
+<p>$a = 1$, $b = 2$ and $f(n) = n(2 - \cos n)$.</p>
+
+<p>If we try to prove it,</p>
+
+<div>
+$$
+\begin{aligned}
+\frac{n}{2}(2 - \cos\frac{n}{2}) & <   cn \\
+        \frac{1 - cos(n / 2)}{2} & <   c \\
+        1 - \frac{cos(n / 2)}{2} & \le c.
+\end{aligned}
+$$
+</div>
+
+<p>Since $\min\cos(n / 2) = -1$, this implies that $c \ge 3 / 2$. But $c &lt; 1$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8589,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8604,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8863,6 +8998,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8877,6 +9013,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8941,6 +9080,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8958,6 +9098,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14606,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap04/4.4/" title="4.4 The recursion-tree method for solving recurrences"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap04/4.6/" title="4.6 Proof of the master theorem" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14619,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

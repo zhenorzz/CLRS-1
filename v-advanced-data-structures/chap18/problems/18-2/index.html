@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>18-2 Joining and splitting 2-3-4 trees :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/v-advanced-data-structures/chap18/problems/18-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4157,7 +4157,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4184,7 +4184,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap18/" title="18 B-Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4268,7 +4268,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap18/problems/" title="Chap 18 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4311,7 +4311,7 @@
  
   
     
-      <li data-nav-id="/CLRS/v-advanced-data-structures/chap18/problems/18-2/" title="18-2 Joining and splitting 2-3-4 trees" class="dd-item ">
+      <li data-nav-id="/CLRS/v-advanced-data-structures/chap18/problems/18-2/" title="18-2 Joining and splitting 2-3-4 trees" class="dd-item active">
         <a href="/CLRS/v-advanced-data-structures/chap18/problems/18-2/">
         Problem 18-2
         
@@ -8374,56 +8374,145 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/V%20Advanced%20Data%20Structures/Chap18/Problems/18-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/v-advanced-data-structures/'>V Advanced Data Structures</a> > <a href='/CLRS/v-advanced-data-structures/chap18/'>18 B-Trees</a> > <a href='/CLRS/v-advanced-data-structures/chap18/problems/'>Chap 18 Problems</a> > 18-2 Joining and splitting 2-3-4 trees
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>18-2 Joining and splitting 2-3-4 trees</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>The <strong><em>join</em></strong> operation takes two dynamic sets $S^\prime$ and $S^{\prime\prime}$ and an element $x$ such that for any $x^\prime \in S^\prime$ and $x^{\prime\prime} \in S^{\prime\prime}$, we have $x^\prime.key &lt; x.key &lt; x^{\prime\prime}.key$. It returns a set $S = S^\prime \cup \{x\} \cup S^{\prime\prime}$. The <strong><em>split</em></strong> operation is like an &ldquo;inverse&rdquo; join: given a dynamic set $S$ and an element $x \in S$, it creates a set $S^\prime$ that consists of all elements in set $S$ and an element $x \in S$, it creates a set $S^\prime$ that consists of all elements in $S - \{x\}$ whose keys are less than $x.key$ and a set $S^{\prime\prime}$ that consists of all elements in $S - \{x\}$ whose keys are greater than $x.key$. In this problem, we investigate how to implement these operations on 2-3-4 trees. We assume for convenience that elements consist only of keys and that all key values are distinct.</p>
+
+<p><strong>a.</strong> Show how to maintain, for every node $x$ of a 2-3-4 tree, the height of the subtree rooted at $x$ as an attribute $x.height$. Make sure that your implementation does not affect the asymptotic running times of searching, insertion, and deletion.</p>
+
+<p><strong>b.</strong> Show how to implement the join operation. Given two 2-3-4 trees $T^\prime$ and $T^{\prime\prime}$ and a key $k$, the join operation should run in $O(1 + |h^\prime - h^{\prime\prime}|)$ time, where $h^\prime$ and $h^{\prime\prime}$ are the heights of $T^\prime$ and $T^{\prime\prime}$, respectively.</p>
+
+<p><strong>c.</strong> Consider the simple path $p$ from the root of a 2-3-4 tree $T$ to a given key $k$, the set $S^\prime$ of keys in $T$ that are less than $k$, and the set $S^{\prime\prime}$ of keys in $T$ that are greater than $k$. Show that $p$ breaks $S^\prime$ into a set of trees $\{T^\prime_0, T^\prime_1, \ldots, T^\prime_m\}$ and a set of keys $\{k^\prime_1, k^\prime_2, \ldots, k^\prime_m\}$, where, for $i = 1, 2, \ldots, m$, we have $y &lt; k^\prime_i &lt; z$ for any keys $y \in T^\prime_{i - 1}$ and $z \in T^\prime_i$. What is the relationship between the heights of $T^\prime_{i - 1}$ and $T^\prime_i$? Describe how $p$ breaks $S^{\prime\prime}$ into sets of trees and keys.</p>
+
+<p><strong>d.</strong> Show how to implement the split operation on $T$. Use the join operation to assemble the keys in $S^\prime$ into a single 2-3-4 tree $T^\prime$ and the keys in $S^{\prime\prime}$ into a single 2-3-4 tree $T^{\prime\prime}$. The running time of the split operation should be $O(\lg n)$, where $n$ is then umber of keys in $T$. ($\textit{Hint:}$ The costs for joining should telescope.)</p>
+</blockquote>
+
+<p><strong>a.</strong> For insertion it will suffice to explain how to update height when we split a node. Suppose node $x$ is split into nodes $y$ and $z$, and the median of $x$ is merged into node $w$. The height of $w$ remains unchanged unless $x$ was the root (in which case $w.height = x.height + 1$).</p>
+
+<p>The height of $y$ or $z$ will often change. We set</p>
+
+<div>
+$$
+y.height = \max_i y.c_i .height + 1
+$$
+</div>
+
+<p>and</p>
+
+<div>
+$$
+z.height = \max_i z.c_i.height + 1.
+$$
+</div>
+
+<p>Each update takes $O(t)$. Since a call to $\text{B-TREE-INSERT}$ makes at most $h$ splits where $h$ is the height of the tree, the total time it takes to update heights is $O(th)$, preserving the asymptotic running time of insert. For deletion the situation is even simple. The only time the height changes is when the root has a single node and it is merged with its subtree nodes, leaving an empty root node to be deleted. In this case, we update the height of the new node to be the (old) height of the root minus $1$.</p>
+
+<p><strong>b.</strong> Without loss of generality, assume $h^\prime \ge h^{\prime\prime}$. We essentially wish to merge $T^{\prime\prime}$ into $T^\prime$ at a node of height $h^{\prime\prime}$ using node $x$. To do this, find the node at depth $h^\prime - h^{\prime\prime}$ on the right spine of $T^\prime$. Add $x$ as a key to this node, and $T^{\prime\prime}$ as the additional child. If it should happen that the node was already full, perform a split operation.</p>
+
+<p><strong>c.</strong> Let $x_i$ be the node encountered after $i$ steps on path $p$. Let $l_i$ be the index of the largest key stored in $x_i$ which is less than or equal to $k$. We take $k_i^\prime = x_i.key_{l_i}$ and $T^\prime_{i - 1}$ to be the tree whose root node consists of the keys in $x_i$ which are less than $x_i.key_{l_i}$, and all of their children. In general, $T^\prime_{i - 1}.height \ge T^\prime_i.height$.</p>
+
+<p>For $S^{\prime\prime}$, we take a similar approach. They keys will be those in nodes passed on $p$ which are immediately greater than $k$, and the trees will be rooted at a node consisting of the larger keys, with the associated subtrees. When we reach the node which contains $k$, we don^\primet assign a key, but we do assign a tree.</p>
+
+<p><strong>d.</strong> Let $T_1$ and $T_2$ be empty trees. Consider the path $p$ from the root of $T$ to $k$. Suppose we have reached node $x_i$. We join tree $T^\prime_{i - 1}$ to $T_1$, then insert $k^\prime i$ into $T_1$. We join $T^{\prime\prime}_{i - 1}$ to $T_2$ and insert $k^{\prime\prime}_i$ into $T_2$. Once we have encountered the node which contains $k$ at $x_m.key_k$, join $x_m.c_k$ with $T_1$ and $x_m.c_{k + 1}$ with $T_2$.</p>
+
+<p>We will perform at most $2$ join operations and $1$ insert operation for each level of the tree. Using the runtime determined in part (b), and the fact that when we join a tree $T^\prime$ to $T_1$ (or $T^{\prime\prime}$ to $T_2$ respectively) the height difference is</p>
+
+<div>
+$$
+T^\prime.height - T_1.height.
+$$
+</div>
+
+<p>Since the heights are nondecreasing of successive tree that are joined, we get a telescoping sum of heights. The first tree has height $h$, where $h$ is the height of $T$, and the last tree has height $0$. Thus, the runtime is</p>
+
+<div>
+$$
+O(2(h + h)) = O(\lg n).
+$$
+</div>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11428,6 +11517,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11443,6 +11533,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11457,6 +11548,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11506,6 +11600,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11518,6 +11613,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11534,6 +11632,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11557,6 +11656,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14565,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/v-advanced-data-structures/chap18/problems/18-1/" title="18-1 Stacks on secondary storage"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/v-advanced-data-structures/chap19/" title="19 Fibonacci Heaps" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14578,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

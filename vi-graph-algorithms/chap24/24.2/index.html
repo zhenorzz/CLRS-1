@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>24.2 Single-source shortest paths in directed acyclic graphs :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap24/24.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5398,7 +5398,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/" title="24 Single-Source Shortest Paths" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5443,7 +5443,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/24.2/" title="24.2 Single-source shortest paths in directed acyclic graphs" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/24.2/" title="24.2 Single-source shortest paths in directed acyclic graphs" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap24/24.2/">
         24.2 Single-source shortest paths in directed acyclic graphs
         
@@ -8374,56 +8374,175 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap24/24.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap24/'>24 Single-Source Shortest Paths</a> > 24.2 Single-source shortest paths in directed acyclic graphs
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#24-2-1">24.2-1</a></li>
+<li><a href="#24-2-2">24.2-2</a></li>
+<li><a href="#24-2-3">24.2-3</a></li>
+<li><a href="#24-2-4">24.2-4</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>24.2 Single-source shortest paths in directed acyclic graphs</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="24-2-1">24.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Run $\text{DAG-SHORTEST-PATHS}$ on the directed graph of Figure 24.5, using vertex $r$ as the source.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<ul>
+<li><p>$d$ values:</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+\begin{array}{cccccc}
+r & s & t & x & y & z \\
+0 & \infty & \infty & \infty & \infty & \infty \\
+0 & 5 & 3 & \infty & \infty & \infty \\
+0 & 5 & 3 & 11 & \infty & \infty \\
+0 & 5 & 3 & 10 & 7 & 5 \\
+0 & 5 & 3 & 10 & 7 & 5 \\
+0 & 5 & 3 & 10 & 7 & 5
+\end{array}
+$$
+</div></li>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<li><p>$\pi$ values:</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+\begin{array}{cccccc}
+r & s & t & x & y & z \\
+\text{NIL} & \text{NIL} & \text{NIL} & \text{NIL} & \text{NIL} & \text{NIL} \\
+\text{NIL} & r & r & \text{NIL} & \text{NIL} & \text{NIL} \\
+\text{NIL} & r & r & s & \text{NIL} & \text{NIL} \\
+\text{NIL} & r & r & t & t & t \\
+\text{NIL} & r & r & t & t & t \\
+\text{NIL} & r & r & t & t & t 
+\end{array}
+$$
+</div></li>
+</ul>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="24-2-2">24.2-2</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Suppose we change line 3 of $\text{DAG-SHORTEST-PATHS}$ to read</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<pre><code> 3  for the first |V| - 1 vertices, taken in topologically sorted order
+</code></pre>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Show that the procedure would remain correct.</p>
+</blockquote>
 
-<h1 id="more-informations">More Informations</h1>
+<p>When we reach vertex $v$, the last vertex in the topological sort, it must have $out\text-degree$ $0$. Otherwise there would be an edge pointing from a later vertex to an earlier vertex in the ordering, a contradiction. Thus, the body of the for-loop of line 4 is never entered for this final vertex, so we may as well not consider it.</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<h2 id="24-2-3">24.2-3</h2>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<blockquote>
+<p>The PERT chart formulation given above is somewhat unnatural. In a more natural structure, vertices would represent jobs and edges would represent sequencing constraints; that is, edge $(u, v)$ would indicate that job $u$ must be performed before job $v$. We would then assign weights to vertices, not edges. Modify the $\text{DAG-SHORTEST-PATHS}$ procedure so that it finds a longest path in a directed acyclic graph with weighted vertices in linear time.</p>
+</blockquote>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>Instead of modifying the $\text{DAG-SHORTEST-PATHS}$ procedure, we&rsquo;ll modify the structure of the graph so that we can run $\text{DAG-SHORTEST-PATHS}$ on it. In fact, we&rsquo;ll give two ways to transform a PERT chart $G = (V, E)$ with weights on vertices to a PERT chart $G^\prime = (V^\prime, E^\prime)$ with weights on edges. In each way, we&rsquo;ll have that $|V^\prime| \le 2|V|$ and $|E^\prime| \le |V| + |E|$. We can then run on $G^\prime$ the same algorithm to find a longest path through a dag as is given in Section 24.2 of the text.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>In the first way, we transform each vertex $v \in V$ into two vertices $v^\prime$ and $v^{\prime\prime}$ in $V^\prime$. All edges in $E$ that enter $v$ will enter $v^\prime$ in $E^\prime$, and all edges in $E$ that leave $v$ will leave $v^{\prime\prime}$ in $E^\prime$. In other words, if $(u, v) \in E$, then $(u^{\prime\prime}, v^\prime) \in E^\prime$. All such edges have weight $0$. We also put edges $(v^\prime, v^{\prime\prime})$ into $E^\prime$ for all vertices $v \in V$, and these edges are given the weight of the corresponding vertex $v$ in $G$. Thus, $|V^\prime| = 2|V|$, $|E^\prime| = |V| + |E|$, and the edge weight of each path in $G^\prime$ equals the vertex weight of the corresponding path in $G$.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>In the second way, we leave vertices in $V$ alone, but we add one new source vertex $s$ to $V^\prime$, so that $V^\prime = V \cup {s}$. All edges of $E$ are in $E^\prime$, and $E^\prime$ also includes an edge $(s, v)$ for every vertex $v \in V$ that has $in\text-degree$ $0$ in $G$. Thus, the only vertex with $in\text-degree$ $0$ in $G^\prime$ is the new source $s$. The weight of edge $(u, v) \in E^\prime$ is the weight of vertex $v$ in $G$. In other words, the weight of each entering edge in $G^\prime$ is the weight of the vertex it enters in $G$. In effect, we have &ldquo;pushed back&rdquo; the weight of each vertex onto the edges that enter it. Here, $|V^\prime| = |V| + 1$, $|E^\prime| \le |V| + |E|$ (since no more than $|V|$ vertices have $in\text-degree$ $0$ in $G$), and again the edge weight of each path in $G^\prime$ equals the vertex weight of the corresponding path in $G$.</p>
+
+<h2 id="24-2-4">24.2-4</h2>
+
+<blockquote>
+<p>Give an efficient algorithm to count the total number of paths in a directed acyclic graph. Analyze your algorithm.</p>
+</blockquote>
+
+<p>We will compute the total number of paths by counting the number of paths whose start point is at each vertex $v$, which will be stored in an attribute $v.paths$. Assume that initial we have $v.paths = 0$ for all $v \in V$. Since all vertices adjacent to $u$ occur later in the topological sort and the final vertex has no neighbors, line 4 is well-defined. Topological sort takes $O(V + E)$ and the nested for-loops take $O(V + E)$ so the total runtime is $O(V + E)$.</p>
+
+<pre><code>PATHS(G)
+    topologically sort the vertices of G
+    for each vertex u, taken in reverse topologically sorted order
+        for each vertex v ∈ G.Adj[u]
+            u.paths = u.paths + 1 + v.paths
+</code></pre>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12101,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12116,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12305,6 +12428,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12319,6 +12443,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12335,6 +12462,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12352,6 +12480,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14594,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap24/24.1/" title="24.1 The Bellman-Ford algorithm"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap24/24.3/" title="24.3 Dijkstra&#39;s algorithm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14607,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

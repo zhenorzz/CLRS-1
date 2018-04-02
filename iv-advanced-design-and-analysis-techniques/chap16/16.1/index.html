@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>16.1 An activity-selection problem :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/16.1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3649,7 +3649,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/" title="16 Greedy Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3675,7 +3675,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/16.1/" title="16.1 An activity-selection problem" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/16.1/" title="16.1 An activity-selection problem" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/16.1/">
         16.1 An activity-selection problem
         
@@ -8374,56 +8374,292 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap16/16.1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap16/'>16 Greedy Algorithms</a> > 16.1 An activity-selection problem
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#16-1-1">16.1-1</a></li>
+<li><a href="#16-1-2">16.1-2</a></li>
+<li><a href="#16-1-3">16.1-3</a></li>
+<li><a href="#16-1-4">16.1-4</a></li>
+<li><a href="#16-1-5">16.1-5</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>16.1 An activity-selection problem</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="16-1-1">16.1-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Give a dynamic-programming algorithm for the activity-selection problem, based on recurrence $\text{(16.2)}$. Have your algorithm compute the sizes $c[i, j]$ as defined above and also produce the maximum-size subset of mutually compatible activities.</p>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>Assume that the inputs have been sorted as in equation $\text{(16.1)}$. Compare the running time of your solution to the running time of $\text{GREEDY-ACTIVITY-SELECTOR}$.</p>
+</blockquote>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>The tricky part is determining which activities are in the set $S_{ij}$. If activity $k$ is in $S_{ij}$, then we must have $i &lt; k &lt; j$, which means that $j - 1 \ge 2$, but we must also have that $f_i \le s_k$ and $f_k \le s_j$. If we start $k$ at $j - 1$ and decrement $k$, we can stop once $k$ reaches $i$, but we can also stop once we find that $f_k \le f_i$, since then activities $i + 1$ through $k$ cannot be compatible with activity $i$.</p>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>We create two fictitious activities, $a_0$ with $f_0 = 0$ and $a_{n + 1}$ with $s_{n + 1} = \infty$. We are interested in a maximum-size set $A_{0, n + 1}$ of mutually compatible activities in $S_{0, n + 1}$. We&rsquo;ll use tables $c[0..n + 1, 0..n + 1]$, as in recurrence $\text{(16.2)}$ (so that $c[i, j] = |A_{ij}|$), and $act[0..n + 1, 0..n + 1]$, where $act[i, j]$ is the activity $k$ that we choose to put into $A_{ij}$.</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>We fill the tables in according to increasing difference $j - 1$, which we denote by $l$ in the pseudocode. Since $S_{ij} = \emptyset$; if $j - i &lt; 2$, we initialize $c[i, i] = 0$ for all $i$ and $c[i, i + 1] = 0$ for $0 \le i \le n$. As in $\text{RECURSIVE-ACTIVITY-SELECTOR}$ and $\text{GREEDY-ACTIVITY-SELECTOR}$, the start and finish times are given as arrays $s$ and $f$, where we assume that the arrays already include the two fictitious activities and that the activities are sorted by monotonically increasing finish time.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<pre><code class="language-cpp">DYNAMIC-ACTIVITY-SELECTOR(s, f, n)
+    let c[0..n + 1, 0..n + 1] and act[0..n + 1, 0..n + 1] be new tables
+    for i = 0 to n
+        c[i, i] = 0
+        c[i, i + 1] = 0
+    c[n + 1, n + 1] = 0
+    for l = 2 to n + 1
+        for i = 0 to n - l + 1
+            j = i + l
+            c[i, j] = 0
+            k = j - 1
+            while f[i] &lt; f[k]
+                if f[i] ≤ s[k] and f[k] ≤ s[j] and c[i, k] + c[k, j] + 1 &gt; c[i, j]
+                    c[i, j] = c[i, k] + c[k, j] + 1
+                    act[i, j] = k
+                k = k - 1
+    print &quot;A maximum size set of mutually compatible activities has size&quot; c[0, n + 1]
+    print &quot;The set contains&quot;
+    PRINT-ACTIVITIES(c, act, 0, n + 1)
+</code></pre>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<pre><code class="language-cpp">PRINT-ACTIVITIES(c, act, i, j)
+    if c[i, j] &gt; 0
+        k = act[i, j]
+        print k
+        PRINT-ACTIVITIES(c, act, i, k)
+        PRINT-ACTIVITIES(c, act, k, j)
+</code></pre>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>The $\text{PRINT-ACTIVITIES}$ procedure recursively prints the set of activities placed into the optimal solution $A_{ij}$. It first prints the activity $k$ that achieved the maximum value of $c[i, j]$, and then it recurses to print the activities in $A_{ik}$ and $A_{kj}$. The recursion bottoms out when $c[i, j] = 0$, so that $A_{ij} = \emptyset$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Whereas $\text{GREEDY-ACTIVITY-SELECTOR}$ runs in $\Theta(n)$ time, the $\text{DYNAMIC-ACTIVITY-SELECTOR}$ procedure runs in $O(n^3)$ time.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="16-1-2">16.1-2</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Suppose that instead of always selecting the first activity to finish, we instead select the last activity to start that is compatible with all previously selected activities. Describe how this approach is a greedy algorithm, and prove that it yields an optimal solution.</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>The proposed approach—selecting the last activity to start that is compatible with all previously selected activities—is really the greedy algorithm but starting from the end rather than the beginning.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>Another way to look at it is as follows. We are given a set $S = \{a_1, a_2, \ldots, a_n\}$ of activities, where $a_i = [s_i, f_i)$, and we propose to find an optimal solution by selecting the last activity to start that is compatible with all previously selected activities. Instead, let us create a set $S = \{a_1^\prime, a_2^\prime, \ldots, a_n^\prime\}$, where $a_i^\prime = [f_i, s_i)$. That is, $a_i^\prime$ is $a_i$ in reverse. Clearly, a subset of $\{a_{i_1}, a_{i_2}, \ldots, a_{i_k}\} \subseteq S$ is mutually compatible if and only if the corresponding subset $\{a_{i_1}^\prime, a_{i_2}^\prime, \ldots, a_{i_k}^\prime\} \subseteq S^\prime$  is also mutually compatible. Thus, an optimal solution for $S$ maps directly to an optimal solution for $S^\prime$ and vice versa.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>The proposed approach of selecting the last activity to start that is compatible with all previously selected activities, when run on $S$, gives the same answer as the greedy algorithm from the text—selecting the first activity to finish that is compatible with all previously selected activities—when run on $S^\prime$. The solution that the proposed approach finds for $S$ corresponds to the solution that the text&rsquo;s greedy algorithm finds for $S^\prime$, and so it is optimal.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<h2 id="16-1-3">16.1-3</h2>
+
+<blockquote>
+<p>Not just any greedy approach to the activity-selection problem produces a maximum-size set of mutually compatible activities. Give an example to show that the approach of selecting the activity of least duration from among those that are compatible with previously selected activities does not work. Do the same for the approaches of always selecting the compatible activity that overlaps the fewest other remaining activities and always selecting the compatible remaining activity with the earliest start time.</p>
+</blockquote>
+
+<ul>
+<li><p>For the approach of selecting the activity of least duration from those that are compatible with previously selected activities:</p>
+
+<div>
+$$\begin{array}{l|ccc}
+  i             & 1 & 2 & 3 \\
+s_i             & 0 & 2 & 3 \\
+f_i             & 3 & 4 & 6 \\
+\text{duration} & 3 & 2 & 3
+\end{array}
+$$
+</div>
+
+<p>This approach selects just $\{a_2\}$, but the optimal solution selects $\{a_1, a_3\}$.</p></li>
+
+<li><p>For the approach of always selecting the compatible activity that overlaps the fewest other remaining activities:</p>
+
+<div>
+$$\begin{array}{l|ccc}
+  i             & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+s_i             & 0 & 1 & 1 & 1 & 2 & 3 & 4 & 5 & 5 &  5 &  6 \\
+f_i             & 2 & 3 & 3 & 3 & 4 & 5 & 6 & 7 & 7 &  7 &  8 \\
+\text{$\#$ of overlapping activities} & 3 & 4 & 4 & 4 & 4 & 2 & 4 & 4 & 4 &  4 &  3
+\end{array}
+$$
+</div>
+
+<p>This approach frst selects $a_6$, and after that choice it can select only two other activities (one of $a_1$, $a_2$, $a_3$, $a_4$ and one of $a_8$, $a_9$, $a_{10}$, $a_{11}$). An optimal solution is $\{a_1, a_5, a_7, a_{11}\}$.</p></li>
+
+<li><p>For the approach of always selecting the compatible remaining activity with the earliest start time, just add one more activity with the interval $[0, 14)$ to the example in Section 16.1. It will be the first activity selected, and no other activities are compatible with it.</p></li>
+</ul>
+
+<h2 id="16-1-4">16.1-4</h2>
+
+<blockquote>
+<p>Suppose that we have a set of activities to schedule among a large number of lecture halls, where any activity can take place in any lecture hall. We wish to schedule all the activities using as few lecture halls as possible. Give an efficient greedy algorithm to determine which activity should use which lecture hall.</p>
+
+<p>(This problem is also known as the <strong><em>interval-graph coloring problem</em></strong>. We can create an interval graph whose vertices are the given activities and whose edges connect incompatible activities. The smallest number of colors required to color every vertex so that no two adjacent vertices have the same color corresponds to finding the fewest lecture halls needed to schedule all of the given activities.)</p>
+</blockquote>
+
+<p>Let $S$ be the set of $n$ activities.</p>
+
+<p>The &ldquo;obvious&rdquo; solution of using $\text{GREEDY-ACTIVITY-SELECTOR}$ to find a maximum-size set $S_1$ of compatible activities from $S$ for the first lecture hall, then using it again to find a maximum-size set $S_2$ of compatible activities from $S - S_1$ for the second hall, (and so on until all the activities are assigned), requires $\Theta(n^2)$ time in the worst case.</p>
+
+<p>There is a better algorithm, however, whose asymptotic time is just the time needed to sort the activities by time—$O(n\lg n)$ time for arbitrary times, or possibly as fast as $O(n)$ if the times are small integers.</p>
+
+<p>The general idea is to go through the activities in order of start time, assigning each to any hall that is available at that time. To do this, move through the set of events consisting of activities starting and activities finishing, in order of event time. Maintain two lists of lecture halls: Halls that are busy at the current event time $t$ (because they have been assigned an activity $i$ that started at $s_i \le t$ but won&rsquo;t finish until $f_i &gt; t$) and halls that are free at time $t$. (As in the activity- selection problem in Section 16.1, we are assuming that activity time intervals are half open—i.e., that if $s_i \ge f_j$, then activities $i$ and $j$ are compatible.) When $t$ is the start time of some activity, assign that activity to a free hall and move the hall from the free list to the busy list. When $t$ is the finish time of some activity, move the activity&rsquo;s hall from the busy list to the free list. (The activity is certainly in some hall, because the event times are processed in order and the activity must have started before its finish time $t$, hence must have been assigned to a hall.)</p>
+
+<p>To avoid using more halls than necessary, always pick a hall that has already had an activity assigned to it, if possible, before picking a never-used hall. (This can be done by always working at the front of the free-halls list—putting freed halls onto the front of the list and taking halls from the front of the list—so that a new hall doesn&rsquo;t come to the front and get chosen if there are previously-used halls.)</p>
+
+<p>This guarantees that the algorithm uses as few lecture halls as possible: The algorithm will terminate with a schedule requiring $m \le n$ lecture halls. Let activity $i$ be the first activity scheduled in lecture hall $m$. The reason that $i$ was put in the $m$th lecture hall is that the first $m - 1$ lecture halls were busy at time $s_i$ . So at this time there are $m$ activities occurring simultaneously. Therefore any schedule must use at least $m$ lecture halls, so the schedule returned by the algorithm is optimal.</p>
+
+<p>Run time:</p>
+
+<ul>
+<li>Sort the $2n$ activity-starts/activity-ends events. (In the sorted order, an activity-ending event should precede an activity-starting event that is at the same time.) $O(n\lg n)$ time for arbitrary times, possibly $O(n)$ if the times are restricted (e.g., to small integers).</li>
+<li>Process the events in $O(n)$ time: Scan the $2n$ events, doing $O(1)$ work for each (moving a hall from one list to the other and possibly associating an activity with it).</li>
+</ul>
+
+<p>Total: $O(n + \text{time to sort)}$
+<em>[The idea of this algorithm is related to the rectangle-overlap algorithm in Exercise 14.3-7.]</em></p>
+
+<h2 id="16-1-5">16.1-5</h2>
+
+<blockquote>
+<p>Consider a modification to the activity-selection problem in which each activity $a_i$ has, in addition to a start and finish time, a value $v_i$. The objective is no longer to maximize the number of activities scheduled, but instead to maximize the total value of the activities scheduled. That is, we wish to choose a set $A$ of compatible activities such that $\sum_{a_k \in A} v_k$ is maximized. Give a polynomial-time algorithm for this problem.</p>
+</blockquote>
+
+<p>We can no longer use the greedy algorithm to solve this problem. However, as we show, the problem still has an optimal substructure which allows us to formulate a dynamic programming solution. The analysis here follows closely the analysis of Section 16.1 in the book. We define the value of a set of compatible events as the sum of values of events in that set. Let $S_{ij}$ be defined as in Section 16.1. An <em>optimal solution</em> to $S_{ij}$ is a subset of mutually compatible events of $S_{ij}$ that has maximum value. Let $A_{ij}$ be an optimal solution to $S_{ij}$. Suppose $A_{ij}$ includes an event $a_k$. Let $A_{ik}$ and $A_{kj}$ be defined as in Section 16.1. Thus, we have $A_{ij} = A_{ik} \cup {a_k} \cup A_{kj}$, and so the value of maximum-value set $A_{ij}$ is equal to the value of $A_{ik}$ plus the value of $A_{kj}$ plus $v_k$.</p>
+
+<p>The usual cut-and-paste argument shows that the optimal solution $A_{ij}$ must also include optimal solutions to the two subproblems for $S_{ik}$ and $S_{kj}$. If we could find a set $A_{kj}^\prime$ of mutually compatible activities in $S_{kj}$ where the value of $A_{kj}^\prime$ is greater than the value of $A_{kj}$, then we could use $A_{kj}^\prime$, rather than $A_{kj}$, in a solution to the subproblem for $S_{ij}$. We would have constructed a set of mutually compatible activities with greater value than that of $A_{ij}$, which contradicts the assumption that $A_{ij}$ is an optimal solution. A symmetric argument applies to the activities in $S_{ik}$.</p>
+
+<p>Let us denote the value of an optimal solution for the set $S_{ij}$ by $val[i, j]$. Then, we would have the recurrence</p>
+
+<div>
+$$
+val[i, j] = val[i, k] + val[k, j] + v_k.
+$$
+</div>
+
+<p>Of course, since we do not know that an optimal solution for the set $S_{ij}$ includes activity $a_k$ , we would have to examine all activities in $S_{ij}$ to find which one to choose, so that</p>
+
+<div>
+$$
+val[i, j] =
+\begin{cases}
+0 & \text{if $S_{ij} = \emptyset$}, \\
+\max\limits_{a_k\in S_{ij}} {val[i, k] + val[k, j] + v_k} & \text{if $S_{ij} \ne \emptyset$}.
+\end{cases}
+$$
+</div>
+
+<p>While implementing the recurrence, the tricky part is determining which activities are in the set $S_{ij}$ . If activity $k$ is in $S_{ij}$ , then we must have $i &lt; k &lt; j$, which means that $j - i \ge 2$, but we must also have that $f_i \le s_k$ and $f_k \le s_j$. If we start $k$ at $j - 1$ and decrement $k$, we can stop once $k$ reaches $i$, but we can also stop once we find that $f_k \le f_i$, since then activities $i + 1$ through $k$ cannot be compatible with activity $i$.</p>
+
+<p>We create two fictitious activities, $a_0$ with $f_0 = 0$ and $a_{n + 1}$ with $s_{n + 1} = \infty$. We are interested in a maximum-size set $A_{0, n + 1}$ of mutually compatible activities in $S_{0, n + 1}$. We&rsquo;ll use tables $val[0..n + 1, 0..n + 1]$, as in the recurrence, and $act[0..n + 1, 0..n + 1]$, where $act[i, j]$ is the activity $k$ that we choose to put into $A_{ij}$ .</p>
+
+<p>We fill the tables in according to increasing difference $j - i$, which we denote by $l$ in the pseudocode. Since $S_{ij} = \emptyset$ if $j - i &lt; 2$, we initialize $val[i, i] = 0$ for all $i$ and $val[i, i + 1] = 0$ for $0\le i\le n$. As in $\text{RECURSIVE-ACTIVITY-SELECTOR}$ and $\text{GREEDY-ACTIVITY-SELECTOR}$, the start and finish times are given as arrays $s$ and $f$, where we assume that the arrays already include the two fictitious activities and that the activities are sorted by monotonically increasing finish time. The array $v$ specifies the value of each activity.</p>
+
+<pre><code class="language-cpp">MAX-VALUE-ACTIVITY-SELECTOR(s, f, v, n)
+    let val[0..n + 1, 0..n + 1] and act[0..n + 1, 0..n + 1] be new tables
+    for i = 0 to n
+        val[i, i] = 0
+        val[i, i + 1] = 0
+    val[n + 1, n + 1] = 0
+    for l = 2 to n + 1
+        for i = 0 to n - l + 1
+            j = i + l
+            val[i, j] = 0
+            k = j - 1
+            while f[i] &lt; f[k]
+                if f[i] ≤ s[k] and f[k] ≤ s[j] and val[i, k] + val[k, j] + vk &gt; val[i, j]
+                    val[i, j] = val[i, k] + val[k, j] + vk
+                    act[i, j] = k
+                k = k - 1
+    print &quot;A maximum-value set of mutually compatible activities has value&quot; val[0, n + 1]
+    print &quot;The set contains&quot;
+    PRINT-ACTIVITIES(val, act, 0, n + 1)
+</code></pre>
+
+<pre><code class="language-cpp">PRINT-ACTIVITIES(val, act, i, j)
+    if val[i, j] &gt; 0
+        k = act[i, j]
+        print k
+        PRINT-ACTIVITIES(val, act, i, k)
+        PRINT-ACTIVITIES(val, act, k, j)
+</code></pre>
+
+<p>The $\text{PRINT-ACTIVITIES}$ procedure recursively prints the set of activities placed into the optimal solution $A_{ij}$ . It first prints the activity $k$ that achieved the maximum value of $val[i, j]$, and then it recurses to print the activities in $A_{ik}$ and $A_{kj}$. The recursion bottoms out when $val[i, j] = 0$, so that $A_{ij} = \emptyset$.</p>
+
+<p>Whereas $\text{GREEDY-ACTIVITY-SELECTOR}$ runs in $\Theta(n)$ time, the $\text{MAX-VALUE-ACTIVITY-SELECTOR}$ procedure runs in $O(n^3)$ time.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10968,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10746,6 +10983,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11052,6 +11292,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11068,6 +11309,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11083,6 +11325,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14708,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/" title="16 Greedy Algorithms"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/16.2/" title="16.2 Elements of the greedy strategy" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14721,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

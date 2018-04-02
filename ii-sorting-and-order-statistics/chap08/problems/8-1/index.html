@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>8-1 Probabilistic lower bounds on comparison sorting :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-1/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1653,7 +1653,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/" title="8 Sorting in Linear Time" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1756,7 +1756,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/" title="Chap 8 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1780,7 +1780,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-1/" title="8-1 Probabilistic lower bounds on comparison sorting" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-1/" title="8-1 Probabilistic lower bounds on comparison sorting" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-1/">
         Problem 8-1
         
@@ -8374,56 +8374,250 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap08/Problems/8-1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/'>8 Sorting in Linear Time</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/problems/'>Chap 8 Problems</a> > 8-1 Probabilistic lower bounds on comparison sorting
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>8-1 Probabilistic lower bounds on comparison sorting</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>In this problem, we prove a probabilistic $\Omega(n\lg n)$ lower bound on the running time of any deterministic or randomized comparison sort on $n$ distinct input elements. We begin by examining a deterministic comparison sort $A$ with decision tree $T_A$. We assume that every permutation of $A$&rsquo;s inputs is equally likely.</p>
+
+<p><strong>a.</strong> Suppose that each leaf of $T_A$ is labeled with the probability that it is reached given a random input. Prove that exactly $n!$ leaves are labeled $1 / n!$ and that the rest are labeled $0$.</p>
+
+<p><strong>b.</strong> Let $D(T)$ denote the external path length of a decision tree $T$; that is, $D(T)$ is the sum of the depths of all the leaves of $T$. Let $T$ be a decision tree with $k &gt; 1$ leaves, and let $LT$ and $RT$ be the left and right subtrees of $T$. Show that $D(T) = D(LT) + D(RT)+k$.</p>
+
+<p><strong>c.</strong> Let $d(k)$ be the minimum value of $D(T)$ over all decision trees $T$ with $k &gt; 1$ leaves. Show that $d(k) = \min _{1 \le i \le k - 1}{d(i) + d(k - i) + k}$. ($\textit{Hint:}$ Consider a decision tree $T$ with $k$ leaves that achieves the minimum. Let $i_0$ be the number of leaves in $LT$ and $k - i_0$ the number of leaves in $RT$.)</p>
+
+<p><strong>d.</strong> Prove that for a given value of $k &gt; 1$ and $i$ in the range $1 \le i \le k - 1$, the function $i\lg i + (k - i) \lg(k - i)$ is minimized at $i = k / 2$. Conclude that $d(k) = \Omega(k\lg k)$.</p>
+
+<p><strong>e.</strong> Prove that $D(T_A) = \Omega(n!\lg(n!))$, and conclude that the average-case time to sort $n$ elements is $\Omega(n\lg n)$.</p>
+
+<p>Now, consider a <em>randomized</em> comparison sort $B$. We can extend the decision-tree model to handle randomization by incorporating two kinds of nodes: ordinary comparison nodes and &ldquo;randomization&rdquo; nodes. A randomization node models a random choice of the form $\text{RANDOM}(1, r)$ made by algorithm $B$; the node has $r$ children, each of which is equally likely to be chosen during an execution of the algorithm.</p>
+
+<p><strong>f.</strong> Show that for any randomized comparison sort $B$, there exists a deterministic comparison sort $A$ whose expected number of comparisons is no more than those made by $B$.</p>
+</blockquote>
+
+<p><strong>a.</strong> For a comparison algorithm $A$ to sort, no two input permutations can reach the same leaf of the decision tree, so there must be at least $n!$ leaves reached in $T_A$, one for each possible input permutation. Since $A$ is a deterministic algorithm, it must always reach the same leaf when given a particular permutation as input, so at most $n!$ leaves are reached (one for each permutation). Therefore exactly $n!$ leaves are reached, one for each input permutation.</p>
+
+<p>These $n!$ leaves will each have probability $1 / n!$, since each of the $n!$ possible permutations is the input with the probability $1 / n!$. Any remaining leaves will have probability $0$, since they are not reached for any input.</p>
+
+<p>Without loss of generality, we can assume for the rest of this problem that paths leading only to $0$-probability leaves aren&rsquo;t in the tree, since they cannot affect the running time of the sort. That is, we can assume that $T_A$ consists of only the $n!$ leaves labeled $1 / n!$ and their ancestors.</p>
+
+<p><strong>b.</strong> If $k &gt; 1$, then the root of $T$ is not a leaf. This implies that all of $T$&rsquo;s leaves are leaves in $LT$ and $RT$. Since every leaf at depth $h$ in $LT$ or $RT$ has depth $h + 1$ in $T$, $D(T)$ must be the sum of $D(LT)$, $D(RT)$, and $k$, the total number of leaves. To prove this last assertion, let $d_T(x) =$ depth of node $x$ in tree $T$. Then,</p>
+
+<div>
+$$
+\begin{aligned}
+D(T) & = \sum_{x \in T} d_T(x) \\
+     & = \sum_{x \in LT} d_T(x) + \sum_{x \in RT} d_T(x) \\
+     & = \sum_{x \in LT} (d_{LT}(x) + 1) + \sum_{x \in RT} (d_{RT}(x) + 1) \\
+     & = \sum_{x \in LT} d_{LT}(x) + \sum_{x \in RT} d_{RT}(x) + \sum_{x \in T} 1 \\
+     & = D(LT) + D(RT) + k. \\
+\end{aligned}
+$$
+</div>
+
+<p><strong>c.</strong> To show that $d(k) = \min_{1\le i\le k - 1}{d(i) + d(k - i) + k}$ we will show separately that</p>
+
+<div>
+$$
+\begin{aligned}
+            & d(k) \le \min_{1\le i\le k - 1}{d(i) + d(k - i) + k} \\
+\text{and } & d(k) \ge \min_{1\le i\le k - 1}{d(i) + d(k - i) + k}.
+\end{aligned}
+$$
+</div>
+
+<ul>
+<li>To show that $d(k) \le \min_{1\le i\le k - 1}{d(i) + d(k - i) + k}$, we need only show that $d(k) \le d(i) + d(k - i) + k$, for $i = 1, 2, \ldots, k - 1$. For any $i$ from $1$ to $k - 1$ we can find trees $RT$ with $i$ leaves and $LT$ with $k - i$ leaves such that $D(RT) = d(i)$ and $D(LT) = d(k - i)$. Construct $T$ such that $RT$ and $LT$ are the right and left subtrees of $T$&rsquo;s root respectively. Then</li>
+</ul>
+
+<div>
+$$
+\begin{aligned}
+d(k) & \le D(T)                 & \text{(by definition of $d$ as min $D(T)$ value)} \\
+     & =   D(RT) + D(LT) + k    & \text{(by part (b))} \\
+     & =   d(i) + d(k - i) + k. & \text{(by choice of $RT$ and $LT$)}
+\end{aligned}
+$$
+</div>
+
+<ul>
+<li>To show that $d(k) \ge \min_{1\le i\le k - 1}{d(i) + d(k - i) + d}$, we need only show that $d(k) \ge d(i) + d(k - i) + k$, for some $i$ in ${1, 2, \ldots, k - 1}$. Take the tree $T$ with $k$ leaves such that $D(T) = d(k)$, let $RT$ and $LT$ be $T$&rsquo;s right and left subtree, respectively, and let $i$ be the number of leaves in $RT$. Then $k - i$ is the number of leaves in $LT$ and</li>
+</ul>
+
+<div>
+$$
+\begin{aligned}
+d(k) & =   D(T)                 & \text{(by choice of $T$)} \\
+     & =   D(RT) + D(LT) + k    & \text{(by part (b))} \\
+     & \ge d(i) + d(k - i) + k. & \text{(by definition of $d$ as min $D(T)$ value)}
+\end{aligned}
+$$
+</div>
+
+<p>Neither $i$ nor $k - i$ can be $0$ (and hence $1 \le i \le k - 1$), since if one of these were $0$, either $RT$ or $LT$ would contain all $k$ leaves of $T$, and that $k$-leaf subtree would have a $D$ equal to $D(T) - k$ (by part (b)), contradicting the choice of $T$ as the $k$-leaf tree with the minimum $D$.</p>
+
+<p><strong>d.</strong> Let $f_k(i) = i\lg i + (k - i)\lg(k - i)$. To find the value of $i$ that minimizes $f_k$, find the $i$ for which the derivative of $f_k$ with respect to $i$ is $0$:</p>
+
+<div>
+$$
+\begin{aligned}
+f_k'(i) & = \frac{d}{di} \Big(\frac{i\ln i + (k - i)\ln(k - i)}{\ln 2}\Big) \\
+        & = \frac{\ln i + 1 - \ln(k - i) - 1}{\ln 2} \\
+        & = \frac{\ln i - \ln(k - i)}{\ln 2}
+\end{aligned}
+$$
+</div>
+
+<p>is $0$ at $i = k / 2$. To verify this is indeed a minimum (not a maximum), check that the second derivative of $f_k$ is positive at $i = k / 2$:</p>
+
+<div>
+$$
+\begin{aligned}
+f_k''(i) & = \frac{d}{di}\Big(\frac{\ln i - \ln(k - i)}{\ln 2}\Big) \\
+         & = \frac{1}{\ln 2}\Big(\frac{1}{i} + \frac{1}{k - i}\Big).
+\end{aligned}
+$$
+</div>
+<div>
+$$
+\begin{aligned}
+f_k''(k / 2) & = \frac{1}{\ln 2}\Big(\frac{2}{k} + \frac{2}{k}\Big) \\
+           & = \frac{1}{\ln 2} \cdot \frac{4}{k} \\
+           & > 0 & \text{since $k > 1$}.
+\end{aligned}
+$$
+</div>
+
+<p>Now we use substitution to prove $d(k) = \Omega(k\lg k)$. The base case of the induction is satisfied because $d(1) \ge 0 = c \cdot 1 \cdot \lg 1$ for any constant $c$. For the inductive step we assume that $d(i) \ge ci\lg i$ for $1 \le i \le k - 1$, where $c$ is some constant to be determined.</p>
+
+<div>
+$$
+\begin{aligned}
+d(k) & =   \min_{1\le i\le k - 1} {d(i) + d(k - i) + k} \\
+     & \ge \min_{1\le i\le k - 1} {c(i\lg i + (k - i)\lg(k - i)) + k} \\
+     & =   \min_{1\le i\le k - 1} {cf_k(i) + k} \\
+     & =   c\Big(\frac{k}{2}\lg\frac{k}{2}\Big(k - \frac{k}{2}\Big)\lg\Big(k - \frac{k}{2}\Big)\Big) + k \\
+     & =   ck\lg\Big(\frac{k}{2}\Big) + k \\
+     & =   c(k\lg k - k) + k \\
+     & =   ck\lg k + (k - ck) \\
+     & \ge ck\lg k & \text{if $c \le 1$},
+\end{aligned}
+$$
+</div>
+
+<p>and so $d(k) = \Omega(k\lg k)$.</p>
+
+<p><strong>e.</strong> Using the result of part (d) and the fact that $T_A$ (as modified in our solution to part (a)) has $n!$ leaves, we can conclude that</p>
+
+<div>
+$$
+D(T_A) \ge d(n!) = \Omega(n!\lg(n!)).
+$$
+</div>
+
+<p>$D(T_A)$ is the sum of the decision-tree path lengths for sorting all input permutations, and the path lengths are proportional to the run time. Since the $n!$ permutations have equal probability $1 / n!$, the expected time to sort $n$ random elements (1 input permutation) is the total time for all permutations divided by $n!$:</p>
+
+<div>
+$$
+\frac{\Omega(n!\lg(n!))}{n!} = \Omega(\lg(n!)) = \Omega(n\lg n).
+$$
+</div>
+
+<p><strong>f.</strong> We will show how to modify a randomized decision tree (algorithm) to define a deterministic decision tree (algorithm) that is at least as good as the randomized one in terms of the average number of comparisons.</p>
+
+<p>At each randomized node, pick the child with the smallest subtree (the subtree with the smallest average number of comparisons on a path to a leaf). Delete all the other children of the randomized node and splice out the randomized node itself.</p>
+
+<p>The deterministic algorithm corresponding to this modified tree still works, because the randomized algorithm worked no matter which path was taken from each randomized node.</p>
+
+<p>The average number of comparisons for the modified algorithm is no larger than the average number for the original randomized tree, since we discarded the higher-average subtrees in each case. In particular, each time we splice out a randomized node, we leave the overall average less than or equal to what it was, because</p>
+
+<ul>
+<li>the same set of input permutations reaches the modified subtree as before, but those inputs are handled in less than or equal to average time than before, and</li>
+<li>the rest of the tree is unmodified.</li>
+</ul>
+
+<p>The randomized algorithm thus takes at least as much time on average as the corresponding deterministic one. (We&rsquo;ve shown that the expected running time for a deterministic comparison sort is $\Omega(n\lg n)$, hence the expected time for a randomized comparison sort is also $\Omega(n\lg n)$).</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9416,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9431,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9592,6 +9790,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9607,6 +9806,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9672,6 +9874,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9684,6 +9887,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9701,6 +9905,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14670,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/" title="Chap 8 Problems"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-2/" title="8-2 Sorting in place in linear time" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>13.1 Properties of red-black trees :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap13/13.1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2835,7 +2835,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap13/" title="13 Red-Black Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2861,7 +2861,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap13/13.1/" title="13.1 Properties of red-black trees" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap13/13.1/" title="13.1 Properties of red-black trees" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap13/13.1/">
         13.1 Properties of red-black trees
         
@@ -8374,56 +8374,197 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap13/13.1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap13/'>13 Red-Black Trees</a> > 13.1 Properties of red-black trees
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#13-1-1">13.1-1</a></li>
+<li><a href="#13-1-2">13.1-2</a></li>
+<li><a href="#13-1-3">13.1-3</a></li>
+<li><a href="#13-1-4">13.1-4</a></li>
+<li><a href="#13-1-5">13.1-5</a></li>
+<li><a href="#13-1-6">13.1-6</a></li>
+<li><a href="#13-1-7">13.1-7</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>13.1 Properties of red-black trees</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="13-1-1">13.1-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>In the style of Figure 13.1(a), draw the complete binary search tree of height $3$ on the keys $\{1, 2, \ldots, 15\}$. Add the $\text{NIL}$ leaves and color the nodes in three different ways such that the black-heights of the resulting red-black trees are $2$, $3$, and $4$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<ul>
+<li><p>Complete binary tree of $height = 3$:</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p><img src="https://i.imgur.com/s7cQTji.png?width=40rem" alt="" /></p></li>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<li><p>Red-black tree of $black\text-heights = 2$:</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p><img src="https://i.imgur.com/82R48g7.png?width=40rem" alt="" /></p></li>
 
-<h1 id="getting-started">Getting Started</h1>
+<li><p>Red-black tree of $black\text-heights = 3$:</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p><img src="https://i.imgur.com/kduzjYj.png?width=40rem" alt="" /></p></li>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<li><p>Red-black tree of $black\text-heights = 4$:</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p><img src="https://i.imgur.com/n91lrJL.png?width=40rem" alt="" /></p></li>
+</ul>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="13-1-2">13.1-2</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Draw the red-black tree that results after $\text{TREE-INSERT}$ is called on the tree in Figure 13.1 with key $36$. If the inserted node is colored red, is the resulting tree a red-black tree? What if it is colored black?</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<ul>
+<li>If the inserted node is colored red, the tree doesn&rsquo;t satisfy property 4 because $35$ will be the parent of $36$, which is also colored red.</li>
+<li>If the inserted node is colored black, the tree doesn&rsquo;t satisfy property 5 because there will be two paths from node $38$ to $T.nil$ which contain different numbers of black nodes.</li>
+</ul>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>We don&rsquo;t draw the <em>wrong</em> red-black tree; however, we draw the adjusted correct tree:</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p><img src="https://i.imgur.com/CvRfxxE.png?width=40rem" alt="" /></p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<h2 id="13-1-3">13.1-3</h2>
+
+<blockquote>
+<p>Let us define a <strong><em>relaxed red-black tree</em></strong> as a binary search tree that satisfies red-black properties 1, 3, 4, and 5. In other words, the root may be either red or black. Consider a relaxed red-black tree $T$ whose root is red. If we color the root of $T$ black but make no other changes to $T$, is the resulting tree a red-black tree?</p>
+</blockquote>
+
+<p>If we color the root of a relaxed red-black tree black but make no other changes, the resulting tree is a red-black tree. Not even any black-heights change.</p>
+
+<h2 id="13-1-4">13.1-4</h2>
+
+<blockquote>
+<p>Suppose that we &ldquo;absorb&rdquo; every red node in a red-black tree into its black parent, so that the children of the red node become children of the black parent. (Ignore what happens to the keys.) What are the possible degrees of a black node after all its red children are absorbed? What can you say about the depths of the leaves of the resulting tree?</p>
+</blockquote>
+
+<p>After absorbing each red node into its black parent, the degree of each node black node is</p>
+
+<ul>
+<li>$2$, if both children were already black,</li>
+<li>$3$, if one child was black and one was red, or</li>
+<li>$4$, if both children were red.</li>
+</ul>
+
+<p>All leaves of the resulting tree have the same depth.</p>
+
+<h2 id="13-1-5">13.1-5</h2>
+
+<blockquote>
+<p>Show that the longest simple path from a node $x$ in a red-black tree to a descendant leaf has length at most twice that of the shortest simple path from node $x$ to a descendant leaf.</p>
+</blockquote>
+
+<p>In the longest path, at least every other node is black. In the shortest path, at most every node is black. Since the two paths contain equal numbers of black nodes, the length of the longest path is at most twice the length of the shortest path.</p>
+
+<p>We can say this more precisely, as follows:</p>
+
+<p>Since every path contains $\text{bh}(x)$ black nodes, even the shortest path from $x$ to a descendant leaf has length at least $\text{bh}(x)$. By definition, the longest path from $x$ to a descendant leaf has length $\text{height}(x)$. Since the longest path has $\text{bh}(x)$ black nodes and at least half the nodes on the longest path are black (by property 4), $\text{bh}(x) \ge \text{height}(x) / 2$, so</p>
+
+<p>length of longest path $= \text{height}(x) \le 2 \cdot \text{bh}(x) \le$ twice length of shortest path.</p>
+
+<h2 id="13-1-6">13.1-6</h2>
+
+<blockquote>
+<p>What is the largest possible number of internal nodes in a red-black tree with black-height $k$? What is the smallest possible number?</p>
+</blockquote>
+
+<ul>
+<li>The largest is the complete binary tree with height $2k$, which has $2^{2k} - 1$ internal nodes.</li>
+<li>The smallest is a black chain with length $k$, which has $k$ internal nodes.</li>
+</ul>
+
+<h2 id="13-1-7">13.1-7</h2>
+
+<blockquote>
+<p>Describe a red-black tree on $n$ keys that realizes the largest possible ratio of red internal nodes to black internal nodes. What is this ratio? What tree has the smallest possible ratio, and what is the ratio?</p>
+</blockquote>
+
+<ul>
+<li>The largest ratio is $2$, each black node has two red children.</li>
+<li>The smallest ratio is $0$.</li>
+</ul>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10093,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10108,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10452,6 +10597,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10468,6 +10614,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10483,6 +10630,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14613,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap13/" title="13 Red-Black Trees"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap13/13.2/" title="13.2 Rotations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14626,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

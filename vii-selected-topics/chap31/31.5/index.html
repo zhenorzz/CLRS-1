@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>31.5 The Chinese remainder theorem :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vii-selected-topics/chap31/31.5/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -6128,7 +6128,7 @@
   
     
     <li data-nav-id="/CLRS/vii-selected-topics/" title="VII Selected Topics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -7062,7 +7062,7 @@
   
     
     <li data-nav-id="/CLRS/vii-selected-topics/chap31/" title="31 Number-Theoretic Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -7164,7 +7164,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vii-selected-topics/chap31/31.5/" title="31.5 The Chinese remainder theorem" class="dd-item ">
+      <li data-nav-id="/CLRS/vii-selected-topics/chap31/31.5/" title="31.5 The Chinese remainder theorem" class="dd-item active">
         <a href="/CLRS/vii-selected-topics/chap31/31.5/">
         31.5 The Chinese remainder theorem
         
@@ -8374,56 +8374,135 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VII%20Selected%20Topics/Chap31/31.5.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vii-selected-topics/'>VII Selected Topics</a> > <a href='/CLRS/vii-selected-topics/chap31/'>31 Number-Theoretic Algorithms</a> > 31.5 The Chinese remainder theorem
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#31-5-1">31.5-1</a></li>
+<li><a href="#31-5-2">31.5-2</a></li>
+<li><a href="#31-5-3">31.5-3</a></li>
+<li><a href="#31-5-4">31.5-4</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>31.5 The Chinese remainder theorem</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="31-5-1">31.5-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Find all solutions to the equations $x \equiv 4 ~(\text{mod}~5)$ and $x \equiv 5 ~(\text{mod}~11)$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>$m_1 = 11$, $m_2 = 5$.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>$m_1^{-1} = 1$, $m_2^{-1} = 9$.</p>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>$c_1 = 11$, $c_2 = 45$.</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>$a = (c_1 \cdot a_1 + c_2 \cdot a_2) ~\text{mod}~ (n_1 \cdot n_2) = (11 * 4 + 45 * 5) ~\text{mod}~ 55 = 49$.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="31-5-2">31.5-2</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Find all integers $x$ that leave remainders $1, 2, 3$ when divided by $9, 8, 7$ respectively.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>$10 + 504i$, $i \in \mathbb{Z}$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="31-5-3">31.5-3</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Argue that, under the definitions of Theorem 31.27, if $\text{gcd}(a, n) = 1$, then</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>$(a^{-1} ~\text{mod}~ n) \leftrightarrow ((a_1^{-1} ~\text{mod}~ n_1), (a_2^{-1} ~\text{mod}~ n_2), \ldots, (a_k^{-1} ~\text{mod}~ n_k))$.</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>$\text{gcd}(a, n) = 1 \rightarrow \text{gcd}(a, n_i) = 1$.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<h2 id="31-5-4">31.5-4</h2>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<blockquote>
+<p>Under the definitions of Theorem 31.27, prove that for any polynomial $f$, the number of roots of the equation $f(x) \equiv 0 ~(\text{mod}~n)$ equals the product of the number of roots of each of the equations $f(x) \equiv 0 ~(\text{mod}~n_1), f(x) \equiv 0 ~(\text{mod}~n_2), \ldots, f(x) \equiv 0 ~(\text{mod}~n_k)$.</p>
+</blockquote>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>Based on 31.28 ~ 31.30.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -12842,6 +12921,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12856,6 +12936,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -13521,6 +13604,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -13535,6 +13619,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -13599,6 +13686,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -13616,6 +13704,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14554,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vii-selected-topics/chap31/31.4/" title="31.4 Solving modular linear equations"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vii-selected-topics/chap31/31.6/" title="31.6 Powers of an element" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14567,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

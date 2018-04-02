@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>8-3 Sorting variable-length items :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-3/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1653,7 +1653,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/" title="8 Sorting in Linear Time" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1756,7 +1756,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/" title="Chap 8 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1818,7 +1818,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-3/" title="8-3 Sorting variable-length items" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-3/" title="8-3 Sorting variable-length items" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-3/">
         Problem 8-3
         
@@ -8374,56 +8374,133 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap08/Problems/8-3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/'>8 Sorting in Linear Time</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/problems/'>Chap 8 Problems</a> > 8-3 Sorting variable-length items
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>8-3 Sorting variable-length items</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p><strong>a.</strong> You are given an array of integers, where different integers may have different numbers of digits, but the total number of digits over <em>all</em> the integers in the array is $n$. Show how to sort the array in $O(n)$ time.</p>
+
+<p><strong>b.</strong> You are given an array of strings, where different strings may have different numbers of characters, but the total number of characters over all the strings is $n$. Show how to sort the strings in $O(n)$ time.
+(Note that the desired order here is the standard alphabetical order; for example, $a &lt; ab &lt; b$.)</p>
+</blockquote>
+
+<p><strong>a.</strong> The usual, unadorned radix sort algorithm will not solve this problem in the required time bound. The number of passes, $d$, would have to be the number of digits in the largest integer. Suppose that there are $m$ integers; we always have $m \le n$. In the worst case, we would have one integer with $n / 2$ digits and $n / 2$ integers with one digit each. We assume that the range of a single digit is constant. Therefore, we would have $d = n / 2$ and $m = n / 2 + 1$, and so the running time would be $\Theta(dm) = \Theta(n^2)$.</p>
+
+<p>Let us assume without loss of generality that all the integers are positive and have no leading zeros. (If there are negative integers or $0$, deal with the positive numbers, negative numbers, and $0$ separately.) Under this assumption, we can observe that integers with more digits are always greater than integers with fewer digits. Thus, we can first sort the integers by number of digits (using counting sort), and then use radix sort to sort each group of integers with the same length. Noting that each integer has between $1$ and $n$ digits, let $m_i$ be the number of integers with $i$ digits, for $i = 1, 2, \ldots, n$. Since there are $n$ digits altogether, we have $\sum_{i = 1}^n i \cdot m_i = n$.</p>
+
+<p>It takes $O(n)$ time to compute how many digits all the integers have and, once the numbers of digits have been computed, it takes $O(m + n) = O(n)$ time to group the integers by number of digits. To sort the group with $m_i$ digits by radix sort takes $\Theta(i \cdot m_i)$ time. The time to sort all groups, therefore, is</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{i = 1}^n \Theta(i\cdot m_i)
+    & = \Theta\Bigg(\sum_{i = 1}^n i \cdot m_i\Bigg) \\
+    & = \Theta(n).
+\end{aligned}
+$$
+</div>
+
+<p><strong>b.</strong> One way to solve this problem is by a radix sort from right to left. Since the strings have varying lengths, however, we have to pad out all strings that are shorter than the longest string. The padding is on the right end of the string, and it&rsquo;s with a special character that is lexicographically less than any other character (e.g., in C, the character &lsquo;\0&rsquo; with ASCII value $0$). Of course, we don&rsquo;t have to actually change any string; if we want to know the $j$th character of a string whose length is $k$, then if $j &gt; k$, the $j$th character is the pad character.</p>
+
+<p>Unfortunately, this scheme does not always run in the required time bound. Suppose that there are $m$ strings and that the longest string has $d$ characters. In the worst case, one string has $n / 2$ characters and, before padding, $n / 2$ strings have one character each. As in part (a), we would have $d = n / 2$ and $m = n / 2 + 1$. We still have to examine the pad characters in each pass of radix sort, even if we don&rsquo;t actually create them in the strings. Assuming that the range of a single character is constant, the running time of radix sort would be $\Theta(dm) = \Theta(n^2)$.</p>
+
+<p>To solve the problem in $O(n)$ time, we use the property that, if the first letter of string $x$ is lexicographically less that the first letter of string $y$, then $x$ is lexicographically less than $y$, regardless of the lengths of the two strings. We take advantage of this property by sorting the strings on the first letter, using counting sort. We take an empty string as a special case and put it first. We gather together all strings with the same first letter as a group. Then we recurse, within each group, based on each string with the first letter removed.</p>
+
+<p>The correctness of this algorithm is straightforward. Analyzing the running time is a bit trickier. Let us count the number of times that each string is sorted by a call of counting sort. Suppose that the ith string, $s_i$, has length $l_i$. Then $s_i$ is sorted by at most $l_i + 1$ counting sorts. (The &ldquo;+1&rdquo; is because it may have to be sorted as an empty string at some point; for example, ab and a end up in the same group in the first pass and are then ordered based on b and the empty string in the second pass. The string a is sorted its length, $1$, time plus one more time.) A call of counting sort on t strings takes $\Theta(t)$ time (remembering that the number of different characters on which we are sorting is a constant.) Thus, the total time for all calls of counting sort is</p>
+
+<div>
+$$
+\begin{aligned}
+O\Bigg(\sum_{i = 1}^m (l_i + 1)\Bigg)
+    & = O\Bigg(\sum_{i = 1}^m (l_i + m)\Bigg) \\
+    & = O(n + m) \\
+    & = O(n),
+\end{aligned}
+$$
+</div>
+
+<p>where the second line follows from $\sum_{i = 1}^m l_i = n$, and the last line is because $m \le n$.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9299,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9314,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9593,6 +9674,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9607,6 +9689,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9672,6 +9757,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9684,6 +9770,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9717,6 +9806,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9732,6 +9822,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14556,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-2/" title="8-2 Sorting in place in linear time"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-4/" title="8-4 Water jugs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>11.1 Direct-address tables :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap11/11.1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2372,7 +2372,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap11/" title="11 Hash Tables" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2398,7 +2398,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.1/" title="11.1 Direct-address tables" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.1/" title="11.1 Direct-address tables" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap11/11.1/">
         11.1 Direct-address tables
         
@@ -8374,56 +8374,199 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap11/11.1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap11/'>11 Hash Tables</a> > 11.1 Direct-address tables
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#11-1-1">11.1-1</a></li>
+<li><a href="#11-1-2">11.1-2</a></li>
+<li><a href="#11-1-3">11.1-3</a></li>
+<li><a href="#11-1-4-star">11.1-4 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>11.1 Direct-address tables</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="11-1-1">11.1-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Suppose that a dynamic set $S$ is represented by a direct-address table $T$ of length $m$. Describe a procedure that finds the maximum element of $S$. What is the worst-case performance of your procedure?</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>As the dynamic set $S$ is represented by the direct-address table $T$, for each key $k$ in $S$, there is a slot $k$ in $T$ points to it. If no element with key $k$ in $S$, then $T[k] = \text{NIL}$. Using this property, we can find the maximum element of $S$ by traversing down from the highest slot to seek the first non-$\text{NIL}$ one.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<pre><code class="language-cpp">MAXIMUM(S)
+    return TABLE-MAXIMUM(T, m - 1)
+</code></pre>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<pre><code class="language-cpp">TABLE-MAXIMUM(T, l)
+    if l &lt; 0
+        return NIL
+    else if DIRECT-ADDRESS-SEARCH(T, l) != NIL
+        return l
+    else return TABLE-MAXIMUM(T, l - 1)
+</code></pre>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>The $\text{TABLE-MAXIMUM}$ procedure gest down and checks $1$ sloc at a time, linearly approaches the solution. In the worst case where $S$ is empty, $\text{TABLE-MAXIMUM}$ examines $m$ slots. Therefore, the worst-case performance of $\text{MAXIMUM}$ is $O(n)$, where $n$ is the number of elements in the set $S$.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="11-1-2">11.1-2</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>A <strong><em>bit vector</em></strong> is simply an array of bits ($0$s and $1$s). A bit vector of length $m$ takes much less space than an array of $m$ pointers. Describe how to use a bit vector to represent a dynamic set of distinct elements with no satellite data. Dictionary operations should run in $O(1)$ time.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>Using the bit vector data structure, we can represent keys less than $m$ by a string of $m$ bits, denoted by $V[0..m - 1]$, in which each position that occupied by the bit $1$, corresponds to a key in the set $S$. If the set contains no element with key $k$, then $V[k] = 0$. For instance, we can store the set ${2, 4, 6, 10, 16}$ in a bit vector of length $20$:</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<div>
+$$
+001010100010000010000
+$$
+</div>
 
-<h1 id="more-informations">More Informations</h1>
+<pre><code class="language-cpp">BITMAP-SEARCH(V, k)
+    if V[k] != 0
+        return k
+    else return NIL
+</code></pre>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<pre><code class="language-cpp">BITMAP-INSERT(V, x)
+    V[x] = 1
+</code></pre>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<pre><code class="language-cpp">BITMAP-DELETE(V, x)
+    V[x] = 0
+</code></pre>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>Each of these operations takes only $O(1)$ time.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<h2 id="11-1-3">11.1-3</h2>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<blockquote>
+<p>Suggest how to implement a direct-address table in which the keys of stored elements do not need to be distinct and the elements can have satellite data. All three dictionary operations ($\text{INSERT}$, $\text{DELETE}$, and $\text{SEARCH}$) should run in $O(1)$ time. (Don&rsquo;t forget that $\text{DELETE}$ takes as an argument a pointer to an object to be deleted, not a key.)</p>
+</blockquote>
+
+<p>Assuming that fetching an element should return the satellite data of all the stored elements, we can have each key map to a doubly linked list.</p>
+
+<ul>
+<li>$\text{INSERT}$: appends the element to the list in constant time</li>
+<li>$\text{DELETE}$: removes the element from the linked list in constant time (the element contains pointers to the previous and next element)</li>
+<li>$\text{SEARCH}$: returns the first element, which is a node in a linked list, in constant time</li>
+</ul>
+
+<h2 id="11-1-4-star">11.1-4 $\star$</h2>
+
+<blockquote>
+<p>We wish to implement a dictionary by using direct addressing on a <em>huge</em> array. At the start, the array entries may contain garbage, and initializing the entire array is impractical because of its size. Describe a scheme for implementing a direct-address dictionary on a huge array. Each stored object should use $O(1)$ space; the operations $\text{SEARCH}$, $\text{INSERT}$, and $\text{DELETE}$ should take $O(1)$ time each; and initializing the data structure should take $O(1)$ time. ($\textit{Hint:}$ Use an additional array, treated somewhat like a stack whose size is the number of keys actually stored in the dictionary, to help determine whether a given entry in the huge array is valid or not.)</p>
+</blockquote>
+
+<p>We denote the huge array by $T$ and, taking the hint from the book, we also have a stack implemented by an array $S$. The size of $S$ equals the number of keys actually stored, so that $S$ should be allocated at the dictionary&rsquo;s maximum size. The stack<br />
+has an attribute $S.top$, so that only entries $S[1..S.top]$ are valid.</p>
+
+<p>The idea of this scheme is that entries of $T$ and $S$ validate each other. If key $k$ is<br />
+actually stored in $T$, then $T[k]$ contains the index, say $j$, of a valid entry in $S$, and<br />
+$S[j]$ contains the value $k$. Let us call this situation, in which $1 \le T[k] \le S.top$, $S[T[k]] = k$, and $T[S[j]] = j$, a <strong><em>validating cycle</em></strong>.</p>
+
+<p>Assuming that we also need to store pointers to objects in our direct-address table, we can store them in an array that is parallel to either $T$ or $S$. Since $S$ is smaller than $T$, we&rsquo;ll use an array $S^\prime$, allocated to be the same size as $S$, for these pointers. Thus, if the dictionary contains an object $x$ with key $k$, then there is a validating cycle and $S^\prime[T[k]]$ points to $x$.</p>
+
+<p>The operations on the dictionary work as follows:</p>
+
+<ul>
+<li><strong>Initialization:</strong> Simply set $S.top = 0$, so that there are no valid entries in the stack.<br /></li>
+<li><strong>SEARCH:</strong> Given key $k$, we check whether we have a validating cycle, i.e., whether $1 \le T [k] \le S.top$ and $S[T[k]] = k$. If so, we return $S^\prime[T[k]]$, and otherwise we return $\text{NIL}$.<br /></li>
+<li><strong>INSERT:</strong> To insert object $x$ with key $k$, assuming that this object is not already in the dictionary, we increment $S.top$, set $S[S.top] = k$, set $S^\prime[S.top] = x$, and set $T[k] = S.top$.<br /></li>
+<li><strong>DELETE:</strong> To delete object $x$ with key $k$, assuming that this object is in the dictionary, we need to break the validating cycle. The trick is to also ensure that we don&rsquo;t leave a &ldquo;hole&rdquo; in the stack, and we solve this problem by moving the top entry of the stack into the position that we are vacating-and then fixing up <em>that</em> entry&rsquo;s validating cycle. That is, we execute the following sequence of assignments:<br /></li>
+</ul>
+
+<div>
+$$
+\begin{aligned}
+    & S[T[k]] = S[S.top]   \\
+    & S'[T[k]] = S'[S.top] \\
+    & T[S[T[k]]] = T[k]    \\
+    & T[k] = 0             \\
+    & S.top = S.top - 1
+\end{aligned}
+$$
+</div>
+
+<p>Each of these operation - initialization, $\text{SEARCH}$, $\text{INSERT}$, and $\text{DELETE}$-takes $O(1)$ time.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10095,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10110,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10112,6 +10259,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10128,6 +10276,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10143,6 +10292,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14615,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap11/" title="11 Hash Tables"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap11/11.2/" title="11.2 Hash tables" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14628,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>13.4 Deletion :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap13/13.4/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2835,7 +2835,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap13/" title="13 Red-Black Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2918,7 +2918,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap13/13.4/" title="13.4 Deletion" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap13/13.4/" title="13.4 Deletion" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap13/13.4/">
         13.4 Deletion
         
@@ -8374,56 +8374,221 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap13/13.4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap13/'>13 Red-Black Trees</a> > 13.4 Deletion
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#13-4-1">13.4-1</a></li>
+<li><a href="#13-4-2">13.4-2</a></li>
+<li><a href="#13-4-3">13.4-3</a></li>
+<li><a href="#13-4-4">13.4-4</a></li>
+<li><a href="#13-4-5">13.4-5</a></li>
+<li><a href="#13-4-6">13.4-6</a></li>
+<li><a href="#13-4-7">13.4-7</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>13.4 Deletion</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="13-4-1">13.4-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Argue that after executing $\text{RB-DELETE-FIXUP}$, the root of the tree must be black.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<ul>
+<li><strong>Case 1:</strong> transform to 2, 3, 4.</li>
+<li><strong>Case 2:</strong> if terminates, the root of the subtree (the new $x$) is set to black.</li>
+<li><strong>Case 3:</strong> transform to 4.</li>
+<li><strong>Case 4:</strong> the root (the new $x$) is set to black.</li>
+</ul>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="13-4-2">13.4-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Argue that if in $\text{RB-DELETE}$ both $x$ and $x.p$ are red, then property 4 is restored by the call to $\text{RB-DELETE-FIXUP}(T, x)$.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>Suppose that both $x$ and $x.p$ are red in $\text{RB-DELETE}$. This can only happen
+in the else-case of line 9. Since we are deleting from a red-black tree, the other child of y.p which becomes $x$&rsquo;s sibling in the call to $\text{RB-TRANSPLANT}$ on line 14 must be black, so $x$ is the only child of $x.p$ which is red. The while-loop condition of $\text{RB-DELETE-FIXUP}(T, x)$ is immediately violated so we simply set $x.color = black$, restoring property 4.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="13-4-3">13.4-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>In Exercise 13.3-2, you found the red-black tree that results from successively inserting the keys $41, 38, 31, 12, 19, 8$ into an initially empty tree. Now show the red-black trees that result from the successive deletion of the keys in the order $8, 12, 19, 31, 38, 41$.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<ul>
+<li><p>initial:</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p><img src="https://i.imgur.com/xh3cYv7.png?width=30rem" alt="" /></p></li>
 
-<h1 id="more-informations">More Informations</h1>
+<li><p>delete $8$:</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p><img src="https://i.imgur.com/dxsoxhq.png?width=30rem" alt="" /></p></li>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<li><p>delete $12$:</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p><img src="https://i.imgur.com/fwUh4YE.png?width=30rem" alt="" /></p></li>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<li><p>delete $19$:</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p><img src="https://i.imgur.com/ZcRQw4d.png?width=30rem" alt="" /></p></li>
+
+<li><p>delete $31$:</p>
+
+<p><img src="https://i.imgur.com/9E4l28g.png?width=30rem" alt="" /></p></li>
+
+<li><p>delete $38$:</p>
+
+<p><img src="https://i.imgur.com/HByIb6J.png?width=30rem" alt="" /></p></li>
+
+<li><p>delete $41$:</p>
+
+<p><img src="https://i.imgur.com/xZSTs76.png?width=30rem" alt="" /></p></li>
+</ul>
+
+<h2 id="13-4-4">13.4-4</h2>
+
+<blockquote>
+<p>In which lines of the code for $\text{RB-DELETE-FIXUP}$ might we examine or modify the sentinel $T.nil$?</p>
+</blockquote>
+
+<p>Since it is possible that $w$ is $T.nil$, any line of $\text{RB-DELETE-FIXUP}(T, x)$ which examines or modifies w must be included. However, as described on page 317, $x$ will never be $T.nil$, so we need not include those lines.</p>
+
+<h2 id="13-4-5">13.4-5</h2>
+
+<blockquote>
+<p>In each of the cases of Figure 13.7, give the count of black nodes from the root of the subtree shown to each of the subtrees $\alpha, \beta, \ldots, \zeta$, and verify that each count remains the same after the transformation. When a node has a color attribute $c$ or $c^\prime$, use the notation $\text{count}(c)$ or $\text{count}(c^\prime)$ symbolically in your count.</p>
+</blockquote>
+
+<p>Our count will include the root (if it is black).</p>
+
+<ul>
+<li><strong>Case 1:</strong> For each subtree, it is $2$ both before and after.</li>
+<li><strong>Case 2:</strong>
+
+<ul>
+<li>For $\alpha$ and $\beta$, it is $1 + \text{count}(c)$ in both cases.</li>
+<li>For the rest of the subtrees, it is from $2 + \text{count}(c)$ to $1 + \text{count}(c)$.</li>
+</ul></li>
+</ul>
+
+<p>This decrease in the count for the other subtreese is handled by then having $x$ represent an additional black.</p>
+
+<ul>
+<li><strong>Case 3:</strong>
+
+<ul>
+<li>For $\epsilon$ and $\zeta$, it is $2+\text{count}(c)$ both before and after.</li>
+<li>For all the other subtrees, it is $1+\text{count}(c)$ both before and after.</li>
+</ul></li>
+<li><strong>Case 4:</strong>
+
+<ul>
+<li>For $\alpha$ and $\beta$, it is from $1 + \text{count}(c)$ to $2 + \text{count}(c)$.</li>
+<li>For $\gamma$ and $\delta$, it is $1 + \text{count}(c) + \text{count}(c^\prime)$ both before and after.</li>
+<li>For $\epsilon$ and $\zeta$, it is $1 + \text{count}(c)$ both before and after.
+<br /></li>
+</ul></li>
+</ul>
+
+<p>This increase in the count for $\alpha$ and $\beta$ is because $x$ before indicated an extra black.</p>
+
+<h2 id="13-4-6">13.4-6</h2>
+
+<blockquote>
+<p>Professors Skelton and Baron are concerned that at the start of case 1 of $\text{RB-DELETE-FIXUP}$, the node $x.p$ might not be black. If the professors are correct, then lines 5–6 are wrong. Show that $x.p$ must be black at the start of case 1, so that the professors have nothing to worry about.</p>
+</blockquote>
+
+<p>Case 1 occurs only if $x$&rsquo;s sibling $w$ is red. If $x.p$ were red, then there would be two reds in a row, namely $x.p$ (which is also $w.p$) and $w$, and we would have had these two reds in a row even before calling $\text{RB-DELETE}$.</p>
+
+<h2 id="13-4-7">13.4-7</h2>
+
+<blockquote>
+<p>Suppose that a node $x$ is inserted into a red-black tree with $\text{RB-INSERT}$ and then is immediately deleted with $\text{RB-DELETE}$. Is the resulting red-black tree the same as the initial red-black tree? Justify your answer.</p>
+</blockquote>
+
+<p>No, the red-black tree will not necessarily be the same. Here are two examples: one in which the tree&rsquo;s shape changes, and one in which the shape remains the same but the node colors change.</p>
+
+<p><img src="https://i.imgur.com/OF1BxXQ.png?width=40rem" alt="" /></p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10117,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10132,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10453,6 +10622,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10467,6 +10637,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10515,6 +10688,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10532,6 +10706,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14640,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap13/13.3/" title="13.3 Insertion"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap13/problems/" title="Chap 13 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14653,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

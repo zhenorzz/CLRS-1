@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>9-2 Weighted median :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-2/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1932,7 +1932,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/" title="9 Medians and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2016,7 +2016,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/problems/" title="Chap 9 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2059,7 +2059,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-2/" title="9-2 Weighted median" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-2/" title="9-2 Weighted median" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-2/">
         Problem 9-2
         
@@ -8374,56 +8374,263 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap09/Problems/9-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap09/'>9 Medians and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap09/problems/'>Chap 9 Problems</a> > 9-2 Weighted median
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>9-2 Weighted median</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>For $n$ distinct elements $x_1, x_2, \ldots, x_n$ with positive weights $w_1, w_2, \ldots, w_n$ such that $\sum_{i = 1}^n w_i = 1$, the <strong><em>weighted (lower) median</em></strong> is the element $x_k$ satisfying</p>
+
+<div>
+$$
+\sum_{x_i < x_k} w_i < \frac{1}{2}
+$$
+</div>
+
+<p>and</p>
+
+<div>
+$$
+\sum_{x_i > x_k} w_i \le \frac{1}{2}.
+$$
+</div>
+
+<p>For example, if the elements are $0.1, 0.35, 0.05, 0.1, 0.15, 0.05, 0.2$ and each element equals its weight (that is, $w_i = x_i$ for $i = 1, 2, \ldots, 7$), then the median is $0.1$, but the weighted median is $0.2$.</p>
+
+<p><strong>a.</strong> Argue that the median of $x_1, x_2, \ldots, x_n$ is the weighted median of the $x_i$ with weights $w_i = 1 / n$ for $i = 1, 2, \ldots, n$.</p>
+
+<p><strong>b.</strong> Show how to compute the weighted median of $n$ elements in $O(n\lg n)$ worstcase time using sorting.</p>
+
+<p><strong>c.</strong> Show how to compute the weighted median in $\Theta(n)$ worst-case time using a linear-time median algorithm such as $\text{SELECT}$ from Section 9.3.</p>
+
+<p>The <strong><em>post-office location problem</em></strong> is defined as follows. We are given $n$ points $p_1, p_2, \ldots, p_n$ with associated weights $w_1, w_2, \ldots, w_n$. We wish to find a point $p$ (not necessarily one of the input points) that minimizes the sum $\sum_{i = 1}^n w_i d(p, p_i)$, where $d(a, b)$ is the distance between points $a$ and $b$.</p>
+
+<p><strong>d.</strong> Argue that the weighted median is a best solution for the $1$-dimensional postoffice location problem, in which points are simply real numbers and the distance between points $a$ and $b$ is $d(a, b) = |a - b|$.</p>
+
+<p><strong>e.</strong> Find the best solution for the $2$-dimensional post-office location problem, in which the points are $(x,y)$ coordinate pairs and the distance between points $a = (x_1, y_1)$ and $b = (x_2, y_2)$ is the <strong><em>Manhattan distance</em></strong> given by $d(a, b) = |x_1 - x_2| + |y_1 - y_2|$.</p>
+</blockquote>
+
+<p><strong>a.</strong> The median $x$ of the elements $x_1, x_2, \ldots, x_n$, is an element $x = x_k$ satisfying $|{x_i: 1\le i\le n \text{ and } x_i &lt; x}| \le n / 2$ and $|{x_i: 1 \le i \le n \text{ and } x_i &gt; x}| \le n / 2$. If each element $x_i$ is assigned a weight $x_i = 1 / n$, then we get</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{x_i < x} w_i
+    & =   \sum_{x_i < x} \frac{1}{n} \\
+    & =   \frac{1}{n} \cdot \sum_{x_i < x} 1 \\
+    & =   \frac{1}{n} \cdot |{x_i: 1\le i\le n\text{ and } x_i < x}| \\
+    & \le \frac{1}{n} \cdot \frac{n}{2} \\
+    & =   \frac{1}{2},
+\end{aligned}
+$$
+</div>
+
+<p>and</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{x_i > x} w_i
+    & =   \sum_{x_i > x} \frac{1}{n} \\
+    & =   \frac{1}{n} \cdot \sum_{x_i > x} 1 \\
+    & =   \frac{1}{n} \cdot |{x_i: 1\le i\le n\text{ and } x_i > x}| \\
+    & \le \frac{1}{n} \cdot \frac{n}{2} \\
+    & =   \frac{1}{2},
+\end{aligned}
+$$
+</div>
+
+<p>which proves that $x$ is also the weighted median of $x_1, x_2, \ldots, x_n$ with weights $x_i = 1 / n$, for $i = 1, 2, \ldots, n$.</p>
+
+<p><strong>b.</strong> We first sort the $n$ elements into increasing order by $x_i$ values. Then we scan the array of sorted $x_i$&rsquo;s, starting with the smallest element and accumulating weights as we scan, until the total exceeds $1 / 2$. The last element, say $x_k$, whose weight caused the total to exceed $1 / 2$, is the weighted median. Notice that the total weight of all elements smaller than $x_k$ is less than $1 / 2$, because $x_k$ was the first element that caused the total weight to exceed $1 / 2$. Similarly, the total weight of all elements larger than $x_k$ is also less than $1 / 2$, because the total weight of all the other elements exceeds $1 / 2$.</p>
+
+<p>The sorting phase can be done in $O(n\lg n)$ worst-case time (using merge sort or heapsort), and the scanning phase takes $O(n)$ time. The total running time in the worst case, therefore, is $O(n\lg n)$.</p>
+
+<p><strong>c.</strong> We find the weighted median in $\Theta(n)$ worst-case time using the $\Theta(n)$ worst-case median algorithm in Section 9.3. (Although the first paragraph of the section only claims an $O(n)$ upper bound, it is easy to see that the more precise running time of $\Theta(n)$ applies as well, since steps 1, 2, and 4 of $\text{SELECT}$ actually take $\Theta(n)$ time.)</p>
+
+<p>The weighted-median algorithm works as follows. If $n \le 2$, we just return the brute-force solution. Otherwise, we proceed as follows. We find the actual median $x_k$ of the $n$ elements and then partition around it. We then compute the total weights of the two halves. If the weights of the two halves are each strictly less than $1 / 2$, then the weighted median is $x_k$ . Otherwise, the weighted median should be in the half with total weight exceeding $1 / 2$. The total weight of the &ldquo;light&rdquo; half is lumped into the weight of $x_k$ , and the search continues within the half that weighs more than $1 / 2$. Here&rsquo;s pseudocode, which takes as input a set $X = {x_1, x_2, \ldots, x_n}$:</p>
+
+<pre><code class="language-cpp">WEIGHTED-MEDIAN(X)
+    if n == 1
+        return x1
+    else if n == 2
+        if w1 ≥ w2
+            return x1
+        else return x2
+    else find the median xk of X = {x1, x2,..., xn}
+        partition the set X around xk
+        compute WL = sum\_{xi &lt; xk}(wi) and WG = sum\_{xi &gt; xk}(wi)
+        if WL &lt; 1 / 2 and WG &lt; 1 / 2
+            return xk
+        else if WL &gt; 1 / 2
+            wk = wk + WG
+            X' = {xi ∈ X: xi ≤ xk}
+            return WEIGHTED-MEDIAN(X')
+        else wk = wk + WL
+            X' = {xi ∈ X: xi ≥ xk}
+            return WEIGHTED-MEDIAN(X')
+</code></pre>
+
+<p>The recurrence for the worst-case running time of $\text{WEIGHTED-MEDIAN}$ is $T(n) = T(n / 2 + 1) + \Theta(n)$, since there is at most one recursive call on half the number of elements, plus the median element $x_k$, and all the work preceding the recursive call takes $\Theta(n)$ time. The solution of the recurrence is $T (n) = \Theta(n)$.</p>
+
+<p><strong>d.</strong> Let the $n$ points be denoted by their coordinates $x_1, x_2, \ldots, x_n$, let the corresponding weights be $w_1, w_2, \ldots, w_n$, and let $x = x_k$ be the weighted median. For any point $p$, let $f(p) = \sum_{i = 1}^n w_i |p - x_i|$; we want to find a point $p$ such that $f(p)$ is minimum. Let $y$ be any point (real number) other than $x$. We show the optimality of the weighted median $x$ by showing that $f(y) - f(x) \ge 0$. We examine separately the cases in which $y &gt; x$ and $x &gt; y$. For any $x$ and $y$, we have</p>
+
+<div>
+$$
+\begin{aligned}
+f(y) - f(x) & = \sum_{i = 1}^n w_i |y - x_i| - \sum_{i = 1}^n w_i |x - x_i| \\
+            & = \sum_{i = 1}^n w_i (|y - x_i| - |x - x_i|).
+\end{aligned}
+$$
+</div>
+
+<p>When $y &gt; x$, we bound the quantity $|y - x_i| - |x - x_i|$ from below by examining three cases:</p>
+
+<ol>
+<li>$x &lt; y \le x_i$: Here, $|x - y| + |y - x_i| = |x - x_i|$ and $|x - y| = y - x$, which imply that $|y - x_i| - |x - x_i| = -|x - y| = x - y$.</li>
+<li>$x &lt; x_i \le y$: Here, $|y - x_i| \ge 0$ and $|x_i - x| \le y - x$, which imply that $|y - x_i| - |x - x_i| \ge -(y - x) = x - y$.</li>
+<li>$x_i \le x &lt; y$: Here, $|x - x_i| + |y - x| = |y - x_i|$ and $|y - x| = y - x$, which imply that $y - x_i| - |x - x_i| = |y - x| = y - x$.</li>
+</ol>
+
+<p>Separating out the first two cases, in which $x &lt; x_i$, from the third case, in which $x \ge x_i$, we get</p>
+
+<div>
+$$
+\begin{aligned}
+f(y) - f(x) & =   \sum_{i = 1}^n w_i(|y - x_i| - |x - x_i|) \\
+            & \ge \sum_{x < x_i} w_i (x - y) + \sum_{x \ge x_i} w_i (y - x) \\
+            & =   (y - x) \Bigg(\sum_{x \ge x_i} w_i - \sum_{x < x_i} w_i \Bigg).
+\end{aligned}
+$$
+</div>
+
+<p>The property that $\sum_{x_i &lt; x} w_i &lt; 1 / 2$ implies that $\sum_{x \ge x_i} w_i \ge 1 / 2$. This fact, combined with $y - x &gt; 0$ and $\sum_{x &lt; x_i} w_i \le 1 / 2$, yields that $f(y) - f(x) \ge 0$.</p>
+
+<p>When $x &gt; y$, we bound the quantity $|y - x_i| - |x - x_i|$ from below by examining three cases:</p>
+
+<ol>
+<li>$x_i \le y &lt; x$: Here, $|y - x_i| + |x - y| = |x - x_i|$ and $|x - y| = x - y$, which imply that $|y - x_i| - |x - x_i| = -|x - y| = y - x$.</li>
+<li>$y \le x_i &lt; x$: Here, $|y - x_i| \ge 0$ and $|x - x_i| \le x - y$, which imply that $|y - x_i| - |x - x_i| \ge -(x - y) = y - x$.</li>
+<li>$y &lt; x \le x_i$: Here, $|x - y| + |x - x_i| = |y - x_i|$ and $|x - y| = x - y$, which imply that $y - x_i| - |x - x_i| = |x - y| = x - y$.</li>
+</ol>
+
+<p>Separating out the first two cases, in which $x &gt; x_i$, from the third case, in which $x \le x_i$, we get</p>
+
+<div>
+$$
+\begin{aligned}
+f(y) - f(x) & =   \sum_{i = 1}^n w_i(|y - x_i| - |x - x_i|) \\
+            & \ge \sum_{x > x_i} w_i(y - x) + \sum_{x \ge x_i} w_i(x - y) \\
+            & =   (x - y) \Bigg(\sum_{x \le x_i} w_i - \sum_{x > x_i} w_i \Bigg).
+\end{aligned}
+$$
+</div>
+
+<p>The property that $sum_{x_i &gt; x} w_i \le 1 / 2$ implies that $\sum_{x \le x_i} w_i &gt; 1 / 2$. This fact, combined with $x - y &gt; 0$ and $\sum_{x &gt; x_i} w_i &lt; 1 / 2$, yields that $f(y) - f(x) &gt; 0$.</p>
+
+<p><strong>e.</strong> We are given $n$ 2-dimensional points $p_1, p_2, \ldots, p_n$, where each $p_i$ is a pair of real numbers $p_i = (x_i, y_i)$, and positive weights $w_1, w_2, \ldots, w_n$. The goal is to find a point $p = (x, y)$ that minimizes the sum</p>
+
+<div>
+$$
+f(x, y) = \sum_{i = 1}^n w_i(|x - x_i| + |y - y_i|).
+$$
+</div>
+
+<p>We can express the cost function of the two variables, $f(x, y)$, as the sum of two functions of one variable each: $f(x, y) = g(x) + h(y)$, where $g(x) = \sum_{i = 1}^n w_i |x - x_i|$, and $h(y) = \sum_{i = 1}^n w_i |y - y_i|$. The goal of finding a point $p = (x, y)$ that minimizes the value of $f(x, y)$ can be achieved by treating each dimension independently, because $g$ does not depend on $y$ and $h$ does not depend on $x$. Thus,</p>
+
+<div>
+$$
+\begin{aligned}
+\min_{x, y} f(x, y)
+    & = \min_{x, y} (g(x) + h(y)) \\
+    & = \min_x \Big(\min_y(g(x) + h(y))\Big) \\
+    & = \min_x \Big(g(x) + \min_y h(y)\Big) \\
+    & = \min_x g(x) + \min_y h(y).
+\end{aligned}
+$$
+</div>
+
+<p>Consequently, finding the best location in 2 dimensions can be done by finding the weighted median $x_k$ of the $x$-coordinates and then finding the weighted median $y_j$ of the $y$-coordinates. The point $(x_k, y_j)$ is an optimal solution for the 2-dimensional post-office location problem.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9429,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9444,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9803,6 +10014,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9817,6 +10029,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9866,6 +10081,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9878,6 +10094,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9895,6 +10114,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9910,6 +10130,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14686,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-1/" title="9-1 Largest $i$ numbers in sorted order"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap09/problems/9-3/" title="9-3 Small order statistics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

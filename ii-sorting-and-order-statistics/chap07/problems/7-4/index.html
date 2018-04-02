@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>7-4 Stack depth for quicksort :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-4/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1393,7 +1393,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/" title="7 Quicksort" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1496,7 +1496,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/problems/" title="Chap 7 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1577,7 +1577,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-4/" title="7-4 Stack depth for quicksort" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-4/" title="7-4 Stack depth for quicksort" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-4/">
         Problem 7-4
         
@@ -8374,56 +8374,143 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap07/Problems/7-4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap07/'>7 Quicksort</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap07/problems/'>Chap 7 Problems</a> > 7-4 Stack depth for quicksort
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>7-4 Stack depth for quicksort</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>The $\text{QUICKSORT}$ algorithm of Section 7.1 contains two recursive calls to itself. After $\text{QUICKSORT}$ calls $\text{PARTITION}$, it recursively sorts the left subarray and then it recursively sorts the right subarray. The second recursive call in $\text{QUICKSORT}$ is not really necessary; we can avoid it by using an iterative control structure. This technique, called tail recursion, is provided automatically by good compilers. Consider the following version of quicksort, which simulates tail recursion:</p>
+
+<pre><code class="language-cpp">TAIL-RECURSIVE-QUICKSORT(A, p, r)
+    while p &lt; r
+        // Partition and sort left subarray.
+        q = PARTITION(A, p, r)
+        TAIL-RECURSIVE-QUICKSORT(A, p, q - 1)
+        p = q + 1
+</code></pre>
+
+<p><strong>a.</strong> Argue that $\text{TAIL-RECURSIVE-QUICKSORT}(A, 1, A.length)$ correctly sorts the array $A$.
+Compilers usually execute recursive procedures by using a <strong><em>stack</em></strong> that contains pertinent information, including the parameter values, for each recursive call. The information for the most recent call is at the top of the stack, and the information for the initial call is at the bottom. Upon calling a procedure, its information is <strong><em>pushed</em></strong> onto the stack; when it terminates, its information is <strong><em>popped</em></strong>. Since we assume that array parameters are represented by pointers, the information for each procedure call on the stack requires $O(1)$ stack space. The <strong><em>stack depth</em></strong> is the maximum amount of stack space used at any time during a computation.</p>
+
+<p><strong>b.</strong> Describe a scenario in which $\text{TAIL-RECURSIVE-QUICKSORT}$&rsquo;s stack depth is $\Theta(n)$ on an $n$-element input array.</p>
+
+<p><strong>c.</strong> Modify the code for $\text{TAIL-RECURSIVE-QUICKSORT}$ so that the worst-case stack depth is $\Theta(\lg n)$. Maintain the $O(n\lg n)$ expected running time of the algorithm.</p>
+</blockquote>
+
+<p><strong>a.</strong> $\text{QUICKSORT}^\prime$ does exactly what $\text{QUICKSORT}$ does; hence it sorts correctly.</p>
+
+<p>$\text{QUICKSORT}$ and $\text{QUICKSORT}^\prime$ do the same partitioning, and then each calls itself with arguments $A$, $p$, $q - 1$. $\text{QUICKSORT}$ then calls itself again, with arguments $A$, $q + 1$, $r$. $\text{QUICKSORT}^\prime$ instead sets $p = q + 1$ and performs another iteration of its while loop. This executes the same operations as calling itself with $A$, $q + 1$, $r$, because in both cases, the first and third arguments ($A$ and $r$) have the same values as before, and $p$ has the old value of $q + 1$.</p>
+
+<p><strong>b.</strong> The stack depth of $\text{QUICKSORT}^\prime$ will be $\Theta(n)$ on an $n$-element input array if there are $\Theta(n)$ recursive calls to $\text{QUICKSORT}^\prime$. This happens if every call to $\text{PARTITION}(A, p, r)$ returns $q = r$. The sequence of recursive calls in this scenario is</p>
+
+<div>
+$$
+\begin{aligned}
+    & \text{QUICKSORT$'(A, 1, n)$}, \\
+    & \text{QUICKSORT$'(A, 1, n - 1)$}, \\
+    & \text{QUICKSORT$'(A, 1, n - 2)$}, \\
+    & \quad\quad\vdots \\
+    & \text{QUICKSORT$'(A, 1, 1)$}.
+\end{aligned}
+$$
+</div>
+
+<p>Any array that is already sorted in increasing order will cause $\text{QUICKSORT}^\prime$ to behave this way.</p>
+
+<p><strong>c.</strong> The problem demonstrated by the scenario in part (b) is that each invocation of $\text{QUICKSORT}^\prime$ calls $\text{QUICKSORT}^\prime$ again with almost the same range. To avoid such behavior, we must change $\text{QUICKSORT}^\prime$ so that the recursive call is on a smaller interval of the array. The following variation of $\text{QUICKSORT}^\prime$ checks which of the two subarrays returned from $\text{PARTITION}$ is smaller and recurses on the smaller subarray, which is at most half the size of the current array. Since the array size is reduced by at least half on each recursive call, the number of recursive calls, and hence the stack depth, is $\Theta(\lg n)$ in the worst case. Note that this method works no matter how partitioning is performed (as long as the $\text{PARTITION}$ procedure has the same functionality as the procedure given in Section 7.1).</p>
+
+<pre><code>QUICKSORT''(A, p, r)
+    while p &lt; r
+        // Partition and sort the small subarray first.
+        q = PARTITION(A, p, r)
+        if q - p &lt; r - q
+            QUICKSORT''(A, p, q - 1)
+            p = q + 1
+        else QUICKSORT''(A, q + 1, r)
+            r = q - 1
+</code></pre>
+
+<p>The expected running time is not affected, because exactly the same work is done as before: the same partitions are produced, and the same subarrays are sorted.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9309,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9324,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9399,6 +9490,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9413,6 +9505,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9478,6 +9573,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9490,6 +9586,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9539,6 +9638,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9554,6 +9654,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14566,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-3/" title="7-3 Alternative quicksort analysis"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-5/" title="7-5 Median-of-3 partition" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

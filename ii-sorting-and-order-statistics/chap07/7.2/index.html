@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>7.2 Performance of quicksort :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap07/7.2/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1393,7 +1393,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/" title="7 Quicksort" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1438,7 +1438,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/7.2/" title="7.2 Performance of quicksort" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/7.2/" title="7.2 Performance of quicksort" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap07/7.2/">
         7.2 Performance of quicksort
         
@@ -8374,56 +8374,164 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap07/7.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap07/'>7 Quicksort</a> > 7.2 Performance of quicksort
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#7-2-1">7.2-1</a></li>
+<li><a href="#7-2-2">7.2-2</a></li>
+<li><a href="#7-2-3">7.2-3</a></li>
+<li><a href="#7-2-4">7.2-4</a></li>
+<li><a href="#7-2-5">7.2-5</a></li>
+<li><a href="#7-2-6-star">7.2-6 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>7.2 Performance of quicksort</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="7-2-1">7.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Use the substitution method to prove that the recurrence $T(n) = T(n - 1) + \Theta(n)$ has the solution $T(n) = \Theta(n^2)$, as claimed at the beginning of section 7.2.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>We represent $\Theta(n)$ as $c_2n$ and we guess that $T(n) \le c_1n^2$,</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+\begin{aligned}
+T(n) & =   T(n - 1) + c_2n \\
+     & \le c_1(n - 1)^2 + c_2n \\
+     & =   c_1n^2 - 2c_1n + c_1 + c_2n & (2c_1 > c_2, n \ge c_1 / (2c_1 - c_2)) \\
+     & \le c_1n^2. 
+\end{aligned}
+$$
+</div>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<h2 id="7-2-2">7.2-2</h2>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<blockquote>
+<p>What is the running time of $\text{QUICKSORT}$ when all elements of the array $A$ have the same value?</p>
+</blockquote>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>It is $\Theta(n^2)$, since one of the partitions is always empty (see exercise 7.1-2.)</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<h2 id="7-2-3">7.2-3</h2>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<blockquote>
+<p>Show that the running time of $\text{QUICKSORT}$ is $\Theta(n^2)$ when the array $A$ contains distict elements and is sorted in decreasing order.</p>
+</blockquote>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>$\text{PARTITION}$ does a &ldquo;worst-case partitioning&rdquo; when the elements are in decreasing order. It reduces the size of the subarray under consideration by only $1$ at each step, which we&rsquo;ve seen has running time $\Theta(n^2)$.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<p>In particular, $\text{PARTITION}$, given a subarray $A[p..r]$ of distinct elements in decreasing order, produces an empty partition in $A[p..q - 1]$, puts the pivot (originally in $A[r]$) into $A[p]$, and produces a partition $A[p + 1..r]$ with only one fewer element than $A[p..r]$. The recurrence for $\text{QUICKSORT}$ becomes $T(n) = T(n - 1) + \Theta(n)$, which has the solution $T(n) = \Theta(n^2)$.</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<h2 id="7-2-4">7.2-4</h2>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<blockquote>
+<p>Banks often record transactions on an account in order of the times of the transactions, but many people like to receive their bank statements with checks listed in order by check numbers. People usually write checks in order by check number, and merchants usually cash the with reasonable dispatch. The problem of converting time-of-transaction ordering to check-number ordering is therefore the problem of sorting almost-sorted input. Argue that the procedure $\text{INSERTION-SORT}$ would tend to beat the procedure $\text{QUICKSORT}$ on this problem.</p>
+</blockquote>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>The more sorted the array is, the less work insertion sort will do. Namely, $\text{INSERTION-SORT}$ is $\Theta(n + d)$, where $d$ is the number of inversions in the array. In the example above the number of inversions tends to be small so insertion sort will be close to linear.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>On the other hand, if $\text{PARTITION}$ does picks a pivot that does not participate in an inversion, it will produce and empty partition. Since there is a small number of inversions, $\text{QUICKSORT}$ is very likely to produce empty partitions.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<h2 id="7-2-5">7.2-5</h2>
+
+<blockquote>
+<p>Suppose that the splits at every level of quicksort are in proportion $1 - \alpha$ to $\alpha$, where $0 &lt; \alpha \le 1 / 2$ is a constant. Show that the minumum depth of a leaf in the recursion tree is approximately $-\lg n / \lg\alpha$ and the maximum depth is approximately $-\lg n / \lg(1 - \alpha)$. (Don&rsquo;t worry about integer round-off.)</p>
+</blockquote>
+
+<p>The minimum depth follows a path that always takes the smaller part of the partition—i.e., that multiplies the number of elements by $\alpha$. One iteration reduces the number of elements from $n$ to $\alpha n$, and $i$ iterations reduces the number of elements to $\alpha^i n$. At a leaf, there is just one remaining element, and so at a minimum-depth leaf of depth $m$, we have $\alpha^m n = 1$. Thus, $\alpha^m = 1 / n$. Taking logs, we get $m\lg\alpha = -\lg n$, or $m = -\lg n / \lg\alpha$.</p>
+
+<p>Similarly, maximum depth corresponds to always taking the larger part of the partition, i.e., keeping a fraction $1 - \alpha$ of the elements each time. The maximum depth $M$ is reached when there is one element left, that is, when $(1 - \alpha)^M n = 1$. Thus, $M = -\lg n / \lg (1 - \alpha)$.</p>
+
+<p>All these equations are approximate because we are ignoring floors and ceilings.</p>
+
+<h2 id="7-2-6-star">7.2-6 $\star$</h2>
+
+<blockquote>
+<p>Argue that for any constant $0 &lt; \alpha \le 1 / 2$, the probability is approximately $1 - 2\alpha$ that on a random input array, $\text{PARTITION}$ produces a split more balanced than $1 - \alpha$ to $\alpha$.</p>
+</blockquote>
+
+<p>In order to produce a worse split than $\alpha$ to $1 - \alpha$, $\text{PARTITION}$ must pick a pivot that will be either within the smallest $\alpha n$ elements or the largest $\alpha n$ elements. The probability of either is (approximately) $\alpha n / n = \alpha$ and the probability of both is $2\alpha$. Thus, the probability of having a better partition is the complement, $1 - 2\alpha$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9330,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9345,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9399,6 +9511,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9413,6 +9526,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9429,6 +9545,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9446,6 +9563,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14583,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap07/7.1/" title="7.1 Description of quicksort"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap07/7.3/" title="7.3 A randomized version of quicksort" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

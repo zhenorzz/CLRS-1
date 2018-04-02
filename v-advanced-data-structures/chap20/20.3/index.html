@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>20.3 The van Emde Boas tree :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/v-advanced-data-structures/chap20/20.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4157,7 +4157,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4571,7 +4571,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap20/" title="20 van Emde Boas Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4635,7 +4635,7 @@
  
   
     
-      <li data-nav-id="/CLRS/v-advanced-data-structures/chap20/20.3/" title="20.3 The van Emde Boas tree" class="dd-item ">
+      <li data-nav-id="/CLRS/v-advanced-data-structures/chap20/20.3/" title="20.3 The van Emde Boas tree" class="dd-item active">
         <a href="/CLRS/v-advanced-data-structures/chap20/20.3/">
         20.3 The van Emde Boas tree
         
@@ -8374,56 +8374,163 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/V%20Advanced%20Data%20Structures/Chap20/20.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/v-advanced-data-structures/'>V Advanced Data Structures</a> > <a href='/CLRS/v-advanced-data-structures/chap20/'>20 van Emde Boas Trees</a> > 20.3 The van Emde Boas tree
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#20-3-1">20.3-1</a></li>
+<li><a href="#20-3-2">20.3-2</a></li>
+<li><a href="#20-3-3">20.3-3</a></li>
+<li><a href="#20-3-4">20.3-4</a></li>
+<li><a href="#20-3-5">20.3-5</a></li>
+<li><a href="#20-3-6">20.3-6</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>20.3 The van Emde Boas tree</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="20-3-1">20.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Modify vEB trees to support duplicate keys.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>To support duplicate keys, for each $u = 2$ vEB tree, instead of storing just a bit in each of the entries of its array, it should store an integer representing how many elements of that value the vEB contains.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="20-3-2">20.3-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Modify vEB trees to support keys that have associated satellite data.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>For any key which is a minimum on some vEB, we&rsquo;ll need to store its satellite data with the min value since the key doesn&rsquo;t appear in the subtree. The rest of the satellite data will be stored alongside the keys of the vEB trees of size $2$. Explicitly, for each non-summary vEB tree, store a pointer in addition to min. If min is $\text{NIL}$, the pointer should also point to $\text{NIL}$. Otherwise, the pointer should point to the satellite data associated with that minimum. In a size $2$ vEB tree, we&rsquo;ll have two additional pointers, which will each point to the minimum&rsquo;s and maximum&rsquo;s satellite data, or $\text{NIL}$ if these don&rsquo;t exist. In the case where $\min = \max$, the pointers will point to the same data.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="20-3-3">20.3-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Write pseudocode for a procedure that creates an empty van Emde Boas tree.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>We define the procedure for any $u$ that is a power of $2$. If $u = 2$, then, just slap that fact together with an array of length $2$ that contains $0$ in both entries.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>If $u = 2k &gt; 2$, then, we create an empty vEB tree called Summary with $u = 2^{\lceil k / 2 \rceil}$. We also make an array called cluster of length $2^{\lceil k / 2 \rceil}$ with each entry initialized to an empty vEB tree with $u = 2^{\lfloor k / 2 \rfloor}$. Lastly, we create a min and max element, both initialized to $\text{NIL}$.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="20-3-4">20.3-4</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>What happens if you call $\text{VEB-TREE-INSERT}$ with an element that is already in the vEB tree? What happens if you call $\text{VEB-TREE-DELETE}$ with an element that is not in the vEB tree? Explain why the procedures exhibit the behavior that they do. Show how to modify vEB trees and their operations so that we can check in constant time whether an element is present.</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>Suppose that $x$ is already in $V$ and we call $\text{INSERT}$. Then we can&rsquo;t satisfy lines 1, 3, 6, or 10, so we will enter the else case on line 9 every time, causing an infinite loop. Now suppose we call $\text{DELETE}$ when $x$ isn&rsquo;t in $V$ . If there is only a single element in $V$, lines 1 through 3 will delete it, regardless of what element it is. To enter the elseif of line 4, $x$ can&rsquo;t be equal to $0$ or $1$ and the vEB tree must be of size $2$. In this case, we delete the max element, regardless of what it is. Since the recursive call always puts us in this case, we always delete an element we shouldn&rsquo;t. To avoid these issue, keep and updated auxiliary array $A$ with $u$ elements. Set $A[i] = 0$ if $i$ is not in the tree, and $1$ if it is. Since we can perform constant time updates to this array, it won&rsquo;t affect the runtime of any of our operations. When inserting $x$, check first to be sure $A[x] = 0$. If it&rsquo;s not, simply return. If it is, set $A[x] = 1$ and proceed with insert as usual. When deleting $x$, check if $A[x] = 1$. If it isn&rsquo;t, simply return. If it is, set $A[x] = 0$ and proceed with delete as usual.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<h2 id="20-3-5">20.3-5</h2>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<blockquote>
+<p>Suppose that instead of $\sqrt[\uparrow]u$ clusters, each with universe size $\sqrt[\downarrow]u$, we constructed vEB trees to have $u^{1 / k}$ clusters, each with universe size $u^{1 - 1 / k}$, where $k &gt; 1$ is a constant. If we were to modify the operations appropriately, what would be their running times? For the purpose of analysis, assume that $u^{1 / k}$ and $u^{1 - 1 / k}$ are always integers.</p>
+</blockquote>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>Similar to the analysis of $\text{(20.4)}$, we will analyze</p>
+
+<div>
+$$
+T(u) \le T(u^{1 - 1 / k}) + T(u^{1 / k}) + O(1).
+$$
+</div>
+
+<p>This is a good choice for analysis because for many operations we first check the summary vEB tree, which will have size $u^{1 / k}$ (the second term). And then possible have to check a vEB tree somewhere in cluster, which will have size $u^{1 - 1/k}$ (the first term). We let $T(2^m) = S(m)$, so the equation becomes</p>
+
+<div>
+$$
+S(m) \le S(m(1 - 1/k)) + S(m/k) + O(1).
+$$
+</div>
+
+<p>If $k &gt; 2$ the first term dominates, so by master theorem, we&rsquo;ll have that $S(m)$ is $O(\lg m)$, this means that T will be $O(\lg(\lg u))$ just as in the original case where we took squareroots.</p>
+
+<h2 id="20-3-6">20.3-6</h2>
+
+<blockquote>
+<p>Creating a vEB tree with universe size $u$ requires $O(u)$ time. Suppose we wish to explicitly account for that time. What is the smallest number of operations $n$ for which the amortized time of each operation in a vEB tree is $O(\lg\lg u)$?</p>
+</blockquote>
+
+<p>Set $n = u / \lg\lg u$. Then performing $n$ operations takes $c(u + n\lg\lg u)$ time for some constant $c$. Using the aggregate amortized analysis, we divide by n to see that the amortized cost of each operations is $c(\lg\lg u + \lg\lg u) = O(\lg\lg u)$ per operation. Thus we need $n \ge u/ \lg \lg u$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11428,6 +11535,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11442,6 +11550,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11719,6 +11830,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11733,6 +11845,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11765,6 +11880,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11782,6 +11898,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14582,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/v-advanced-data-structures/chap20/20.2/" title="20.2 A recursive structure"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/v-advanced-data-structures/chap20/problems/" title="Chap 20 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14595,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

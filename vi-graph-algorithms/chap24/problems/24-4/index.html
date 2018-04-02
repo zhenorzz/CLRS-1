@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>24-4 Gabow&#39;s scaling algorithm for single-source shortest paths :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap24/problems/24-4/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5398,7 +5398,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/" title="24 Single-Source Shortest Paths" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5520,7 +5520,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/problems/" title="Chap 24 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5601,7 +5601,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/problems/24-4/" title="24-4 Gabow&#39;s scaling algorithm for single-source shortest paths" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/problems/24-4/" title="24-4 Gabow&#39;s scaling algorithm for single-source shortest paths" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap24/problems/24-4/">
         Problem 24-4
         
@@ -8374,56 +8374,211 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap24/Problems/24-4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap24/'>24 Single-Source Shortest Paths</a> > <a href='/CLRS/vi-graph-algorithms/chap24/problems/'>Chap 24 Problems</a> > 24-4 Gabow's scaling algorithm for single-source shortest paths
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>24-4 Gabow&#39;s scaling algorithm for single-source shortest paths</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>A <strong><em>scaling</em></strong> algorithm solves a problem by initially considering only the highestorder bit of each relevant input value (such as an edge weight). It then refines the initial solution by looking at the two highest-order bits. It progressively looks at more and more high-order bits, refining the solution each time, until it has examined all bits and computed the correct solution.</p>
+
+<p>In this problem, we examine an algorithm for computing the shortest paths from a single source by scaling edge weights. We are given a directed graph $G = (V, E)$ with nonnegative integer edge weights $w$. Let $W = \max_{(u, v) \in E} {w(u, v)}$. Our goal is to develop an algorithm that runs in $O(E\lg W)$ time. We assume that all vertices are reachable from the source.</p>
+
+<p>The algorithm uncovers the bits in the binary representation of the edge weights one at a time, from the most significant bit to the least significant bit. Specifically, let $k = \lceil \lg(W + 1) \rceil$ be the number of bits in the binary representation of $W$, and for $i = 1, 2, \ldots, k$, let $w_i(u, v) = \lfloor w(u, v) / 2^{k - i} \rfloor$. That is, $w_i(u, v)$ is the &ldquo;scaled-down&rdquo; version of $w(u, v)$ given by the $i$ most significant bits of $w(u, v)$. (Thus, $w_k(u, v) = w(u, v)$ for all $(u, v) \in E$.) For example, if $k = 5$ and $w(u, v) = 25$, which has the binary representation $\langle 11001 \rangle$, then $w_3(u, v) = \langle 110 \rangle = 6$. As another example with $k = 5$, if $w(u, v) = \langle 00100 \rangle = 4$, then $w_3(u, v) = \langle 001 \rangle = 1$. Let us define $\delta_i(u, v)$ as the shortest-path weight from vertex $u$ to vertex $v$ using weight function $w_i$. Thus, $\delta_k(u, v) = \delta(u, v)$ for all $u, v \in V$. For a given source vertex $s$, the scaling algorithm first computes the shortest-path weights $\delta_1(s, v)$ for all $v \in V$, then computes $\delta_2(s, v)$ for all $v \in V$, and so on, until it computes $\delta_k(s, v)$ for all $v \in V$. We assume throughout that $|E| \ge |V| - 1$, and we shall see that computing $\delta_i$ from $\delta_{i - 1}$ takes $O(E)$ time, so that the entire algorithm takes $O(kE) = O(E\lg W)$ time.</p>
+
+<p><strong>a.</strong> Suppose that for all vertices $v \in V$, we have $\delta(s, v) \le |E|$. Show that we can compute $\delta(s, v)$ for all $v \in V$ in $O(E)$ time.</p>
+
+<p><strong>b.</strong> Show that we can compute $\delta_1(s, v)$ for all $v \in V$ in $O(E)$ time.</p>
+
+<p>Let us now focus on computing $\delta_i$ from $\delta_{i - 1}$.</p>
+
+<p><strong>c.</strong> Prove that for $i = 2, 3, \ldots, k$, we have either $w_i(u, v) = 2w_{i - 1}(u, v)$ or $w_i(u, v) = 2w_{i - 1}(u, v) + 1$. Then, prove that</p>
+
+<div>
+$$
+ 2\delta_{i - 1}(s, v) \le \delta_i(s, v) \le 2\delta_{i - 1}(s, v) + |V| - 1
+$$
+</div>
+
+<p>for all $v \in V$.</p>
+
+<p><strong>d.</strong> Define for $i = 2, 3, \ldots, k$ and all $(u, v) \in E$,</p>
+
+<div>
+$$
+ \hat w_i = w_i(u, v) + 2\delta_{i - 1}(s, u) - 2\delta_{i - 1}(s, v).
+$$
+</div>
+
+<p>Prove that for $i = 2, 3, \ldots, k$ and all $u, v \in V$, the &ldquo;reweighted&rdquo; value $\hat w_i(u, v)$ of edge $(u, v)$ is a nonnegative integer.</p>
+
+<p><strong>e.</strong> Now, define $\delta_i(s, v)$ as the shortest-path weight from $s$ to $v$ using the weight function $\hat w_i$. Prove that for $i = 2, 3, \ldots, k$ and all $v \in V$,</p>
+
+<div>
+$$
+ \delta_i(s, v) = \hat\delta_i(s, v) + 2\delta_{i - 1}(s, v)
+$$
+</div>
+
+<p>and that $\hat\delta_i(s, v) \le |E|$.</p>
+
+<p><strong>f.</strong> Show how to compute $\delta_i(s, v)$ from $\delta_{i - 1}(s, v)$ for all $v \in V$ in $O(E)$ time, and conclude that we can compute $\delta(s, v)$ for all $v \in V$ in $O(E\lg W)$ time.</p>
+</blockquote>
+
+<p><strong>a.</strong> Since all weights are nonnegative, use Dijkstra&rsquo;s algorithm. Implement the priority queue as an array $Q[0..|E| + 1]$, where $Q[i]$ is a list of vertices $v$ for which $v.d = i$. Initialize $v.d$ for $v \ne s$ to $|E| + 1$ instead of to $\infty$, so that all vertices have a place in $Q$. (Any initial $v.d &gt; \delta(s, v)$ works in the algorithm, since $v.d$ decreases until it reaches $\delta(s, v)$.)</p>
+
+<p>The $|V|$ $\text{EXTRACT-MIN}$s can be done in $O(E)$ total time, and decreasing a $d$ value during relaxation can be done in $O(1)$ time, for a total running time of $O(E)$.</p>
+
+<ul>
+<li>When $v.d$ decreases, just add $v$ to the front of the list in $Q[v.d]$.</li>
+<li>$\text{EXTRACT-MIN}$ removes the head of the list in the first nonempty slot of $Q$. To do $\text{EXTRACT-MIN}$ without scanning all of $Q$, keep track of the smallest $i$ for which $Q[i]$ is not empty. The key point is that when $v.d$ decreases due to relaxation of edge $(u, v)$, $v.d$ remains $u.d$, so it never moves to an earlier slot of $Q$ than the one that had $u$, the previous minimum. Thus $\text{EXTRACT-MIN}$ can always scan upward in the array, taking a total of $O(E)$ time for all $\text{EXTRACT-MIN}$s.</li>
+</ul>
+
+<p><strong>b.</strong> For all $(u, v) \in E$, we have $w_1(u, v) \in {0, 1}$, so $\delta_1(s, v) \le |V| - 1 \le |E|$. Use part (a) to get the $O(E)$ time bound.</p>
+
+<p><strong>c.</strong> To show that $w_i(u, v) = 2w_{i - 1}(u, v)$ or $w_i(u, v) = 2w_{i - 1}(u, v) + 1$, observe that the $i$ bits of $w_i(u, v)$ consist of the $i - 1$ bits of $w_{i - 1}(u, v)$ followed by one more bit. If that low-order bit is $0$, then $w_i(u, v) = 2w_{i - 1}(u, v)$; if it is $1$, then $w_i(u, v) = 2w_{i - 1}(u, v) + 1$.</p>
+
+<p>Notice the following two properties of shortest paths:</p>
+
+<ol>
+<li>If all edge weights are multiplied by a factor of $c$, then all shortest-path weights are multiplied by $c$.</li>
+<li>If all edge weights are increased by at most $c$, then all shortest-path weights are increased by at most $c(|V| - 1)$, since all shortest paths have at most $|V| - 1$ edges.</li>
+</ol>
+
+<p>The lowest possible value for $w_i(u, v)$ is $2w_{i - 1}(u, v)$, so by the first observation, the lowest possible value for $\delta_i(s, v)$ is $2\delta_{i - 1}(s, v)$.</p>
+
+<p>The highest possible value for $w_i(u, v)$ is $2w_{i - 1}(u, v) + 1$. Therefore, using the two observations together, the highest possible value for $\delta_i(s, v)$ is $2\delta_{i - 1}(s, v) + |V| - 1$</p>
+
+<p><strong>d.</strong> We have</p>
+
+<div>
+$$
+\begin{aligned}
+\hat w_i(u, v)
+    & =   w_i(u, v) + 2\delta_{i - 1}(s, u) - 2\delta_{i - 1}(s, v) \\
+    & \ge 2w_{i - 1}(u, v) + 2\delta_{i - 1}(s, u) - 2\delta_{i - 1}(s, v) \\
+    & \ge 0.
+\end{aligned}
+$$
+</div>
+
+<p>The second line follows from part (c), and the third line follows from Lemma 24.10: $\delta_{i - 1}(s, v) \le \delta_{i - 1}(s, u) + w_{i - 1}(u, v)$.</p>
+
+<p><strong>e.</strong> Observe that if we compute $\hat w_i(p)$ for any path $p:u \leadsto v$, the terms $\delta_{i - 1}(s, t)$ cancel for every intermediate vertex $t$ on the path. Thus,</p>
+
+<div>
+$$
+\hat w_i(p) = w_i(p) + 2\delta_{i - 1}(s, u) - 2\delta_{i - 1}(s, v).
+$$
+</div>
+
+<p>(This relationship will be shown in detail in equation ($\text{25.10}$) within the proof of Lemma 25.1.) The $\delta_{i - 1}$ terms depend only on $u$, $v$, and $s$, but not on the path $p$; therefore the same paths will be of minimum $w_i$ weight and of minimum $\hat w_i$ weight between $u$ and $v$. Letting $u = s$, we get</p>
+
+<div>
+$$
+\begin{aligned}
+\hat\delta_i(s, v)
+    & = \delta_i(s, v) + 2\delta_{i - 1}(s, s) - 2\delta_{i - 1}(s, v) \\
+    & = \delta_i(s, v) - 2\delta_{i - 1}(s, v).
+\end{aligned}
+$$
+</div>
+
+<p>Rewriting this result as $\delta_i(s, v) = \hat\delta_i(s, v) + 2\delta_{i - 1}(s, v)$ and combining it with $\delta_i(s, v) \le 2\delta_{i - 1}(s, v) + |V| - 1$ (from part (c)) gives us $\hat\delta_i(s, v) \le |V| - 1 \le |E|$.</p>
+
+<p><strong>f.</strong> To compute $\delta_i(s, v)$ from $\delta_{i - 1}(s, v)$ for all $v \in V$ in $O(E)$ time:</p>
+
+<ol>
+<li>Compute the weights $\hat w_i(u, v)$ in $O(E)$ time, as shown in part (d).</li>
+<li>By part (e), $\hat\delta_i(s, v) \le |E|$, so use part (a) to compute all $\hat\delta_i(s, v)$ in $O(E)$ time.</li>
+<li>Compute all $\delta_i(s, v)$ from $\hat\delta_i(s, v)$ and $\delta_{i - 1}(s, v)$ as shown in part (e), in $O(V)$ time.</li>
+</ol>
+
+<p>To compute all $\delta(s, v)$ in $O(E\lg W)$ time:</p>
+
+<ol>
+<li>Compute $\delta_1(s, v)$ for all $v \in V$. As shown in part (b), this takes $O(E)$ time.</li>
+<li>For each $i = 2, 3, \ldots, k$, compute all $\delta_i(s, v)$ from $\delta_{i - 1}(s, v)$ in $O(E)$ time as shown above. This procedure computes $\delta(s, v) = \delta_k(u, v)$ in time $O(Ek) = O(E\lg W)$.</li>
+</ol>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12137,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12152,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12305,6 +12464,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12319,6 +12479,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12400,6 +12563,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12412,6 +12576,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12461,6 +12628,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12476,6 +12644,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14634,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap24/problems/24-3/" title="24-3 Arbitrage"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap24/problems/24-5/" title="24-5 Karp&#39;s minimum mean-weight cycle algorithm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14647,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

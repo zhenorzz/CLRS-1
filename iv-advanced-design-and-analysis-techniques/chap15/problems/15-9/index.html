@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>15-9 Breaking a string :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-9/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3256,7 +3256,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/" title="15 Dynamic Programming" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3378,7 +3378,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/" title="Chap 15 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3554,7 +3554,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-9/" title="15-9 Breaking a string" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-9/" title="15-9 Breaking a string" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-9/">
         Problem 15-9
         
@@ -8374,56 +8374,193 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap15/Problems/15-9.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/'>15 Dynamic Programming</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/'>Chap 15 Problems</a> > 15-9 Breaking a string
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>15-9 Breaking a string</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>A certain string-processing language allows a programmer to break a string into two pieces. Because this operation copies the string, it costs $n$ time units to break a string of $n$ characters into two pieces. Suppose a programmer wants to break a string into many pieces. The order in which the breaks occur can affect the total amount of time used. For example, suppose that the programmer wants to break a $20$-character string after characters $2$, $8$, and $10$ (numbering the characters in ascending order from the left-hand end, starting from $1$). If she programs the breaks to occur in left-to-right order, then the first break costs $20$ time units, the second break costs $18$ time units (breaking the string from characters $3$ to $20$ at character $8$), and the third break costs $12$ time units, totaling $50$ time units. If she programs the breaks to occur in right-to-left order, however, then the first break costs $20$ time units, the second break costs $10$ time units, and the third break costs $8$ time units, totaling $38$ time units. In yet another order, she could break first at $8$ (costing $20$), then break the left piece at $2$ (costing $8$), and finally the right piece at $10$ (costing $12$), for a total cost of $40$.</p>
+
+<p>Design an algorithm that, given the numbers of characters after which to break, determines a least-cost way to sequence those breaks. More formally, given a string $S$ with $n$ characters and an array $L[1..m]$ containing the break points, com- pute the lowest cost for a sequence of breaks, along with a sequence of breaks that achieves this cost.</p>
+</blockquote>
+
+<p>Our first step will be to identify the subproblems that satisfy the optimalsubstructure property. Before we frame the subproblem, we make two simplifying modifications to the input:</p>
+
+<ul>
+<li>We sort $L$ so that the indices in $L$ are in ascending order.</li>
+<li>We prepend the index $0$ to the beginning of $L$ and append n to the end of $L$.</li>
+</ul>
+
+<p>Let $L[i..j]$ denote a subarray of $L$ that starts from index $i$ and ends at index $j$. Define the subproblem denoted by $(i, j)$ as &ldquo;What is the cheapest sequence of breaks to break the substring $S[L[i] + 1..L[j]]$?&rdquo; Note that the first and last elements of the subarray $L[i..j]$ define the ends of the substring, and we have to worry about only the indices of the subarray $L[i + 1..j - 1]$.</p>
+
+<p>For example, let $L = \langle 20, 17, 14, 11, 25 \rangle$ and $n = 30$. First, we sort $L$. Then, we prepend $0$ and append $n$ as explained to get $L = \langle 0, 11, 14, 17, 20, 25, 30 \rangle$. Now, what is the subproblem $(2, 6)$? We obtain a substring by breaking $S$ after character $L[2] = 11$ and character $L[6] = 25$. We ask &ldquo;What is the cheapest sequence of breaks to break the substring $S[12..25]$?&rdquo; We have to worry about only indices in the subarray $L[3..5] = \langle 14, 17, 20 \rangle$, since the other indices are not present in the substring.</p>
+
+<p>At this point, the problem looks similar to matrix-chain multiplication (see Section 15.2). We can make the first break at any element of $L[i + 1..j - 1]$.</p>
+
+<p>Suppose that an optimal sequence of breaks $\sigma$ for subproblem $(i, j)$ makes the first break at $L[k]$, where $i &lt; k &lt; j$. This break gives rise to two subproblems:</p>
+
+<ul>
+<li>The &ldquo;prefix&rdquo; subproblem $(i, k)$, covering the subarray $L[i + 1..k - 1]$,</li>
+<li>The &ldquo;suffix&rdquo; subproblem $(k, j)$, covering the subarray $L[k + 1..j - 1]$.</li>
+</ul>
+
+<p>The overall cost can be expressed as the sum of the length of the substring, the prefix cost, and the suffix cost.</p>
+
+<p>We show optimal substructure by claiming that the sequence of breaks in  for the prefix subproblem $(i, k)$ must be an optimal one. Why? If there were a less costly way to break the substring $S[L[i] + 1..L[k]]$ represented by the subproblem $(i, k)$, then substituting that sequence of breaks in $\sigma$ would produce another sequence of breaks whose cost is lower than that of $\sigma$, which would be a contradiction. A similar observation holds for the sequence of breaks for the suffix subproblem $(k, j)$: it must be an optimal sequence of breaks.</p>
+
+<p>Let $cost[i, j]$ denote the cost of the cheapest solution to subproblem $(i, j)$. We write the recurrence relation for cost as</p>
+
+<div>
+$$
+cost[i, j] =
+\begin{cases}
+0                                                                 & \text{if $j - i \le 1$}, \\
+\min\limits_{i < k < j} {cost[i, k] + cost[k, j] + (L[j] - L[i])} & \text{if $j - i > 1$}.
+\end{cases}
+$$
+</div>
+
+<p>Thus, our approach to solving the subproblem $(i, j)$ will be to try to split the respective substring at all possible values of $k$ and then choosing a break that results in the minimum cost. We need to be careful to solve smaller subproblems before we solve larger subproblems. In particular, we solve subproblems in increasing order of the length $j - 1$.</p>
+
+<pre><code class="language-cpp">BREAK-STRING(n, L)
+    prepend 0 to the start of L and append n to the end of L
+    m = L.length
+    sort L into increasing order
+    let cost[1..m, 1..m] and break[1..m, 1..m] be new tables
+    for i = 1 to m - 1
+        cost[i, i] = cost[i, i + 1] = 0
+    cost[m, m] = 0
+    for len = 3 to m
+        for i = 1 to m - len + 1
+            j = i + len - 1
+            cost[i, j] = ∞
+            for k = i + 1 to j - 1
+                if cost[i, k] + cost[k, j] &lt; cost[i, j]
+                    cost[i, j] = cost[i, k] + cost[k, j]
+                    break[i, j] = k
+            cost[i, j] = cost[i, j] + L[j] - L[i]
+    print &quot;The minimum cost of breaking the string is&quot; cost[1, m]
+    PRINT-BREAKS(L, break, 1, m)
+</code></pre>
+
+<p>After sorting $L$, we initialize the base cases, in which $i = j$ or $j = i + 1$.</p>
+
+<p>The nested <strong>for</strong> loops represent the main computation. The outermost <strong>for</strong> loop runs for $len = 3$ to $m$, which means that we need to consider subarrays of $L$ with length at least $3$, since the first and the last element define the substring, and we need at least one more element to specify a break. The increasing values of $len$ also ensures that we solve subproblems with smaller length before we solve subproblems with greater length.</p>
+
+<p>The inner <strong>for</strong> loop on $i$ runs from $1$ to $m - len + 1$. The upper bound of $m - len + 1$ is the largest value that the start index $i$ can take such that $i + len - 1 \le m$.</p>
+
+<p>In the innermost <strong>for</strong> loop, we try each possible location k as the place to make the first break for subproblem $(i, j)$. The first such place is $L[i + 1]$, and not $L[i]$, since $L[i]$ represents the start of the substring (and thus not a valid place for a break). Similarly, the last valid place is $L[j - 1]$, because $L[j]$ represents the end of the substring.</p>
+
+<p>The <strong>if</strong> condition tests whether $k$ is the best place for a break found so far, and it updates the best value in $cost[i, j]$ if so. We use $break[i, j]$ to record that the best place for the first break is $k$. Specifically, if $break[i, j] = k$, then an optimal sequence of breaks for $(i, j)$ makes the first break at $L[k]$.</p>
+
+<p>Finally, we add the length of the substring $L[j] - L[i]$ to $cost[i, j]$ because, irrespective of what we choose as the first break, it costs us a price equal to the length of the substring to make a break.</p>
+
+<p>The lowest cost for the original problem ends up in $cost[1, m]$. By our initialization, $L[1] = 0$ and $L[m] = n$. Thus, $cost[1, m]$ will hold the optimum price of cutting the substring from $L[1] + 1 = 1$ to $L[m] = n$, which is the entire string.</p>
+
+<p>The running time is $\Theta(m^3)$, and it is dictated by the three nested <strong>for</strong> loops. They fill in the entries above the main diagonal of the two tables, except for entries in which $j = i + 1$. That is, they fill in rows $i = 1, 2, \ldots, m - 2$, entries $j = i + 2, i + 3, \ldots, m$. When filling in entry $[i, j]$, we check values of $k$ running from $i + 1$ to $j - 1$, or $j - i - 1$ entries. Thus, the total number of iterations of the innermost <strong>for</strong> loop is</p>
+
+<div>
+$$
+\begin{aligned}
+\sum{i = 1}^{m - 2} \sum{j = i + 2}^m (j - i - 1) 
+    & = \sum_{i = 1}^{m - 2} \sum{d = 1}^{m - i - 1} d & \text{($d = j - i - 1$)} \\
+    & = \sum_{i = 1}^{m - 2} \Theta((m - i)^2)         & \text{(equation (A.2))} \\
+    & = \sum_{h = 2}^{m - 1} \Theta(h^2)               & (h = m - i) \\
+    & = \Theta(m^3).                                   & \text{(equation (A.3))}
+\end{aligned}
+$$
+</div>
+
+<p>Since each iteration of the innermost <strong>for</strong> loop takes constant time, the total running time is $\Theta(m^3)$. Note in particular that the running time is independent of the length of the string $n$.</p>
+
+<pre><code class="language-cpp">PRINT-BREAKS(L, break, i, j)
+    if j - i ≥ 2
+        print &quot;Break at&quot; L[k]
+        PRINT-BREAKS(L, break, i, k)
+        PRINT-BREAKS(L, break, k, j)
+</code></pre>
+
+<p>$\text{PRINT-BREAKS}$ uses the information stored in $break$ to print out the actual sequence of breaks.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10869,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10747,6 +10885,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10761,6 +10900,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10842,6 +10984,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10854,6 +10997,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10982,6 +11128,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10999,6 +11146,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14613,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-8/" title="15-8 Image compression by seam carving"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-10/" title="15-10 Planning an investment strategy" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14626,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

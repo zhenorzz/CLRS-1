@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>15.2 Matrix-chain multiplication :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/15.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3256,7 +3256,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/" title="15 Dynamic Programming" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3301,7 +3301,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/15.2/" title="15.2 Matrix-chain multiplication" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/15.2/" title="15.2 Matrix-chain multiplication" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/15.2/">
         15.2 Matrix-chain multiplication
         
@@ -8374,56 +8374,224 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap15/15.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/'>15 Dynamic Programming</a> > 15.2 Matrix-chain multiplication
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#15-2-1">15.2-1</a></li>
+<li><a href="#15-2-2">15.2-2</a></li>
+<li><a href="#15-2-3">15.2-3</a></li>
+<li><a href="#15-2-4">15.2-4</a></li>
+<li><a href="#15-2-5">15.2-5</a></li>
+<li><a href="#15-2-6">15.2-6</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>15.2 Matrix-chain multiplication</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="15-2-1">15.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Find an optimal parenthesization of a matrix-chain product whose sequence of dimensions is $\langle 5, 10, 3, 12, 5, 50, 6 \rangle$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+((5 \times 10)(10 \times 3))(((3 \times 12)(12 \times 5))((5 \times 50)(50 \times 6))).
+$$
+</div>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="15-2-2">15.2-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Give a recursive algorithm $\text{MATRIX-CHAIN-MULTIPLY}(A, s, i, j)$ that actually performs the optimal matrix-chain multiplication, given the sequence of matrices $\langle A_1, A_2, \ldots ,A_{n_i} \rangle$, the $s$ table computed by $\text{MATRIX-CHAIN-ORDER}$, and the indices $i$ and $j$. (The initial call would be $\text{MATRIX-CHAIN-MULTIPLY}(A, s, 1, n)$.)</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<pre><code class="language-cpp">MATRIX-CHAIN-MULTIPLY(A, s, i, j)
+    if i == j
+        return A[i]
+    if i + 1 == j
+        return A[i] * A[j]
+    b = MATRIX-CHAIN-MULTIPLY(A, s, i, s[i, j])
+    c = MATRIX-CHAIN-MULTIPLY(A, s, s[i, j] + 1, j)
+    return b * c
+</code></pre>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="15-2-3">15.2-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Use the substitution method to show that the solution to the recurrence $\text{(15.6)}$ is $\Omega(2^n)$.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>Suppose $P(n) \ge c2^n$,</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<div>
+$$
+\begin{aligned}
+P(n) & \ge   \sum_{k = 1}^{n - 1} c2^k \cdot c2^{n - k} \\
+     & =     \sum_{k = 1}^{n - 1} c^2 2^n \\
+     & =     c^2 (n - 1) 2^n \\
+     & \ge   c^2 2^n & (n > 1) \\
+     & \ge   c 2^n.  & (0 < c \le 1)
+\end{aligned}
+$$
+</div>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="15-2-4">15.2-4</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Describe the subproblem graph for matrix-chain multiplication with an input chain of length $n$. How many vertices does it have? How many edges does it have, and which edges are they?</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>The vertices of the subproblem graph are the ordered pairs $v_{ij}$, where $i \le j$. If $i = j$, then there are no edges out of $v_{ij}$. If $i &lt; j$, then for every $k$ such that $i \le k &lt; j$, the subproblem graph contains edges $(v_{ij}, v_{jk})$ and $(v_{ij}, v_{k + 1, j})$. These edges indicate that to solve the subproblem of optimally parenthesizing the product $A_i \cdots A_j$, we need to solve subproblems of optimally parenthesizing the products $A_i \cdots A_k$ and $A_{k + 1} \cdots A_j$. The number of vertices is</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<div>
+$$
+\sum_{i = 1}^n\sum_{j = 1}^n 1 = \frac{n(n + 1)}{2},
+$$
+</div>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>and the number of edges is</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<div>
+$$
+\begin{aligned}
+\sum_{i = 1}^n\sum_{j = 1}^n 
+    & = \sum_{i = 1}^n\sum_{t = 0}^{n - i} & \text{(substituting $t = j - i$)} \\
+    & = \sum_{i = 1}^n \frac{(n - i)(n - i + 1)}{2}.
+\end{aligned}
+$$
+</div>
+
+<p>Substituting $r = n - i$ and reversing the order of summation, we obtain</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{i = 1}^n \frac{(n - i)(n - i + 1)}{2} 
+    & = \frac{1}{2} \sum_{r = 0}^{n - 1} (r^2 + r) \\
+    & = \frac{1}{2} \Big(\frac{(n - 1)n(2n - 1)}{6} + \frac{(n - 1)n}{2}\Big) & \text{(by equations (A.3) and (A.1))} \\
+    & = \frac{(n - 1)n(n + 1)}{6}.
+\end{aligned}
+$$
+</div>
+
+<p>Thus, the subproblem graph has $\Theta(n^2)$ vertices and $\Theta(n^3)$ edges.</p>
+
+<h2 id="15-2-5">15.2-5</h2>
+
+<blockquote>
+<p>Let $R(i, j)$ be the number of times that table entry $m[i, j]$ is referenced while computing other table entries in a call of $\text{MATRIX-CHAIN-ORDER}$. Show that the total number of references for the entire table is</p>
+
+<div>
+$$
+\sum_{i = 1}^n \sum_{j = i}^n R(i, j) = \frac{n^3 - n}{3}.
+$$
+</div>
+
+<p>($\textit{Hint:}$ You may find equation $\text{(A.3)}$ useful.)</p>
+</blockquote>
+
+<p>Each time the $l$-loop executes, the $i$-loop executes $n - l + 1$ times. Each time the $i$-loop executes, the $k$-loop executes $j - i = l - 1$ times, each time referencing $m$ twice. Thus the total number of times that an entry of $m$ is referenced while computing other entries is $\sum_{l = 2}^n (n - l + 1)(l - 1)2$. Thus,</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{i = 1}^n\sum_{j = 1}^n R(i, j)
+    & = \sum_{l = 2}^n (n - l + 1)(l - 1)2 \\
+    & = 2 \sum_{l = 1}^{n - 1} (n - l)l \\
+    & = 2 \sum_{l = 1}^{n - 1} nl - 2 \sum_{l = 1}^{n - 1} l^2 \\
+    & = 2 \frac{n(n - 1)n}{2} - 2\frac{(n - 1)n(2n - 1)}{6} \\
+    & = n^3 - n^2 - \frac{2n^3 - 3n^2 + n}{3} \\
+    & = \frac{n^3 - n}{3}.
+\end{aligned}
+$$
+</div>
+
+<h2 id="15-2-6">15.2-6</h2>
+
+<blockquote>
+<p>Show that a full parenthesization of an $n$-element expression has exactly $n - 1$ pairs of parentheses.</p>
+</blockquote>
+
+<p>$n - 1$ multiplications.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10900,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10746,6 +10915,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10761,6 +10931,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10778,6 +10951,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10793,6 +10967,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14640,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/15.1/" title="15.1 Rod cutting"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/15.3/" title="15.3 Elements of dynamic programming" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14653,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

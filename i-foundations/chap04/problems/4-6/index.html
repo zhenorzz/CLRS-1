@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>4-6 Monge arrays :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap04/problems/4-6/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -655,7 +655,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap04/" title="4 Divide-and-Conquer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -796,7 +796,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap04/problems/" title="Chap 4 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -915,7 +915,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap04/problems/4-6/" title="4-6 Monge arrays" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap04/problems/4-6/" title="4-6 Monge arrays" class="dd-item active">
         <a href="/CLRS/i-foundations/chap04/problems/4-6/">
         Problem 4-6
         
@@ -8374,56 +8374,261 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap04/Problems/4-6.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap04/'>4 Divide-and-Conquer</a> > <a href='/CLRS/i-foundations/chap04/problems/'>Chap 4 Problems</a> > 4-6 Monge arrays
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>4-6 Monge arrays</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>An $m \times n$ array $A$ of real numbers is a <strong>Monge array</strong> if for all $i$, $j$, $k$, and $l$ such that $1 \le i &lt; k \le m$ and $1 \le j &lt; l \le n$, we have</p>
+
+<div>
+$$
+A[i, j] + A[k, l] \le A[i, l] + A[k, j]
+$$
+</div>
+
+<p>In other words, whenever we pick two rows and two columns of a Monge array and consider the four elements at the intersections of the rows and columns, the sum of the upper-left and lower-right elements is less than or equal to the sum of the lower-left and upper-right elements. For example, the following array is Monge:</p>
+
+<div>
+$$
+\begin{matrix}
+10 & 17 & 13 & 28 & 23 \\
+17 & 22 & 16 & 29 & 23 \\
+24 & 28 & 22 & 34 & 24 \\
+11 & 13 &  6 & 17 &  7 \\
+45 & 44 & 32 & 37 & 23 \\
+36 & 33 & 19 & 21 &  6 \\
+75 & 66 & 51 & 53 & 34
+\end{matrix}
+$$
+</div>
+
+<p><strong>a.</strong> Prove that an array is Monge if and only if for all $i = 1, 2, \ldots, m - 1$, and $j = 1, 2, \ldots, n - 1$ we have $A[i, j] + A[i + 1,j + 1] \le A[i, j + 1] + A[i + 1, j]$. ($\textit{Hint:}$ For the &ldquo;if&rdquo; part, use induction seperately on rows and columns.)</p>
+
+<p><strong>b.</strong> The following array is not Monge. Change one element in order to make it Monge. ($\textit{Hint:}$ Use part (a).)</p>
+
+<div>
+$$
+\begin{matrix}
+37 & 23 & 22 & 32 \\
+21 &  6 &  7 & 10 \\
+53 & 34 & 30 & 31 \\
+32 & 13 &  9 &  6 \\
+43 & 21 & 15 &  8
+\end{matrix}
+$$
+</div>
+
+<p><strong>c.</strong> Let $f(i)$ be the index of the column containing the leftmost minimum element of the row $i$. Prove that $f(1) \le f(2) \le \cdots \le f(m)$ for any $m \times n$ Monge array.</p>
+
+<p><strong>d.</strong> Here is a description of a divide-and-conquer algorithm that computes the leftmost minimum element in each row of an $m \times n$ Monge array $A$:</p>
+
+<p>Construct a submatrix $A^\prime$ of $A$ consisting of the even-numbered rows of $A$. Recursively determine the leftmost minimum for each row in $A^\prime$. Then compute the leftmost minimum in the odd-numbered rows of $A$.</p>
+
+<p>Explain how to compute the leftmost minimum in the odd-numbered rows of $A$ (given that the leftmost minimum of the even-numbered rows is known) in $O(m + n)$ time.</p>
+
+<p><strong>e.</strong> Write the recurrence describing the running time of the algorithm described in part (1). Show that its solution is $O(m + n\log m)$.</p>
+</blockquote>
+
+<p><strong>a.</strong> The &ldquo;only if&rdquo; part is trivial, it follows form the definition of Monge array.</p>
+
+<p>As for the &ldquo;if&rdquo; part, let&rsquo;s first prove that</p>
+
+<div>
+$$
+\begin{aligned}
+         A[i, j] + A[i + 1, j + 1] & \le A[i, j + 1] + A[i + 1, j] \\
+\Rightarrow  A[i, j] + A[k, j + 1] & \le A[i, j + 1] + A[k, j],
+\end{aligned}
+$$
+</div>
+
+<p>where $i &lt; k$.</p>
+
+<p>Let&rsquo;s prove it by induction. The base case of $k = i + 1$ is given. As for the inductive step, we assume it holds for $k = i + n$ and we want to prove it for $k + 1 = i + n + 1$. If we add the given to the assumption, we get</p>
+
+<div>
+$$
+\begin{aligned}
+                                        A[i, j] + A[k, j + 1] & \le A[i, j + 1] + A[k, j]     & \text{(assumption)} \\
+                                    A[k, j] + A[k + 1, j + 1] & \le A[k, j + 1] + A[k + 1, j] & \text{(given)} \\
+\Rightarrow A[i, j] + A[k, j + 1] + A[k, j] + A[k + 1, j + 1] & \le A[i, j + 1] + A[k, j] + A[k, j + 1] + A[k + 1, j] \\
+                        \Rightarrow A[i, j] + A[k + 1, j + 1] & \le A[i, j + 1] + A[k + 1, j]
+\end{aligned}
+$$
+</div>
+
+<p><strong>b.</strong></p>
+
+<div>
+$$
+\begin{matrix}
+37 & 23 & \mathbf{24} & 32 \\
+21 &  6 &  7 & 10 \\
+53 & 34 & 30 & 31 \\
+32 & 13 &  9 & 6  \\
+43 & 21 & 15 & 8  \\
+\end{matrix}
+$$
+</div>
+
+<p><strong>c.</strong> Let $a_i$ and $b_j$ be the leftmost minimal elements on rows $a$ and $b$ and let&rsquo;s assume that $i &gt; j$. Then we have</p>
+
+<div>
+$$
+A[j, a] + A[i, b] \le A[i, a] + A[j, b].
+$$
+</div>
+
+<p>But</p>
+
+<div>
+$$
+\begin{aligned}
+A[j, a] \ge A[i, a] & (a_i \text{ is minimal}) \\
+A[i, b] \ge A[j, b] & (b_j \text{ is minimal}) \\
+\end{aligned}
+$$
+</div>
+
+<p>Which implies that</p>
+
+<div>
+$$
+\begin{aligned}
+A[j, a] + A[i, b] & \ge A[i, a] + A[j, b] \\
+A[j, a] + A[i, b] & =   A[i, a] + A[j, b]
+\end{aligned}
+$$
+</div>
+
+<p>Which in turn implies that either:</p>
+
+<div>
+$$
+\begin{aligned}
+A[j, b] < A[i, b] & \Rightarrow A[i, a] > A[j, a] \Rightarrow a_i \text{ is not minimal} \\
+A[j, b] = A[i, b] & \Rightarrow b_j \text{ is not the leftmost minimal}
+\end{aligned}
+$$
+</div>
+
+<p><strong>d.</strong> If $\mu_i$ is the index of the $i$-th row&rsquo;s leftmost minimum, then we have</p>
+
+<div>
+$$
+\mu_{i - 1} \le \mu_i \le \mu_{i + 1}.
+$$
+</div>
+
+<p>For $i = 2k + 1$, $k \ge 0$, finding $\mu_i$ takes $\mu_{i + 1} - \mu_{i - 1} + 1$ steps at most, since we only need to compare with those numbers. Thus</p>
+
+<div>
+$$
+\begin{aligned}
+T(m, n) & = \sum_{i = 0}^{m / 2 - 1}\Big(\mu_{2i + 2} - \mu_{2i} + 1\Big) \\
+        & = \sum_{i = 0}^{m / 2-1}\mu_{2i + 2} - \sum_{i = 0}^{m / 2-1}\mu_{2i} + m / 2 \\
+        & = \sum_{i = 1}^{m / 2}\mu{2i} - \sum_{i = 0}^{m / 2-1}\mu{2i} + m / 2 \\ &= \mu_m - \mu_0 + m / 2 \\
+        & = n + m / 2 \\
+        & = O(m + n).          
+\end{aligned}
+$$
+</div>
+
+<p><strong>e.</strong> The divide time is $O(1)$, the conquer part is $T(m / 2)$ and the merge part is $O(m + n)$. Thus,</p>
+
+<div>
+$$
+\begin{aligned}
+T(m) & = T(m / 2) + cn + dm \\
+     & = cn + dm + cn + dm / 2 + cn + dm / 4 + \cdots \\
+     & = \sum_{i = 0}^{\lg m - 1}cn + \sum_{i = 0}^{\lg m - 1}\frac{dm}{2^i} \\
+     & = cn\lg m + dm\sum_{i = 0}^{\lg m - 1} \\
+     & < cn\lg m + 2dm \\ 
+     & = O(n\lg m + m).
+\end{aligned}
+$$
+</div>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8660,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8675,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8862,6 +9068,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8877,6 +9084,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8974,6 +9184,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8986,6 +9197,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9067,6 +9281,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9088,6 +9303,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14681,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap04/problems/4-5/" title="4-5 Chip testing"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap05/" title="5 Probabilistic Analysis and Randomized Algorithms" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14694,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

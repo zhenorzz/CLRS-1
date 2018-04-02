@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>3.1 Asymptotic notation :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap03/3.1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -433,7 +433,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap03/" title="3 Growth of Functions" class="dd-item 
-        
+        parent
         
         
         ">
@@ -459,7 +459,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap03/3.1/" title="3.1 Asymptotic notation" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap03/3.1/" title="3.1 Asymptotic notation" class="dd-item active">
         <a href="/CLRS/i-foundations/chap03/3.1/">
         3.1 Asymptotic notation
         
@@ -8374,56 +8374,364 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap03/3.1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap03/'>3 Growth of Functions</a> > 3.1 Asymptotic notation
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#3-1-1">3.1-1</a></li>
+<li><a href="#3-1-2">3.1-2</a></li>
+<li><a href="#3-1-3">3.1-3</a></li>
+<li><a href="#3-1-4">3.1-4</a></li>
+<li><a href="#3-1-5">3.1-5</a></li>
+<li><a href="#3-1-6">3.1-6</a></li>
+<li><a href="#3-1-7">3.1-7</a></li>
+<li><a href="#3-1-8">3.1-8</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>3.1 Asymptotic notation</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="3-1-1">3.1-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Let $f(n) + g(n)$ be asymptotically nonnegative functions. Using the basic definition of $\Theta$-notation, prove that $\max(f(n), g(n)) = \Theta(f(n) + g(n))$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>First, let&rsquo;s clarify what the function $\max(f(n), g(n))$ is. Let&rsquo;s define the function $h(n) = \max(f(n), g(n))$. Then</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+h(n) =
+\begin{cases}
+f(n) & \text{ if } f(n) \ge g(n), \\
+g(n) & \text{ if } f(n) <   g(n).
+\end{cases}
+$$
+</div>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>Since $f(n)$ and $g(n)$ are asymptotically nonnegative, there exists $n_0$ such that $f(n) \ge 0$ and $g(n) \ge 0$ for all $n \ge n_0$. Thus for $n \ge n_0$ , $f(n) + g(n) \ge f(n) \ge 0$ and $f(n) + g(n) \ge g(n) \ge 0$. Since for any particular $n$, $h(n)$ is either $f(n)$ or $g(n)$, we have $f(n) + g(n) \ge h(n) \ge 0$, which shows that</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+h(n) = \max(f(n), g(n)) \le c_2(f(n) + g(n))
+$$
+</div>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>for all $n \ge n_0$ (with $c_2 = 1$ in the definition of $\Theta$).</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>Similarly, since for any particular $n$, $h(n)$ is the larger of $f(n)$ and $g(n)$, we have for all $n \ge n_0$, $0 \le f(n) \le h(n)$ and $0 \le g(n) \le h(n)$. Adding these two inequalities yields $0 \le f(n) + g(n) \le 2h(n)$, or equivalently $0 \le (f(n) + g(n)) / 2 \le h(n)$, which shows that</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<div>
+$$
+h(n) = \max(f(n), g(n)) \ge c_1(f(n) + g(n))
+$$
+</div>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>for all $n \ge n_0$ (with $c_1 = 1 / 2$ in the definition of $\Theta$).</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="3-1-2">3.1-2</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Show that for any real constants $a$ and $b$, where $b &gt; 0$,</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<div>
+$$
+(n + a)^b = \Theta(n^b). \tag{3.2}
+$$
+</div>
+</blockquote>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>To show that $(n + a)^b = \Theta(n^b)$, we want to find constants $c_1, c_2, n_0 &gt; 0$ such that $0 \le c_1 n^b \le (n + a)^b \le c_2 n^b$ for all $n \ge n_0$.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>Note that</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<div>
+$$
+\begin{aligned}
+n + a & \le n + |a| & \\
+      & \le 2n      & \text{ when } |a| \le n,
+\end{aligned}
+$$
+</div>
+
+<p>and</p>
+
+<div>
+$$
+\begin{aligned}
+n + a & \ge n - |a|           & \\
+      & \ge \frac{1}{2}n      & \text{ when } |a| \le \frac{1}{2}n.
+\end{aligned}
+$$
+</div>
+
+<p>Thus, when $n \ge 2|a|$,</p>
+
+<div>
+$$
+0 \le \frac{1}{2}n \le n + a \le 2n.
+$$
+</div>
+
+<p>Since $b &gt; 0$, the inequality still holds when all parts are raised to the power $b$:</p>
+
+<div>
+$$
+\begin{aligned}
+0 \le \Big(\frac{1}{2}n\Big)^b    & \le (n + a)^b \le (2n)^b, \\
+0 \le \Big(\frac{1}{2}\Big)^b n^b & \le (n + a)^b \le 2^b n^b.
+\end{aligned}
+$$
+</div>
+
+<p>Thus, $c_1 = (1 / 2)^b$, $c_2 = 2^b$, and $n_0 = 2|a|$ satisfy the definition.</p>
+
+<h2 id="3-1-3">3.1-3</h2>
+
+<blockquote>
+<p>Explain why the statement, &ldquo;The running time of algorithm $A$ is at least $O(n^2)$,&rdquo; is meaningless.</p>
+</blockquote>
+
+<p>Let the running time be $T(n)$. $T(n) \ge O(n^2)$ means that $T(n) \ge f(n)$ for some function $f(n)$ in the set $O(n^2)$. This statement holds for any running time $T(n)$, since the function $g(n) = 0$ for all $n$ is in $O(n^2)$, and running times are always nonnegative. Thus, the statement tells us nothing about the running time.</p>
+
+<h2 id="3-1-4">3.1-4</h2>
+
+<blockquote>
+<p>Is $2^{n + 1} = O(2^n)$? Is $2^{2n} = O(2^n)$?</p>
+</blockquote>
+
+<p>$2^{n + 1} = O(2^n)$, but $2^{2n} \ne O(2^n)$.</p>
+
+<ul>
+<li>To show that $2^{n + 1} = O(2^n)$, we must find constants $c$; $n_0 &gt; 0$ such that
+<div>
+$$
+0 \le 2^{n + 1} \le c \cdot 2^n \text{ for all } n \ge n_0.
+$$
+</div>
+Since $2^{n + 1} = 2 \cdot 2^n$ for all $n$, we can satisfy the definition with $c = 2$ and $n_0 = 1$.</li>
+<li>To show that $2^{2n} \ne O(2^n)$, assume there exist constants $c, n_0 &gt; 0$ such that
+<div>
+$$
+0 \le 2^{2n} \le c \cdot 2^n \text{ for all } n \ge n_0.
+$$
+</div>
+Then $2^{2n} = 2^n \cdot 2^n \le c \cdot 2^n \Rightarrow 2^n \le c$. But no constant is greater than all $2^n$, and so the assumption leads to a contradiction.</li>
+</ul>
+
+<h2 id="3-1-5">3.1-5</h2>
+
+<blockquote>
+<p>Prove Theorem 3.1.</p>
+</blockquote>
+
+<p>The theorem states:</p>
+
+<blockquote>
+<p>For any two functions $f(n)$ and $g(n)$, we have $f(n) = \Theta(g(n))$ if and only if $f(n) = O(g(n))$ and $f(n) = \Theta(g(n))$.</p>
+</blockquote>
+
+<p>From $f = \Theta(g(n))$, we have that</p>
+
+<div>
+$$
+0 \le c_1 g(n) \le f(n) \le c_2g(n) \text{ for } n > n_0.
+$$
+</div>
+
+<p>We can pick the constants from here and use them in the definitions of $O$ and $\Omega$ to show that both hold.</p>
+
+<p>From $f(n) = \Omega(g(n))$ and $f(n) = O(g(n))$, we have that</p>
+
+<div>
+$$
+\begin{aligned}
+            & 0 \le c_3g(n) \le f(n) & \text{ for all } n \ge n_1 \\
+\text{and } & 0 \le f(n) \le c_4g(n) & \text{ for all } n \ge n_2.
+\end{aligned}
+$$
+</div>
+
+<p>If we let $n_3 = \max(n_1, n_2)$ and merge the inequalities, we get</p>
+
+<div>
+$$
+0 \le c_3g(n) \le f(n) \le c_4g(n) \text{ for all } n > n_3.
+$$
+</div>
+
+<p>Which is the definition of $\Theta$.</p>
+
+<h2 id="3-1-6">3.1-6</h2>
+
+<blockquote>
+<p>Prove that the running time of an algorithm is $\Theta(g(n))$ if and only if its worst-case running time is $O(g(n))$ and its best-case running time is $\Omega(g(n))$.</p>
+</blockquote>
+
+<p>If $T_w$ is the worst-case running time and $T_b$ is the best-case running time, we know that</p>
+
+<div>
+$$
+\begin{aligned}
+            & 0 \le c_1g(n) \le T_b(n) & \text{ for } n > n_b \\
+\text{and } & 0 \le T_w(n) \le c_2g(n) & \text{ for } n > n_w.
+\end{aligned}
+$$
+</div>
+
+<p>Combining them we get</p>
+
+<div>
+$$
+0 \le c_1g(n) \le T_b(n) \le T_w(n) \le c_2g(n) \text{ for } n > \max(n_b, n_w).
+$$
+</div>
+
+<p>Since the running time is bound between $T_b$ and $T_w$ and the above is the definition of the $\Theta$-notation, proved.</p>
+
+<h2 id="3-1-7">3.1-7</h2>
+
+<blockquote>
+<p>Prove $o(g(n)) \cap w(g(n))$ is the empty set.</p>
+</blockquote>
+
+<p>We know that for any $c &gt; 0$,</p>
+
+<div>
+$$
+\begin{aligned}
+            & \exists n_1 > 0: 0 \le f(n) < cg(n) \\
+\text{and } & \exists n_2 > 0: 0 \le cg(n) < f(n).
+\end{aligned}
+$$
+</div>
+
+<p>If we pick $n_0 = \max(n_1, n_2)$, from the problem definition we get</p>
+
+<div>
+$$
+f(n) < cg(n) < f(n).
+$$
+</div>
+
+<p>There is no solutions, which means that the intersection is the empty set.</p>
+
+<h2 id="3-1-8">3.1-8</h2>
+
+<blockquote>
+<p>We can extend our notation to the case of two parameters $n$ and $m$ that can go to infinity independently at different rates. For a given function $g(n, m)$ we denote $O(g(n, m))$ the set of functions:</p>
+
+<div>
+$$
+\begin{aligned}
+O(g(n, m) = \{f(n, m):
+  & \text{ there exist positive constants } c, n_0, \text{ and } m_0 \\
+  & \text{ such that } 0 \le cg(n, m) \le f(n, m) \\
+  & \text{ for all } n \ge n_0 \text{ or } m \ge m_0.\} 
+\end{aligned}
+$$
+</div>
+
+<p>Give corresponding definitions for $\Omega(g(n, m))$ and $\Theta(g(n, m))$.</p>
+</blockquote>
+
+<div>
+$$
+\begin{aligned}
+\Omega(g(n, m) = \{f(n, m): 
+  & \text{ there exist positive constants } c, n_0, \text{ and } m_0 \\
+  & \text{ such that } 0 \le f(n, m) \le cg(n, m) \\
+  & \text{ for all } n \ge n_0 \text{ or } m \ge m_0.\}
+\end{aligned}
+$$
+</div>
+<div>
+$$
+\begin{aligned}
+\Theta(g(n, m) = \{f(n, m): 
+  & \text{ there exist positive constants } c_1, c_2, n_0, \text{ and } m_0 \\
+  & \text{ such that } 0 \le c_1 g(n, m) \le f(n, m) \le c_2 g(n, m) \\
+  & \text{ for all } n \ge n_0 \text{ or } m \ge m_0.\}
+\end{aligned}
+$$
+</div>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8763,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8778,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8701,6 +9010,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8716,6 +9026,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8731,6 +9042,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14777,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap03/" title="3 Growth of Functions"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap03/3.2/" title="3.2 Standard notations and common functions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14790,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

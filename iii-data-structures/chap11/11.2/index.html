@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>11.2 Hash tables :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap11/11.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2372,7 +2372,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap11/" title="11 Hash Tables" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2417,7 +2417,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.2/" title="11.2 Hash tables" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.2/" title="11.2 Hash tables" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap11/11.2/">
         11.2 Hash tables
         
@@ -8374,56 +8374,215 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap11/11.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap11/'>11 Hash Tables</a> > 11.2 Hash tables
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#11-2-1">11.2-1</a></li>
+<li><a href="#11-2-2">11.2-2</a></li>
+<li><a href="#11-2-3">11.2-3</a></li>
+<li><a href="#11-2-4">11.2-4</a></li>
+<li><a href="#11-2-5">11.2-5</a></li>
+<li><a href="#11-2-6">11.2-6</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>11.2 Hash tables</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="11-2-1">11.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Suppose we use a hash function $h$ to hash $n$ distinct keys into an array $T$ of length $m$. Assuming simple uniform hashing, what is the expected number of collisions? More precisely, what is the expected cardinality of $\{\{k, l\}: k \ne l \text{ and } h(k) = h(l)\}$?</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>For each pair of keys $k$, $l$, where $k \ne l$, define the indicator random variable $X_{kl} = \text I\{h(k) = h(l)\}$. Since we assume simple uniform hashing, $\Pr\{X_{kl} = 1\} = \Pr\{h(k) = h(l)\} = 1 / m$, and so $\text E[X_{kl}] = 1 / m$.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>Now define the random variable $Y$ to be the total number of collisions, so that $Y = \sum_{k \ne l} X_{kl}$. The expected number of collisions is</p>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<div>
+$$
+\begin{aligned}
+\text E[Y] & = \text E\bigg[\sum_{k \ne l} X_{kl}\bigg] \\
+           & = \sum_{k \ne l} \text E[X_{kl}] & \text{(linearity of expectation)} \\
+           & = \binom{n}{2}\frac{1}{m} \\
+           & = \frac{n(n - 1)}{2} \cdot \frac{1}{m} \\
+           & = \frac{n(n - 1)}{2m}.
+\end{aligned}
+$$
+</div>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<h2 id="11-2-2">11.2-2</h2>
 
-<h1 id="getting-started">Getting Started</h1>
+<blockquote>
+<p>Demonstrate what happens when we insert the keys $5, 28, 19, 15, 20, 33, 12, 17, 10$ into a hash table with collisions resolved by chaining. Let the table have $9$ slots, and let the hash function be $h(k) = k \mod 9$.</p>
+</blockquote>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>Start with a bit vector $b$ which contains a $1$ in position $k$ if $k$ is in the dynamic set, and a $0$ otherwise.</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<ul>
+<li>To search, we return true if $b[x] = 1$.</li>
+<li>To insert $x$, set $b[x] = 1$.</li>
+<li>To delete $x$, set $b[x] = 0$.</li>
+</ul>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Each of these takes $O(1)$ time.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="11-2-3">11.2-3</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Professor Marley hypothesizes that he can obtain substantial performance gains by modifying the chaining scheme to keep each list in sorted order. How does the professor&rsquo;s modification affect the running time for successful searches, unsuccessful searches, insertions, and deletions?</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<ul>
+<li>Successful searches: no difference, $\Theta(1 + \alpha)$.</li>
+<li>Unsuccessful searches: faster but still $\Theta(1 + \alpha)$.</li>
+<li>Insertions: same as successful searches, $\Theta(1 + \alpha)$.</li>
+<li>Deletions: same as successful searches, $\Theta(1 + \alpha)$.</li>
+</ul>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<h2 id="11-2-4">11.2-4</h2>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<blockquote>
+<p>Suggest how to allocate and deallocate storage for elements within the hash table itself by linking all unused slots into a free list. Assume that one slot can store a flag and either one element plus a pointer or two pointers. All dictionary and free-list operations should run in $O(1)$ expected time. Does the free list need to be doubly linked, or does a singly linked free list suffice?</p>
+</blockquote>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>The flag in each slot will indicate whether the slot is free.</p>
+
+<ul>
+<li>A free slot is in the free list, a doubly linked list of all free slots in the table. The slot thus contains two pointers.</li>
+<li>A used slot contains an element and a pointer (possibly $\text{NIL}$) to the next element that hashes to this slot. (Of course, that pointer points to another slot in the table.)</li>
+</ul>
+
+<p><strong>Operations</strong></p>
+
+<ul>
+<li><p><strong><em>Insertion:</em></strong></p>
+
+<ul>
+<li>If the element hashes to a free slot, just remove the slot from the free list and store the element there (with a $\text{NIL}$ pointer). The free list must be doubly linked in order for this deletion to run in $O(1)$ time.</li>
+
+<li><p>If the element hashes to a used slot $j$, check whether the element $x$ already there &ldquo;belongs&rdquo; there (its key also hashes to slot $j$).</p>
+
+<ul>
+<li>If so, add the new element to the chain of elements in this slot. To do so, allocate a free slot (e.g., take the head of the free list) for the new element and put this new slot at the head of the list pointed to by the hashed-to slot ($j$).</li>
+<li>If not, $E$ is part of another slot&rsquo;s chain. Move it to a new slot by allocating one from the free list, copying the old slot&rsquo;s ($j$&rsquo;s) contents (element $x$ and pointer) to the new slot, and updating the pointer in the slot that pointed to $j$ to point to the new slot. Then insert the new element in the now-empty slot as usual.</li>
+</ul>
+
+<p>To update the pointer to $j$, it is necessary to find it by searching the chain of elements starting in the slot $x$ hashes to.</p></li>
+</ul></li>
+
+<li><p><strong><em>Deletion:</em></strong> Let $j$ be the slot the element $x$ to be deleted hashes to.</p>
+
+<ul>
+<li>If $x$ is the only element in $j$ ($j$ doesn&rsquo;t point to any other entries), just free the slot, returning it to the head of the free list.</li>
+<li>If $x$ is in $j$ but there&rsquo;s a pointer to a chain of other elements, move the first pointed-to entry to slot $j$ and free the slot it was in.</li>
+<li>If $x$ is found by following a pointer from $j$, just free $x$&rsquo;s slot and splice it out of the chain (i.e., update the slot that pointed to $x$ to point to $x$&rsquo;s successor).</li>
+</ul></li>
+
+<li><p><strong><em>Searching:</em></strong> Check the slot the key hashes to, and if that is not the desired element, follow the chain of pointers from the slot.
+All the operations take expected $O(1)$ times for the same reason they do with the version in the book: The expected time to search the chains is $O(1 + \alpha)$ regardless of where the chains are stored, and the fact that all the elements are stored in the table means that $\alpha \le 1$. If the free list were singly linked, then operations that involved removing an arbitrary slot from the free list would not run in $O(1)$ time.</p></li>
+</ul>
+
+<h2 id="11-2-5">11.2-5</h2>
+
+<blockquote>
+<p>Suppose that we are storing a set of $n$ keys into a hash table of size $m$. Show that if the keys are drawn from a universe $U$ with $|U| &gt; nm$, then $U$ has a subset of size $n$ consisting of keys that all hash to the same slot, so that the worst-case searching time for hashing with chaining is $\Theta(n)$.</p>
+</blockquote>
+
+<p>Suppose the $m - 1$ slots contains at most $n - 1$ elements, then the remaining slot should have</p>
+
+<div>
+$$
+|U| - (m - 1)(n - 1) > nm - (m - 1)(n - 1) = n + m - 1 \ge n
+$$
+</div>
+
+<p>elements, thus $U$ has a subset of size $n$.</p>
+
+<h2 id="11-2-6">11.2-6</h2>
+
+<blockquote>
+<p>Suppose we have stored $n$ keys in a hash table of size $m$, with collisions resolved by chaining, and that we know the length of each chain, including the length $L$ of the longest chain. Describe a procedure that selects a key uniformly at random from among the keys in the hash table and returns it in expected time $O(L \cdot (1 + 1 / \alpha))$.</p>
+</blockquote>
+
+<p>We can view the hash table as if it had $m$ rows and $L$ columns; each row stores one chain. The array has $mL$ entries storing $n$ keys, and $mL - n$ empty values. The procedure picks array positions at random until it finds a key, which it returns. The probability of success on one draw is $n / mL$, so $mL / n = L / \alpha$ trials are needed. Each trial takes time $O(1)$, since the individual chain sizes are known. The chain for the last draw needs to be scanned to find the desired element, however, costing $O(L)$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10111,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10126,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10113,6 +10276,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10127,6 +10291,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10143,6 +10310,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10160,6 +10328,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14634,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap11/11.1/" title="11.1 Direct-address tables"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap11/11.3/" title="11.3 Hash functions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14647,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

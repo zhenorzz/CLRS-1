@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>6.3 Building a heap :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap06/6.3/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1171,7 +1171,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/" title="6 Heapsort" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1235,7 +1235,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/6.3/" title="6.3 Building a heap" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/6.3/" title="6.3 Building a heap" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap06/6.3/">
         6.3 Building a heap
         
@@ -8374,56 +8374,254 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap06/6.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap06/'>6 Heapsort</a> > 6.3 Building a heap
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#6-3-1">6.3-1</a></li>
+<li><a href="#6-3-2">6.3-2</a></li>
+<li><a href="#6-3-3">6.3-3</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>6.3 Building a heap</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="6-3-1">6.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Using figure 6.3 as a model, illustrate the operation of $\text{BUILD-MAX-HEAP}$ on the array $A = \langle 5, 3, 17, 10, 84, 19, 6, 22, 9 \rangle$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\begin{aligned}
+\langle  5,  3, 17, 10, 84, 19, 6, 22, 9 \rangle \\
+\langle  5,  3, 17, 22, 84, 19, 6, 10, 9 \rangle \\
+\langle  5,  3, 19, 22, 84, 17, 6, 10, 9 \rangle \\
+\langle  5, 84, 19, 22,  3, 17, 6, 10, 9 \rangle \\
+\langle 84,  5, 19, 22,  3, 17, 6, 10, 9 \rangle \\
+\langle 84, 22, 19,  5,  3, 17, 6, 10, 9 \rangle \\
+\langle 84, 22, 19, 10,  3, 17, 6,  5, 9 \rangle \\
+\end{aligned}
+$$
+</div>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="6-3-2">6.3-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Why do we want the loop index $i$ in line 2 of $\text{BUILD-MAX-HEAP}$ to decrease from $\lfloor A.length / 2 \rfloor$ to $1$ rather than increase from $1$ to $\lfloor A.length/2 \rfloor$?</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>Otherwise we won&rsquo;t be allowed to call $\text{MAX-HEAPIFY}$, since it will fail the condition of having the subtrees be max-heaps. That is, if we start with $1$, there is no guarantee that $A[2]$ and $A[3]$ are roots of max-heaps.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="6-3-3">6.3-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Show that there are at most $\lceil n / 2^{h + 1} \rceil$ nodes of height $h$ in any $n$-element heap.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>Let $H$ be the height of the heap.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Two subtleties to beware of:</p>
 
-<h1 id="more-informations">More Informations</h1>
+<ul>
+<li>Be careful not to confuse the height of a node (longest distance from a leaf) with its depth (distance from the root).</li>
+<li>If the heap is not a complete binary tree (bottom level is not full), then the nodes at a given level (depth) don&rsquo;t all have the same height. For example, although all nodes at depth $H$ have height $0$, nodes at depth $H - 1$ can have either height $0$ or height $1$.</li>
+</ul>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>For a complete binary tree, it&rsquo;s easy to show that there are $\lceil n / 2^{h + 1}\rceil$ nodes of height $h$. But the proof for an incomplete tree is tricky and is not derived from the proof for a complete tree.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p><strong><em>Proof</em></strong></p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>By induction on $h$.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p><strong>Basis：</strong> Show that it&rsquo;s true for $h = 0$ (i.e., that # of leaves $\le \lceil n / 2^{h + 1} \rceil = \lceil n / 2 \rceil$ In fact, we&rsquo;ll show that the # of leaves $= \lceil n / 2 \rceil$.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>The tree leaves (nodes at height $0$) are at depths $H$ and $H - 1$. They consist of</p>
+
+<ul>
+<li>all nodes at depth $H$, and</li>
+<li>the nodes at depth $H - 1$ that are not parents of depth-$H$ nodes.</li>
+</ul>
+
+<p>Let $x$ be the number of nodes at depth $H$—that is, the number of nodes in the bottom (possibly incomplete) level.</p>
+
+<p>Note that $n - x$ is odd, because the $n - x$ nodes above the bottom level form a complete binary tree, and a complete binary tree has an odd number of nodes ($1$ less than a power of $2$). Thus if $n$ is odd, $x$ is even, and if $n$ is even, $x$ is odd.</p>
+
+<p>To prove the base case, we must consider separately the case in which $n$ is even ($x$ is odd) and the case in which $n$ is odd ($x$ is even). Here are two ways to do this: The first requires more cleverness, and the second requires more algebraic manipulation.</p>
+
+<ol>
+<li><p>First method of proving the base case:</p>
+
+<ul>
+<li>If $n$ is odd, then $x$ is even, so all nodes have siblings—i.e., all internal nodes have $2$ children. Thus (see Exercise B.5-3),# of internal nodes $=$ # of leaves $- 1$.<br />
+So, $n =$ # of nodes $=$ # of leaves $+$ # of internal nodes $ = 2 \cdot$ # of leaves $- 1$. Thus, # of leaves $= (n + 1) / 2$. (The latter equality holds because $n$ is odd.)<br /></li>
+<li>If $n$ is even, then $x$ is odd, and some leaf doesn&rsquo;t have a sibling. If we gave it a sibling, we would have $n + 1$ nodes, where $n + 1$ is odd, so the case we analyzed above would apply. Observe that we would also increase the number of leaves by $1$, since we added a node to a parent that already had a child. By the odd-node case above, # of leaves $+ 1 = \lceil (n + 1) / 2 \rceil = \lceil n / 2 \rceil + 1$. (The latter equality holds because $n$ is even.)<br /></li>
+</ul>
+
+<p>In either case, # of leaves = $\lceil n / 2 \rceil$.</p></li>
+
+<li><p>Second method of proving the base case:<br />
+Note that at any depth $d &lt; H$ there are $2^d$ nodes, because all such tree levels are complete.</p>
+
+<ul>
+<li><p>If $x$ is even, there are $x / 2$ nodes at depth $H - 1$ that are parents of depth $H$ nodes, hence $2^{H - 1} - x / 2$ nodes at depth $H - 1$ that are not parents of depth-$H$ nodes. Thus,</p>
+
+<div>
+$$
+\begin{aligned}
+    \text{total \# of height-$0$ nodes}
+    & = x + 2^{H - 1} - x / 2 \\
+    & = 2^{H - 1} + x / 2 \\
+    & = (2^H + x) / 2 \\
+    & = \lceil (2^H + x - 1) / 2 \rceil & \text{(because $x$ is even)} \\
+    & = \lceil n / 2 \rceil
+\end{aligned}
+$$
+</div>
+
+<p>($n = 2^H + x - 1$ because the complete tree down to depth $H - 1$ has $2^H - 1$ nodes and depth $H$ has $x$ nodes.)</p></li>
+
+<li><p>If $x$ is odd, by an argument similar to the even case, we see that</p>
+
+<div>
+$$
+\begin{aligned}
+    \text{total \# of height-$0$ nodes}
+    & = x + 2^{H - 1} - (x + 1) / 2 \\
+    & = 2^{H - 1} + (x - 1) / 2 \\
+    & = (2^H + x - 1) / 2 \\
+    & = n / 2 \\
+    & = \lceil n / 2 \rceil & \text{(because $x$ is odd $\Rightarrow n$ is even)}. \\
+    \end{aligned}
+$$
+</div></li>
+</ul></li>
+</ol>
+
+<p><strong>Inductive step:</strong> Show that if it&rsquo;s true for height $H - 1$, it&rsquo;s true for $h$.</p>
+
+<p>Let $n_h$ be the number of nodes at height $h$ in the $n$-node tree $T$.</p>
+
+<p>Consider the tree $T^\prime$ formed by removing the leaves of $T$. It has $n^\prime = n - n_0$ nodes. We know from the base case that $n^\prime = \lceil n / 2 \rceil$, so $n^\prime = n - n_0 = n - \lceil n / 2 \rceil$.</p>
+
+<p>Note that the nodes at height $h$ in $T$ would be at height $H - 1$ if the leaves of the tree were removed—that is, they are at height $h - 1$ in $T^\prime$. Letting $n^\prime_{h - 1}$ denote the number of nodes at height $h - 1$ in $T^\prime$, we have</p>
+
+<div>
+$$
+n_h = n^\prime_{h - 1}.
+$$
+</div>
+
+<p>By induction, we can bound $n^\prime_{h - 1}$:</p>
+
+<div>
+$$
+n_h = n^\prime_{h - 1} \le \lceil n^\prime / 2^h \rceil = \big\lceil\lfloor n / 2 \rfloor / 2^h \big\rceil \le \lceil (n / 2) / 2^h \rceil = \lceil n / 2^{h + 1} \rceil.
+$$
+</div>
+
+<p><strong>Alternative solution</strong></p>
+
+<p>An alternative solution relies on four facts:</p>
+
+<ol>
+<li>Every node <em>not</em> on the unique simple path from the last leaf to the root is the root of a complete binary subtree.</li>
+<li>A node that is the root of a complete binary subtree and has height $h$ is the ancestor of $2^h$ leaves.</li>
+<li>By Exercise 6.1-7, an n-element heap has $\lceil n / 2 \rceil$ leaves.</li>
+<li>For nonnegative reals $a$ and $b$, we have $\lceil a \rceil \cdot b \ge \lceil ab \rceil$.</li>
+</ol>
+
+<p>The proof is by contradiction. Assume that an $n$-element heap contains at least $\lceil n / 2^{h + 1} \rceil + 1$ nodes of height $h$. Exactly one node of height $h$ is on the unique simple path from the last leaf to the root, and the subtree rooted at this node has at least one leaf (that being the last leaf). All other nodes of height $h$, of which the heap contains at least $\lceil n / 2^{h + 1} \rceil$, are the roots of complete binary subtrees, and each such node is the root of a subtree with $2^h$ leaves. Moreover, each subtree whose root is at height $h$ is disjoint. Therefore, the number of leaves in the entire heap is at least</p>
+
+<div>
+$$
+\begin{aligned}
+\Big\lceil \frac{n}{2^{h + 1}} \Big\rceil \cdot 2^h + 1
+& \ge \Big\lceil \frac{n}{2^{h + 1}} \cdot 2^h \Big\rceil + 1 \\
+& =   \Big\lceil \frac{n}{2} \Big\rceil + 1,
+\end{aligned}
+$$
+</div>
+
+<p>which contradicts the property that an $n$-element heap has $\lceil n / 2 \rceil$ leaves.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9420,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9435,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9251,6 +9451,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9284,6 +9487,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9299,6 +9503,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14670,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap06/6.2/" title="6.2 Maintaining the heap property"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap06/6.4/" title="6.4 The heapsort algorithm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

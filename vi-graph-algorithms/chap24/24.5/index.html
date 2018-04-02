@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>24.5 Proofs of shortest-paths properties :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap24/24.5/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5398,7 +5398,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/" title="24 Single-Source Shortest Paths" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5500,7 +5500,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/24.5/" title="24.5 Proofs of shortest-paths properties" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/24.5/" title="24.5 Proofs of shortest-paths properties" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap24/24.5/">
         24.5 Proofs of shortest-paths properties
         
@@ -8374,56 +8374,171 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap24/24.5.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap24/'>24 Single-Source Shortest Paths</a> > 24.5 Proofs of shortest-paths properties
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#24-5-1">24.5-1</a></li>
+<li><a href="#24-5-2">24.5-2</a></li>
+<li><a href="#24-5-3">24.5-3</a></li>
+<li><a href="#24-5-4">24.5-4</a></li>
+<li><a href="#24-5-5">24.5-5</a></li>
+<li><a href="#24-5-6">24.5-6</a></li>
+<li><a href="#24-5-7">24.5-7</a></li>
+<li><a href="#24-5-8">24.5-8</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>24.5 Proofs of shortest-paths properties</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="24-5-1">24.5-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Give two shortest-paths trees for the directed graph of Figure 24.2 (on page 648) other than the two shown.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>Since the induced shortest path trees on $\{s, t, y\}$ and on $\{t, x, y, z\}$ are independent and have to possible configurations each, there are four total arising from that. So, we have the two not shown in the figure are the one consisting of the edges $\{(s, t), (s, y), (y, x), (x, z)\}$ and the one consisting of the edges $\{(s, t), (t, y), (t, x), (y, z)\}$.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="24-5-2">24.5-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Give an example of a weighted, directed graph $G = (V, E)$ with weight function $w: E \rightarrow \mathbb R$ and source vertex $s$ such that $G$ satisfies the following property: For every edge $(u, v) \in E$, there is a shortest-paths tree rooted at $s$ that contains $(u, v)$ and another shortest-paths tree rooted at $s$ that does not contain $(u, v)$.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>Let $G$ have $3$ vertices $s$, $x$, and $y$. Let the edges be $(s, x)$, $(s, y)$, and $(x, y)$ with weights $1$, $1$, and $0$ respectively. There are $3$ possible trees on these vertices rooted at $s$, and each is a shortest paths tree which gives $\delta(s, x) = \delta(s, y) = 1$.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="24-5-3">24.5-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Embellish the proof of Lemma 24.10 to handle cases in which shortest-path weights are $\infty$ or $-\infty$.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>To modify Lemma 24.10 to allow for possible shortest path weights of $\infty$ and $-\infty$, we need to define our addition as $\infty + c = \infty$, and $-\infty + c = -\infty$. This will make the statement behave correctly, that is, we can take the shortest path from $s$ to $u$ and tack on the edge $(u, v)$ to the end. That is, if there is a negative weight cycle on your way to $u$ and there is an edge from $u$ to $v$, there is a negative weight cycle on our way to $v$. Similarly, if we cannot reach $v$ and there is an edge from $u$ to $v$, we cannot reach $u$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="24-5-4">24.5-4</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Let $G = (V, E)$ be a weighted, directed graph with source vertex $s$, and let $G$ be initialized by $\text{INITIALIZE-SINGLE-SOURCE}(G, s)$. Prove that if a sequence of relaxation steps sets $s.\pi$ to a non-$\text{NIL}$ value, then $G$ contains a negative-weight cycle.</p>
+</blockquote>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>Whenever $\text{RELAX}$ sets $\pi$ for some vertex, it also reduces the vertex&rsquo;s $d$ value. Thus if $s.\pi$ gets set to a non-$\text{NIL}$ value, $s.d$ is reduced from its initial value of $0$ to a negative number. But $s.d$ is the weight of some path from $s$ to $s$, which is a cycle including $s$. Thus, there is a negative-weight cycle.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="24-5-5">24.5-5</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Let $G = (V, E)$ be a weighted, directed graph with no negative-weight edges. Let $s \in V$ be the source vertex, and suppose that we allow $v.\pi$ to be the predecessor of $v$ on any shortest path to $v$ from source $s$ if $v \in V - \{s\}$ is reachable from $s$, and $\text{NIL}$ otherwise. Give an example of such a graph $G$ and an assignment of $\pi$ values that produces a cycle in $G_\pi$. (By Lemma 24.16, such an assignment cannot be produced by a sequence of relaxation steps.)</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>Suppose that we have a grap hon three vertices $\{s, u, v\}$ and containing edges $(s, u), (s, v), (u, v), (v, u)$ all with weight $0$. Then, there is a shortest path from $s$ to $v$ of $s$, $u$, $v$ and a shortest path from $s$ to $u$ of $s$ $v$, $u$. Based off of these, we could set $v.\pi = u$ and $u.\pi = v$. This then means that there is a cycle consisting of $u, v$ in $G_\pi$.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<h2 id="24-5-6">24.5-6</h2>
+
+<blockquote>
+<p>Let $G = (V, E)$ be a weighted, directed graph with weight function $w: E \rightarrow \mathbb R$ and no negative-weight cycles. Let $s \in V$ be the source vertex, and let $G$ be initialized by $\text{INITIALIZE-SINGLE-SOURCE}(G, s)$. Prove that for every vertex $v \in V_\pi$, there exists a path from $s$ to $v$ in $G_\pi$ and that this property is maintained as an invariant over any sequence of relaxations.</p>
+</blockquote>
+
+<p>We will prove this by induction on the number of relaxations performed. For the base-case, we have just called $\text{INITIALIZE-SINGLE-SOURCE}(G, s)$. The only vertex in $V_\pi$ is $s$, and there is trivially a path from $s$ to itself. Now suppose that after any sequence of $n$ relaxations, for every vertex $v \in V_\pi$ there exists a path from $s$ to $v$ in $G_\pi$. Consider the $(n + 1)$th relaxation. Suppose it is such that $v.d &gt; u.d + w(u, v)$. When we relax $v$, we update $v.\pi = u.\pi$. By the induction hypothesis, there was a path from $s$ to $u$ in $G_\pi$. Now $v$ is in $V_\pi$, and the path from $s$ to $u$, followed by the edge $(u,v) = (v.\pi, v)$ is a path from s to $v$ in $G_\pi$, so the claim holds.</p>
+
+<h2 id="24-5-7">24.5-7</h2>
+
+<blockquote>
+<p>Let $G = (V, E)$ be a weighted, directed graph that contains no negative-weight cycles. Let $s \in V$ be the source vertex, and let $G$ be initialized by $\text{INITIALIZE-SINGLE-SOURCE}(G, s)$. Prove that there exists a sequence of $|V| - 1$ relaxation steps that produces $v.d = \delta(s, v)$ for all $v \in V$.</p>
+</blockquote>
+
+<p>Suppose we have a shortest-paths tree $G_\pi$. Relax edges in $G_\pi$ according to the order in which a BFS would visit them. Then we are guaranteed that the edges along each shortest path are relaxed in order. By the path-relaxation property, we would then have $v.d = \delta(s, v)$ for all $v \in V$. Since $G_\pi$ contains at most $|V| - 1$ edges, we need to relax only $|V| - 1$ edges to get $v.d = \delta(s, v)$ for all $v \in V$.</p>
+
+<h2 id="24-5-8">24.5-8</h2>
+
+<blockquote>
+<p>Let $G$ be an arbitrary weighted, directed graph with a negative-weight cycle reachable from the source vertex $s$. Show how to construct an infinite sequence of relaxations of the edges of $G$ such that every relaxation causes a shortest-path estimate to change.</p>
+</blockquote>
+
+<p>Suppose that there is a negative-weight cycle $c = \langle v_0, v_1, \ldots, v_k \rangle$, where $v_0 = v_k$, that is reachable from the source vertex $s$; thus, $w(c) &lt; 0$. Without loss of generality, $c$ is simple. There must be an acyclic path from $s$ to some vertex of $c$ that uses no other vertices in $c$. Without loss of generality let this vertex of $c$ be $v_0$, and let this path from $s$ to $v_0$ be $p = \langle u_0, u_1, \ldots, u_l \rangle$, where $u_0 = s$ and $u_l = v_0 = v_k$. (It may be the case that $u_l = s$, in which case path $p$ has no edges.)</p>
+
+<p>After the call to $\text{INITIALIZE-SINGLE-SOURCE}$ sets $v.d = \infty$ for all $v \in V - \{s\}$, perform the following sequence of relaxations. First, relax every edge in path $p$, in order. Then relax every edge in cycle $c$, in order, and repeatedly relax the cycle. That is, we relax the edges $(u_0, u_1)$, $(u_1, u_2)$, $\ldots$, $(u_{l - 1}, v_0)$, $(v_0, v_1)$, $(v_1, v_2)$, $\ldots$, $(v_{k - 1}, v_0)$, $(v_0, v_1)$, $(v_1, v_2)$, $\ldots$, $(v_{k - 1}, v_0)$, $(v_0, v_1)$, $(v_1, v_2)$, $\ldots$, $(v_{k - 1}, v_0)$, $\ldots$</p>
+
+<p>We claim that every edge relaxation in this sequence reduces a shortest-path estimate. Clearly, the first time we relax an edge $(u_{i - 1}, u_i)$ or $(v_{j - 1}, v_j)$, for $i = 1, 2, \ldots, l$ and $j = 1, 2, \ldots, k - 1$ (note that we have not yet relaxed the last edge of cycle $c$), we reduce $u_i.d$ or $v_j.d$ from $\infty$ to a finite value. Now consider the relaxation of any edge $(v_{j - 1}, v_j)$ after this opening sequence of relaxations. We use induction on the number of edge relaxations to show that this relaxation reduces $v_j.d$.</p>
+
+<p><strong>Basis:</strong> The next edge relaxed after the opening sequence is $(v_{k - 1}, v_k)$. Before relaxation, $v_k.d = w(p)$, and after relaxation, $v_k.d = w(p) + w(c) &lt; w(p)$, since $w(c) &lt; 0$.</p>
+
+<p><strong>Inductive step:</strong> Consider the relaxation of edge $(v_{j - 1}, v_j)$. Since $c$ is a simple cycle, the last time $v_j.d$ was updated was by a relaxation of this same edge. By the inductive hypothesis, $v_{j - 1}.d$ has just been reduced. Thus, $v_{j - 1}.d + w(v_{j - 1}, v_j) &lt; v_j.d$, and so the relaxation will reduce the value of $v_j.d$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12097,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12112,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12305,6 +12424,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12319,6 +12439,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12383,6 +12506,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12400,6 +12524,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14590,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap24/24.4/" title="24.4 Difference constraints and shortest paths"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap24/problems/" title="Chap 24 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14603,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

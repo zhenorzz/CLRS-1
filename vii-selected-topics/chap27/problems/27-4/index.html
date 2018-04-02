@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>27-4 Multithreading reductions and prefix computations :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vii-selected-topics/chap27/problems/27-4/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -6128,7 +6128,7 @@
   
     
     <li data-nav-id="/CLRS/vii-selected-topics/" title="VII Selected Topics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -6155,7 +6155,7 @@
   
     
     <li data-nav-id="/CLRS/vii-selected-topics/chap27/" title="27 Multithreaded Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -6239,7 +6239,7 @@
   
     
     <li data-nav-id="/CLRS/vii-selected-topics/chap27/problems/" title="Chap 27 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -6320,7 +6320,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vii-selected-topics/chap27/problems/27-4/" title="27-4 Multithreading reductions and prefix computations" class="dd-item ">
+      <li data-nav-id="/CLRS/vii-selected-topics/chap27/problems/27-4/" title="27-4 Multithreading reductions and prefix computations" class="dd-item active">
         <a href="/CLRS/vii-selected-topics/chap27/problems/27-4/">
         Problem 27-4
         
@@ -8374,56 +8374,299 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VII%20Selected%20Topics/Chap27/Problems/27-4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vii-selected-topics/'>VII Selected Topics</a> > <a href='/CLRS/vii-selected-topics/chap27/'>27 Multithreaded Algorithms</a> > <a href='/CLRS/vii-selected-topics/chap27/problems/'>Chap 27 Problems</a> > 27-4 Multithreading reductions and prefix computations
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>27-4 Multithreading reductions and prefix computations</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>A <strong><em>$\otimes$-reduction</em></strong> of an array $x[1 \ldots n]$, where $\otimes$ is an associative operator, is the value</p>
+
+<div>
+$$
+y = x[1] \otimes x[2] \otimes \cdots \otimes x[n]
+$$
+</div>
+
+<p>The following procedure computes the $\otimes$-reduction of a subarray $x[i \ldots j]$ serially.</p>
+
+<pre><code class="language-cpp">REDUCE(x, i, j)
+    y = x[i]
+    for k = i + 1 to j
+         y = y ⊗ x[k]
+    return y
+</code></pre>
+
+<p><strong>a.</strong> Use nested parallelism to implement a multithreaded algorithm $\text{P-REDUCE}$, which performs the same function with $\Theta(n)$ work and $\Theta(\lg n)$ span. Analyze your algorithm.</p>
+
+<p>A related problem is that of computing a <strong><em>$\otimes$-prefix computation</em></strong>, sometimes called a <strong><em>$\otimes$-scan</em></strong>, on an array $x[1 \ldots n]$, where $\otimes$ is once again an associative operator. The $\otimes$-scan produces the array $y[1 \ldots n]$ given by</p>
+
+<div>
+$$
+\begin{aligned}
+y[1] & = x[1], \\
+y[2] & = x[1] \otimes x[2], \\
+y[3] & = x[1] \otimes x[2] \otimes x[3], \\
+     & \vdots \\
+y[n] & = x[1] \otimes x[2] \otimes x[3] \otimes \cdots \otimes x[n],
+\end{aligned}
+$$
+</div>
+
+<p>that is, all prefixes of the array $x$ &ldquo;summed&rdquo; using $\otimes$ operator. The following serial procedure $\text{SCAN}$ performs a $\otimes$-prefix computation:</p>
+
+<pre><code class="language-cpp">SCAN(x)
+    n = x.length
+    let y[1..n] be a new array
+    y[1] = x[1]
+    for i = 2 to n
+        y[i] = y[i - 1] ⊗ x[i]
+    return y
+</code></pre>
+
+<p>Unfortunately, multithreading $\text{SCAN}$ is not straightforward. For example, changing the <strong>for</strong> loop to a <strong>parallel for</strong> loop would create races, since each iteration of the loop body depends on the previous iteration. The following procedure $\text{P-SCAN-1}$ performs the $\otimes$-prefix computation in parallel, albeit inefficiently.</p>
+
+<pre><code class="language-cpp">P-SCAN-1(x)
+    n = x.length
+    let y[1..n] be a new array
+    P-SCAN-1-AUX(x, y, 1, n)
+    return y
+</code></pre>
+
+<pre><code class="language-cpp">P-SCAN-1-AUX(x, y, i, j)
+    parallel for l = i to j
+        y[l] = P-REDUCE(x, 1, l)
+</code></pre>
+
+<p><strong>b.</strong> Analyze the work, span, and parallelism of $\text{P-SCAN-1}$.</p>
+
+<p>By using nested parallelism, we can obtain a more efficient $\otimes$-prefix computation:</p>
+
+<pre><code class="language-cpp">P-SCAN-2(x)
+    n = x.length
+    let y[1..n] be a new array
+    P-SCAN-2-AUX(x, y, 1, n)
+    return y
+</code></pre>
+
+<pre><code class="language-cpp">P-SCAN-2-AUX(x, y, i, j)
+    if i == j
+        y[i] = x[i]
+    else k = floor((i + j) / 2)
+        spawn P-SCAN-2-AUX(x, y, i, k)
+        P-SCAN-2-AUX(x, y, k + 1, j)
+        sync
+        parallel for l = k + 1 to j
+            y[l] = y[k] ⊗ y[l]
+</code></pre>
+
+<p><strong>c.</strong> Argue that $\text{P-SCAN-2}$ is correct, and analyze its work, span, and parallelism.</p>
+
+<p>We can improve on both $\text{P-SCAN-1}$ and $\text{P-SCAN-2}$ by performing the $\otimes$-prefix computation in two distinct passes over the data. On the first pass, we gather the terms for various contiguous subarrays of $x$ into a temporary array $t$, and on the second pass we use the terms in $t$ to compute the final result $y$. The following pseudocode implements this strategy, but certain expressions have been omitted:</p>
+
+<pre><code class="language-cpp">P-SCAN-3(x)
+    n = x.length
+    let y[1..n] and t[1..n] be new arrays
+    y[1] = x[1]
+    if n &gt; 1
+        P-SCAN-UP(x, t, 2, n)
+        P-SCAN-DOWN(x[1], x, t, y, 2, n)
+    return y
+</code></pre>
+
+<pre><code class="language-cpp">P-SCAN-UP(x, t, i, j)
+    if i == j
+        return x[i]
+    else
+        k = floor((i + j) / 2)
+        t[k] = spawn P-SCAN-UP(x, t, i, k)
+        right = P-SCAN-UP(x, t, k + 1, j)
+        sync
+        return ____           // fill in the blank
+</code></pre>
+
+<pre><code class="language-cpp">P-SCAN-DOWN(v, x, t, y, i, j)
+    if i == j
+        y[i] = v ⊗ x[i]
+    else
+        k = floor((i + j) / 2)
+        spawn P-SCAN-DOWN(____, x, t, y, i, k)  // fill in the blank
+        P-SCAN-DOWN(____, x, t, y, k + 1, j)    // fill in the blank
+        sync
+</code></pre>
+
+<p><strong>d.</strong> Fill in the three missing expressions in line 8 of $\text{P-SCAN-UP}$ and lines 5 and 6 of $\text{P-SCAN-DOWN}$. Argue that with expressions you supplied, $\text{P-SCAN-3}$ is correct. ($\textit{Hint:}$ Prove that the value $v$ passed to $\text{P-SCAN-DOWN}(v, x, t, y, i, j)$ satisfies $v = x[1] \otimes x[2] \otimes \cdots \otimes x[i - 1]$.)</p>
+
+<p><strong>e.</strong> Analyze the work, span, and parallelism of $\text{P-SCAN-3}$.</p>
+</blockquote>
+
+<p><strong>a.</strong> Here is a multithreaded $\otimes$-reduction algorithm:</p>
+
+<pre><code class="language-cpp">P-REDUCE(x, i, j)
+    if i == j
+        return x[i]
+    else mid = floor((i + j) / 2)
+        lh = spawn P-REDUCE(x, i, mid)
+        rh = P-REDUCE(x, mid + 1, j)
+        sync
+        return lh ⊗ rh
+</code></pre>
+
+<p>If we denote the length $j - i + 1$ of the subarray $x[i..j]$ by $n$, then the work for the above algorithm is given by the recurrence $T_1(n) = 2T_1(n / 2) + \Theta(1) = \Theta(n)$. Because one of the recursive calls to $\text{P-REDUCE}$ is spawned and the procedure does constant work following the recursive calls and in the base case, the span is given by the recurrence $T_\infty(n) = T_\infty(n / 2) + \Theta(1) = \Theta(\lg n)$.</p>
+
+<p><strong>b.</strong> The work and span of $\text{P-SCAN-1-AUX}$ dominate the work and span of $\text{P-SCAN-1}$. We can calculate the work of $\text{P-SCAN-1-AUX}$ by replacing the <strong>parallel for</strong> loop with an ordinary <strong>for</strong> loop and noting that in each iteration, the running time of $\text{P-REDUCE}$ will be equal to $\Theta(l)$. Since $\text{P-SCAN-1}$ calls $\text{P-SCAN-1-AUX}$ with $1$ and $n$ as the last two arguments, the running time of $\text{P-SCAN-1}$, and hence its work, is $\Theta(1 + 2 + \cdots + n) = \Theta(n^2)$.</p>
+
+<p>As we noted earlier, the <strong>parallel for</strong> loop in $\text{P-SCAN-1-AUX}$ undergoes $n$ iterations; therefore, the span of $\text{P-SCAN-1-AUX}$ is given by $\Theta(\lg n)$ for the recursive splitting of the loop iterations plus the span of the iteration that has maximum span. Among the loop iterations, the call to $\text{P-REDUCE}$ in the last iteration (when $l = n$) has the maximum span, equal to $\Theta(\lg n)$. Thus, $\text{P-SCAN-1}$ has $\Theta(\lg n)$ span and $\Theta(n^2 / \lg n)$ parallelism.</p>
+
+<p><strong>c.</strong> In $\text{P-SCAN-2-AUX}$, before the <strong>parallel for</strong> loop in lines 7 and 8 executes, the following invariant is satisfied: $y[l] = x[i] \otimes x[i + 1] \otimes \cdots \otimes x[l]$ for $l = i, i + 1, \ldots, k$ and $y[l] = x[k + 1] \otimes x[k + 2] \otimes \cdots \otimes x[k]$ for $l = k + 1, k + 2, \ldots, j$. The <strong>parallel for</strong> loop need not update $y[i], \ldots, y[k]$, since they have the correct values after the call to $\text{P-SCAN-2-AUX}(x, y, i, k)$. For $l = k + 1, k + 2, \ldots, j$, the <strong>parallel for</strong> loop sets</p>
+
+<div>
+$$
+\begin{aligned}
+y[l] & = y[k] \otimes y[l] \\
+     & = x[i] \otimes \cdots \otimes x[k] \otimes x[k + 1] \otimes \cdots \otimes x[l] \\
+     & = x[i] \otimes \cdots \otimes x[l].
+\end{aligned}
+$$
+</div>
+
+<p>as desired. We can run this loop in parallel because the $l$th iteration depends only on the values of $y[k]$, which is the same in all iterations, and $y[l]$. Therefore, when the call to $\text{P-SCAN-2-AUX}$ from $\text{P-SCAN-2}$ returns, array $y$ represents the $\otimes$-prefix computation of array $x$.</p>
+
+<p>Because the work and span of $\text{P-SCAN-2-AUX}$ dominate the work and span of $\text{P-SCAN-2}$, we will concentrate on calculating these values for $\text{P-SCAN-2-AUX}$ working on an array of size $n$. The work $PS2A_1(n)$ of $\text{P-SCAN-2-AUX}$ is given by the recurrence $PS2A_1(n) = 2PS2A_1(n / 2) + \Theta(\lg n)$, which equals $\Theta(n\lg n)$ by case 2 of the master theorem. The span $PS2A_\infty(n)$ of $\text{P-SCAN-2-AUX}$ is given by the recurrence $PS2A_\infty(n) = PS2A_\infty(n / 2) + \Theta(\lg n)$, which equals $\Theta(\lg^2 n)$ per Exercise 4.6-2. That is, the work, span, and parallelism of $\text{P-SCAN-2}$ are $\Theta(n\lg n)$, $\Theta(\lg^2 n)$, and $\Theta(n / \lg n)$, respectively.</p>
+
+<p><strong>d.</strong> The missing expression in line 8 of $\text{P-SCAN-UP}$ is $t[k] \otimes right$ right. The missing expressions in lines 5 and 6 of $\text{P-SCAN-DOWN}$ are $v$ and $v \otimes t[k]$, respectively.</p>
+
+<p>As suggested in the hint, we will prove that the value $v$ passed to $\text{P-SCAN-DOWN}(v, x, t, y, i, j)$ satisfies $v = x[1] \otimes x[2] \otimes \cdots \otimes x[i - 1]$, so that the value $v \otimes x[i]$ stored into $y[i]$ in the base case of $\text{P-SCAN-DOWN}$ is correct.</p>
+
+<p>In order to compute the arguments that are passed to $\text{P-SCAN-DOWN}$, we must first understand what $t[k]$ holds as a result of the call to $\text{P-SCAN-UP}$. A call to $\text{P-SCAN-UP}(x, t, i, j)$ returns $x[i] \otimes \cdots \otimes x[j]$; because $t[k]$ stores the return value of $\text{P-SCAN-UP}(x, t, i, k)$, we can say that $t[k] = x[i] \otimes \cdots \otimes x[k]$.</p>
+
+<p>The value $v = x[1]$ when $\text{P-SCAN-DOWN}(x[1], x, t, y, 2, n)$ is called from $\text{P-SCAN-3}$ clearly satisifies $v = x[1] \otimes \cdots \otimes x[i - 1]$. Let us suppose that $v = x[1] \otimes x[2] \otimes \cdots \otimes x[i - 1]$ in a call of $\text{P-SCAN-DOWN}(v, x, t, y, i, j)$. Therefore, $v$ meets the required condition in the first recursive call, with $i$ and $k$ as the last two arguments, in $\text{P-SCAN-DOWN}$. If we can prove that the value $v \otimes t[k]$ passed to the second recursive call in $\text{P-SCAN-DOWN}$ equals $x[1] \otimes x[2] \otimes \cdots \otimes x[k]$, we would have proved the required condition on $v$ for all calls to $\text{P-SCAN-DOWN}$. Earlier, we proved that $t[k] = x[i] \otimes \cdots \otimes x[k]$; therefore,</p>
+
+<div>
+$$
+\begin{aligned}
+v \otimes t[k]
+    & = x[1] \otimes x[2] \otimes \cdots \otimes x[i - 1] \otimes x[i] \otimes \cdots x[k] \\
+    & = x[1] \otimes x[2] \otimes \cdots \otimes x[k].
+\end{aligned}
+$$
+</div>
+
+<p>Thus, the value $v$ passed to $\text{P-SCAN-DOWN}(v, x, t, y, i, j)$ satisfies $v = x[1] \otimes x[2] \otimes \cdots \otimes x[i - 1]$.</p>
+
+<p><strong>e.</strong> Let $PSU_1(n)$ and $PSU_\infty(n)$ denote the work and span of $\text{P-SCAN-UP}$ and let $PSD_1(n)$ and $PSD_\infty(n)$ denote the work and span of $\text{P-SCAN-DOWN}$. Then the expressions $T_1(n) = PSU_1(n) + PSD_1(n) + \Theta(1)$ and $T_\infty(n) = PSU_\infty(n) + PSD_\infty(n) + \Theta(1)$ characterize the work and span of $\text{P-SCAN-3}$.</p>
+
+<p>The work $PSU_1(n)$ of $\text{P-SCAN-UP}$ is given by the recurrence</p>
+
+<div>
+$$
+PSU_1(n) = 2PSU_1(n / 2) + \Theta(1),
+$$
+</div>
+
+<p>and its span is defined by the recurrence</p>
+
+<div>
+$$
+PSU_\infty(n) = PSU_\infty(n / 2) + \Theta(1).
+$$
+</div>
+
+<p>Using the master theorem to solve these recurrences, we get $PSU_1(n) = \Theta(\lg n)$ and $PSU_\infty(n) = \Theta(\lg n)$.</p>
+
+<p>Similarly, the recurrences</p>
+
+<div>
+$$
+\begin{aligned}
+PSD_1      & = 2PSD_1(n / 2) + \Theta(1),       \tag{*} \\
+PSD_\infty & = PSD_\infty(n / 2) + \Theta(1)    \tag{**}
+\end{aligned}
+$$
+</div>
+
+<p>define the work and span of $\text{P-SCAN-DOWN}$, and they evaluate to $PSD_1(n) = \Theta(\lg n)$ and $PSD_\infty(n) = \Theta(\lg n)$.</p>
+
+<p>Applying the results for the work and span of $\text{P-SCAN-UP}$ and $\text{P-SCAN-DOWN}$ obtained above in the expressions for the work and span of $\text{P-SCAN-3}$, we get $T_1(n) = \Theta(\lg n)$ and $T_\infty(n) = \Theta(\lg n)$. Hence, $\text{P-SCAN-3}$ has $\Theta(n / \lg n)$ parallelism. $\text{P-SCAN-3}$ performs less work than $\text{P-SCAN-1}$, but with the same span, and it has the same parallelism as $\text{P-SCAN-2}$ with less work and a lower span.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -12842,6 +13085,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12857,6 +13101,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12871,6 +13116,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12920,6 +13168,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12932,6 +13181,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12980,6 +13232,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12997,6 +13250,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14719,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vii-selected-topics/chap27/problems/27-3/" title="27-3 Multithreaded matrix algorithms"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vii-selected-topics/chap27/problems/27-5/" title="27-5 Multithreading a simple stencil calculation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14732,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

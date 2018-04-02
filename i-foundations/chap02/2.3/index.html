@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>2.3 Designing algorithms :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap02/2.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -230,7 +230,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap02/" title="2 Getting Started" class="dd-item 
-        
+        parent
         
         
         ">
@@ -294,7 +294,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap02/2.3/" title="2.3 Designing algorithms" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap02/2.3/" title="2.3 Designing algorithms" class="dd-item active">
         <a href="/CLRS/i-foundations/chap02/2.3/">
         2.3 Designing algorithms
         
@@ -8374,56 +8374,288 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap02/2.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap02/'>2 Getting Started</a> > 2.3 Designing algorithms
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#2-3-1">2.3-1</a></li>
+<li><a href="#2-3-2">2.3-2</a></li>
+<li><a href="#2-3-3">2.3-3</a></li>
+<li><a href="#2-3-4">2.3-4</a></li>
+<li><a href="#2-3-5">2.3-5</a></li>
+<li><a href="#2-3-6">2.3-6</a></li>
+<li><a href="#2-3-7-star">2.3-7 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>2.3 Designing algorithms</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="2-3-1">2.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Using Figure 2.4 as a model, illustrate the operation of merge sort on the array $A = \langle 3, 41, 52, 26, 38, 57, 9, 49 \rangle$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+[3] \quad [41] \quad [52] \quad [26] \quad [38] \quad [57] \quad [9] \quad [49]
+$$
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+$$
+\downarrow
+$$
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+$$
+[3|41] \quad [26| 52] \quad [38|57] \quad [9|49]
+$$
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+$$
+\downarrow
+$$
 
-<h1 id="getting-started">Getting Started</h1>
+$$
+[3|26|41|52] \quad [9 |38|49|57]
+$$
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+$$
+\downarrow
+$$
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+$$
+[3|9|26|38|41|49|52|57]
+$$
+</div>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="2-3-2">2.3-2</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Rewrite the $\text{MERGE}$ procedure so that it does not use sentinels, instead stopping once either array $L$ or $R$ has had all its elements copied back to $A$ and then copying the remainder of the other array back into $A$.</p>
+</blockquote>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<pre><code class="language-cpp">MERGE(A, p, q, r)
+    n1 = q - p + 1
+    n2 = r - q
+    let L[1..n1] and R[1..n2] be new arrays
+    for i = 1 to n1
+        L[i] = A[p + i - 1]
+    for j = 1 to n2
+        R[j] = A[q + j]
+    i = 1
+    j = 1
+    for k = p to r
+        if i &gt; n1
+            A[k] = R[j]
+            j = j + 1
+        else if j &gt; n2
+            A[k] = L[i]
+            i = i + 1
+        else if L[i] ≤ R[j]
+            A[k] = L[i]
+            i = i + 1
+        else
+            A[k] = R[j]
+            j = j + 1
+</code></pre>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="2-3-3">2.3-3</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Use mathematical induction to show that when $n$ is an exact power of $2$, the solution of the recurrence</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<div>
+$$
+T(n) =
+\begin{cases}
+    2         & \text{if } n = 2, \\
+    2T(n / 2) & \text{if } n = 2^k, \text{for } k > 1
+\end{cases}
+$$
+</div>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>is $T(n) = n\lg n$.</p>
+
+<p>The base case is when $n = 2$, and we have $n\lg n = 2\lg 2 = 2 \cdot 1 = 2$.</p>
+
+<p>For the inductive step, our inductive hypothesis is that $T(n / 2) = (n / 2)\lg(n / 2)$. Then</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & = 2T(n / 2) + n \\
+     & = 2(n / 2) \lg(n / 2) + n \\
+     & = n(\lg n - 1) + n \\
+     & = n\lg n - n + n \\
+     & = n\lg n,
+\end{aligned}
+$$
+</div>
+
+<p>which completes the inductive proof for exact powers of $2$.</p>
+
+<h2 id="2-3-4">2.3-4</h2>
+
+<blockquote>
+<p>We can express insertion sort as a recursive procedure as follows. In order to sort $A[1..n]$, we recursively sort $A[1..n - 1]$ and then insert $A[n]$ into the sorted array $A[1..n - 1]$. Write a recurrence for the running time of this recursive version of insertion sort.</p>
+</blockquote>
+
+<p>Since it takes $\Theta(n)$ time in the worst case to insert $A[n]$ into the sorted array $A[1..n - 1]$, we get the recurrence</p>
+
+<div>
+$$
+T(n) = \begin{cases}
+    \Theta(1)            & \text{if } n = 1, \\
+    T(n - 1) + \Theta(n) & \text{if } n > 1.
+\end{cases}
+$$
+</div>
+
+<p>Although the exercise does not ask you to solve this recurrence, its solution is $T(n) = \Theta(n^2)$.</p>
+
+<h2 id="2-3-5">2.3-5</h2>
+
+<blockquote>
+<p>Referring back to the searching problem (see Exercise 2.1-3), observe that if the sequence $A$ is sorted, we can check the midpoint of the sequence against $v$ and eliminate half of the sequence from further consideration. The <strong><em>binary search</em></strong> algorithm repeats this procedure, halving the size of the remaining portion of the sequence each time. Write pseudocode, either iterative or recursive, for binary search. Argue that the worst-case running time of binary search is $\Theta(\lg n)$.</p>
+</blockquote>
+
+<p>Procedure $\text{BINARY-SEARCH}$ takes a sorted array $A$, a value $v$, and a range $[low..high]$ of the array, in which we search for the value $v$. The procedure compares to the array entry at the midpoint of the range and decides to eliminate half the range from further consideration. We give both iterative and recursive versions, each of which returns either an index $i$ such that $A[i] = v$, or $\text{NIL}$ if no entry of $A[low..high]$ contains the value $v$. The initial call to either version should have the parameters $A$, $v$, $1$, $n$.</p>
+
+<pre><code class="language-cpp">ITERATIVE-BINARY-SEARCH(A, v, low, high)
+    while low ≤ high
+        mid = floor((low + high) / 2)
+        if v == A[mid]
+            return mid
+        else if v &gt; A[mid]
+            low = mid + 1
+        else high = mid - 1
+    return NIL
+</code></pre>
+
+<pre><code class="language-cpp">RECURSIVE-BINARY-SEARCH(A, v, low, high)
+    if low &gt; high
+        return NIL
+    mid = floor((low + high) / 2)
+    if v == A[mid]
+        return mid
+    else if v &gt; A[mid]
+        return RECURSIVE-BINARY-SEARCH(A, v, mid + 1, high)
+    else return RECURSIVE-BINARY-SEARCH(A, v, low, mid - 1)
+</code></pre>
+
+<p>Both procedures terminate the search unsuccessfully when the range is empty (i.e., $low &gt; high$) and terminate it successfully if the value $v$ has been found. Based on the comparison of $v$ to the middle element in the searched range, the search continues with the range halved. The recurrence for these procedures is therefore $T(n) = T(n / 2) + \Theta(1)$, whose solution is $T(n) = \Theta(\lg n)$.</p>
+
+<h2 id="2-3-6">2.3-6</h2>
+
+<blockquote>
+<p>Observe that the <strong>while</strong> loop of lines 5–7 of the $\text{INSERTION-SORT}$ procedure in Section 2.1 uses a linear search to scan (backward) through the sorted subarray $A[i..j - 1]$. Can we use a binary search (see Exercise 2.3-5) instead to improve the overall worst-case running time of insertion sort to $\Theta(n\lg n)$?</p>
+</blockquote>
+
+<p>The <strong>while</strong> loop of lines 5–7 of procedure $\text{INSERTION-SORT}$ scans backward through the sorted array $A[1..j - 1]$ to find the appropriate place for $A[j]$. The hitch is that the loop not only searches for the proper place for $A[j]$, but that it also moves each of the array elements that are bigger than $A[j]$ one position to the right (line 6). These movements can take as much as $\Theta(j)$ time, which occurs when all the $j - 1$ elements preceding $A[j]$ are larger than $A[j]$. We can use binary search to improve the running time of the search to $\Theta(\lg j)$, but binary search will have no effect on the running time of moving the elements. Therefore, binary search alone cannot improve the worst-case running time of $\text{INSERTION-SORT}$ to $\Theta(n\lg n)$.</p>
+
+<h2 id="2-3-7-star">2.3-7 $\star$</h2>
+
+<blockquote>
+<p>Describe a $\Theta(n\lg n)$-time algorithm that, given a set $S$ of $n$ integers and another integer $x$, determines whether or not there exist two elements in $S$ whose sum is exactly $x$.</p>
+</blockquote>
+
+<p>The following algorithm solves the problem:</p>
+
+<ol>
+<li>Sort the elements in $S$.</li>
+<li>Form the set $S^\prime = \{z: z = x - y$ for some $y \in S\}$.</li>
+<li>Sort the elements in $S^\prime$.</li>
+<li>Merge the two sorted sets $S$ and $S^\prime$.</li>
+<li>There exist two elements in $S$ whose sum is exactly $x$ if and only if the same value appears in consecutive positions in the merged output.</li>
+</ol>
+
+<p>To justify the claim in step 4, first observe that if any value appears twice in the merged output, it must appear in consecutive positions. Thus, we can restate the condition in step 5 as there exist two elements in $S$ whose sum is exactly $x$ if and only if the same value appears twice in the merged output.</p>
+
+<p>Suppose that some value $w$ appears twice. Then $w$ appeared once in $S$ and once in $S^\prime$. Because $w$ appeared in $S^\prime$, there exists some $y \in S$ such that $w = x - y$, or $x = w + y$. Since $w \in S$, the elements $w$ and $y$ are in $S$ and sum to $x$.</p>
+
+<p>Conversely, suppose that there are values $w, y \in S$ such that $w + y = x$. Then, since $x - y = w$, the value $w$ appears in $S^\prime$. Thus, $w$ is in both $S$ and $S^\prime$, and so it will appear twice in the merged output.</p>
+
+<p>Steps 1 and 3 require $\Theta(n\lg n)$ steps. Steps 2, 4, 5, and 6 require $O(n)$ steps. Thus the overall running time is $O(n\lg n)$.</p>
+
+<p>A reader submitted a simpler solution that also runs in $\Theta(n\lg n)$ time. First, sort the elements in $S$, taking $\Theta(n\lg n)$ time. Then, for each element $y$ in $S$, perform a binary search in $S$ for $x - y$. Each binary search takes $O(\lg n)$ time, and there are are most $n$ of them, and so the time for all the binary searches is $O(n\lg n)$. The overall running time is $\Theta(n\lg n)$.</p>
+
+<p>Another reader pointed out that since $S$ is a set, if the value $x / 2$ appears in $S$, it appears in $S$ just once, and so $x / 2$ cannot be a solution.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8687,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8702,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8555,6 +8788,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8569,6 +8803,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8601,6 +8838,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8618,6 +8856,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14704,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap02/2.2/" title="2.2 Analyzing algorithms"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap02/problems/" title="Chap 2 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14717,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>4.2 Strassen&#39;s algorithm for matrix multiplication :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap04/4.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -655,7 +655,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap04/" title="4 Divide-and-Conquer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -700,7 +700,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap04/4.2/" title="4.2 Strassen&#39;s algorithm for matrix multiplication" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap04/4.2/" title="4.2 Strassen&#39;s algorithm for matrix multiplication" class="dd-item active">
         <a href="/CLRS/i-foundations/chap04/4.2/">
         4.2 Strassen&#39;s algorithm for matrix multiplication
         
@@ -8374,56 +8374,295 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap04/4.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap04/'>4 Divide-and-Conquer</a> > 4.2 Strassen's algorithm for matrix multiplication
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#4-2-1">4.2-1</a></li>
+<li><a href="#4-2-2">4.2-2</a></li>
+<li><a href="#4-2-3">4.2-3</a></li>
+<li><a href="#4-2-4">4.2-4</a></li>
+<li><a href="#4-2-5">4.2-5</a></li>
+<li><a href="#4-2-6">4.2-6</a></li>
+<li><a href="#4-2-7">4.2-7</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>4.2 Strassen&#39;s algorithm for matrix multiplication</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="4-2-1">4.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Use Strassen&rsquo;s algorithm to compute the matrix product</p>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\begin{pmatrix}
+1 & 2 \\
+7 & 5
+\end{pmatrix}
+\begin{pmatrix}
+6 & 8 \\
+4 & 2
+\end{pmatrix}
+$$
+</div>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>Show your work.</p>
+</blockquote>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>The first matrices are</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+\begin{array}{ll}
+S_1 =  6 & S_6    =  8 \\
+S_2 =  4 & S_7    = -2 \\
+S_3 = 12 & S_8    =  6 \\
+S_4 = -2 & S_9    = -6 \\
+S_5 =  5 & S_{10} = 14.
+\end{array}
+$$
+</div>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>The products are</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<div>
+$$
+\begin{aligned}
+P_1 & =  1 \cdot 6  =   6 \\
+P_2 & =  4 \cdot 2  =   8 \\
+P_3 & =  6 \cdot 12 =  72 \\
+P_4 & = -2 \cdot 5  = -10 \\
+P_5 & =  6 \cdot 8  =  48 \\
+P_6 & = -2 \cdot 6  = -12 \\
+P_7 & = -6 \cdot 14 = -84.
+\end{aligned}
+$$
+</div>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>The four matrices are</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<div>
+$$
+\begin{aligned}
+C_{11} & = 48 + (-10) - 8 + (-12) = 18 \\
+C_{12} & =  6 + 8 = 14 \\
+C_{21} & = 72 + (-10) = 62 \\
+C_{22} & = 48 + 6 - 72 - (-84) = 66.
+\end{aligned}
+$$
+</div>
 
-<h1 id="more-informations">More Informations</h1>
+<p>The result is</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<div>
+$$
+\begin{pmatrix}
+18 & 14 \\
+62 & 66
+\end{pmatrix}.
+$$
+</div>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="4-2-2">4.2-2</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Write pseudocode for Strassen&rsquo;s algorithm</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<pre><code class="language-cpp">STRASSEN(A, B)
+    n = A.rows
+    let + be a new n * n matrix
+    if n == 1
+        c11 = a11 * b11
+    else partition A and B in equations (4.9)
+        let C11, C12, C21, and C22 be n / 2 * n / 2 matrices
+        create n / 2 * n / 2 matrices S1, S2,...,S10 and P1, P2,...,P7
+        S1 = B12 - B22
+        S2 = A11 + A12
+        S3 = A12 + A22
+        S4 = B21 - B11
+        S5 = A11 + A22
+        S6 = B11 + B22
+        S7 = A12 - A22
+        S8 = B21 + B22
+        S9 = A11 - A21
+        S10 = B11 + B12
+        P1 = STRASSEN(A11, S1)
+        P2 = STRASSEN(S2, B22)
+        P3 = STRASSEN(S3, B11)
+        P4 = STRASSEN(A22, S4)
+        P5 = STRASSEN(S5, S6)
+        P6 = STRASSEN(S7, S8)
+        P7 = STRASSEN(S9, S10)
+        C11 = P5 + P4 - P2 + P6
+        C12 = P1 + P2
+        C21 = P3 + P4
+        C22 = P5 + P1 - P3 - P7
+        combine C11, C12, C21, and C22 into C
+    return C
+</code></pre>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<h2 id="4-2-3">4.2-3</h2>
+
+<blockquote>
+<p>How would you modify Strassen&rsquo;s algorithm to multiply $n \times n$ matrices in which $n$ is not an exact power of $2$? Show that the resulting algorithm runs in time $\Theta(n^{\lg7})$.</p>
+</blockquote>
+
+<p>We can just extend it to an $n \times n$ matrix and pad it with zeroes. It&rsquo;s obviously $\Theta(n^{\lg7})$.</p>
+
+<h2 id="4-2-4">4.2-4</h2>
+
+<blockquote>
+<p>What is the largest $k$ such that if you can multiply $3 \times 3$ matrices using $k$ multiplications (not assuming commutativity of multiplication), then you can multiply $n \times n$ matrices is time $o(n^{\lg 7})$? What would the running time of this algorithm be?</p>
+</blockquote>
+
+<p>If you can multiply $3 \times 3$ matrices using $k$ multiplications, then you can multiply $n \times n$ matrices by recursively multiplying $n / 3 \times n /3$ matrices, in time $T(n) = kT(n / 3) + \Theta(n^2)$.</p>
+
+<p>Using the master method to solve this recurrence, consider the ratio of $n^{\log_3 k}$ and $n^2$:</p>
+
+<ul>
+<li>If $\log_3 k = 2$, case 2 applies and $T(n) = \Theta(n^2\lg n)$. In this case, $k = 9$ and $T(n) = o(n^{\lg 7})$.</li>
+<li>If $\log_3 k &lt; 2$, case 3 applies and $T(n) = \Theta(n^2)$. In this case, $k &lt; 9$ and $T(n) = o(n^{\lg 7})$.</li>
+<li>If $\log_3 k &gt; 2$, case 1 applies and $T(n) = \Theta(n^{\log_3 k})$. In this case, $k &gt; 9$. $T(n) = o(n^{\lg 7})$ when $\log_3 k &lt; \lg 7$, i.e., when $k &lt; 3^{\lg 7} \approx 21.85$. The largest such integer $k$ is $21$.</li>
+</ul>
+
+<p>Thus, $k = 21$ and the running time is $\Theta(n^{\log_3 k}) = \Theta(n^{\log_3 21} = O(n^{2.80})$ (since $\log_3 21 \approx 2.77$).</p>
+
+<h2 id="4-2-5">4.2-5</h2>
+
+<blockquote>
+<p>V. Pan has discovered a way of multiplying $68 \times 68$ matrices using $132464$ multiplications, a way of multiplying $70 \times 70$ matrices using $143640$ multiplications, and a way of multiplying $72 \times 72$ matrices using $155424$ multiplications. Which method yields the best asymptotic running time when used in a divide-and-conquer matrix-multiplication algorithm? How does it compare to Strassen&rsquo;s algorithm?</p>
+</blockquote>
+
+<p>Using what we know from the last exercise, we need to pick the smallest of the following</p>
+
+<div>
+$$
+\begin{aligned}
+\log_{68} 132464 & \approx 2.795128 \\
+\log_{70} 143640 & \approx 2.795122 \\
+\log_{72} 155424 & \approx 2.795147.
+\end{aligned}
+$$
+</div>
+
+<p>The fastest one asymptotically is $70 \times 70$ using $143640$.</p>
+
+<h2 id="4-2-6">4.2-6</h2>
+
+<blockquote>
+<p>How quickly can you multiply a $kn \times n$ matrix by an $n \times kn$ matrix, using Strassen&rsquo;s algorithm as a subroutine? Answer the same question with the order of the input matrices reversed.</p>
+</blockquote>
+
+<ul>
+<li>$(kn \times n)(n \times kn)$ produces a $kn \times kn$ matrix. This produces $k^2$ multiplications of $n \times n$ matrices.</li>
+<li>$(n \times kn)(kn \times n)$ produces an $n \times n$ matrix. This produces $k$ multiplications and $k - 1$ additions.</li>
+</ul>
+
+<h2 id="4-2-7">4.2-7</h2>
+
+<blockquote>
+<p>Show how to multiply the complex numbers $a + bi$ and $c + di$ using only three multiplications of real numbers. The algorithm should take $a$, $b$, $c$ and $d$ as input and produce the real component $ac - bd$ and the imaginary component $ad + bc$ separately.</p>
+</blockquote>
+
+<p>The three matrices are</p>
+
+<div>
+$$
+\begin{aligned}
+A & = (a + b)(c + d) = ac + ad + bc + bd \\
+B & = ac \\
+C & = bd.
+\end{aligned}
+$$
+</div>
+
+<p>The result is</p>
+
+<div>
+$$
+(B - C) + (A - B - C)i.
+$$
+</div>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8694,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8709,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8863,6 +9103,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8877,6 +9118,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8893,6 +9137,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8910,6 +9155,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14711,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap04/4.1/" title="4.1 The maximum-subarray problem"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap04/4.3/" title="4.3 The substitution method for solving recurrences" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14724,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

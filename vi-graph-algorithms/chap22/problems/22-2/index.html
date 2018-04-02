@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>22-2 Articulation points, bridges, and biconnected components :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap22/problems/22-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4973,7 +4973,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/" title="22 Elementary Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5095,7 +5095,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/problems/" title="Chap 22 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5138,7 +5138,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/problems/22-2/" title="22-2 Articulation points, bridges, and biconnected components" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/problems/22-2/" title="22-2 Articulation points, bridges, and biconnected components" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap22/problems/22-2/">
         Problem 22-2
         
@@ -8374,56 +8374,177 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap22/Problems/22-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap22/'>22 Elementary Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap22/problems/'>Chap 22 Problems</a> > 22-2 Articulation points, bridges, and biconnected components
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>22-2 Articulation points, bridges, and biconnected components</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Let $G = (V, E)$ be a connected, undirected graph. An <strong><em>articulation point</em></strong> of $G$ is a vertex whose removal disconnects $G$. A <strong><em>bridge</em></strong> of $G$ is an edge whose removal disconnects $G$. A <strong><em>biconnected component</em></strong> of $G$ is a maximal set of edges such that any two edges in the set lie on a common simple cycle. Figure 22.10 illustrates these definitions. We can determine articulation points, bridges, and biconnected components using depth-first search. Let $G_\pi = (V, E_\pi)$ be a depth-first tree of $G$.</p>
+
+<p><strong>a.</strong> Prove that the root of $G_\pi$ is an articulation point of $G$ if and only if it has at least two children in $G_\pi$.</p>
+
+<p><strong>b.</strong> Let $v$ be a nonroot vertex of $G_\pi$. Prove that $v$ is an articulation point of $G$ if and only if $v$ has a child $s$ such that there is no back edge from $s$ or any descendant of $s$ to a proper ancestor of $v$.</p>
+
+<p><strong>c.</strong> Let</p>
+
+<div>
+$$
+v.low = \min
+\begin{cases}
+v.d, \\
+w.d:(u,w) \text{ is a back edge for some descendant } u \text{ of } v.
+\end{cases}
+$$
+</div>
+
+<p>Show how to computer $v.low$ for all vertices $v \in V$ in $O(E)$ time.</p>
+
+<p><strong>d.</strong> Show how to compute all articulation points in $O(E)$ time.</p>
+
+<p><strong>e.</strong> Prove that an edge of $G$ is a bridge if and only if it does not lie on any simple cycle of $G$.</p>
+
+<p><strong>f.</strong> Show how to compute all the bridges of $G$ in $O(E)$ time.</p>
+
+<p><strong>g.</strong> Prove that the biconnected components of $G$ partition the nonbridge edges of $G$.</p>
+
+<p><strong>h.</strong> Give an $O(E)$-time algorithm to label each edge $e$ of $G$ with a positive integer $e.bcc$ such that $e.bcc = e^\prime.bcc$ if and only if $e$ and $e^\prime$ are in the same biconnected component.</p>
+</blockquote>
+
+<p><strong>a.</strong> First suppose the root $r$ of $G_\pi$ is an articulation point. Then the removal of $r$ from $G$ would cause the graph to disconnect, so $r$ has at least $2$ children in $G$. If $r$ has only one child $v$ in $G_\pi$ then it must be the case that there is a path from $v$ to each of $r$&rsquo;s other children. Since removing $r$ disconnects the graph, there must exist vertices $u$ and $w$ such that the only paths from $u$ to $w$ contain $r$.</p>
+
+<p>To reach $r$ from $u$, the path must first reach one of $r$&rsquo;s children. This child is connect to $v$ via a path which doesn&rsquo;t contain $r$.</p>
+
+<p>To reach $w$, the path must also leave $r$ through one of its children, which is also reachable by $v$. This implies that there is a path from $u$ to $w$ which doesn&rsquo;t contain $r$, a contradiction.</p>
+
+<p>Now suppose $r$ has at least two children $u$ and $v$ in $G_\pi$. Then there is no path from $u$ to $v$ in $G$ which doesn&rsquo;t go through $r$, since otherwise $u$ would be an ancestor of $v$. Thus, removing $r$ disconnects the component containing $u$ and the component containing $v$, so $r$ is an articulation point.</p>
+
+<p><strong>b.</strong> Suppose that $v$ is a nonroot vertex of $G_\pi$ and that $v$ has a child $s$ such that neither $s$ nor any of $s$&rsquo;s descendants have back edges to a proper ancestor of $v$. Let $r$ be an ancestor of $v$, and remove $v$ from $G$. Since we are in the undirected case, the only edges in the graph are tree edges or back edges, which means that every edge incident with $s$ takes us to a descendant of $s$, and no descendants have back edges, so at no point can we move up the tree by taking edges. Therefore $r$ is unreachable from $s$, so the graph is disconnected and $v$ is an articulation point.</p>
+
+<p>Now suppose that for every child of $v$ there exists a descendant of that child which has a back edge to a proper ancestor of $v$. Remove $v$ from $G$. Every subtree of $v$ is a connected component. Within a given subtree, find the vertex which has a back edge to a proper ancestor of $v$. Since the set $T$ of vertices which aren&rsquo;t descendants of $v$ form a connected component, we have that every subtree of $v$ is connected to $T$. Thus, the graph remains connected after the deletion of $v$ so $v$ is not an articulation point.</p>
+
+<p><strong>c.</strong> Since $v$ is discovered before all of its descendants, the only back edges which could affect $v.low$ are ones which go from a descendant of $v$ to a proper ancestor of $v$. If we know $u.low$ for every child $u$ of $v$, then we can compute $v.low$ easily since all the information is coded in its descendants.</p>
+
+<p>Thus, we can write the algorithm recursively: If $v$ is a leaf in $G_\pi$ then $v.low$ is the minimum of $v.d$ and $w.d$ where $(v, w)$ is a back edge. If $v$ is not a leaf, $v$ is the minimum of $v.d$, $w.d$ where $w$ is a back edge, and $u.low$, where $u$ is a child of $v$. Computing $v.low$ for a vertex is linear in its degree. The sum of the vertices&rsquo; degrees gives twice the number of edges, so the total runtime is $O(E)$.</p>
+
+<p><strong>d.</strong> First apply the algorithm of part (c) in $O(E)$ to compute $v.low$ for all $v \in V$. If $v.low$ = $v.d$ if and only if no descendant of $v$ has a back edge to a proper ancestor of $v$, if and only if $v$ is not an articulation point.</p>
+
+<p>Thus, we need only check $v.low$ versus $v.d$ to decide in constant time whether or not $v$ is an articulation point, so the runtime is $O(E)$.</p>
+
+<p><strong>e.</strong> An edge $(u, v)$ lies on a simple cycle if and only if there exists at least one path from $u$ to $v$ which doesn&rsquo;t contain the edge $(u, v)$, if and only if removing $(u, v)$ doesn&rsquo;t disconnect the graph, if and only if $(u, v)$ is not a bridge.</p>
+
+<p><strong>f.</strong> A edge $(u, v)$ lies on a simple cycle in an undirected graph if and only if either both of its endpoints are articulation points, or one of its endpoints is an articulation point and the other is a vertex of degree $1$. Since we can compute all articulation points in $O(E)$ and we can decide whether or not a vertex has degree $1$ in constant time, we can run the algorithm in part (d) and then decide whether each edge is a bridge in constant time, so we can find all bridges in $O(E)$ time.</p>
+
+<p><strong>g.</strong> It is clear that every nonbridge edge is in some biconnected component, so we need to show that if $C_1$ and $C_2$ are distinct biconnected components, then they contain no common edges. Suppose to the contrary that $(u, v)$ is in both $C_1$ and $C_2$.</p>
+
+<p>Let $(a, b)$ be any edge in $C_1$ and $(c, d)$ be any edge in $C_2$.</p>
+
+<p>Then $(a, b)$ lies on a simple cycle with $(u, v)$, consisting of the path</p>
+
+<div>
+$$
+a, b, p_1, \ldots, p_k, u, v, p_{k + 1}, \ldots, p_n, a.
+$$
+</div>
+
+<p>Similarly, $(c, d)$ lies on a simple cycle with $(u, v)$ consisting of the path</p>
+
+<div>
+$$
+c, d, q_1, \ldots, q_m, u, v, q_{m + 1}, \ldots, q_l, c.
+$$
+</div>
+
+<p>This means</p>
+
+<div>
+$$
+a, b, p_1, \ldots, p_k, u, q_m, \ldots, q_1, d, c, q_l , \ldots, q_{m + 1}, v, p_{k + 1}, \ldots, p_n,
+$$
+</div>
+
+<p>a is a simple cycle containing $(a, b)$ and $(c, d)$, a contradiction. Thus, the biconnected components form a partition.</p>
+
+<p><strong>h.</strong> Locate all bridge edges in $O(E)$ time using the algorithm described in part (f). Remove each bridge from $E$. The biconnected components are now simply the edges in the connected components. Assuming this has been done, run the following algorithm, which clearly runs in $O(|E|)$ where $|E|$ is the number of edges originally in $G$.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12103,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11997,6 +12119,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12011,6 +12134,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12092,6 +12218,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12104,6 +12231,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12120,6 +12250,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12137,6 +12268,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14597,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap22/problems/22-1/" title="22-1 Classifying edges by breadth-first search"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap22/problems/22-3/" title="22-3 Euler tour" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14610,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

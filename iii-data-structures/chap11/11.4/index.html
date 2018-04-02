@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>11.4 Open addressing :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap11/11.4/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2372,7 +2372,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap11/" title="11 Hash Tables" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2455,7 +2455,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.4/" title="11.4 Open addressing" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.4/" title="11.4 Open addressing" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap11/11.4/">
         11.4 Open addressing
         
@@ -8374,56 +8374,246 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap11/11.4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap11/'>11 Hash Tables</a> > 11.4 Open addressing
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#11-4-1">11.4-1</a></li>
+<li><a href="#11-4-2">11.4-2</a></li>
+<li><a href="#11-4-3">11.4-3</a></li>
+<li><a href="#11-4-4-star">11.4-4 $\star$</a></li>
+<li><a href="#11-4-5-star">11.4-5 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>11.4 Open addressing</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="11-4-1">11.4-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Consider inserting the keys $10, 22, 31, 4, 15, 28, 17, 88, 59$ into a hash table of length $m = 11$ using open addressing with the auxiliary hash function $h^\prime(k) = k$. Illustrate the result of inserting these keys using linear probing, using quadratic probing with $c_1 = 1$ and $c_2 = 3$, and using double hashing with $h_1(k) = k$ and $h_2(k) = 1 + (k \mod (m - 1))$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<ul>
+<li><p>Linear probing:</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+\begin{array}{r|ccccccccc}
+\mod 0 &    & 22 & 22 & 22 & 22 & 22 & 22 & 22 & 22 \\
+\mod 1 &    &    &    &    &    &    &    & 88 & 88 \\
+\mod 2 &    &    &    &    &    &    &    &    &    \\
+\mod 3 &    &    &    &    &    &    &    &    &    \\
+\mod 4 &    &    &    &  4 &  4 &  4 &  4 &  4 &  4 \\
+\mod 5 &    &    &    &    & 15 & 15 & 15 & 15 & 15 \\
+\mod 6 &    &    &    &    &    & 28 & 28 & 28 & 28 \\
+\mod 7 &    &    &    &    &    &    & 17 & 17 & 17 \\
+\mod 8 &    &    &    &    &    &    &    &    & 59 \\
+\mod 9 &    &    & 31 & 31 & 31 & 31 & 31 & 31 & 31 \\
+\mod10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 
+\end{array}
+$$
+</div></li>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<li><p>Quadradic probing, it will look identical until there is a collision on inserting the fifth element:</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+\begin{array}{r|ccccccccc}
+\mod 0 &    & 22 & 22 & 22 & 22 & 22 & 22 & 22 & 22 \\
+\mod 1 &    &    &    &    &    &    &    &    &    \\
+\mod 2 &    &    &    &    &    &    &    & 88 & 88 \\
+\mod 3 &    &    &    &    &    &    & 17 & 17 & 17 \\
+\mod 4 &    &    &    &  4 &  4 &  4 &  4 &  4 &  4 \\
+\mod 5 &    &    &    &    &    &    &    &    &    \\
+\mod 6 &    &    &    &    &    & 28 & 28 & 28 & 28 \\
+\mod 7 &    &    &    &    &    &    &    &    & 59 \\
+\mod 8 &    &    &    &    & 15 & 15 & 15 & 15 & 15 \\
+\mod 9 &    &    & 31 & 31 & 31 & 31 & 31 & 31 & 31 \\
+\mod10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10  
+\end{array}
+$$
+</div></li>
+</ul>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>Note that there is no way to insert the element $59$ now, because the offsets coming from $c_1 = 1$ and $c_2 = 3$ can only be even, and an odd offset would be required to insert $59$ because $59 \mod 11 = 4$ and all the empty positions are at odd indices.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<ul>
+<li><p>Double hashing:</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<div>
+$$
+\begin{array}{r|ccccccccc}
+\mod 0 &    & 22 & 22 & 22 & 22 & 22 & 22 & 22 & 22 \\
+\mod 1 &    &    &    &    &    &    &    &    &    \\
+\mod 2 &    &    &    &    &    &    &    &    & 59 \\
+\mod 3 &    &    &    &    &    &    & 17 & 17 & 17 \\
+\mod 4 &    &    &    &  4 &  4 &  4 &  4 &  4 &  4 \\
+\mod 5 &    &    &    &    & 15 & 15 & 15 & 15 & 15 \\
+\mod 6 &    &    &    &    &    & 28 & 28 & 28 & 28 \\
+\mod 7 &    &    &    &    &    &    &    & 88 & 88 \\
+\mod 8 &    &    &    &    &    &    &    &    &    \\
+\mod 9 &    &    & 31 & 31 & 31 & 31 & 31 & 31 & 31 \\
+\mod10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 
+\end{array}
+$$
+</div></li>
+</ul>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="11-4-2">11.4-2</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Write pseudocode for $\text{HASH-DELETE}$ as outlined in the text, and modify $\text{HASH-INSERT}$ to handle the special value $\text{DELETED}$.</p>
+</blockquote>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<pre><code class="language-cpp">HASH-DELETE(T, k)
+    i = 0
+    repeat
+        j = h(k, i)
+        if T[j] == k
+            T[j] = NIL
+            return j
+        else i = i + 1
+    until T[j] == NIL or i == m
+    error &quot;element not exist&quot;
+</code></pre>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>By implementing $\text{HASH-DELETE}$ in this way, the $\text{HASH-INSERT}$ need to be modified to treat $\text{NIL}$ slots as empty ones.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<pre><code class="language-cpp">HASH-INSERT(T, k)
+    i = 0
+    repeat
+        j = h(k, i)
+        if T[j] == NIL or T[j] == DELETE
+            T[j] = k
+            return j
+        else j
+    until i == m
+    error &quot;hash table overflow&quot;
+</code></pre>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<h2 id="11-4-3">11.4-3</h2>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<blockquote>
+<p>Consider an open-address hash table with uniform hashing. Give upper bounds on the expected number of probes in an unsuccessful search and on the expected number of probes in a successful search when the load factor is $3 / 4$ and when it is $7 / 8$.</p>
+</blockquote>
+
+<ul>
+<li>$\alpha = 3 / 4$,
+
+<ul>
+<li>unsuccessful: $\frac{1}{1 - \frac{3}{4}} = 4$ probes,</li>
+<li>successful: $\frac{1}{\frac{3}{4}} \ln\frac{1}{1-\frac{3}{4}} \approx 1.848$ probes.</li>
+</ul></li>
+<li>$\alpha = 7 / 8$,
+
+<ul>
+<li>unsuccessful: $\frac{1}{1 - \frac{7}{8}} = 8$ probes,</li>
+<li>successful: $\frac{1}{\frac{7}{8}} \ln\frac{1}{1 - \frac{7}{8}} \approx 2.377$ probes.</li>
+</ul></li>
+</ul>
+
+<h2 id="11-4-4-star">11.4-4 $\star$</h2>
+
+<blockquote>
+<p>Suppose that we use double hashing to resolve collisions—that is, we use the hash function $h(k, i) = (h_1(k) + ih_2(k) \mod m$. Show that if $m$ and $h_2(k)$ have greatest common divisor $d \ge 1$ for some key $k$, then an unsuccessful search for key $k$ examines $(1/d)$th of the hash table before returning to slot $h_1(k)$. Thus, when $d = 1$, so that $m$ and $h_2(k)$ are relatively prime, the search may examine the entire hash table. ($\textit{Hint:}$ See Chapter 31.)</p>
+</blockquote>
+
+<p>Suppose $d = \gcd(m, h_2(k))$, the $\text{LCM}$ $l = m \cdot h_2(k) / d$.</p>
+
+<p>Since $d | h_2(k)$, then $m \cdot h_2(k) / d \mod m = 0 \cdot (h_2(k) / d \mod m) = 0$, therefore $(l + ih_2(k)) \mod m = ih_2(k) \mod m$, which means $ih_2(k) \mod m$ has a period of $m / d$.</p>
+
+<h2 id="11-4-5-star">11.4-5 $\star$</h2>
+
+<blockquote>
+<p>Consider an open-address hash table with a load factor $\alpha$. Find the nonzero value $\alpha$ for which the expected number of probes in an unsuccessful search equals twice the expected number of probes in a successful search. Use the upper bounds given by Theorems 11.6 and 11.8 for these expected numbers of probes.</p>
+</blockquote>
+
+<div>
+$$
+\begin{aligned}
+\frac{1}{1 - \alpha} & = 2 \cdot \frac{1}{\alpha} \ln\frac{1}{1 - \alpha} \\
+              \alpha & = 0.71533.
+\end{aligned}
+$$
+</div>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10142,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10157,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10113,6 +10307,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10127,6 +10322,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10175,6 +10373,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10192,6 +10391,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14665,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap11/11.3/" title="11.3 Hash functions"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap11/11.5/" title="11.5 Perfect hashing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14678,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

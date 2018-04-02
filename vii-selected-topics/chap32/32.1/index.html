@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>32.1 The naive string-matching algorithm :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vii-selected-topics/chap32/32.1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -6128,7 +6128,7 @@
   
     
     <li data-nav-id="/CLRS/vii-selected-topics/" title="VII Selected Topics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -7379,7 +7379,7 @@
   
     
     <li data-nav-id="/CLRS/vii-selected-topics/chap32/" title="32 String Matching" class="dd-item 
-        
+        parent
         
         
         ">
@@ -7405,7 +7405,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vii-selected-topics/chap32/32.1/" title="32.1 The naive string-matching algorithm" class="dd-item ">
+      <li data-nav-id="/CLRS/vii-selected-topics/chap32/32.1/" title="32.1 The naive string-matching algorithm" class="dd-item active">
         <a href="/CLRS/vii-selected-topics/chap32/32.1/">
         32.1 The naive string-matching algorithm
         
@@ -8374,56 +8374,177 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VII%20Selected%20Topics/Chap32/32.1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vii-selected-topics/'>VII Selected Topics</a> > <a href='/CLRS/vii-selected-topics/chap32/'>32 String Matching</a> > 32.1 The naive string-matching algorithm
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#32-1-1">32.1-1</a></li>
+<li><a href="#32-1-2">32.1-2</a></li>
+<li><a href="#32-1-3">32.1-3</a></li>
+<li><a href="#32-1-4">32.1-4</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>32.1 The naive string-matching algorithm</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="32-1-1">32.1-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Show the comparisons the naive string matcher makes for the pattern $P = 0001$ in the text $T = 000010001010001$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>$\ldots{equation}</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="32-1-2">32.1-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Suppose that all characters in the pattern $P$ are different. Show how to accelerate NAIVE-STRING-MATCHER to run in time $O(n)$ on an $n$-character text $T$.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>Suppose $T[i] \ne P[j]$, then for $k \in [1, j)$, $T[i - k] = P[j - k] \ne P[0]$, the $[i - k, i)$ are all invalid shifts which could be skipped, therefore we can compare $T[i]$ with $P[0]$ in the next iteration.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="32-1-3">32.1-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Suppose that pattern $P$ and text $T$ are randomly chosen strings of length $m$ and $n$, respectively, from the $d$-ary alphabet $\Sigma_d = {0, 1, \ldots, d - 1 }$, where $d \ge 2$. Show that the expected number of character-to-character comparisons made by the implicit loop in line 4 of the naive algorithm is</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>$\displaystyle (n - m + 1) \frac{1 - d^{-m}}{1 - d^{-1}} \le 2 (n - m + 1){equation}
+over all executions of this loop. (Assume that the naive algorithm stops comparing characters for a given shift once it finds a mismatch or matches the entire pattern.) Thus, for randomly chosen strings, the naive algorithm is quite efficient.</p>
+</blockquote>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Suppose for each shift, the number of compared characters is $L$, then:</p>
 
-<h1 id="more-informations">More Informations</h1>
+<p>{equation}<div>
+$$\begin{array}{rll}
+\text E[L] &amp;=&amp;
+\displaystyle 1 \cdot \frac{d - 1}{d} + 2 \cdot \left ( \frac{1}{d} \right )^1 \frac{d - 1}{d} + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m - 1} \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m} <br />
+&amp;=&amp;
+\displaystyle \left (1 + 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m} \right ) \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m}
+\end{array}
+$$
+</div>
+{equation}
+{equation}<div>
+$$\begin{array}{rllcl}
+S &amp;=&amp; 1 + &amp;\displaystyle 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m - 1} <br />
+\displaystyle \frac{1}{d}S &amp;=&amp; &amp;
+\displaystyle 1 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + (m - 1) \cdot \left ( \frac{1}{d} \right )^{m - 1} &amp;\displaystyle  + m \cdot \left ( \frac{1}{d} \right )^{m} <br />
+\displaystyle \frac{d - 1}{d}S &amp;=&amp; &amp;\displaystyle 1 +  \left ( \frac{1}{d} \right )^1  + \cdots + \cdot \left ( \frac{1}{d} \right )^{m - 1}&amp;\displaystyle  - m \cdot \left ( \frac{1}{d} \right )^{m} <br />
+\displaystyle \frac{d - 1}{d}S &amp;=&amp; &amp;
+\displaystyle \frac{1 - d^{-m}}{1 - d^{-1}}
+&amp;\displaystyle  - m \cdot \left ( \frac{1}{d} \right )^{m} <br />
+\end{array}
+$$
+</div>
+{equation}
+{equation}<div>
+$$\begin{array}{rll}
+\text E[L] &amp;=&amp;
+\displaystyle \left (1 + 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m} \right ) \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m} <br />
+&amp;=&amp;\displaystyle
+ \frac{1 - d^{-m}}{1 - d^{-1}}
+ - m \cdot \left ( \frac{1}{d} \right )^{m}  + m \cdot \left ( \frac{1}{d} \right )^{m} <br />
+ &amp;=&amp;\displaystyle
+ \frac{1 - d^{-m}}{1 - d^{-1}}
+\end{array}
+$$
+</div>
+{equation}
+There are $n - m + 1$ shifts, therefore the expected number of comparisons is:</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>$\displaystyle (n - m + 1) \cdot \text E[L] = (n - m + 1) \frac{1 - d^{-m}}{1 - d^{-1}}{equation}
+And since $d \ge 2$, $1 - d^{-1} \ge 0.5$, and since $1 - d^{-m} &lt; 1$, $\displaystyle \frac{1 - d^{-m}}{1 - d^{-1}} \le 2$, therefore $\displaystyle (n - m + 1) \frac{1 - d^{-m}}{1 - d^{-1}} \le 2 (n - m + 1)$.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="32-1-4">32.1-4</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Suppose we allow the pattern $P$ to contain occurrences of a <strong><em>gap character</em></strong> $\diamond$ that can match an _arbitrary_ string of characters (even one of zero length). For example, the pattern $ab\diamond ba\diamond c$ occurs in the text $cabccbacbacab$ as</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>$\displaystyle c \underbrace{ab}_{ab} \underbrace{cc}_{\diamond} \underbrace{ba}_{ba} \underbrace{cba}_{\diamond} \underbrace{c}_{c} ab{equation}
+and as</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>$\displaystyle c \underbrace{ab}_{ab} \underbrace{ccbac}_{\diamond} \underbrace{ba}_{ba} \underbrace{ }_{\diamond} \underbrace{c}_{c} ab{equation}
+Note that the gap character may occur an arbitrary number of times in the pattern but not at all in the text. Give a polynomial-time algorithm to determine whether such a pattern $P$ occurs in a given text $T$, and analyze the running time of your algorithm.</p>
+</blockquote>
+
+<p>Dynamic programming, $\Theta(n^2 m)$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -12842,6 +12963,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12856,6 +12978,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -13762,6 +13887,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -13778,6 +13904,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -13793,6 +13920,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14593,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vii-selected-topics/chap32/" title="32 String Matching"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vii-selected-topics/chap32/32.2/" title="32.2 The Rabin-Karp algorithm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14606,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

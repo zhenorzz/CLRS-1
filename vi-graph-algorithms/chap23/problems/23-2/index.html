@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>23-2 Minimum spanning tree in sparse graphs :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap23/problems/23-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5214,7 +5214,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap23/" title="23 Minimum Spanning Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5279,7 +5279,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap23/problems/" title="Chap 23 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5322,7 +5322,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap23/problems/23-2/" title="23-2 Minimum spanning tree in sparse graphs" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap23/problems/23-2/" title="23-2 Minimum spanning tree in sparse graphs" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap23/problems/23-2/">
         Problem 23-2
         
@@ -8374,56 +8374,178 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap23/Problems/23-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap23/'>23 Minimum Spanning Trees</a> > <a href='/CLRS/vi-graph-algorithms/chap23/problems/'>Chap 23 Problems</a> > 23-2 Minimum spanning tree in sparse graphs
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>23-2 Minimum spanning tree in sparse graphs</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>For a very sparse connected graph $G = (V, E)$, we can further improve upon the $O(E + V\lg V)$ running time of Prim&rsquo;s algorithm with Fibonacci heaps by preprocessing $G$ to decrease the number of vertices before running Prim&rsquo;s algorithm. In particular, we choose, for each vertex $u$, the minimum-weight edge $(u, v)$ incident on $u$, and we put $(u, v)$ into the minimum spanning tree under construction. We then contract all chosen edges (see Section B.4). Rather than contracting these edges one at a time, we first identify sets of vertices that are united into the same new vertex. Then we create the graph that would have resulted from contracting these edges one at a time, but we do so by &ldquo;renaming&rdquo; edges according to the sets into which their endpoints were placed. Several edges from the original graph may be renamed the same as each other. In such a case, only one edge results, and its weight is the minimum of the weights of the corresponding original edges.</p>
+
+<p>Initially, we set the minimum spanning tree $T$ being constructed to be empty, and for each edge $(u, v) \in E$, we initialize the attributes $(u, v).orig = (u, v)$ and $(u, v).c = w(u, v)$. We use the $orig$ attribute to reference the edge from the initial graph that is associated with an edge in the contracted graph. The $c$ attribute holds the weight of an edge, and as edges are contracted, we update it according to the above scheme for choosing edge weights. The procedure $\text{MST-REDUCE}$ takes inputs $G$ and $T$, and it returns a contracted graph $G^\prime$ with updated attributes $orig^\prime$ and $c^\prime$. The procedure also accumulates edges of $G$ into the minimum spanning tree $T$.</p>
+
+<pre><code>MST-REDUCE(G, T)
+    for each v in G.V
+        v.mark = FALSE
+        MAKE-SET(v)
+    for each u in G.V
+        if u.mark == FALSE
+            choose v in G.Adj[u] such that (u, v).c is minimized
+                UNION(u, v)
+                T = T ∪ {(u, v).orig}
+                u.mark = v.mark = TRUE
+    G'.V = {FIND-SET(v) : v ∈ G.V}
+    G'.E = ∅
+    for each (x, y) ∈ G.E
+        u = FIND-SET(x)
+        v = FIND-SET(y)
+        if (u, v) ∉ in G'.E
+             G'.E = G'.E ∪ {(u, v)}
+             (u, v).orig' = (x, y).orig
+             (u, v).c' = (x, y).c
+        else if (x, y).c &lt; (u,v).c'
+             (u, v).orig' = (x, y).orig
+             (u, v).c' = (x, y).c
+    construct adjacency lists G'.Adj for G'
+    return G' and T
+</code></pre>
+
+<p><strong>a.</strong> Let $T$ be the set of edges returned by $\text{MST-REDUCE}$, and let $A$ be the minimum spanning tree of the graph $G^\prime$ formed by the call $\text{MST-PRIM}(G^\prime, c^\prime, r)$, where $c^\prime$ is the weight attribute on the edges of $G^\prime.E$ and $r$ is any vertex in $G^\prime.V$. Prove that $T \cup \{(x,y).orig^\prime: (x, y) \in A\}$ is a minimum spanning tree of $G$.</p>
+
+<p><strong>b.</strong> Argue that $|G^\prime.V| \le |V| / 2$.</p>
+
+<p><strong>c.</strong> Show how to implement $\text{MST-REDUCE}$ so that it runs in $O(E)$ time. ($\textit{Hint:}$ Use simple data structures.)</p>
+
+<p><strong>d.</strong> Suppose that we run $k$ phases of $\text{MST-REDUCE}$, using the output $G^\prime$ produced by one phase as the input $G$ to the next phase and accumulating edges in $T$. Argue that the overall running time of the $k$ phases is $O(kE)$.</p>
+
+<p><strong>e.</strong> Suppose that after running $k$ phases of $\text{MST-REDUCE}$, as in part (d), we run Prim&rsquo;s algorithm by calling $\text{MST-PRIM}(G^\prime, c^\prime, r)$, where $G^\prime$, with weight attribute $c^\prime$, is returned by the last phase and $r$ is any vertex in $G^\prime.V$. Show how to pick $k$ so that the overall running time is $O(E\lg\lg V)$. Argue that your choice of $k$ minimizes the overall asymptotic running time.</p>
+
+<p><strong>f.</strong> For what values of $|E|$ (in terms of $|V|$) does Prim&rsquo;s algorithm with preprocessing asymptotically beat Prim&rsquo;s algorithm without preprocessing?</p>
+</blockquote>
+
+<p><strong>a.</strong> We&rsquo;ll show that the edges added at each step are safe. Consider an unmarked vertex $u$. Set $S = {u}$ and let $A$ be the set of edges in the tree so far. Then the cut respects $A$, and the next edge we add is a light edge, so it is safe for $A$. Thus, every edge in $T$ before we run Prim&rsquo;s algorithm is safe for $T$. Any edge that Prim&rsquo;s would normally add at this point would have to connect two of the trees already created, and it would be chosen as minimal. Moreover, we choose exactly one between any two trees. Thus, the fact that we only have the smallest edges available to us is not a problem. The resulting tree must be minimal.</p>
+
+<p><strong>b.</strong> We argue by induction on the number of vertices in $G$. We&rsquo;ll assume that $|V| &gt; 1$, since otherwise $\text{MST-REDUCE}$ will encounter an error on line 6 because there is no way to choose $v$. Let $|V| = 2$. Since $G$ is connected, there must be an edge between $u$ and $v$, and it is trivially of minimum weight. They are joined, and $|G^\prime.V| = 1 = |V| / 2$.</p>
+
+<p>Suppose the claim holds for $|V| = n$. Let $G$ be a connected graph on $n + 1$ vertices. Then $G^\prime.V \le n / 2$ prior to the final vertex $v$ being examined in the for-loop of line 4. If $v$ is marked then we&rsquo;re done, and if $v$ isn&rsquo;t marked then we&rsquo;ll connect it to some other vertex, which must be marked since $v$ is the last to be processed.</p>
+
+<p>Either way, $v$ can&rsquo;t contribute an additional vertex to $G^\prime.V$. so</p>
+
+<div>
+$$
+|G'.V| \le n / 2 \le (n + 1) / 2.
+$$
+</div>
+
+<p><strong>c.</strong> Rather than using the disjoint set structures of chapter 21, we can simply use an array to keep track of which component a vertex is in. Let $A$ be an array of length $|V|$ such that $A[u] = v$ if $v = \text{FIND-SET}(u)$. Then $\text{FIND-SET}(u)$ can now be replaced with $A[u]$ and $\text{UNION}(u, v)$ can be replaced by $A[v] = A[u]$. Since these operations run in constant time, the runtime is $O(E)$.</p>
+
+<p><strong>d.</strong> The number of edges in the output is monotonically decreasing, so each call is $O(E)$. Thus, $k$ calls take $O(kE)$ time.</p>
+
+<p><strong>e.</strong> The runtime of Prim&rsquo;s algorithm is $O(E + V\lg V)$. Each time we run $\text{MST-REDUCE}$, we cut the number of vertices at least in half. Thus, after $k$ calls, the number of vertices is at most $|V| / 2^k$. We need to minimize</p>
+
+<div>
+$$
+E + V / 2^k\lg(V / 2^k) + kE = E + \frac{V\lg V}{2^k} - \frac{Vk}{2^k} + kE
+$$
+</div> 
+
+<p>with respect to $k$. If we choose $k = \lg\lg V$ then we achieve the overall running time of $O(E\lg\lg V)$ as desired.</p>
+
+<p>To see that this value of $k$ minimizes, note that the $\frac{Vk}{2^k}$ term is always less than the $kE$ term since $E \ge V$. As $k$ decreases, the contribution of $kE$ decreases, and the contribution of $\frac{V\lg V}{2^k}$ increases. Thus, we need to find the value of $k$ which makes them approximately equal in the worst case, when $E = V$. To do this, we set $\frac{\lg V}{2^k} = k$. Solving this exactly would involve the Lambert W function, but the nicest elementary function which gets close is $k = \lg\lg V$.</p>
+
+<p><strong>f.</strong> We simply set up the inequality</p>
+
+<div>
+$$
+E\lg\lg V < E + V\lg V
+$$
+</div>
+
+<p>to find that we need
+<div>
+$$
+E &lt; \frac{V\lg V}{\lg\lg V-1} = O(\frac{V\lg V}{\lg\lg V}).
+$$
+</div></p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12104,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12119,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12175,6 +12301,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12189,6 +12316,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12222,6 +12352,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12234,6 +12365,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12251,6 +12385,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12266,6 +12401,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14601,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap23/problems/23-1/" title="23-1 Second-best minimum spanning tree"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap23/problems/23-3/" title="23-3 Bottleneck spanning tree" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14614,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

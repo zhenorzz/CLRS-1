@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>24-5 Karp&#39;s minimum mean-weight cycle algorithm :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap24/problems/24-5/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5398,7 +5398,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/" title="24 Single-Source Shortest Paths" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5520,7 +5520,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/problems/" title="Chap 24 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5620,7 +5620,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/problems/24-5/" title="24-5 Karp&#39;s minimum mean-weight cycle algorithm" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/problems/24-5/" title="24-5 Karp&#39;s minimum mean-weight cycle algorithm" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap24/problems/24-5/">
         Problem 24-5
         
@@ -8374,56 +8374,219 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap24/Problems/24-5.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap24/'>24 Single-Source Shortest Paths</a> > <a href='/CLRS/vi-graph-algorithms/chap24/problems/'>Chap 24 Problems</a> > 24-5 Karp's minimum mean-weight cycle algorithm
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>24-5 Karp&#39;s minimum mean-weight cycle algorithm</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Let $G = (V, E)$ be a directed graph with weight function $w: E \to \mathbb R$, and let $n = |V|$. We define the <strong><em>mean weight</em></strong> of a cycle $c = \langle e_1, e_2, \ldots, e_k \rangle$ of edges in $E$ to be</p>
+
+<div>
+$$
+\mu(c) = \frac{1}{k} \sum_{i = 1}^k w(e_i).
+$$
+</div>
+
+<p>Let $\mu^* = \min_c \mu(c)$, where $c$ ranges over all directed cycles in $G$. We call a cycle $c$ for which $\mu(c) = \mu^*$ a  <strong><em>minimum mean-weight cycle</em></strong>. This problem investigates an efficient algorithm for computing $\mu^*$.</p>
+
+<p>Assume without loss of generality that every vertex $v \in V$ is reachable from a source vertex $s \in V$. Let $\delta(s, v)$ be the weight of a shortest path from $s$ to $v$, and let $\delta_k(s, v)$ be the weight of a shortest path from $s$ to $v$ consisting of <em>exactly</em> $k$ edges. If there is no path from $s$ to $v$ with exactly $k$ edges, then $\delta_k(s, v) = \infty$.</p>
+
+<p><strong>a.</strong> Show that if $\mu^* = 0$, then $G$ contains no negative-weight cycles and $\delta(s, v) = \min_{0 \le k \le n - 1} \delta_k(s, v)$ for all vertices $v \in V$.</p>
+
+<p><strong>b.</strong> Show that if $\mu^* = 0$, then</p>
+
+<div>
+$$
+\max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta_k(s, v)}{n - k} \ge 0
+$$
+</div>
+
+<p>for all vertices $v \in V$. ($\textit{Hint:}$ Use both properties from part (a).)</p>
+
+<p><strong>c.</strong> Let $c$ be a $0$-weight cycle, and let $u$ and $v$ be any two vertices on $c$. Suppose that $\mu^* = 0$ and that the weight of the simple path from $u$ to $v$ along the cycle is $x$. Prove that $\delta(s, v) = \delta(s, u) + x$. ($\textit{Hint:}$ The weight of the simple path from $v$ to $u$ along the cycle is $-x$.)</p>
+
+<p><strong>d.</strong> Show that if $\mu^* = 0$, then on each minimum mean-weight cycle there exists a vertex $v$ such that</p>
+
+<div>
+$$
+\max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta_k(s, v)}{n - k} = 0.
+$$
+</div>
+
+<p>($\textit{Hint:}$ Show how to extend a shortest path to any vertex on a minimum meanweight cycle along the cycle to make a shortest path to the next vertex on the cycle.)</p>
+
+<p><strong>e.</strong> Show that if $\mu^* = 0$, then</p>
+
+<div>
+$$
+\min_{v \in V} \max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta_k(s, v)}{n - k} = 0.
+$$
+</div>
+
+<p><strong>f.</strong> Show that if we add a constant $t$ to the weight of each edge of $G$, then $\mu^*$ increases by $t$. Use this fact to show that</p>
+
+<div>
+$$
+\mu^* = \min_{v \in V} \max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta_k(s, v)}{n - k}.
+$$
+</div>
+
+<p><strong>g.</strong> Give an $O(VE)$-time algorithm to compute $\mu^*$.</p>
+</blockquote>
+
+<p><strong>a.</strong> If $\mu^* = 0$, then we have that the lowest that $\frac{1}{k}_{i = 1}^k w(e_i)$ can be zero. This means that the lowest $\sum_{i = 1}^k w(e_i)$ can be $0$. This means that no cycle can have negative weight. Also, we know that for any path from $s$ to $v$, we can make it simple by removing any cycles that occur. This means that it had a weight equal to some path that has at most $n - 1$ edges in it. Since we take the minimum over all possible number of edges, we have the minimum over all paths.</p>
+
+<p><strong>b.</strong> To show that</p>
+
+<div>
+$$
+\max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta_k(s, v)}{n - k} \ge 0,
+$$
+</div>
+
+<p>we need to show that</p>
+
+<div>
+$$
+\max_{0 \le k \le n - 1} \delta_n(s, v) - \delta_k(s, v) \ge 0.
+$$
+</div>
+
+<p>Since we have that $\mu^* = 0$, there aren&rsquo;t any negative weight cycles. This means that we can&rsquo;t have the minimum cost of a path decrease as we increase the possible length of the path past $n - 1$. This means that there will be a path that at least ties for cheapest when we restrict to the path being less than length $n$. Note that there may also be cheapest path of longer length since we necessarily do have zero cost cycles. However, this isn&rsquo;t guaranteed since the zero cost cycle may not lie along a cheapest path from $s$ to $v$.</p>
+
+<p><strong>c.</strong> Since the total cost of the cycle is $0$, and one part of it has cost $x$, in order to balance that out, the weight of the rest of the cycle has to be $-x$. So, suppose we have some shortest length path from $s$ to $u$, then, we could traverse the path from $u$ to $v$ along the cycle to get a path from $s$ to $u$ that has length $\delta(s, u) + x$. This gets us that $\delta(s, v) \le \delta(s, u) + x$.</p>
+
+<p>To see the converse inequality, suppose that we have some shortest length path from $s$ to $v$. Then, we can traverse the cycle going from $v$ to $u$. We already said that this part of the cycle had total cost $-x$. This gets us that $\delta(s, u) \le \delta(s, v) - x$. Or, rearranging, we have $\delta(s, u) + x \le \delta(s, v)$. Since we have inequalities both ways, we must have equality.</p>
+
+<p><strong>d.</strong> To see this, we find a vertex $v$ and natural number $k \le n - 1$ so that $\delta_n(s, v) - \delta_k(s, v) = 0$. To do this, we will first take any shortest length, smallest number of edges path from $s$ to any vertex on the cycle. Then, we will just keep on walking around the cycle until we&rsquo;ve walked along $n$ edges. Whatever vertex we end up on at that point will be our $v$. Since we did not change the $d$ value of $v$ after looking at length $n$ paths, by part (a), we know that there was some length of this path, say $k$, which had the same cost. That is, we have $\delta_n(s, v) = \delta_k(s,v)$.</p>
+
+<p><strong>e.</strong> This is an immediate result of the previous problem and part (b). Part (a) says that the inequality holds for all $v$, so, we have</p>
+
+<div>
+$$
+\min_{v \in V} \max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta(s, v)}{n - k} \ge 0.
+$$
+</div>
+
+<p>The previous part says that there is some $v$ on each minimum weight cycle so that</p>
+
+<div>
+$$
+\max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta(s, v)}{n - k} = 0,
+$$
+</div>
+
+<p>which means that</p>
+
+<div>
+$$
+\min_{v \in V} \max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta_k(s, v)}{n - k} \le 0.
+$$
+</div>
+
+<p>Putting the two inequalities together, we have the desired equality.</p>
+
+<p><strong>f.</strong> If we add $t$ to the weight of each edge, the mean weight of any cycle becomes</p>
+
+<div>
+$$
+\mu(c) = \frac{1}{k} \sum_{i = 1}^k (w(e_i) + t) = \frac{1}{k} \Big(\sum_i^k w(e_i) \Big) + \frac{kt}{k} = \frac{1}{k} \Big(\sum_i^k w(e_i) \Big) + t.
+$$
+</div>
+
+<p>This is the original, unmodified mean weight cycle, plus $t$. Since this is how the mean weight of every cycle is changed, the lowest mean weight cycle stays the lowest mean weight cycle. This means that $\mu^*$ will increase by $t$. Suppose that we first compute $\mu^*$. Then, we subtract from every edge weight the value $\mu^*$. This will make the new $\mu^*$ equal zero, which by part (e) means that</p>
+
+<div>
+$$
+\min_{v \in V} \max_{0 \le k \le n - 1} \frac{\delta_n(s, v) - \delta_k(s, v)}{n - k} = 0.
+$$
+</div>
+
+<p>Since they are both equal to zero, they are both equal to each other.</p>
+
+<p><strong>g.</strong> By the previous part, it suffices to compute the expression on the previ- ous line. We will start by creating a table that lists $\delta_k(s, v)$ for every $k \in {1, \ldots, n}$ and $v \in V$. This can be done in time $O(V(E + V))$ by creating a $|V|$ by $|V|$ table, where the $k$th row and vth column represent $\delta)k(s, v)$ when wanting to compute a particular entry, we need look at a number of entries in the previous row equal to the in degree of the vertex we want to compute.</p>
+
+<p>So, summing over the computation required for each row, we need $O(E + V)$. Note that this total runtime can be bumped down to $O(VE)$ by not including in the table any isolated vertices, this will ensure that $E \in \Omega(V)$. So, $O(V(E + V))$ becomes $O(VE)$. Once we have this table of values computed, it is simple to just replace each row with the last row minus what it was, and divide each entry by $n - k$, then, find the min column in each row, and take the max of those numbers.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12145,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12160,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12305,6 +12472,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12319,6 +12487,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12400,6 +12571,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12412,6 +12584,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12477,6 +12652,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12492,6 +12668,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14642,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap24/problems/24-4/" title="24-4 Gabow&#39;s scaling algorithm for single-source shortest paths"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap24/problems/24-6/" title="24-6 Bitonic shortest paths" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14655,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

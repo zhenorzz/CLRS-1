@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>22.3 Depth-first search :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap22/22.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4973,7 +4973,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/" title="22 Elementary Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5037,7 +5037,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/22.3/" title="22.3 Depth-first search" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/22.3/" title="22.3 Depth-first search" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap22/22.3/">
         22.3 Depth-first search
         
@@ -8374,56 +8374,379 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap22/22.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap22/'>22 Elementary Graph Algorithms</a> > 22.3 Depth-first search
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#22-3-1">22.3-1</a></li>
+<li><a href="#22-3-2">22.3-2</a></li>
+<li><a href="#22-3-3">22.3-3</a></li>
+<li><a href="#22-3-4">22.3-4</a></li>
+<li><a href="#22-3-5">22.3-5</a></li>
+<li><a href="#22-3-6">22.3-6</a></li>
+<li><a href="#22-3-7">22.3-7</a></li>
+<li><a href="#22-3-8">22.3-8</a></li>
+<li><a href="#22-3-9">22.3-9</a></li>
+<li><a href="#22-3-10">22.3-10</a></li>
+<li><a href="#22-3-11">22.3-11</a></li>
+<li><a href="#22-3-12">22.3-12</a></li>
+<li><a href="#22-3-13-star">22.3-13 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>22.3 Depth-first search</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="22-3-1">22.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Make a 3-by-3 chart with row and column labels $\text{WHITE}$, $\text{GRAY}$, and $\text{BLACK}$. In each cell $(i, j)$, indicate whether, at any point during a depth-first search of a directed graph, there can be an edge from a vertex of color $i$ to a vertex of color $j$. For each possible edge, indicate what edge types it can be. Make a second such chart for depth-first search of an undirected graph.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<ul>
+<li><p><strong>Directed:</strong></p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+\begin{array}{c|ccc}
+from\backslash to & \text{BLACK}                & \text{GRAY}                & \text{WHITE} \\
+\text{BLACK}      & \text{Allkinds}             & \text{Back, Cross}         & \text{Back, Cross} \\
+\text{GRAY}       & \text{Tree, Forward, Cross} & \text{Tree, Forward, Back} & \text{Back, Cross} \\
+\text{WHITE}      & \text{Cross, Tree, Forward} & \text{Cross, Back}         & \text{Allkinds}
+\end{array}
+$$
+</div></li>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<li><p><strong>Undirected:</strong></p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+\begin{array}{c|ccc}
+from\backslash to & \text{BLACK}    & \text{GRAY}                & \text{WHITE} \\
+\text{BLACK}      & \text{Allkinds} & \text{Allkinds}            & \text{Allkinds} \\
+\text{GRAY}       & -               & \text{Tree, Forward, Back} & \text{Allkinds} \\
+\text{WHITE}      & -               & -                          & \text{Allkinds}
+\end{array}
+$$
+</div></li>
+</ul>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="22-3-2">22.3-2</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Show how depth-first search works on the graph of Figure 22.6. Assume that the <strong><em>for</em></strong> loop of lines 5–7 of the $\text{DFS}$ procedure considers the vertices in alphabetical order, and assume that each adjacency list is ordered alphabetically. Show the discovery and finishing times for each vertex, and show the classification of each edge.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>The following table gives the discovery time and finish time for each vetex in the graph.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<div>
+$$
+\begin{array}{ccc}
+\text{Vertex} & \text{Discovered} & \text{Finished} \\
+q &  1 & 16 \\
+r & 17 & 20 \\
+s &  2 &  7 \\
+t &  8 & 15 \\
+u & 18 & 19 \\
+v &  3 &  6 \\
+w &  4 &  5 \\
+x &  9 & 12 \\
+y & 13 & 14 \\
+z & 10 & 11
+\end{array}
+$$
+</div>
 
-<h1 id="more-informations">More Informations</h1>
+<ul>
+<li><strong>Tree edges:</strong> $(q, s)$, $(s, v)$, $(v, w)$, $(q, t)$, $(t, x)$, $(x, z)$, $(t, y)$, $(r, u)$.</li>
+<li><strong>Back edges:</strong> $(w, s)$, $(z, x)$, $(y, q)$.</li>
+<li><strong>Forward edges:</strong> $(q, w)$.</li>
+<li><strong>Cross edges:</strong> $(r, y)$, $(u, y)$.</li>
+</ul>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<h2 id="22-3-3">22.3-3</h2>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<blockquote>
+<p>Show the parenthesis structure of the depth-first search of Figure 22.4.</p>
+</blockquote>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>As pointed out in figure 22.5, the parentheses structure of the $\text{DFS}$ of figure 22.4 is $(((())()))(()())$.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<h2 id="22-3-4">22.3-4</h2>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<blockquote>
+<p>Show that using a single bit to store each vertex color suffices by arguing that the $\text{DFS}$ procedure would produce the same result if line 3 of $\text{DFS-VISIT}$ was removed.</p>
+</blockquote>
+
+<p>$\textit{Note:}$ This exercise changed in the third printing. This solution reflects the change.</p>
+
+<p>The $\text{DFS}$ and $\text{DFS-VISIT}$ procedures care only whether a vertex is white or not. By coloring vertex $u$ gray when it is first visited, in line 3 of $\text{DFS-VISIT}$, we ensure that $u$ will not be visited again. Once we have changed a vertex&rsquo;s color to non-white, we do not need to change it again.</p>
+
+<h2 id="22-3-5">22.3-5</h2>
+
+<blockquote>
+<p>Show that edge $(u, v)$ is</p>
+
+<p><strong>a.</strong> a tree edge or forward edge if and only if $u.d &lt; v.d &lt; v.f &lt; u.f$,</p>
+
+<p><strong>b.</strong> a back edge if and only if $v.d \le u.d &lt; u.f \le v.f$, and</p>
+
+<p><strong>c.</strong> a cross edge if and only if $v.d &lt; v.f &lt; u.d &lt; u.f$.</p>
+</blockquote>
+
+<p><strong>a.</strong> Edge $(u, v)$ is a tree edge or forward edge if and only if $v$ is a descendant of $u$ in the depth-first forest. (If $(u, v)$ is a back edge, then $u$ is a descendant of $v$, and if $(u, v)$ is a cross edge, then neither of $u$ or $v$ is a descendant of the other.) By Corollary 22.8, therefore, $(u, v)$ is a tree edge or forward edge if and only if $u.d &lt; v.d &lt; v.f &lt; u.f$.</p>
+
+<p><strong>b.</strong> First, suppose that $(u, v)$ is a back edge. A self-loop is by definition a back edge. If $(u, v)$ is a self-loop, then clearly $v.d = u.d &lt; u.f = v.f$. If $(u, v)$ is not a self-loop, then $u$ is a descendant of $v$ in the depth-first forest, and by Corollary 22.8, $v.d &lt; u.d &lt; u.f &lt; v.f$.</p>
+
+<p>Now, suppose that $v.d \le u.d &lt; u.f \le v.f$. If $u$ and $v$ are the same vertex, then $v.d = u.d &lt; u.f = v.f$, and $(u, v)$ is a self-loop and hence a back edge. If $u$ and $v$ are distinct, then $v.d &lt; u.d &lt; u.f &lt; v.f$. By the parenthesis theorem, interval $[u.d, u.f]$ is contained entirely within the interval $[v.d, v.f]$, and $u$ is a descendant of $v$ in a depth-first tree. Thus, $(u, v)$ is a back edge.</p>
+
+<p><strong>c.</strong> First, suppose that $(u, v)$ is a cross edge. Since neither $u$ nor $v$ is an ancestor of the other, the parenthesis theorem says that the intervals $[u.d, u.f]$ and $[v.d, v.f]$ are entirely disjoint. Thus, we must have either $u.d &lt; u.f &lt; v.d &lt; v.f$ or $v.d &lt; v.f &lt; u.d &lt; u.f$. We claim that we cannot have $u.d &lt; v.d$ if $(u, v)$ is a cross edge. Why? If $u.d &lt; v.d$, then $v$ is white at time $u.d$. By the white-path theorem, $v$ is a descendant of $u$, which contradicts $(u, v)$ being a cross edge. Thus, we must have $v.d &lt; v.f &lt; u.d &lt; u.f$.</p>
+
+<p>Now suppose that $v.d &lt; v.f &lt; u.d &lt; u.f$. By the parenthesis theorem, neither $u$ nor $v$ is a descendant of the other, which means that $(u, v)$ must be a cross edge.</p>
+
+<h2 id="22-3-6">22.3-6</h2>
+
+<blockquote>
+<p>Show that in an undirected graph, classifying an edge $(u, v)$ as a tree edge or a back edge according to whether $(u, v)$ or $(v, u)$ is encountered first during the depth-first search is equivalent to classifying it according to the ordering of the four types in the classification scheme.</p>
+</blockquote>
+
+<p>By Theorem 22.10, every edge of an undirected graph is either a tree edge or a back edge. First suppose that $v$ is first discovered by exploring edge $(u, v)$. Then by definition, $(u, v)$ is a tree edge. Moreover, $(u, v)$ must have been discovered before $(v, u)$ because once $(v, u)$ is explored, $v$ is necessarily discovered. Now suppose that $v$ isn&rsquo;t first discovered by $(u, v)$. Then it must be discovered by $(r, v)$ for some $r\ne u$. If $u$ hasn&rsquo;t yet been discovered then if $(u, v)$ is explored first, it must be a back edge since $v$ is an ancestor of $u$. If $u$ has been discovered then $u$ is an ancestor of $v$, so $(v, u)$ is a back edge.</p>
+
+<h2 id="22-3-7">22.3-7</h2>
+
+<blockquote>
+<p>Rewrite the procedure $\text{DFS}$, using a stack to eliminate recursion.</p>
+</blockquote>
+
+<p>See the algorithm $\text{DFS-STACK}(G)$. Note that by a similar justification to 22.2-3, we may remove line 8 from the original $\text{DFS-VISIT}$ algorithm without changing the final result of the program, that is just working with the colors white and gray.</p>
+
+<h2 id="22-3-8">22.3-8</h2>
+
+<blockquote>
+<p>Give a counterexample to the conjecture that if a directed graph $G$ contains a path from $u$ to $v$, and if $u.d &lt; v.d$ in a depth-first search of $G$, then $v$ is a descendant of $u$ in the depth-first forest produced.</p>
+</blockquote>
+
+<p>Let us consider the example graph depth-first search below.</p>
+
+<div>
+$$
+\begin{array}{c|cc}
+  & d & f \\
+w & 1 & 6 \\
+u & 2 & 3 \\
+v & 4 & 5
+\end{array}
+$$
+</div>
+
+<p><img src="https://i.imgur.com/7dO8rAp.png?width=10rem" alt="" /></p>
+
+<p>Clearly, there is a path from $u$ to $v$ in $G$. The bold edges are in the depth-first forest produced. We can see that $u.d &lt; v.d$ in the depth-first search but $v$ is not a descendant of $u$ in the forest.</p>
+
+<h2 id="22-3-9">22.3-9</h2>
+
+<blockquote>
+<p>Give a counterexample to the conjecture that if a directed graph $G$ contains a path from $u$ to $v$, then any depth-first search must result in $v.d \le u.f$.</p>
+</blockquote>
+
+<p>Let us consider the example graph depth-first search below.</p>
+
+<div>
+$$
+\begin{array}{c|cc}
+  & d & f \\
+w & 1 & 6 \\
+u & 2 & 3 \\
+v & 4 & 5
+\end{array}
+$$
+</div>
+
+<p><img src="https://i.imgur.com/7dO8rAp.png?width=10rem" alt="" /></p>
+
+<p>Clearly, there is a path from $u$ to $v$ in $G$. The bold edges are in the depth-first forest produced by search. However, $v.d &gt; u.f$ and the conjecture is false.</p>
+
+<h2 id="22-3-10">22.3-10</h2>
+
+<blockquote>
+<p>Modify the pseudocode for depth-first search so that it prints out every edge in the directed graph $G$, together with its type. Show what modifications, if any, you need to make if $G$ is undirected.</p>
+</blockquote>
+
+<p>We need only update $\text{DFS-VISIT}$. If $G$ is undirected we don&rsquo;t need to make any modifications. We simply note that lines 11 through 16 will never be executed.</p>
+
+<pre><code class="language-cpp">DFS-VISIT-PRINT(G, u)
+  time = time + 1
+  u.d = time
+  u.color = GRAY
+  for each v in G.Adj[u]
+      if v.color == white
+          print &quot;(u,v) is a Tree edge.&quot;
+          v.PI = u
+          DFS-VISIT-PRINT(G, v)
+      else if v.color == gray
+          print &quot;(u, v) is a Back edge.&quot;
+      else
+          if v.d &gt; u.d
+              print &quot;(u, v) is a Forward edge.&quot;
+          else print &quot;(u, v) is a Cross edge.&quot;
+</code></pre>
+
+<h2 id="22-3-11">22.3-11</h2>
+
+<blockquote>
+<p>Explain how a vertex $u$ of a directed graph can end up in a depth-first tree containing only $u$, even though $u$ has both incoming and outgoing edges in $G$.</p>
+</blockquote>
+
+<p>Let us consider the example graph and depth-first search below.</p>
+
+<div>
+$$
+\begin{array}{c|cc}
+  & d & f \\
+w & 1 & 2 \\
+u & 3 & 4 \\
+v & 5 & 6
+\end{array}
+$$
+</div>
+
+<p><img src="https://i.imgur.com/MCHtL78.png?width=12rem" alt="" /></p>
+
+<p>Cleary $u$ has both incoming and outgoing edges in $G$ but a depth-first search of $G$ produced a depth-first forest where $u$ is in a tree by itself.</p>
+
+<h2 id="22-3-12">22.3-12</h2>
+
+<blockquote>
+<p>Show that we can use a depth-first search of an undirected graph $G$ to identify the connected components of $G$, and that the depth-first forest contains as many trees as $G$ has connected components. More precisely, show how to modify depth-first search so that it assigns to each vertex $v$ an integer label $v.cc$ between $1$ and $k$, where $k$ is the number of connected components of $G$, such that $u.cc = v.cc$ if and only if $u$ and $v$ are in the same connected component.</p>
+</blockquote>
+
+<p>The following pseudocode modifies the $\text{DFS}$ and $\text{DFS-VISIT}$ procedures to assign values to the $cc$ attributes of vertices.</p>
+
+<pre><code class="language-cpp">DFS(G)
+    for each vertex u ∈ G.V
+        u.color = WHITE
+        u.PI = NIL
+    time = 0
+    counter = 0
+    for each vertex u ∈ G.V
+        if u.color == WHITE
+            counter = counter + 1
+            DFS-VISIT(G, u, counter)
+</code></pre>
+
+<pre><code class="language-cpp">DFS-VISIT(G, u, counter)
+    u.cc = counter      // label the vertex
+    time = time + 1
+    u.d = time
+    u.color = GRAY
+    for each v ∈ G.Adj[u]
+        if v.color == WHITE
+            v.PI = u
+            DFS-VISIT(G, v, counter)
+    u.color = BLACK
+    time = time + 1
+    u.f = time
+</code></pre>
+
+<p>This $\text{DFS}$ increments a counter each time $\text{DFS-VISIT}$ is called to grow a new tree in the $\text{DFS}$ forest. Every vertex visited (and added to the tree) by $\text{DFS-VISIT}$ is labeled with that same counter value. Thus $u.vv = v.cc$ if and only if $u$ and $v$ are visited in the same call to $\text{DFS-VISIT}$ from $\text{DFS}$, and the final value of the counter is the number of calls that were made to $\text{DFS-VISIT}$ by $\text{DFS}$. Also, since every vertex is visited eventually, every vertex is labeled.</p>
+
+<p>Thus all we need to show is that the vertices visited by each call to $\text{DFS-VISIT}$ from $\text{DFS}$ are exactly the vertices in one connected component of $G$.</p>
+
+<ul>
+<li><p>All vertices in a connected component are visited by one call to $\text{DFS-VISIT}$ from $\text{DFS}$:</p>
+
+<p>Let $u$ be the first vertex in component $C$ visited by $\text{DFS-VISIT}$. Since a vertex becomes non-white only when it is visited, all vertices in $C$ are white when $\text{DFS-VISIT}$ is called for $u$. Thus, by the white-path theorem, all vertices in $C$ become descendants of $u$ in the forest, which means that all vertices in $C$ are visited (by recursive calls to $\text{DFS-VISIT}$) before $\text{DFS-VISIT}$ returns to $\text{DFS}$.</p></li>
+
+<li><p>All vertices visited by one call to $\text{DFS-VISIT}$ from $\text{DFS}$ are in the same connected component:</p>
+
+<p>If two vertices are visited in the same call to $\text{DFS-VISIT}$ from $\text{DFS}$, they are in the same connected component, because vertices are visited only by following paths in $G$ (by following edges found in adjacency lists, starting from some vertex).</p></li>
+</ul>
+
+<h2 id="22-3-13-star">22.3-13 $\star$</h2>
+
+<blockquote>
+<p>A directed graph $G = (V, E)$ is <strong><em>singly connected</em></strong> if $u \leadsto v$ implies that $G$ contains at most one simple path from $u$ to $v$ for all vertices $u, v \in V$. Give an efficient algorithm to determine whether or not a directed graph is singly connected.</p>
+</blockquote>
+
+<p>This can be done in time $O(|V||E|)$. To do this, first perform a topological sort of the vertices. Then, we will contain for each vertex a list of it&rsquo;s ancestors with $in\text-degree$ $0$. We compute these lists for each vertex in the order starting from the earlier ones topologically.</p>
+
+<p>Then, if we ever have a vertex that has the same degree $0$ vertex appearing in the lists of two of its immediate parents, we know that the graph is not singly connected. however, if at each step we have that at each step all of the parents have disjoint sets of degree $0$ vertices as ancestors, the graph is singly connected. Since, for each vertex, the amount of time required is bounded by the number of vertices times the $in\text-degree$ of the particular vertex, the total runtime is bounded by $O(|V||E|)$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12305,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12320,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12011,6 +12336,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12044,6 +12372,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12059,6 +12388,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14795,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap22/22.2/" title="22.2 Breadth-first search"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap22/22.4/" title="22.4 Topological sort" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14808,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

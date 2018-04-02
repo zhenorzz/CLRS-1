@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>9.1 Minimum and maximum :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap09/9.1/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1932,7 +1932,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/" title="9 Medians and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1958,7 +1958,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/9.1/" title="9.1 Minimum and maximum" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/9.1/" title="9.1 Minimum and maximum" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap09/9.1/">
         9.1 Minimum and maximum
         
@@ -8374,56 +8374,150 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap09/9.1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap09/'>9 Medians and Order Statistics</a> > 9.1 Minimum and maximum
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#9-1-1">9.1-1</a></li>
+<li><a href="#9-1-2-star">9.1-2 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>9.1 Minimum and maximum</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="9-1-1">9.1-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Show that the second smallest of $n$ elements can be found with $n + \lceil \lg n \rceil - 2$ comparisons in the worst case. ($\textit{Hint:}$ Also find the smallest element.)</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>The smallest of $n$ numbers can be found with $n - 1$ comparisons by conducting a tournament as follows: Compare all the numbers in pairs. Only the smaller of each pair could possibly be the smallest of all $n$, so the problem has been reduced to that of finding the smallest of $\lceil n / 2 \rceil$ numbers. Compare those numbers in pairs, and so on, until there&rsquo;s just one number left, which is the answer.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>To see that this algorithm does exactly $n - 1$ comparisons, notice that each number except the smallest loses exactly once. To show this more formally, draw a binary tree of the comparisons the algorithm does. The $n$ numbers are the leaves, and each number that came out smaller in a comparison is the parent of the two numbers that were compared. Each non-leaf node of the tree represents a comparison, and there are $n - 1$ internal nodes in an $n$-leaf full binary tree (see Exercise (B.5-3)), so exactly $n - 1$ comparisons are made.</p>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>In the search for the smallest number, the second smallest number must have come out smallest in every comparison made with it until it was eventually compared with the smallest. So the second smallest is among the elements that were compared with the smallest during the tournament. To find it, conduct another tournament (as above) to find the smallest of these numbers. At most $\lceil \lg n \rceil$ (the height of the tree of comparisons) elements were compared with the smallest, so finding the smallest of these takes $\lceil \lg n \rceil - 1$ comparisons in the worst case.</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>The total number of comparisons made in the two tournaments was</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<div>
+$$
+n - 1 + \lceil \lg n \rceil - 1 = n + \lceil \lg n \rceil - 2
+$$
+</div>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>in the worst case.</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<h2 id="9-1-2-star">9.1-2 $\star$</h2>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<blockquote>
+<p>Prove the lower bound of $\lceil 3n / 2 \rceil - 2$ comparisons in the worst case to find both the maximum and minimum of $n$ numbers. ($\textit{Hint:}$ Consider how many numbers are potentially either the maximum or minimum, and investigate how a comparison affects these counts.)</p>
+</blockquote>
 
-<h1 id="more-informations">More Informations</h1>
+<p>If $n$ is odd, there are</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<div>
+$$
+\begin{aligned}
+1 + \frac{3(n-3)}{2} + 2
+    & = \frac{3n}{2} - \frac{3}{2} \\
+    & = (\lceil \frac{3n}{2} \rceil - \frac{1}{2}) - \frac{3}{2} \\
+    & = \lceil \frac{3n}{2} \rceil - 2
+\end{aligned}
+$$
+</div>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>comparisons.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>If $n$ is even, there are</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<div>
+$$
+\begin{aligned}
+1 + \frac{3(n - 2)}{2}
+    & = \frac{3n}{2} - 2 \\
+    & = \lceil \frac{3n}{2} \rceil - 2
+\end{aligned}
+$$
+</div>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>comparisons.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9316,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9331,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9802,6 +9900,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9818,6 +9917,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9833,6 +9933,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14566,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap09/" title="9 Medians and Order Statistics"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap09/9.2/" title="9.2 Selection in expected linear time" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

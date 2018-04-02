@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>26.3 Maximum bipartite matching :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap26/26.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5842,7 +5842,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/" title="26 Maximum Flow" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5906,7 +5906,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/26.3/" title="26.3 Maximum bipartite matching" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/26.3/" title="26.3 Maximum bipartite matching" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap26/26.3/">
         26.3 Maximum bipartite matching
         
@@ -8374,56 +8374,174 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap26/26.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap26/'>26 Maximum Flow</a> > 26.3 Maximum bipartite matching
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#26-3-1">26.3-1</a></li>
+<li><a href="#26-3-2">26.3-2</a></li>
+<li><a href="#26-3-3">26.3-3</a></li>
+<li><a href="#26-3-4-star">26.3-4 $\star$</a></li>
+<li><a href="#26-3-5-star">26.3-5 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>26.3 Maximum bipartite matching</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="26-3-1">26.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Run the Ford-Fulkerson algorithm on the flow network in Figure 26.8(c) and show the residual network after each flow augmentation. Number the vertices in $L$ top to bottom from 1 to 5 and in $R$ top to bottom from 6 to 9. For each iteration, pick the augmenting path that is lexicographically smallest.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>First, we pick an augmenting path that passes through vertices 1 and 6. Then, we pick the path going through 2 and 8. Then, we pick the path going through 3 and 7. Then, the resulting residual graph has no path from $s$ to $t$. So, we know that we are done, and that we are pairing up vertices $(1, 6)$, $(2, 8)$, and $(3, 7)$. This number of unit augmenting paths agrees with the value of the cut where you cut the edges $(s, 3)$, $(6, t)$, and $(7, t)$.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="26-3-2">26.3-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Prove Theorem 26.10.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>We proceed by induction on the number of iterations of the while loop of Ford-Fulkerson. After the first iteration, since $c$ only takes on integer values and $(u, v).f$ is set to $0$, $c_f$ only takes on integer values. Thus, lines 7 and 8 of Ford-Fulkerson only assign integer values to $(u, v).f$. Assume that $(u, v).f \in \mathbb Z$ for all $(u, v)$ after the $n$th iteration. On the $(n + 1)$th iteration $c_f(p)$ is set to the minimum of $c_f(u, v)$ which is an integer by the induction hypothesis. Lines 7 and 8 compute $(u, v).f$ or $(v, u).f$. Either way, these the the sum or difference of integers by assumption, so after the $(n + 1)$th iteration we have that $(u, v).f$ is an integer for all $(u, v) \in E$. Since the value of the flow is a sum of flows of edges, we must have $|f| \in \mathbb Z$ as well.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="26-3-3">26.3-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Let $G = (V, E)$ be a bipartite graph with vertex partition $V = L \cup R$, and let $G^\prime$ be its corresponding flow network. Give a good upper bound on the length of any augmenting path found in $G^\prime$ during the execution of $\text{FORD-FULKERSON}$.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>By definition, an augmenting path is a simple path $s \leadsto t$ in the residual network $G_f^\prime$. Since $G$ has no edges between vertices in $L$ and no edges between vertices in $R$, neither does the flow network $G^\prime$ and hence neither does $G_f^\prime$. Also, the only edges involving $s$ or $t$ connect $s$ to $L$ and $R$ to $t$. Note that although edges in $G^\prime$ can go only from $L$ to $R$, edges in $G_f^\prime$ can also go from $R$ to $L$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Thus any augmenting path must go</p>
 
-<h1 id="more-informations">More Informations</h1>
+<div>
+$$
+s \to L \to R \to \cdots \to L \to R \to t,
+$$
+</div>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>crossing back and forth between $L$ and $R$ at most as many times as it can do so without using a vertex twice. It contains $s$, $t$, and equal numbers of distinct vertices from $L$ and $R$—at most $2 + 2 \cdot \min(|L|, |R|)$ vertices in all. The length of an augmenting path (i.e., its number of edges) is thus bounded above by $2 \cdot \min(|L|, |R|) + 1$.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="26-3-4-star">26.3-4 $\star$</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>A <strong><em>perfect matching</em></strong> is a matching in which every vertex is matched. Let $G = (V, E)$ be an undirected bipartite graph with vertex partition $V = L \cup R$, where $|L| = |R|$. For any $X \subseteq V$, define the <strong><em>neighborhood</em></strong> of $X$ as</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>$N(X) = \{y \in V: (x, y) \in E \text{ for some } x \in X\}$,</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>that is, the set of vertices adjacent to some member of $X$. Prove <strong><em>Hall&rsquo;s theorem</em></strong>: there exists a perfect matching in $G$ if and only if $|A| \le |N(A)|$ for every subset $A \subseteq L$.</p>
+</blockquote>
+
+<p>First suppose there exists a perfect matching in $G$. Then for any subset $A \subseteq L$, each vertex of $A$ is matched with a neighbor in $R$, and since it is a matching, no two such vertices are matched with the same vertex in $R$. Thus, there are at least $|A|$ vertices in the neighborhood of $A$.</p>
+
+<p>Now suppose that $|A| \le |N(A)|$ for all $A \subseteq L$. Run Ford-Fulkerson on the corresponding flow network. The flow is increased by $1$ each time an augmenting path is found, so it will suffice to show that this happens $|L|$ times. Suppose the while loop has run fewer than $L$ times, but there is no augmenting path. Then fewer than $L$ edges from $L$ to $R$ have flow $1$.</p>
+
+<p>Let $v_1 \in L$ be such that no edge from $v_1$ to a vertex in $R$ has nonzero flow. By assumption, $v_1$ has at least one neighbor $v_1^\prime \in R$. If any of $v_1$&rsquo;s neighbors are connected to $t$ in $G_f$ then there is a path, so assume this is not the case. Thus, there must be some edge $(v_2, v_1)$ with flow $1$. By assumption, $N(\{v_1, v_2\}) \ge 2$, so there must exist $v_2^\prime \ne v_1^\prime$ such that $v_2^\prime\in N(\{v_1, v_2 \})$. If $(v_2^\prime, t)$ is an edge in the residual network we&rsquo;re done since $v_2^\prime$ must be a neighbor of $v_2$, so $s$, $v_1$, $v_1^\prime$, $v_2$, $v_2^\prime$, and $t$ is a path in $G_f$. Otherwise $v_2^\prime$ must have a neighbor $v_3 \in L$ such that $(v_3, v_2^\prime)$ is in $G_f$. Specifically, $v_3 \ne v_1$ since $(v_3, v_2^\prime)$ has flow $1$, and $v_3 \ne v_2$ since $(v_2, v_1^\prime)$ has flow $1$, so no more flow can leave $v_2$ without violating conservation of flow. Again by our hypothesis, $N(\{v_1, v_2, v_3\}) \ge 3$, so there is another neighbor $v_3^\prime \in R$.</p>
+
+<p>Continuing in this fashion, we keep building up the neighborhood $v_i′$, expanding each time we find that $(v_i′, t)$ is not an edge in $G_f$. This cannot happen $L$ times, since we have run the Ford-Fulkerson while-loop fewer than $|L|$ times, so there still exist edges into $t$ in $G_f$. Thus, the process must stop at some vertex $v_k′$, and we obtain an augmenting path</p>
+
+<div>
+$$
+s, v_1, v_1^\prime, v_2, v_2^\prime, v_3, \ldots, v_k, v_k^\prime, t,
+$$
+</div>
+
+<p>contradicting our assumption that there was no such path. Therefore the while loop runs at least $|L|$ times. By Corollary 26.3 the flow strictly increases each time by $f_p$. By Theorem 26.10 $f_p$ is an integer. In particular, it is equal to $1$. This implies that $|f| \ge |L|$. It is clear that $|f| \le |L|$, so we must have $|f| = |L|$. By Corollary 26.11 this is the cardinality of a maximum matching. Since $|L| = |R|$, any maximum matching must be a perfect matching.</p>
+
+<h2 id="26-3-5-star">26.3-5 $\star$</h2>
+
+<blockquote>
+<p>We say that a bipartite graph $G = (V, E)$, where $V = L \cup R$, is <strong><em>$d$-regular</em></strong> if every vertex $v \in V$ has degree exactly $d$. Every $d$-regular bipartite graph has $|L| = |R|$. Prove that every $d$-regular bipartite graph has a matching of cardinality $|L|$ by arguing that a minimum cut of the corresponding flow network has capacity $|L|$.</p>
+</blockquote>
+
+<p>We convert the bipartite graph into a flow problem by making a new vertex for the source which has an edge of unit capacity going to each of the vertices in $L$, and a new vertex for the sink that has an edge from each of the vertices in $R$, each with unit capacity. We want to show that the number of edge between the two parts of the cut is at least $L$, this would get us by the max-flow-min-cut theorem that there is a flow of value at least $|L|$. The, we can apply the integrality theorem that all of the flow values are integers, meaning that we are selecting $|L|$ disjoint edges between $L$ and $R$.</p>
+
+<p>To see that every cut must have capacity at lest $|L|$, let $S_1$ be the side of the cut containing the source and let $S_2$ be the side of the cut containing the sink. Then, look at $L \cap S_1$. The source has an edge going to each of $L \cap (S_1)^c$, and there is an edge from $R \cap S_1$ to the sink that will be cut. This means that we need that there are at least $|L \cap S_1| - |R \cap S_1|$ many edges going from $L \cap S_1$ to $R \cap S_2$. If we look at the set of all neighbors of $L \cap S_1$, we get that there must be at least the same number of neighbors in $R$, because otherwise we could sum up the degrees going from $L \cap S_1$ to $R$ on both sides, and get that some of the vertices in $R$ would need to have a degree higher than $d$. This means that the number of neighbors of $L \cap S_1$ is at least $L \cap S_1$, but we have that they are in $S_1$, but there are only $|R \cap S_1|$ of those, so, we have that the size of the set of neighbors of $L \cap S_1$ that are in $S_2$ is at least $|L \cap S_1| - |R \cap S_1|$. Since each of these neighbors has an edge crossing the cut, we have that the total number of edges that the cut breaks is at least</p>
+
+<div>
+$$
+(|L| - |L \cap S_1|) + (|L \cap S_1| - |R \cap S_1|) + |R \cap S_1| = |L|.
+$$
+</div>
+
+<p>Since each of these edges is unit valued, the value of the cut is at least $|L|$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12100,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12115,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12629,6 +12751,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12643,6 +12766,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12675,6 +12801,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12692,6 +12819,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14593,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap26/26.2/" title="26.2 The Ford-Fulkerson method"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap26/26.4/" title="26.4 Push-relabel algorithms" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14606,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

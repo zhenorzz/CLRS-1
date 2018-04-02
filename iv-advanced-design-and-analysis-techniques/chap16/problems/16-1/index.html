@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>16-1 Coin changing :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/16-1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3649,7 +3649,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/" title="16 Greedy Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3771,7 +3771,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/" title="Chap 16 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3795,7 +3795,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/16-1/" title="16-1 Coin changing" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/16-1/" title="16-1 Coin changing" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/16-1/">
         Problem 16-1
         
@@ -8374,56 +8374,209 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap16/Problems/16-1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap16/'>16 Greedy Algorithms</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/'>Chap 16 Problems</a> > 16-1 Coin changing
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>16-1 Coin changing</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Consider the problem of making change for $n$ cents using the fewest number of coins. Assume that each coin&rsquo;s value is an integer.</p>
+
+<p><strong>a.</strong> Describe a greedy algorithm to make change consisting of quarters, dimes, nickels, and pennies. Prove that your algorithm yields an optimal solution.</p>
+
+<p><strong>b.</strong> Suppose that the available coins are in the denominations that are powers of $c$, i.e., the denominations are $c^0, c^1, \ldots, c^k$ for some integers $c &gt; 1$ and $k \ge 1$. Show that the greedy algorithm always yields an optimal solution.</p>
+
+<p><strong>c.</strong> Give a set of coin denominations for which the greedy algorithm does not yield an optimal solution. Your set should include a penny so that there is a solution for every value of $n$.</p>
+
+<p><strong>d.</strong> Give an $O(nk)$-time algorithm that makes change for any set of $k$ different coin denominations, assuming that one of the coins is a penny.</p>
+</blockquote>
+
+<p>Before we go into the various parts of this problem, let us first prove once and for all that the coin-changing problem has optimal substructure.</p>
+
+<p>Suppose we have an optimal solution for a problem of making change for $n$ cents, and we know that this optimal solution uses a coin whose value is $c$ cents; let this optimal solution use $k$ coins. We claim that this optimal solution for the problem of $n$ cents must contain within it an optimal solution for the problem of $n - c$ cents. We use the usual cut-and-paste argument. Clearly, there are $k - 1$ coins in the solution to the $n - c$ cents problem used within our optimal solution to the $n$ cents problem. If we had a solution to the $n - c$ cents problem that used fewer than $k - 1$ coins, then we could use this solution to produce a solution to the $n$ cents problem that uses fewer than $k$ coins, which contradicts the optimality of our solution.</p>
+
+<p><strong>a.</strong> A greedy algorithm to make change using quarters, dimes, nickels, and pennies works as follows:</p>
+
+<ul>
+<li>Give $q = \lfloor n / 25 \rfloor$ quarters. That leaves $n_q = n \mod 25$ cents to make change.</li>
+<li>Then give $d = \lfloor n_q / 10 \rfloor$ dimes. That leaves $n_d = n_q \mod 10$ cents to make change.</li>
+<li>Then give $k = \lfloor n_d / 5 \rfloor$ nickels. That leaves $n_k = n_d \mod 5$ cents to make change.</li>
+<li>Finally, give $p = n_k$ pennies.</li>
+</ul>
+
+<p>An equivalent formulation is the following. The problem we wish to solve is making change for $n$ cents. If $n = 0$, the optimal solution is to give no coins. If $n &gt; 0$, determine the largest coin whose value is less than or equal to $n$. Let this coin have value $c$. Give one such coin, and then recursively solve the subproblem of making change for $n - c$ cents.</p>
+
+<p>To prove that this algorithm yields an optimal solution, we first need to show that the greedy-choice property holds, that is, that some optimal solution to making change for $n$ cents includes one coin of value $c$, where $c$ is the largest coin value such that $c \le n$. Consider some optimal solution. If this optimal solution includes a coin of value $c$, then we are done. Otherwise, this optimal solution does not include a coin of value $c$. We have four cases to consider:</p>
+
+<ul>
+<li>If $1 \le n &lt; 5$, then $c = 1$. A solution may consist only of pennies, and so it must contain the greedy choice.</li>
+<li>If $5 \le n &lt; 10$, then $c = 5$. By supposition, this optimal solution does not contain a nickel, and so it consists of only pennies. Replace five pennies by one nickel to give a solution with four fewer coins.</li>
+<li>If $10 \le n &lt; 25$, then $c = 10$. By supposition, this optimal solution does not contain a dime, and so it contains only nickels and pennies. Some subset of the nickels and pennies in this solution adds up to $10$ cents, and so we can replace these nickels and pennies by a dime to give a solution with (between $1$ and $9$) fewer coins.</li>
+<li>If $25 \le n$, then $c = 25$. By supposition, this optimal solution does not contain a quarter, and so it contains only dimes, nickels, and pennies. If it contains three dimes, we can replace these three dimes by a quarter and a nickel, giving a solution with one fewer coin. If it contains at most two dimes, then some subset of the dimes, nickels, and pennies adds up to $25$ cents, and so we can replace these coins by one quarter to give a solution with fewer coins.</li>
+</ul>
+
+<p>Thus, we have shown that there is always an optimal solution that includes the greedy choice, and that we can combine the greedy choice with an optimal solution to the remaining subproblem to produce an optimal solution to our original problem. Therefore, the greedy algorithm produces an optimal solution.</p>
+
+<p>For the algorithm that chooses one coin at a time and then recurses on subproblems, the running time is $\Theta(k)$, where $k$ is the number of coins used in an optimal solution. Since $k \le n$, the running time is $O(n)$. For our first description of the algorithm, we perform a constant number of calculations (since there are only $4$ coin types), and the running time is $O(1)$.</p>
+
+<p><strong>b.</strong> When the coin denominations are $c^0, c^1, \ldots, c^k$, the greedy algorithm to make change for $n$ cents works by finding the denomination $c^j$ such that $j = \max \{0 \le i \le k: c^i \le n\}$, giving one coin of denomination $c^j$, and recursing on the subproblem of making change for $n - c^j$ cents. (An equivalent, but more efficient, algorithm is to give $\lfloor n / c^k \rfloor$ coins of denomination $c^k$ and $\lfloor (n \mod c^{i + 1}) / c^i \rfloor$ coins of denomination $c^i$ for $i = 0, 1, \ldots, k - 1$.)</p>
+
+<p>To show that the greedy algorithm produces an optimal solution, we start by proving the following lemma:</p>
+
+<p><strong><em>Lemma</em></strong></p>
+
+<p>For $i = 0, 1, \ldots, k$, let $a_i$ be the number of coins of denomination $c^i$ used in an optimal solution to the problem of making change for $n$ cents. Then for $i = 0, 1, \ldots, k - 1$, we have $a_i &lt; c$.</p>
+
+<p><strong><em>Proof</em></strong></p>
+
+<p>If $a_i \ge c$ for some $0 \le i &lt; k$, then we can improve the solution by using one more coin of denomination $c^{i + 1}$ and $c$ fewer coins of denomination $c^i$. The amount for which we make change remains the same, but we use $c - 1 &gt; 0$ fewer coins.</p>
+
+<p>To show that the greedy solution is optimal, we show that any non-greedy solution is not optimal. As above, let $j = \max\{0 \le i \le k: c^i \le n\}$, so that the greedy solution uses at least one coin of denomination $c^j$. Consider a nongreedy solution, which must use no coins of denomination $c^j$ or higher. Let the non-greedy solution use $a_i$ coins of denomination $c^i$, for $i = 0, 1, \ldots, j - 1$; thus we have $\sum_{i = 0}^{j - 1} a_i c^i = n$. Since $n \ge c^j$, we have that $\sum_{i = 0}^{j - 1} a_i c^i \ge c^j$.. Now suppose that the non-greedy solution is optimal. By the above lemma, $a_i \le c - 1$ for $i = 0, 1, \ldots, j - 1$. Thus,</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{i = 0}^{j - 1} a_i c^i
+    & \le \sum_{i = 0}^{j - 1} (c - 1) c^i \\
+    & =   (c - 1) \sum_{i = 0}^{j - 1} c^i \\
+    & =   (c - 1) \frac{c^j - 1}{c - 1} \\
+    & =   c^j - 1 \\
+    & <   c^j,
+\end{aligned}
+$$
+</div>
+
+<p>which contradicts our earlier assertion that $\sum_{i = 0}^{j - 1} a_i c^i \ge c^j$. We conclude that the non-greedy solution is not optimal.</p>
+
+<p>Since any algorithm that does not produce the greedy solution fails to be optimal, only the greedy algorithm produces the optimal solution.</p>
+
+<p>The problem did not ask for the running time, but for the more efficient greedy algorithm formulation, it is easy to see that the running time is $O(k)$, since we have to perform at most $k$ each of the division, ﬂoor, and mod operations.</p>
+
+<p><strong>c.</strong> With actual U.S. coins, we can use coins of denomination $1$, $10$, and $25$. When $n = 30$ cents, the greedy solution gives one quarter and five pennies, for a total of six coins. The non-greedy solution of three dimes is better.</p>
+
+<p>The smallest integer numbers we can use are $1$, $3$, and $4$. When $n = 6$ cents, the greedy solution gives one $4$-cent coin and two $1$-cent coins, for a total of three coins. The non-greedy solution of two $3$-cent coins is better.</p>
+
+<p><strong>d.</strong> Since we have optimal substructure, dynamic programming might apply. And indeed it does.</p>
+
+<p>Let us define $c[j]$ to be the minimum number of coins we need to make change for $j$ cents. Let the coin denominations be $d_1, d_2, \ldots, d_k$. Since one of the coins is a penny, there is a way to make change for any amount $j \ge 1$.</p>
+
+<p>Because of the optimal substructure, if we knew that an optimal solution for the problem of making change for $j$ cents used a coin of denomination $d_i$, we would have $c[j] = 1 + c[j - d_i]$. As base cases, we have that $c[j] = 0$ for all $j \le 0$.</p>
+
+<p>To develop a recursive formulation, we have to check all denominations, giving</p>
+
+<div>
+$$
+c[j] =
+\begin{cases}
+0                                            & \text{if $j \le 0$}, \\
+1 + \min\limits_{1 \le i \le k} {c[j - d_i]} & \text{if $j > 1$}.
+\end{cases}
+$$
+</div>
+
+<p>We can compute the $c[j]$ values in order of increasing $j$ by using a table. The following procedure does so, producing a table $c[1..n]$. It avoids even examining $c[j]$ for $j \le 0$ by ensuring that $j \ge d_i$ before looking up $c[j - d_i]$. The procedure also produces a table $denom[1..n]$, where $denom[j]$ is the denomination of a coin used in an optimal solution to the problem of making change for $j$ cents.</p>
+
+<pre><code class="language-cpp">COMPUTE-CHANGE(n, d, k)
+    let c[1..n] and denom[1..n] be new arrays
+    for j = 1 to n
+        c[j] = ∞
+        for i = 1 to k
+            if j ≥ di and 1 + c[j - di] &lt; c[j]
+                c[j] = 1 + c[j - di]
+                denom[j] = di
+    return c and denom
+</code></pre>
+
+<p>This procedure obviously runs in $O(nk)$ time.</p>
+
+<p>We use the following procedure to output the coins used in the optimal solution computed by $\text{COMPUTE-CHANGE}$:</p>
+
+<pre><code class="language-cpp">GIVE-CHANGE(j, denom)
+    if j &gt; 0
+        give one coin of denomination denom[j]
+        GIVE-CHANGE(j - denom[j], denom)
+</code></pre>
+
+<p>The initial call is $\text{GIVE-CHANGE}(n, denom)$. Since the value of the first parameter decreases in each recursive call, this procedure runs in $O(n)$ time.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10885,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10746,6 +10900,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11052,6 +11209,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11067,6 +11225,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11148,6 +11309,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11160,6 +11322,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11177,6 +11340,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14629,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/" title="Chap 16 Problems"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap16/problems/16-2/" title="16-2 Scheduling to minimize average completion time" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14642,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

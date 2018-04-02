@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>11.3 Hash functions :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap11/11.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2372,7 +2372,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap11/" title="11 Hash Tables" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2436,7 +2436,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.3/" title="11.3 Hash functions" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap11/11.3/" title="11.3 Hash functions" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap11/11.3/">
         11.3 Hash functions
         
@@ -8374,56 +8374,278 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap11/11.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap11/'>11 Hash Tables</a> > 11.3 Hash functions
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#11-3-1">11.3-1</a></li>
+<li><a href="#11-3-2">11.3-2</a></li>
+<li><a href="#11-3-3">11.3-3</a></li>
+<li><a href="#11-3-4">11.3-4</a></li>
+<li><a href="#11-3-5-star">11.3-5 $\star$</a></li>
+<li><a href="#11-3-6-star">11.3-6 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>11.3 Hash functions</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="11-3-1">11.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Suppose we wish to search a linked list of length $n$, where each element contains a key $k$ along with a hash value $h(k)$. Each key is a long character string. How might we take advantage of the hash values when searching the list for an element with a given key?</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>If every element also contained a hash of the long character string, when we are searching for the desired element, we&rsquo;ll first check if the hashvalue of the node in the linked list, and move on if it disagrees. This can increase the runtime by a factor proportional to the length of the long character strings.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="11-3-2">11.3-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Suppose that we hash a string of $r$ characters into $m$ slots by treating it as a radix-128 number and then using the division method. We can easily represent the number $m$ as a 32-bit computer word, but the string of $r$ characters, treated as a radix-128 number, takes many words. How can we apply the division method to compute the hash value of the character string without using more than a constant number of words of storage outside the string itself?</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<pre><code class="language-cpp">    sum = 0
+    for i = 1 to r
+        sum = (sum * 128 + s[i]) % m
+</code></pre>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>Use <code>sum</code> as the key.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<h2 id="11-3-3">11.3-3</h2>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<blockquote>
+<p>Consider a version of the division method in which $h(k) = k \mod m$, where $m = 2^p - 1$ and $k$ is a character string interpreted in radix $2^p$. Show that if we can derive string $x$ from string $y$ by permuting its characters, then $x$ and $y$ hash to the same value. Give an example of an application in which this property would be undesirable in a hash function.</p>
+</blockquote>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>First, we observe that we can generate any permutation by a sequence of interchanges of pairs of characters. One can prove this property formally, but informally, consider that both heapsort and quicksort work by interchanging pairs of elements and that they have to be able to produce any permutation of their input array. Thus, it suffices to show that if string $x$ can be derived from string $y$ by interchanging a single pair of characters, then $x$ and $y$ hash to the same value.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<p>Let us denote the $i$th character in $x$ by $x_i$, and similarly for $y$. The interpretation of $x$ in radix $2^p$ is $\sum_{i = 0}^{n - 1} x_i 2^{ip}$, and so $h(x) = (\sum_{i = 0}^{n - 1} x_i 2^{ip}) \mod (2^p - 1)$. Similarly, $h(y) = (\sum_{i = 0}^{n - 1} y_i 2^{ip}) \mod (2^p - 1)$.</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>Suppose that $x$ and $y$ are identical strings of $n$ characters except that the characters in positions $a$ and $b$ are interchanged: $x_a = y_b$ and $y_a = x_b$. Without loss of generality, let $a &gt; b$. We have</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<div>
+$$
+h(x) - h(y) = \Big(\sum_{i = 0}^{n - 1} x_i 2^{ip}\Big) \mod (2^p - 1) - \Big(\sum_{i = 0}^{n - 1} y_i 2^{ip}\Big) \mod (2^p - 1).
+$$
+</div>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>Since $0 \le h(x)$, $h(y) &lt; 2^p - 1$, we have that $-(2^p - 1) &lt; h(x) - h(y) &lt; 2^p - 1$. If we show that $(h(x) - h(y)) \mod (2^p - 1) = 0$, then $h(x) = h(y)$.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>Since the sums in the hash functions are the same except for indices $a$ and $b$, we have</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<div>
+$$
+\begin{aligned}
+(h(x) - h(y)) \mod (2^p - 1)
+    & = ((x_a 2^{ap} + x_b 2^{bp}) - (y_a 2^{ap} + y_b 2^{bp})) \mod (2^p - 1) \\
+    & = ((x_a 2^{ap} + x_b 2^{bp}) - (x_b 2^{ap} + x_a 2^{bp})) \mod (2^p - 1) \\
+    & = ((x_a - x_b)2^{ap} - (x_a - x_b) 2^{bp}) \mod (2^p - 1) \\
+    & = ((x_a - x_b)(2^{ap} - 2^{bp})) \mod (2^p - 1) \\
+    & = ((x_a - x_b)2^{bp}(2^{(a - b)p} - 1)) \mod (2^p - 1).
+\end{aligned}
+$$
+</div>
+
+<p>By equation $\text{(A.5)}$,</p>
+
+<div>
+$$
+\sum_{i = 0}^{a - b - 1} 2^{pi} = \frac{2^{(a - b)p} - 1}{2^p - 1},
+$$
+</div>
+
+<p>and multiplying both sides by $s^p - 1$, we get $2^{(a - b)p} - 1 = \big(\sum_{i = 0}^{a - b - 1} 2^{pi}\big)(2^p - 1)$. Thus,</p>
+
+<div>
+$$
+\begin{aligned}
+(h(x) - h(y))\mod(2^p - 1)
+    & = \Bigg((x_a - x_b)2^{bp}\Bigg(\sum_{i = 0}^{a - b - 1} 2^{pi}\Bigg)(2^p - 1)\Bigg) \mod (2^p - 1) \\
+    & = 0,
+\end{aligned}
+$$
+</div>
+
+<p>since one of the factors is $2^p - 1$.</p>
+
+<p>We have shown that $(h(x) - h(y)) \mod (2^p - 1) = 0$, and so $h(x) = h(y)$.</p>
+
+<h2 id="11-3-4">11.3-4</h2>
+
+<blockquote>
+<p>Consider a hash table of size $m = 1000$ and a corresponding hash function $h(k) = \lfloor m (kA \mod 1) \rfloor$ for $A = (\sqrt 5 - 1) / 2$. Compute the locations to which the keys $61$, $62$, $63$, $64$, and $65$ are mapped.</p>
+</blockquote>
+
+<ul>
+<li>$h(61) = \lfloor 1000(61 \cdot \frac{\sqrt 5 - 1}{2} \mod 1) \rfloor = 700$.</li>
+<li>$h(62) = \lfloor 1000(62 \cdot \frac{\sqrt 5 - 1}{2} \mod 1) \rfloor = 318$.</li>
+<li>$h(63) = \lfloor 1000(63 \cdot \frac{\sqrt 5 - 1}{2} \mod 1) \rfloor = 936$.</li>
+<li>$h(64) = \lfloor 1000(64 \cdot \frac{\sqrt 5 - 1}{2} \mod 1) \rfloor = 554$.</li>
+<li>$h(65) = \lfloor 1000(65 \cdot \frac{\sqrt 5 - 1}{2} \mod 1) \rfloor = 172$.</li>
+</ul>
+
+<h2 id="11-3-5-star">11.3-5 $\star$</h2>
+
+<blockquote>
+<p>Define a family $\mathcal H$ of hash functions from a finite set $U$ to a finite set $B$ to be <strong><em>$\epsilon$-universal</em></strong> if for all pairs of distinct elements $k$ and $l$ in $U$,</p>
+
+<div>
+$$
+\Pr\{h(k) = h(l)\} \le \epsilon,
+$$
+</div>
+
+<p>where the probability is over the choice of the hash function $h$ drawn at random from the family $\mathcal H$. Show that an $\epsilon$-universal family of hash functions must have</p>
+
+<div>
+$$
+\epsilon \ge \frac{1}{|B|} - \frac{1}{|U|}.
+$$
+</div>
+</blockquote>
+
+<p>Let $b = |B|$ and $u = |U|$. We start by showing that the total number of collisions is minimized by a hash function that maps $u / b$ elements of $U$ to each of the $b$ values in $B$. For a given hash function, let $u_j$ be the number of elements that map to $j \in B$. We have $u = \sum_{j \in B} u_j$. We also have that the number of collisions for a given value of $j \in B$ is $\binom{u_j}{2} = u_j(u_j - 1) / 2$.</p>
+
+<p><strong><em>Lemma</em></strong></p>
+
+<p>The total number of collisions is minimized when $u_j = u / b$ for each $j \in B$.</p>
+
+<p><strong><em>Proof</em></strong></p>
+
+<p>If $u_j \le u / b$, let us call $j$ <strong><em>underloaded</em></strong>, and if $u_j \ge u / b$, let us call $j$ <strong><em>overloaded</em></strong>. Consider an unbalanced situation in which $u_j \ne u / b$ for at least one value $j \in B$. We can think of converting a balanced situation in which all $u_j$ equal $u / b$ into the unbalanced situation by repeatedly moving an element that maps to an underloaded value to map instead to an overloaded value. (If you think of the values of $B$ as representing buckets, we are repeatedly moving elements from buckets containing at most $u / b$ elements to buckets containing at least $u / b$ elements.)</p>
+
+<p>We now show that each such move increases the number of collisions, so that all the moves together must increase the number of collisions. Suppose that we move an element from an underloaded value $j$ to an overloaded value $k$, and we leave all other elements alone. Because $j$ is underloaded and $k$ is overloaded, $u_j \le u / b\le u_k$. Considering just the collisions for values $j$ and $k$, we have $u_j(u_j - 1) / 2 + u_k(u_k - 1) / 2$ collisions before the move and $(u_j - 1)(u_j - 2) / 2 + (u_k + 1)u_k / 2$ collisions afterward. We wish to show that</p>
+
+<div>
+$$
+u_j(u_j - 1) / 2 + u_k(u_k - 1) / 2 < (u_j - 1)(u_j - 2) / 2 + (u_k + 1)u_k / 2.
+$$
+</div>
+
+<p>We have the following sequence of equivalent inequalities:</p>
+
+<div>
+$$
+\begin{aligned}
+                                u_j & < u_k + 1 \\
+                               2u_j & < 2u_k + 2 \\
+                               -u_k & < u_k - 2u_j + 2 \\
+          u_j^2 - u_j + u_k^2 - u_k & < u_j^2 - 3u_j + 2 + u_k^2 + u_k \\
+        u_j(u_j - 1) + u_k(u_k - 1) & < (u_j - 1)(u_j - 2) + (u_k + 1)u_k \\
+u_j(u_j - 1) / 2 + u_k(u_k - 1) / 2 & < (u_j - 1)(u_j - 2) / 2 + (u_k + 1)u_k / 2.
+\end{aligned}
+$$
+</div>
+
+<p>Thus, each move increases the number of collisions. We conclude that the number of collisions is minimized when $u_j = u / b$ for each $j \in B$.</p>
+
+<p>By the above lemma, for any hash function, the total number of collisions must  be at least $b(u / b)(u / b - 1) / 2$. The number of pairs of distinct elements is $\binom{u}{2} = u(u - 1) / 2$. Thus, the number of collisions per pair of distinct elements must be at least</p>
+
+<div>
+$$
+\begin{aligned}
+\frac{b(u / b)(u / b - 1) / 2}{u(u - 1) / 2}
+    & = \frac{u / b - 1}{u - 1} \\
+    & > \frac{u / b - 1}{u} \\
+    & = \frac{1}{b} - \frac{1}{u}.
+\end{aligned}
+$$
+</div>
+
+<p>Thus, the bound  on the probability of a collision for any pair of distinct elements can be no less than $1 / b - 1 / u = 1 / |B| - 1 / |U|$.</p>
+
+<h2 id="11-3-6-star">11.3-6 $\star$</h2>
+
+<blockquote>
+<p>Let $U$ be the set of $n$-tuples of values drawn from $\mathbb{Z}_p$, and let $B = \mathbb{Z}_p$, where $p$ is prime. Define the hash function $h_b: U \rightarrow B$ for $b \in \mathbb{Z}_p$ on an input $n$-tuple $\langle a_0, a_1, \ldots, a_{n - 1} \rangle$ from $U$ as</p>
+
+<div>
+$$
+h_b(\langle a_0, a_1, \ldots, a_{n - 1} \rangle) = (\sum_{j = 0}^{n - 1} a_jb^j) \mod p,
+$$
+</div>
+
+<p>and let $\mathcal{H} = {h_b : b \in \mathbb{Z}_p}$. Argue that $\mathcal H$ is $((n - 1) / p)$-universal according to the definition of $\epsilon$-universal in Exercise 11.3-5. ($\textit{Hint:}$ See Exercise 31.4-4.)</p>
+</blockquote>
+
+<p>Fix $b \in \mathbb Z_p$. By exercise 31.4-4, $h_b(x)$ collides with $h_b(y)$ for at most $n - 1$ other $y \in U$. Since there are a total of $p$ possible values that $h_b$ takes on, the
+probability that $h_b(x) = h_b(y)$ is bounded from above by $\frac{n - 1}{p}$, since this holds for any value of $b$, $\mathcal H$ is $((n - 1 ) /p)$-universal.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10174,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10189,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10113,6 +10339,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10127,6 +10354,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10159,6 +10389,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10176,6 +10407,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14697,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap11/11.2/" title="11.2 Hash tables"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap11/11.4/" title="11.4 Open addressing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14710,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

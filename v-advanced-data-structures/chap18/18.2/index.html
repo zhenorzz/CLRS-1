@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>18.2 Basic operations on B-trees :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/v-advanced-data-structures/chap18/18.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4157,7 +4157,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4184,7 +4184,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap18/" title="18 B-Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4229,7 +4229,7 @@
  
   
     
-      <li data-nav-id="/CLRS/v-advanced-data-structures/chap18/18.2/" title="18.2 Basic operations on B-trees" class="dd-item ">
+      <li data-nav-id="/CLRS/v-advanced-data-structures/chap18/18.2/" title="18.2 Basic operations on B-trees" class="dd-item active">
         <a href="/CLRS/v-advanced-data-structures/chap18/18.2/">
         18.2 Basic operations on B-trees
         
@@ -8374,56 +8374,271 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/V%20Advanced%20Data%20Structures/Chap18/18.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/v-advanced-data-structures/'>V Advanced Data Structures</a> > <a href='/CLRS/v-advanced-data-structures/chap18/'>18 B-Trees</a> > 18.2 Basic operations on B-trees
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#18-2-1">18.2-1</a></li>
+<li><a href="#18-2-2">18.2-2</a></li>
+<li><a href="#18-2-3">18.2-3</a></li>
+<li><a href="#18-2-4-star">18.2-4 $\star$</a></li>
+<li><a href="#18-2-5">18.2-5</a></li>
+<li><a href="#18-2-6">18.2-6</a></li>
+<li><a href="#18-2-7">18.2-7</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>18.2 Basic operations on B-trees</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="18-2-1">18.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Show the results of inserting the keys</p>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+F, S, Q, K, C, L, H, T, V, W, M, R, N, P, A, B, X, Y, D, Z, E
+$$
+</div>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>in order into an empty B-tree with minimum degree $2$. Draw only the configurations of the tree just before some node must split, and also draw the final configuration.</p>
+</blockquote>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>(Omit!)</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<h2 id="18-2-2">18.2-2</h2>
 
-<h1 id="getting-started">Getting Started</h1>
+<blockquote>
+<p>Explain under what circumstances, if any, redundant $\text{DISK-READ}$ or $\text{DISK-WRITE}$ operations occur during the course of executing a call to $\text{B-TREE-INSERT}$. (A redundant $\text{DISK-READ}$ is a $\text{DISK-READ}$ for a page that is already in memory. A redundant $\text{DISK-WRITE}$ writes to disk a page of information that is identical to what is already stored there.)</p>
+</blockquote>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>In order to insert the key into a full child node but without its parent being full, we need the  following operations:</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<ul>
+<li>$\text{DISK-READ}$: Key placement</li>
+<li>$\text{DISK-WRITE}$: Split nodes</li>
+<li>$\text{DISK-READ}$: Get to the parent</li>
+<li>$\text{DISK-WRITE}$: Fill parent</li>
+</ul>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>If both were full, we&rsquo;d have to do the same, but instead of the final step, repeat the above to split the parent node and write into the child nodes. With both considerations in mind, there should never be a redundant $\text{DISK-READ}$ or $\text{DISK-WRITE}$ on a $\text{B-TREE-INSERT}$.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="18-2-3">18.2-3</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Explain how to find the minimum key stored in a B-tree and how to find the predecessor of a given key stored in a B-tree.</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>Finding the minimum in a B-tree is quite similar to finding a minimum in a binary search tree. We need to find the left most leaf for the given root, and return the first key.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<ul>
+<li><strong>PRE:</strong> $x$ is a node on the B-tree $T$. The top level call is $\text{B-TREE-FIND-MIN}(T.root)$.</li>
+<li><strong>POST:</strong> $\text{FCTVAL}$ is the minimum key stored in the subtree rooted at $x$.</li>
+</ul>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<pre><code class="language-cpp">B-TREE-FIND-MIN(x)
+    if x == NIL           // T is empty
+        return NIL
+    else if x.leaf        // x is leaf
+        return x.key[1]   // return the minimum key of x
+    else
+        DISK-READ(x.c[1])
+        return B-TREE-FIND-MIN(x.c[1])
+</code></pre>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>Finding the predecessor of a given key $x.key_i$ is according to the following rules:</p>
+
+<ol>
+<li>If $x$ is not a leaf, return the maximum key in the $i$-th child of $x$, which is also the maximum key of the subtree rooted
+at $x.c_i$.</li>
+<li>If $x$ is a leaf and $i &gt; 1$, return the $(i - 1)$st key of $x$, i.e., $x.key_{i - 1}$.</li>
+<li>Otherwise, look for the last node y (from the bottom up) and $j &gt; 0$, such that $x.key_i$ is the leftmost key in $y.c_j$; if $j = 1$, return $\text{NIL}$ since $x.key_i$ is the minimum key in the tree; otherwise we return $y.key_{j - 1}$.</li>
+</ol>
+
+<ul>
+<li><strong>PRE:</strong> $x$ is a node on the B-tree $T$. $i$ is the index of the key.</li>
+<li><strong>POST:</strong> $\text{FCTVAL}$ is the predecessor of $x.key_i$.</li>
+</ul>
+
+<pre><code class="language-cpp">B-TREE-FIND-PREDECESSOR(x, i)
+    if !x.leaf
+        DISK-READ(x.c[i])
+        return B-TREE-FIND-MAX(x.c[i])
+    else if i &gt; 1      // x is a leaf and i &gt; 1
+        return x.key[i - 1]
+    else
+        z = x
+        while TRUE
+            if z.p == NIL    // z is root
+                return NIL   // z.key[i] is the minimum key in T; no predecessor
+              y = z.p
+              j = 1
+              DISK-READ(y.c[1])
+              while y.c[j] != x
+                  j = j + 1
+                  DISK-READ(y.c[j])
+              if j == 1
+                  z = y
+              else
+                  return y.key[j - 1]
+</code></pre>
+
+<ul>
+<li><strong>PRE:</strong> $x$ is a node on the B-tree $T$. The top level call is $\text{B-TREE-FIND-MAX}(T.root)$.</li>
+<li><strong>POST:</strong> $\text{FCTVAL}$ is the maximum key stored in the subtree rooted at $x$.</li>
+</ul>
+
+<pre><code class="language-cpp">B-TREE-FIND-MAX(x)
+    if x == NIL           // T is empty
+        return NIL
+    else if x.leaf        // x is leaf
+        return x.[x.n]    // return the maximum key of x
+    else
+        DISK-READ(x.c[x.n + 1])
+        return B-TREE-FIND-MIN(x.c[x.n + 1])
+</code></pre>
+
+<h2 id="18-2-4-star">18.2-4 $\star$</h2>
+
+<blockquote>
+<p>Suppose that we insert the keys ${1, 2, \ldots, n}$ into an empty B-tree with minimum degree 2. How many nodes does the final B-tree have?</p>
+</blockquote>
+
+<p>The final tree can have as many as $n - 1$ nodes. Unless $n = 1$ there cannot ever be $n$ nodes since we only ever insert a key into a non-empty node, so there will always be at least one node with $2$ keys.</p>
+
+<p>Next observe that we will never have more than one key in a node which is not a right spine of our B-tree. This is because every key we insert is larger than all keys stored in the tree, so it will be inserted into the right spine of the tree. Nodes not in the right spine are a result of splits, and since $t = 2$, every split results in child nodes with one key each. The fewest possible number of nodes occurs when every node in the right spine has $3$ keys. In this case, $n = 2h + 2^{h + 1} - 1$ where $h$ is the height of the B-tree, and the number of nodes is $2^{h + 1} - 1$. Asymptotically these are the same, so the number of nodes is $\Theta(n)$.</p>
+
+<h2 id="18-2-5">18.2-5</h2>
+
+<blockquote>
+<p>Since leaf nodes require no pointers to children, they could conceivably use a different (larger) $t$ value than internal nodes for the same disk page size. Show how to modify the procedures for creating and inserting into a B-tree to handle this variation.</p>
+</blockquote>
+
+<p>We could set the new $t$ (name it $t^\prime$) value of leaf node = $1.5t$.</p>
+
+<h2 id="18-2-6">18.2-6</h2>
+
+<blockquote>
+<p>Suppose that we were to implement $\text{B-TREE-SEARCH}$ to use binary search rather than linear search within each node. Show that this change makes the CPU time required $O(\lg n)$, independently of how $t$ might be chosen as a function of $n$.</p>
+</blockquote>
+
+<p>As in the $\text{TREE-SEARCH}$ procedure for binary search trees, the nodes encountered during the recursion form a simple path downward from the root of the tree. Thus, the $\text{B-TREE-SEARCH}$ procedure needs $O(h) = O(\log_t n)$ CPU time to search along the path, where $h$ is the height of the B-tree and $n$ is the number of keys in the B-tree, and we know that $h \le \log_t \frac{n + 1}{2}$. Since the number of keys in each nodeis less than $2t - 1$, a binary search within each node is $O(\lg t)$. So the total time is:</p>
+
+<div>
+$$
+\begin{aligned}
+O(\lg t \cdot \log_t n) & = O(\lg t \cdot \frac{\lg n}{\lg t}) & \text{by changing the base of the logarithm.} \\
+                        & = O(\lg n).
+\end{aligned}
+$$
+</div>
+
+<p>Thus, the CPU time required is $O(\lg n)$.</p>
+
+<h2 id="18-2-7">18.2-7</h2>
+
+<blockquote>
+<p>Suppose that disk hardware allows us to choose the size of a disk page arbitrarily, but that the time it takes to read the disk page is $a + bt$, where $a$ and $b$ are specified constants and $t$ is the minimum degree for a B-tree using pages of the selected size. Describe how to choose $t$ so as to minimize (approximately) the B-tree search time. Suggest an optimal value of $t$ for the case in which $a = 5$ milliseconds and $b = 10$ microseconds.</p>
+</blockquote>
+
+<div>
+$$
+\min \log_t n \cdot (a + bt) = \min \frac{a + bt}{\ln t}
+$$
+</div>
+<div>
+$$
+\frac{\partial}{\partial t} (\frac{a + bt}{\ln t}) = - \frac{a + bt - bt \ln t}{t \ln^2 t}
+$$
+</div>
+<div>
+$$
+\begin{aligned}
+ a + bt & = bt \ln t \\
+5 + 10t & = 10t \ln t \\
+      t & = e^{W \left(\frac{1}{2e} \right) + 1}, \\
+\end{aligned}
+$$
+</div>
+
+<p>where $W$ is the LambertW function, and we should choose $t = 3$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11428,6 +11643,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11442,6 +11658,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11457,6 +11674,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11474,6 +11694,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11489,6 +11710,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14687,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/v-advanced-data-structures/chap18/18.1/" title="18.1 Definition of B-trees"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/v-advanced-data-structures/chap18/18.3/" title="18.3 Deleting a key from a B-tree" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14700,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

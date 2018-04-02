@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>25-1 Transitive closure of a dynamic graph :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap25/problems/25-1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5677,7 +5677,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap25/" title="25 All-Pairs Shortest Paths" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5761,7 +5761,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap25/problems/" title="Chap 25 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5785,7 +5785,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap25/problems/25-1/" title="25-1 Transitive closure of a dynamic graph" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap25/problems/25-1/" title="25-1 Transitive closure of a dynamic graph" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap25/problems/25-1/">
         Problem 25-1
         
@@ -8374,56 +8374,155 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap25/Problems/25-1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap25/'>25 All-Pairs Shortest Paths</a> > <a href='/CLRS/vi-graph-algorithms/chap25/problems/'>Chap 25 Problems</a> > 25-1 Transitive closure of a dynamic graph
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>25-1 Transitive closure of a dynamic graph</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Suppose that we wish to maintain the transitive closure of a directed graph $G = (V, E)$ as we insert edges into $E$. That is, after each edge has been inserted, we want to update the transitive closure of the edges inserted so far. Assume that the graph $G$ has no edges initially and that we represent the transitive closure as a boolean matrix.</p>
+
+<p><strong>a.</strong> Show how to update the transitive closure $G^* = (V, E^*)$ of a graph $G = (V, E)$ in $O(V^2)$ time when a new edge is added to $G$.</p>
+
+<p><strong>b.</strong> Give an example of a graph $G$ and an edge $e$ such that $\Omega(V^2)$ time is required to update the transitive closure after the insertion of $e$ into $G$, no matter what algorithm is used.</p>
+
+<p><strong>c.</strong> Describe an efficient algorithm for updating the transitive closure as edges are inserted into the graph. For any sequence of $n$ insertions, your algorithm should run in total time $\sum_{i = 1}^n t_i = O(V^3)$, where $t_i$ is the time to update the transitive closure upon inserting the $i$th edge. Prove that your algorithm attains this time bound.</p>
+</blockquote>
+
+<p><strong>a.</strong> Let $T = (t_{ij})$ be the $|V| \times |V|$ matrix representing the transitive closure, such that $t_{ij}$ is $1$ if there is a path from $i$ to $j$, and $0$ otherwise.</p>
+
+<p>Initialize $T$ (when there are no edge in $G$) as follows:</p>
+
+<div>
+$$
+t_{ij} =
+\begin{cases}
+1 & \text{if $i = j$}, \\
+0 & \text{otherwise}.
+\end{cases}
+$$
+</div>
+
+<p>We update $T$ as follows when an edge $(u, v)$ is added to $G$:</p>
+
+<pre><code class="language-cpp">TRANSITIVE-CLOSURE-UPDATE(T, u, v)
+    let T be |V| × |V|
+    for i = 1 to |V|
+        for j = 1 to |V|
+            if t[i][u] == 1 and t[v][j] == 1
+                t[i][j] = 1
+</code></pre>
+
+<ul>
+<li>With this procedure, the effect of adding edge $(u, v)$ is to create a path (via the new edge) from every vertex that could already reach $u$ to every vertex that could already be reached from $v$.</li>
+<li>Note that the procedure sets $t_{uv} = 1$, because both $t_{uu}$ and $t_{vv}$ are initialized to $1$.</li>
+<li>This procedure takes $\Theta(V^2)$ time because of the two nested loops.</li>
+</ul>
+
+<p><strong>b.</strong> Consider inserting the edge $(v_{|V|}, v_1)$ into the straight-line graph $v_1 \to v_2 \to \cdots \to v_{|V|}$.</p>
+
+<p>Before this edge is inserted, only $|V|(|V| + 1) / 2$ entries in $T$ are $1$ (the entries on and above the main diagonal). After the edge is inserted, the graph is a cycle in which every vertex can reach every other vertex, so all $|V|^2$ entries in $T$ are $1$. Hence $|V|^2 - (|V|(|V| + 2) / 2) = \Theta(V^2)$ entries must be changed in $T$, so any algorithm to update the transitive closure must take $\Omega(V^2)$ time on this graph.</p>
+
+<p><strong>c.</strong> The algorithm in part (a) would take $\Theta(V^4)$ time to insert all possible $\Theta(V^2)$ edges, so we need a more efﬁcient algorithm in order for any sequence of insertions to take only $O(V^3)$ total time.</p>
+
+<p>To improve the algorithm, notice that the loop over $j$ is pointless when $t_{iv} = 1$. That is, if there is already a path $i \leadsto v$, then adding the edge $(u, v)$ cannot make any new vertices reachable from $i$. The loop to set $t_{ij}$ to $1$ for $j$ such that there exists a path $v \leadsto j$ is just setting entries that are already $1$. Eliminate this redundant processing as follows:</p>
+
+<pre><code class="language-cpp">TRANSITIVE-CLOSURE-UPDATE(T, u, v)
+    let T be |V| × |V|
+    for i = 1 to |V|
+        if t[i][u] == 1 and t[i][v] == 0
+            for j = 1 to |V|
+                if t[v][j] == 1
+                    t[i][j] = 1
+</code></pre>
+
+<p>We show that this procedure takes $O(V^3)$ time to update the transitive closure for any sequence of $n$ insertions:</p>
+
+<ul>
+<li>There cannot be more than $|V|^2$ edges in $G$, so $n \le |V|^2$.</li>
+<li>Summed over $n$ insertions, the time for the outer <strong>for</strong> loop header and the test for $t_{iu} == 1$ and $t_{iv} == 0$ is $O(nV) = O(V^3)$.</li>
+<li>The last three lines, which take $O(V^2)$ time, are executed only $O(V^2)$ times for $n$ insertions. To see why, notice that the last three lines are executed only when $t_{iv}$ equals $0$, and in that case, the last line sets $t_{iv} = 1$. Thus, the number of $0$ entries in $T$ is reduced by at least $1$ each time the last three lines run. Since there are only $|V|^2$ entries in $T$, these lines can run at most $|V|^2$ times.</li>
+<li>Hence, the total running time over $n$ insertions is $O(V^3)$.</li>
+</ul>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12081,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12096,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12514,6 +12617,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12529,6 +12633,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12578,6 +12685,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12590,6 +12698,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12607,6 +12716,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14575,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap25/problems/" title="Chap 25 Problems"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap25/problems/25-2/" title="25-2 Shortest paths in epsilon-dense graphs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14588,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

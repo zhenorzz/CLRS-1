@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>21-3 Tarjan&#39;s off-line least-common-ancestors algorithm :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/v-advanced-data-structures/chap21/problems/21-3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4157,7 +4157,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4736,7 +4736,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap21/" title="21 Data Structures for Disjoint Sets" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4839,7 +4839,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap21/problems/" title="Chap 21 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4901,7 +4901,7 @@
  
   
     
-      <li data-nav-id="/CLRS/v-advanced-data-structures/chap21/problems/21-3/" title="21-3 Tarjan&#39;s off-line least-common-ancestors algorithm" class="dd-item ">
+      <li data-nav-id="/CLRS/v-advanced-data-structures/chap21/problems/21-3/" title="21-3 Tarjan&#39;s off-line least-common-ancestors algorithm" class="dd-item active">
         <a href="/CLRS/v-advanced-data-structures/chap21/problems/21-3/">
         Problem 21-3
         
@@ -8374,56 +8374,131 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/V%20Advanced%20Data%20Structures/Chap21/Problems/21-3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/v-advanced-data-structures/'>V Advanced Data Structures</a> > <a href='/CLRS/v-advanced-data-structures/chap21/'>21 Data Structures for Disjoint Sets</a> > <a href='/CLRS/v-advanced-data-structures/chap21/problems/'>Chap 21 Problems</a> > 21-3 Tarjan's off-line least-common-ancestors algorithm
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>21-3 Tarjan&#39;s off-line least-common-ancestors algorithm</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>The least common ancestor of two nodes $u$ and $v$ in a rooted tree $T$ is the node $w$ that is an ancestor of both $u$ and $v$ and that has the greatest depth in $T$. In the <strong><em>off-line least-common-ancestors problem</em></strong>, we are given a rooted tree $T$ and an arbitrary set $P = {{u, v}}$ of unordered pairs of nodes in $T$, and we wish to determine the least common ancestor of each pair in $P$.</p>
+
+<p>To solve the off-line least-common-ancestors problem, the following procedure performs a tree walk of $T$ with the initial call $\text{LCA}(T.root)$. We assume that each node is colored $\text{WHITE}$ prior to the walk.</p>
+
+<pre><code class="language-cpp">LCA(u)
+    MAKE-SET(u)
+    FIND-SET(u).ancestor = u
+    for each child v of u in T
+        LCA(v)
+        UNION(u, v)
+        FIND-SET(u).ancestor = u
+    u.color = BLACK
+    for each node v such that {u, v} in P
+        if v.color == BLACK
+            print &quot;The least common ancestor of&quot; u
+            &quot;and&quot; v &quot;is&quot; FIND-SET(v).ancestor
+</code></pre>
+
+<p><strong>a.</strong> Argue that line 10 executes exactly once for each pair ${u, v} \in P$.</p>
+
+<p><strong>b.</strong> Argue that at the time of the call $\text{LCA}(u)$, the number of sets in the disjoint-set data structure equals the depth of $u$ in $T$.</p>
+
+<p><strong>c.</strong> Prove that $\text{LCA}$ correctly prints the least common ancestor of $u$ and $v$ for each pair ${u, v} \in P$.</p>
+
+<p><strong>d.</strong> Analyze the running time of $\text{LCA}$, assuming that we use the implementation of the disjoint-set data structure in Section 21.3.</p>
+</blockquote>
+
+<p><strong>a.</strong> Suppose that we let $\le_{LCA}$ to be an ordering on the vertices so that $u \le_{LCA} v$ if we run line 7 of $\text{LCA}(u)$ before line 7 of $\text{LCA}(v)$. Then, when we are running line 7 of $\text{LCA}(u)$, we immediately go on to the <strong>for</strong> loop on line 8.</p>
+
+<p>So, while we are doing this <strong>for</strong> loop, we still haven&rsquo;t called line 7 of $\text{LCA}(v)$. This means that $v.color$ is white, and so, the pair ${u, v}$ is not considered during the run of $\text{LCA}(u)$. However, during the <strong>for</strong> loop of $\text{LCA}(v)$, since line 7 of $\text{LCA}(u)$ has already run, $u.color = black$. This means that we will consider the pair ${u, v}$ during the running of $\text{LCA}(v)$.</p>
+
+<p>It is not obvious what the ordering $\le_{LCA}$ is, as it will be implementation dependent. It depends on the order in which child vertices are iterated in the <strong>for</strong> loop on line 3. That is, it doesn&rsquo;t just depend on the graph structure.</p>
+
+<p><strong>b.</strong> We suppose that it is true prior to a given call of $\text{LCA}$, and show that this property is preserved throughout a run of the procedure, increasing the number of disjoint sets by one by the end of the procedure. So, supposing that $u$ has depth $d$ and there are $d$ items in the disjoint set data structure before it runs, it increases to $d + 1$ disjoint sets on line 1. So, by the time we get to line 4, and call $\text{LCA}$ of a child of $u$, there are $d + 1$ disjoint sets, this is exactly the depth of the child. After line 4, there are now $d + 2$ disjoint sets, so, line 5 brings it back down to $d + 1$ disjoint sets for the subsequent times through the loop. After the loop, there are no more changes to the number of disjoint sets, so, the algorithm terminates with $\text{d + 1}$ disjoint sets, as desired. Since this holds for any arbitrary run of $\text{LCA}$, it holds for all runs of $\text{LCA}$.</p>
+
+<p><strong>c.</strong> Suppose that the pair $u$ and $v$ have the least common ancestor $w$. Then, when running $\text{LCA}(w)$, $u$ will be in the subtree rooted at one of $w$&rsquo;s children, and $v$ will be in another. WLOG, suppose that the subtree containing $u$ runs first.</p>
+
+<p>So, when we are done with running that subtree, all of their ancestor values will point to $w$ and their colors will be black, and their ancestor values will not change until $\text{LCA}(w)$ returns. However, we run $\text{LCA}(v)$ before $\text{LCA}(w)$ returns, so in the <strong>for</strong> loop on line 8 of $\text{LCA}(v)$, we will be considering the pair ${u, v}$, since $u.color = black$. Since $u.ancestor$ is still $w$, that is what will be output, which is the correct answer for their $\text{LCA}$.</p>
+
+<p><strong>d.</strong> The time complexity of lines 1 and 2 are just constant. Then, for each child, we have a call to the same procedure, a $\text{UNION}$ operation which only takes constant time, and a $\text{FIND-SET}$ operation which can take at most amortized inverse Ackerman&rsquo;s time. Since we check each and every thing that is adjacent to $u$ for being black, we are only checking each pair in $P$ at most twice in lines 8-10, among all the runs of $\text{LCA}$. This means that the total runtime is $O(|T|\alpha(|T|) + |P|)$.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11428,6 +11503,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11442,6 +11518,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11833,6 +11912,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11847,6 +11927,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11912,6 +11995,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11924,6 +12008,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11957,6 +12044,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11981,6 +12069,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14554,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/v-advanced-data-structures/chap21/problems/21-2/" title="21-2 Depth determination"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14567,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

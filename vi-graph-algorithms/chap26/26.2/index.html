@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>26.2 The Ford-Fulkerson method :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap26/26.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5842,7 +5842,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/" title="26 Maximum Flow" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5887,7 +5887,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/26.2/" title="26.2 The Ford-Fulkerson method" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/26.2/" title="26.2 The Ford-Fulkerson method" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap26/26.2/">
         26.2 The Ford-Fulkerson method
         
@@ -8374,56 +8374,380 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap26/26.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap26/'>26 Maximum Flow</a> > 26.2 The Ford-Fulkerson method
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#26-2-1">26.2-1</a></li>
+<li><a href="#26-2-2">26.2-2</a></li>
+<li><a href="#26-2-3">26.2-3</a></li>
+<li><a href="#26-2-4">26.2-4</a></li>
+<li><a href="#26-2-5">26.2-5</a></li>
+<li><a href="#26-2-6">26.2-6</a></li>
+<li><a href="#26-2-7">26.2-7</a></li>
+<li><a href="#26-2-8">26.2-8</a></li>
+<li><a href="#26-2-9">26.2-9</a></li>
+<li><a href="#26-2-10">26.2-10</a></li>
+<li><a href="#26-2-11">26.2-11</a></li>
+<li><a href="#26-2-12">26.2-12</a></li>
+<li><a href="#26-2-13">26.2-13</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>26.2 The Ford-Fulkerson method</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="26-2-1">26.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Prove that the summations in equation $\text{(26.6)}$ equal the summations in equation $\text{(26.7)}$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p><strong><em>Lemma</em></strong></p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<ol>
+<li>If $v \notin V_1$, then $f(s, v) = 0$.</li>
+<li>If $v \notin V_2$, then $f(v, s) = 0$.</li>
+<li>If $v \notin V_1 \cup V_2$, then $f^\prime(s, v) = 0$.</li>
+<li>If $v \notin V_1 \cup V_2$, then $f^\prime(v, s) = 0$.</li>
+</ol>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p><strong><em>Proof</em></strong></p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<ol>
+<li>Let $v \notin V_1$ be some vertex. From the definition of $V_1$, there is no edge from $s$ to $v$. Thus, $f(s, v) = 0$.</li>
+<li>Let $v \notin V_2$ be some vertex. From the definition of $V_2$, there is no edge from $v$ to $s$. Thus, $f(v, s) = 0$.</li>
+<li>Let $v \notin V_1 \cup V_2$ be some vertex. From the definition of $V_1$ and $V_2$, neither $(s, v)$ nor $(v, s)$ exists. Therefore, the third condition of the definition of residual capacity (equation $\text{(26.2)}$) applies, and $c_f(s, v) = 0$. Thus, $f^\prime(s, v) = 0$.</li>
+<li>Let $v \notin V_1 \cup V_2$ be some vertex. By equation $\text{(26.2)}$, we have that $c_f(v, s) = 0$ and thus $f^\prime(v, s) = 0$.</li>
+</ol>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="26-2-2">26.2-2</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>In Figure $\text{26.1}$(b), what is the flow across the cut $(\{s, v_2, v_4\}, \{v_1, v_3, t\})$? What is the capacity of this cut?</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<div>
+$$
+\begin{aligned}
+f(S, T) & = f(s, v_1) + f(v_2, v_1) + f(v_4, v_3) + f(v_4, t) - f(v_3, v_2) = 11 + 1 + 7 + 4 - 4 = 19, \\
+c(S, T) & = c(s, v_1) + c(v_2, v_1) + c(v_4, v_3) + c(v_4, t) = 16 + 4 + 7 + 4 = 31.
+\end{aligned}
+$$
+</div>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="26-2-3">26.2-3</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Show the execution of the Edmonds-Karp algorithm on the flow network of Figure 26.1(a).</p>
+</blockquote>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>If we perform a breadth first search where we consider the neighbors of a vertex as they appear in the ordering $\{s, v_1, v_2, v_3, v_4, t\}$, the first path that we will find is $s, v_1, v_3, t$. The min capacity of this augmenting path is $12$, so we send $12$ units along it. We perform a $\text{BFS}$ on the resulting residual network. This gets us the path $s, v_2, v_4, t$. The min capacity along this path is $4$, so we send $4$ units along it. Then, the only path remaining in the residual network is $\{s, v_2, v_4, v_3\}$ which has a min capacity of $7$, since that&rsquo;s all that&rsquo;s left, we find it in our $\text{BFS}$. Putting it all together, the total flow that we have found has a value of $23$.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="26-2-4">26.2-4</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>In the example of Figure 26.6, what is the minimum cut corresponding to the maximum flow shown? Of the augmenting paths appearing in the example, which one cancels flow?</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>A minimum cut corresponding to the maximum flow is $S = \{s, v_1, v_2, v_4\}$ and $T = \{v_3, t\}$. The augmenting path in part (c) cancels flow on edge $(v_3, v_2)$.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<h2 id="26-2-5">26.2-5</h2>
+
+<blockquote>
+<p>Recall that the construction in Section 26.1 that converts a flow network with multiple sources and sinks into a single-source, single-sink network adds edges with infinite capacity. Prove that any flow in the resulting network has a finite value if the edges of the original network with multiple sources and sinks have finite capacity.</p>
+</blockquote>
+
+<p>Since the only edges that have infinite value are those going from the supersource or to the supersink, as long as we pick a cut that has the supersource and all the original sources on one side, and the other side has the supersink as well as all the original sinks, then it will only cut through edges of finite capacity. Then, by Corollary 26.5, we have that the value of the flow is bounded above by the value of any of these types of cuts, which is finite.</p>
+
+<h2 id="26-2-6">26.2-6</h2>
+
+<blockquote>
+<p>Suppose that each source $s_i$ in a flow network with multiple sources and sinks produces exactly $p_i$ units of flow, so that $\sum_{v \in V} f(s_i, v) = p_i$. Suppose also that each sink $t_j$ consumes exactly $q_j$ units, so that $\sum_{v \in V} f(v, t_j) = q_j$, where $\sum_i p_i = \sum_j q_j$. Show how to convert the problem of finding a flow $f$ that obeys these additional constraints into the problem of finding a maximum flow in a single-source, single-sink flow network.</p>
+</blockquote>
+
+<p>$c(s, s_i) = p_i$, $c(t_j, t) = q_j$.</p>
+
+<h2 id="26-2-7">26.2-7</h2>
+
+<blockquote>
+<p>Prove Lemma 26.2.</p>
+</blockquote>
+
+<p>To check that $f_p$ is a flow, we make sure that it satisfies both the capacity constraints and the flow constraints. First, the capacity constraints. To see this, we recall our definition of $c_f(p)$, that is, it is the smallest residual capacity of any of the edges along the path $p$. Since we have that the residual capacity is always less than or equal to the initial capacity, we have that each value of the flow is less than the capacity. Second, we check the flow constraints, Since the only edges that are given any flow are along a path, we have that at each vertex interior to the path, the flow in from one edge is immediately canceled by the flow out to the next vertex in the path. Lastly, we can check that its value is equal to $c_f(p)$ because, while $s$ may show up at spots later on in the path, it will be canceled out as it leaves to go to the next vertex. So, the only net flow from s is the initial edge along the path, since it (along with all the other edges) is given flow $c_f(p)$, that is the value of the flow $f_p$.</p>
+
+<h2 id="26-2-8">26.2-8</h2>
+
+<blockquote>
+<p>Suppose that we redefine the residual network to disallow edges into $s$. Argue that the procedure $\text{FORD-FULKERSON}$ still correctly computes a maximum flow.</p>
+</blockquote>
+
+<p>Let $G_f$ be the residual network just before an iteration of the <strong>while</strong> loop of $\text{FORD-FULKERSON}$, and let $E_s$ be the set of residual edges of $G_f$ into $s$. We&rsquo;ll show that the augmenting path $p$ chosen by $\text{FORD-FULKERSON}$ does not include an edge in $E_s$. Thus, even if we redefine $G_f$ to disallow edges in $E_s$, the path $p$ still remains an augmenting path in the redefined network. Since $p$ remains unchanged, an iteration of the <strong>while</strong> loop of $\text{FORD-FULKERSON}$ updates the flow in the same way as before the redefinition. Furthermore, by disallowing some edges, we do not introduce any new augmenting paths. Thus, $\text{FORD-FULKERSON}$ still correctly computes a maximum flow.</p>
+
+<p>Now, we prove that $\text{FORD-FULKERSON}$ never chooses an augmenting path $p$ that includes an edge $(v, s) \in E_s$. Why? The path $p$ always starts from $s$, and if $p$ included an edge $(v, s)$, the vertex $s$ would be repeated twice in the path. Thus, $p$ would no longer be a _simple_ path. Since $\text{FORD-FULKERSON}$ chooses only simple paths, $p$ cannot include $(v, s)$.</p>
+
+<h2 id="26-2-9">26.2-9</h2>
+
+<blockquote>
+<p>Suppose that both $f$ and $f^\prime$ are flows in a network $G$ and we compute flow $f \uparrow f^\prime$. Does the augmented flow satisfy the flow conservation property? Does it satisfy the capacity constraint?</p>
+</blockquote>
+
+<p>The augmented flow $f \uparrow f^\prime$ satisfies the flow conservation property but not the capacity constraint property.</p>
+
+<p>First, we prove that $f \uparrow f^\prime$ satisfies the flow conservation property. We note that if edge $(u, v) \in E$, then $(v, u) \ne E$ and $f^\prime(v, u) = 0$. Thus, we can rewrite the definition of flow augmentation (equation $\text{(26.4)}$), when applied to two flows, as</p>
+
+<div>
+$$
+(f \uparrow f^\prime)(u, v) =
+\begin{cases}
+f(u, v) + f^\prime(u, v) & \text{if $(u, v) \in E$}, \\
+0                  & \text{otherwise}.
+\end{cases}
+$$
+</div>
+
+<p>The definition implies that the new flow on each edge is simply the sum of the two flows on that edge. We now prove that in $f \uparrow f^\prime$, the net incoming flow for each vertex equals the net outgoing flow. Let $u \ne {s, t}$ be any vertex of $G$. We have</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{v \in V} (f \uparrow f^\prime) (v, u)
+    & = \sum_{v \in V} (f(v, u) + f^\prime(v, u)) \\
+    & = \sum_{v \in V} f(v, u) + \sum_{v \in V} f^\prime(v, u) \\
+    & = \sum_{v \in V} f(u, v) + \sum_{v \in V} f^\prime(u, v) \quad \text{(because $f$, $f^\prime$ obey flow conservation)} \\
+    & = \sum_{v \in V} (f(u, v) + f^\prime(u, v)) \\
+    & = \sum_{v \in V} (f \uparrow f^\prime) (u, v).
+\end{aligned}
+$$
+</div>
+
+<p>We conclude that $f \uparrow f^\prime$ satisfies flow conservation.</p>
+
+<p>We now show that $f \uparrow f^\prime$ need not satisfy the capacity constraint by giving a simple counterexample. Let the flow network $G$ have just a source and a target vertex, with a single edge $(s, t)$ having $c(s, t) = 1$. Define the flows $f$ and $f^\prime$ to have $f(s, t) = f^\prime(s, t) = 1$. Then, we have $(f \uparrow f^\prime)(s, t) = 2 &gt; c(s, t)$. We conclude that $f \uparrow f^\prime$ need not satisfy the capacity constraint.</p>
+
+<h2 id="26-2-10">26.2-10</h2>
+
+<blockquote>
+<p>Show how to find a maximum flow in a network $G = (V, E)$ by a sequence of at most $|E|$ augmenting paths. ($\textit{Hint:}$ Determine the paths after finding the maximum flow.)</p>
+</blockquote>
+
+<p>Suppose we already have a maximum flow $f$. Consider a new graph $G$ where we set the capacity of edge $(u, v)$ to $f(u, v)$. Run Ford-Fulkerson, with the modification that we remove an edge if its flow reaches its capacity. In other words, if $f(u, v) = c(u, v)$ then there should be no reverse edge appearing in residual network. This will still produce correct output in our case because we never exceed the actual maximum flow through an edge, so it is never advantageous to cancel flow. The augmenting paths chosen in this modified version of Ford-Fulkerson are precisely the ones we want. There are at most $|E|$ because every augmenting path produces at least one edge whose flow is equal to its capacity, which we set to be the actual flow for the edge in a maximum flow, and our modification prevents us from ever destroying this progress.</p>
+
+<h2 id="26-2-11">26.2-11</h2>
+
+<blockquote>
+<p>The <strong><em>edge connectivity</em></strong> of an undirected graph is the minimum number $k$ of edges that must be removed to disconnect the graph. For example, the edge connectivity of a tree is $1$, and the edge connectivity of a cyclic chain of vertices is $2$. Show how to determine the edge connectivity of an undirected graph $G = (V, E)$ by running a maximum-flow algorithm on at most $|V|$ flow networks, each having $O(V)$ vertices and $O(E)$ edges.</p>
+</blockquote>
+
+<p>For any two vertices $u$ and $v$ in $G$, we can define a flow network $G_{uv}$ consisting of the directed version of $G$ with $s = u$, $t = v$, and all edge capacities set to $1$. (The flow network $G_{uv}$ has $V$ vertices and $2|E|$ edges, so that it has $O(V)$ vertices and $O(E)$ edges, as required. We want all capacities to be $1$ so that the number of edges of $G$ crossing a cut equals the capacity of the cut in $G_{uv}$.) Let $f_{uv}$ denote a maximum flow in $G_{uv}$.</p>
+
+<p>We claim that for any $u \in V$, the edge connectivity $k$ equals $\min\limits_{v \in V - \{u\}}\{|f_{uv}|\}$. We&rsquo;ll show below that this claim holds. Assuming that it holds, we can find $k$ as follows:</p>
+
+<pre><code class="language-cpp">EDGE-CONNECTIVITY(G)
+    k = ∞
+    select any vertex u ∈ G.V
+    for each vertex v ∈ G.V - {u}
+        set up the flow network G\_{uv} as described above
+        find the maximum flow f\_{uv} on G\_{uv}
+        k = min(k, |f\_{uv}|)
+    return k
+</code></pre>
+
+<p>The claim follows from the max-flow min-cut theorem and how we chose capacities so that the capacity of a cut is the number of edges crossing it. We prove that $k = \min\limits_{v \in V - \{u\}}\{|f_{uv}|\}$ for any $u \in V$ by showing separately that $k$ is at least this minimum and that $k$ is at most this minimum.</p>
+
+<ul>
+<li>Proof that $k \ge \min\limits_{v \in V - \{u\}} \{|f_{uv}|\}$:<br />
+Let $m = \min\limits_{v \in V - \{u\}} \{|f_{uv}|\}$. Suppose we remove only $m - 1$ edges from $G$. For any vertex $v$, by the max-flow min-cut theorem, $u$ and $v$ are still connected. (The max flow from $u$ to $v$ is at least $m$, hence any cut separating $u$ from $v$ has capacity at least $m$, which means at least $m$ edges cross any such cut. Thus at least one edge is left crossing the cut when we remove $m - 1$ edges.) Thus every vertex is connected to $u$, which implies that the graph is still connected. So at least $m$ edges must be removed to disconnect the graph—i.e., $k \ge \min\limits_{v \in V - \{u\}} \{|f_{uv}|\}$.</li>
+<li>Proof that $k \le \min\limits_{v \in V - \{u\}} \{|f_{uv}|\}$:<br />
+Consider a vertex $v$ with the minimum $|f_{uv}|$. By the max-flow min-cut theorem, there is a cut of capacity $|f_{uv}|$ separating $u$ and $v$. Since all edge capacities are $1$, exactly $|f_{uv}|$ edges cross this cut. If these edges are removed, there is no path from $u$ to $v$, and so our graph becomes disconnected. Hence $k \le \min\limits_{v \in V - \{u\}} \{|f_{uv}|\}$</li>
+<li>Thus, the claim that $k = \min\limits_{v \in V - \{u\}} \{|f_{uv}|\}$ for any $u \in V$ is true.</li>
+</ul>
+
+<h2 id="26-2-12">26.2-12</h2>
+
+<blockquote>
+<p>Suppose that you are given a flow network $G$, and $G$ has edges entering the source $s$. Let $f$ be a flow in $G$ in which one of the edges $(v, s)$ entering the source has $f(v, s) = 1$. Prove that there must exist another flow $f^\prime$ with $f^\prime(v, s) = 0$ such that $|f| = |f^\prime|$. Give an $O(E)$-time algorithm to compute $f^\prime$, given $f$, and assuming that all edge capacities are integers.</p>
+</blockquote>
+
+<p>The idea of the proof is that if $f(v, s) = 1$, then there must exist a cycle containing the edge $(v, s)$ and for which each edge carries one unit of flow. If we reduce the flow on each edge in the cycle by one unit, we can reduce $f(v, s)$ to $0$ without affecting the value of the flow.</p>
+
+<p>Given the flow network $G$ and the flow $f$, we say that vertex $y$ is <em>flow-connected</em> to vertex $z$ if there exists a path $p$ from $y$ to $z$ such that each edge of $p$ has a positive flow on it. We also define $y$ to be flow-connected to itself. In particular, $s$ is flow-connected to $s$.</p>
+
+<p>We start by proving the following lemma:</p>
+
+<p><strong><em>Lemma</em></strong></p>
+
+<p>Let $G = (V, E)$ be a flow network and $f$ be a flow in $G$. If $s$ is not flow-connected to $v$, then $f(v, s) = 0$.</p>
+
+<p><strong><em>Proof</em></strong></p>
+
+<p>The idea is that since $s$ is not flow-connected to $v$, there cannot be any flow from $s$ to $v$. By using flow conservation, we will prove that there cannot be any flow from $v$ to $s$ either, and thus that $f(v, s) = 0$.</p>
+
+<p>Let $Y$ be the set of all vertices $y$ such that $s$ is flow-connected to $y$. By applying flow conservation to vertices in $V - Y$ and taking the sum, we obtain</p>
+
+<div>
+$$
+\sum_{z \in V - Y} \sum_{x \in V} f(x, z) = \sum_{z \in V - Y} \sum_{x \in V} f(z, x).
+$$
+</div>
+
+<p>Partitioning $V$ into $Y$ and $V - Y$ gives</p>
+
+<div>
+$$
+\sum_{z \in V - Y} \sum_{x \in V - Y} f(x, z) + \sum_{z \in V - Y} \sum_{x \in Y} f(x, z) = \sum_{z \in V - Y} \sum_{x \in V - Y} f(z, x) + \sum_{z \in V - Y} \sum_{x \in Y} f(z, x). \tag{*}
+$$
+</div>
+
+<p>But we have</p>
+
+<div>
+$$
+\sum_{z \in V - Y} \sum_{x \in V - Y} f(x, z) = \sum_{z \in V - Y} \sum_{x \in V - Y} f(z, x),
+$$
+</div>
+
+<p>since the left-hand side is the same as the right-hand side, except for a change of variable names $x$ and $z$. We also have</p>
+
+<div>
+$$
+\sum_{z \in V - Y} \sum_{x \in Y} f(x, z) = 0,
+$$
+</div>
+
+<p>since the flow from any vertex in $Y$ to any vertex in $V - Y$ must be $0$. Thus, equation $(*)$ simplifies to</p>
+
+<div>
+$$
+\sum_{z \in V - Y} \sum_{x \in Y} f(z, x) = 0.
+$$
+</div>
+
+<p>The above equation implies that $f(z, x) = 0$ for each $z \in V - Y$ and $x \in Y$. In particular, since $v \in V - Y$ and $s \in Y$, we have that $f(v, s) = 0$.</p>
+
+<p>Now, we show how to construct the required flow $f^\prime$. By the contrapositive of the lemma, $f(v, s) &gt; 0$ implies that $s$ is flow-connected to $v$ through some path $p$. Let path $p^\prime$ be the path $s \overset{p}{\leadsto} v \to s$. Path $p^\prime$ is a cycle that has positive flow on each edge. Because we assume that all edge capacities are integers, the flow on each edge of $p^\prime$ is at least $1$. If we subtract $1$ from each edge of the cycle to obtain a flow $f^\prime$, then $f^\prime$ still satisfies the properties of a flow network and has the same value as $|f|$. Because edge $(v, s)$ is in the cycle, we have that $f^\prime(v, s) = f(v, s) - 1 = 0$.</p>
+
+<h2 id="26-2-13">26.2-13</h2>
+
+<blockquote>
+<p>Suppose that you wish to find, among all minimum cuts in a flow network $G$ with integral capacities, one that contains the smallest number of edges. Show how to modify the capacities of $G$ to create a new flow network $G^\prime$ in which any minimum cut in $G^\prime$ is a minimum cut with the smallest number of edges in $G$.</p>
+</blockquote>
+
+<p>Let $(S, T)$ and $(X, Y)$ be two cuts in $G$ (and $G^\prime$). Let $c^\prime$ be the capacity function of $G^\prime$. One way to define $c^\prime$ is to add a small amount $\delta$ to the capacity of each edge in $G$. That is, if $u$ and $v$ are two vertices, we set</p>
+
+<div>
+$$
+c^\prime(u, v) = c(u, v) + \delta.
+$$
+</div>
+
+<p>Thus, if $c(S, T) = c(X, Y)$ and $(S, T)$ has fewer edges than $(X, Y)$, then we would have $c^\prime(S, T) &lt; c^\prime(X, Y)$. We have to be careful and choose a small $\delta$, lest we change the relative ordering of two unequal capacities. That is, if $c(S, T) &lt; c(X, Y)$, then no matter many more edges $(S, T)$ has than $(X, Y)$, we still need to have $c^\prime(S, T) &lt; c^\prime(X, Y)$. With this definition of $c^\prime$, a minimum cut in $G^\prime$ will be a minimum cut in $G$ that has the minimum number of edges.</p>
+
+<p>How should we choose the value of $\delta$? Let $m$ be the minimum difference between capacities of two unequal-capacity cuts in $G$. Choose $\delta = m / (2|E|)$. For any cut $(S, T)$, since the cut can have at most $|E|$ edges, we can bound $c^\prime(S, T)$ by</p>
+
+<div>
+$$
+c(S, T) \le c^\prime(S, T) \le c(S, T) + |E| \cdot \delta.
+$$
+</div>
+
+<p>Let $c(S, T) &lt; c(X, Y)$. We need to prove that $c^\prime(S, T) &lt; c^\prime(X, Y)$. We have</p>
+
+<div>
+$$
+\begin{aligned}
+c^\prime(S, T)
+    & \le c(S, T) + |E| \cdot \delta \\
+    & =   c(S, T) + m / 2 \\
+    & <   c(X, Y) \qquad \text{(since $c(X, Y) - c(S, T) \ge m$)} \\
+    & \le c^\prime(X, Y).
+\end{aligned}
+$$
+</div>
+
+<p>Because all capacities are integral, we can choose $m = 1$, obtaining $\delta = 1 / 2|E|$. To avoid dealing with fractional values, we can scale all capacities by $2|E|$ to obtain</p>
+
+<div>
+$$
+c^\prime(u, v) = 2|E| \cdot c(u, v) + 1.
+$$
+</div>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12306,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12321,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12629,6 +12957,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12643,6 +12972,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12659,6 +12991,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12676,6 +13009,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14799,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap26/26.1/" title="26.1 Flow networks"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap26/26.3/" title="26.3 Maximum bipartite matching" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14812,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

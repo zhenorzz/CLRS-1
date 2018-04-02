@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>8-5 Average sorting :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-5/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1653,7 +1653,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/" title="8 Sorting in Linear Time" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1756,7 +1756,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/" title="Chap 8 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1856,7 +1856,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-5/" title="8-5 Average sorting" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-5/" title="8-5 Average sorting" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-5/">
         Problem 8-5
         
@@ -8374,56 +8374,135 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap08/Problems/8-5.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/'>8 Sorting in Linear Time</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/problems/'>Chap 8 Problems</a> > 8-5 Average sorting
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>8-5 Average sorting</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Suppose that, instead of sorting an array, we just require that the elements increase on average. More precisely, we call an $n$-element array $A$ <strong><em>k-sorted</em></strong> if, for all $i = 1, 2, \ldots, n - k$, the following holds:</p>
+
+<div>
+$$
+\frac{\sum_{j = i}^{i + k - 1} A[j]}{k} \le \frac{\sum_{j = i + 1}^{i + k} A[j]}{k}.
+$$
+</div>
+
+<p><strong>a.</strong> What does it mean for an array to be $1$-sorted?</p>
+
+<p><strong>b.</strong> Give a permutation of the numbers $1, 2, \ldots, 10$ that is $2$-sorted, but not sorted.</p>
+
+<p><strong>c.</strong> Prove that an $n$-element array is $k$-sorted if and only if $A[i] \le A[i + k]$ for all $i = 1, 2, \ldots, n - k$.</p>
+
+<p><strong>d.</strong> Give an algorithm that $k$-sorts an $n$-element array in $O(n\lg (n / k))$ time.</p>
+
+<p>We can also show a lower bound on the time to produce a $k$-sorted array, when $k$ is a constant.</p>
+
+<p><strong>e.</strong> Show that we can sort a $k$-sorted array of length $n$ in $O(n\lg k)$ time. ($\textit{Hint:}$ Use the solution to Exercise 6.5-9.)</p>
+
+<p><strong>f.</strong> Show that when $k$ is a constant, $k$-sorting an $n$-element array requires $\Omega(n\lg n)$ time. ($\textit{Hint:}$ Use the solution to the previous part along with the lower bound on comparison sorts.)</p>
+</blockquote>
+
+<p><strong>a.</strong> Ordinary sorting</p>
+
+<p><strong>b.</strong> $2, 1, 4, 3, 6, 5, 8, 7, 10, 9$.</p>
+
+<p><strong>c.</strong></p>
+
+<div>
+$$
+\begin{aligned}
+\frac{\sum_{j = i}^{i + k - 1} A[j]}{k} & \le \frac{\sum_{j = i + 1}^{i + k}A[j]}{k} \\
+          \sum_{j = i}^{i + k- 1 } A[j] & \le \sum_{j = i + 1}^{i + k} A[j] \\
+                                   A[i] & \le A[i + k].
+\end{aligned}
+$$
+</div>
+
+<p><strong>d.</strong> Shell-Sort, i.e., We split the $n$-element array into $k$ part. For each part, we use Insertion-Sort (or Quicksort) to sort in $O(n / k \lg(n / k))$ time. Therefore, the total running time is $k \cdot O(n / k \lg(n / k)) = O(n\lg(n / k))$.</p>
+
+<p><strong>e.</strong> Using a heap, we can sort a $k$-sorted array of length $n$ in $O(n\lg k)$ time. (The height of the heap is $\lg k$, the solution to Exercise 6.5-9.)</p>
+
+<p><strong>f.</strong> The lower bound of sorting each part is $\Omega(n / k\lg(n / k))$, so the total lower bound is $\Theta(n\lg n(/k))$. Since $k$ is a constant, therefore $\Theta(n\lg(n / k)) = \Omega(n\lg n)$.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9301,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9316,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9593,6 +9676,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9607,6 +9691,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9672,6 +9759,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9684,6 +9772,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9749,6 +9840,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9764,6 +9856,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14558,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-4/" title="8-4 Water jugs"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/8-6/" title="8-6 Lower bound on merging sorted lists" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

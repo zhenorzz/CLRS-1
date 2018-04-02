@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>8.2 Counting sort :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap08/8.2/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1653,7 +1653,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/" title="8 Sorting in Linear Time" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1698,7 +1698,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/8.2/" title="8.2 Counting sort" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/8.2/" title="8.2 Counting sort" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap08/8.2/">
         8.2 Counting sort
         
@@ -8374,56 +8374,154 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap08/8.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/'>8 Sorting in Linear Time</a> > 8.2 Counting sort
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#8-2-1">8.2-1</a></li>
+<li><a href="#8-2-2">8.2-2</a></li>
+<li><a href="#8-2-3">8.2-3</a></li>
+<li><a href="#8-2-4">8.2-4</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>8.2 Counting sort</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="8-2-1">8.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Using Figure 8.2 as a model, illustrate the operation of $\text{COUNTING-SORT}$ on the array $A = \langle 6, 0, 2, 0, 1, 3, 4, 6, 1, 3, 2 \rangle$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>We have that $C = \langle 2, 4, 6, 8, 9, 9, 11 \rangle$. Then, after successive iterations of the loop on lines 10-12, we have</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+\begin{aligned}
+B & = \langle, , , , , 2, , , , , \rangle, \\
+B & = \langle, , , , , 2, , 3, , , \rangle, \\
+B & = \langle, , , 1, , 2, , 3, , , \rangle
+\end{aligned}
+$$
+</div>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>and at the end,</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+B = \langle 0, 0, 1, 1, 2, 2, 3, 3, 4, 6, 6 \rangle.
+$$
+</div>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="8-2-2">8.2-2</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Prove that $\text{COUNTING-SORT}$ is stable.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<h2 id="8-2-3">8.2-3</h2>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<blockquote>
+<p>Suppose that we were to rewrite the <strong>for</strong> loop header in line 10 of the $\text{COUNTING-SORT}$ as</p>
 
-<h1 id="more-informations">More Informations</h1>
+<pre><code class="language-cpp">10  for j = 1 to A.length
+</code></pre>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>Show that the algorithm still works properly. Is the modified algorithm stable?</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p><em>[The following solution also answers Exercise 8.2-2.]</em></p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>Notice that the correctness argument in the text does not depend on the order in which $A$ is processed. The algorithm is correct no matter what order is used!</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>But the modified algorithm is not stable. As before, in the final <strong>for</strong> loop an element equal to one taken from $A$ earlier is placed before the earlier one (i.e., at a lower index position) in the output array $B$. The original algorithm was stable because an element taken from $A$ later started out with a lower index than one taken earlier. But in the modified algorithm, an element taken from $A$ later started out with a higher index than one taken earlier.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>In particular, the algorithm still places the elements with value $k$ in positions $C[k - 1] + 1$ through $C[k]$, but in the reverse order of their appearance in $A$.</p>
+
+<h2 id="8-2-4">8.2-4</h2>
+
+<blockquote>
+<p>Describe an algorithm that, given n integers in the range $0$ to $k$, preprocesses its input and then answers any query about how many of the $n$ integers fall into a range $[a..b]$ in $O(1)$ time. Your algorithm should use $\Theta(n + k)$ preprocessing time.</p>
+</blockquote>
+
+<p>Compute the $C$ array as is done in counting sort. The number of integers in the range $[a..b]$ is $C[b] - C[a - 1]$, where we interpret $C[-1]$ as $0$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9320,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9335,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9593,6 +9695,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9607,6 +9710,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9623,6 +9729,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9640,6 +9747,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14573,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap08/8.1/" title="8.1 Lower bounds for sorting"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap08/8.3/" title="8.3 Radix sort" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

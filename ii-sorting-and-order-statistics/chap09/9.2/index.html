@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>9.2 Selection in expected linear time :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap09/9.2/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1932,7 +1932,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/" title="9 Medians and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1977,7 +1977,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/9.2/" title="9.2 Selection in expected linear time" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/9.2/" title="9.2 Selection in expected linear time" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap09/9.2/">
         9.2 Selection in expected linear time
         
@@ -8374,56 +8374,161 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap09/9.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap09/'>9 Medians and Order Statistics</a> > 9.2 Selection in expected linear time
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#9-2-1">9.2-1</a></li>
+<li><a href="#9-2-2">9.2-2</a></li>
+<li><a href="#9-2-3">9.2-3</a></li>
+<li><a href="#9-2-4">9.2-4</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>9.2 Selection in expected linear time</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="9-2-1">9.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Show that $\text{RANDOMIZED-SELECT}$ never makes a recursive call to a $0$-length array.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>Calling a $0$-length array would mean that the second and third arguments are equal. So, if the call is made on line 8, we would need that $p = q - 1$, which means that $q - p + 1 = 0$.
+However, $i$ is assumed to be a nonnegative number, and to be executing line 8, we would need that $i &lt; k = q - p + 1 = 0$, a contradiction. The other possibility is that the bad recursive call occurs on line 9. This would mean that $q + 1 = r$. To be executing line 9, we need that $i &gt; k = q - p + 1 = r - p$. This would be a nonsensical original call to the array though because we are asking for the ith element from an array of strictly less size.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="9-2-2">9.2-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Argue that the indicator random variable $X_k$ and the value $T(\max(k - 1, n - k))$ are independent.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>The probability that $X_k$ is equal to $1$ is unchanged when we know the max of $k - 1$ and $n - k$. In other words, $\Pr\{X_k = a \mid \max(k - 1, n - k) = m\} = \Pr\{X_k = a\}$ for $a = 0, 1$ and $m = k - 1, n - k$ so $X_k$ and $\max(k - 1, n - k)$ are independent.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>By C.3-5, so are $X_k$ and $T(\max(k - 1, n - k))$.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<h2 id="9-2-3">9.2-3</h2>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<blockquote>
+<p>Write an iterative version of $\text{RANDOMIZED-SELECT}$.</p>
+</blockquote>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<pre><code class="language-cpp">PARTITION(A, p, r)
+    x = A[r]
+    i = p
+    for k = p - 1 to r
+       if A[k] &lt; x
+           i = i + 1
+           swap(A[i], A[k])
+    i = i + 1
+    swap(A[i], A[r])
+        return i
+</code></pre>
 
-<h1 id="more-informations">More Informations</h1>
+<pre><code class="language-cpp">RANDOMIZED-PARTITION(A, p, r)
+    x = rand(p - 1, r)
+    swap(A[x], A[r])
+    return PARTITION(A, p, r)
+</code></pre>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<pre><code class="language-cpp">RANDOMIZED-SELECT(A, p, r, i)
+    while TRUE
+        if p == r
+            return A[p]
+        q = RANDOMIZED-PARTITION(A, p, r)
+        k = q - p + 1
+        if i == k
+            return A[q]
+        if i &lt; k
+            r = q
+        else
+            p = q
+            i = i - k
+</code></pre>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="9-2-4">9.2-4</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Suppose we use $\text{RANDOMIZED-SELECT}$ to select the minimum element of the array $A = \langle 3, 2, 9, 0, 7, 5, 4, 8, 6, 1 \rangle$. Describe a sequence of partitions that results in a worst-case performance of $\text{RANDOMIZED-SELECT}$.</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>When the partition selected is always the maximum element of the array we get worst-case performance. In the example, the sequence would be $9, 8, 7, 6, 5, 4, 3, 2, 1, 0$.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9327,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9342,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9803,6 +9912,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9817,6 +9927,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9833,6 +9946,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9850,6 +9964,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14580,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap09/9.1/" title="9.1 Minimum and maximum"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap09/9.3/" title="9.3 Selection in worst-case linear time" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

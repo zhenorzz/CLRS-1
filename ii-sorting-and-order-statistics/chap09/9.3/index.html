@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>9.3 Selection in worst-case linear time :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap09/9.3/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1932,7 +1932,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/" title="9 Medians and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1996,7 +1996,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/9.3/" title="9.3 Selection in worst-case linear time" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap09/9.3/" title="9.3 Selection in worst-case linear time" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap09/9.3/">
         9.3 Selection in worst-case linear time
         
@@ -8374,56 +8374,374 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap09/9.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap09/'>9 Medians and Order Statistics</a> > 9.3 Selection in worst-case linear time
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#9-3-1">9.3-1</a></li>
+<li><a href="#9-3-2">9.3-2</a></li>
+<li><a href="#9-3-3">9.3-3</a></li>
+<li><a href="#9-3-4-star">9.3-4 $\star$</a></li>
+<li><a href="#9-3-5">9.3-5</a></li>
+<li><a href="#9-3-6">9.3-6</a></li>
+<li><a href="#9-3-7">9.3-7</a></li>
+<li><a href="#9-3-8">9.3-8</a></li>
+<li><a href="#9-3-9">9.3-9</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>9.3 Selection in worst-case linear time</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="9-3-1">9.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>In the algorithm $\text{SELECT}$, the input elements are divided into groups of $5$. Will the algorithm work in linear time if they are divided into groups of $7$? Argue that $\text{SELECT}$ does not run in linear time if groups of $3$ are used.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>For groups of $7$, the algorithm still works in linear time. The number of elements greater than $x$ (and similarly, the number less than $x$) is at least</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+4\Bigg(\Bigg\lceil \frac{1}{2} \Big\lceil \frac{n}{7} \Big\rceil\Bigg\rceil - 2\Bigg) \ge \frac{2n}{7} - 8,
+$$
+</div>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>and the recurrence becomes</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+T(n) \le T(\lceil n/7 \rceil) + T(5n/7 + 8) + O(n),
+$$
+</div>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>which can be shown to be $O(n)$ by substitution, as for the groups of $5$ case in the text.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>For groups of $3$, however, the algorithm no longer works in linear time. The number of elements greater than $x$, and the number of elements less than $x$, is at least</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<div>
+$$
+2\Bigg(\Bigg\lceil \frac{1}{2} \Big\lceil \frac{n}{3} \Big\rceil\Bigg\rceil - 2\Bigg) \ge \frac{n}{3} - 4,
+$$
+</div>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>and the recurrence becomes</p>
 
-<h1 id="more-informations">More Informations</h1>
+<div>
+$$
+T(n) \le T(\lceil n / 3 \rceil) + T(2n / 3 + 4) + O(n),
+$$
+</div>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>which does not have a linear solution.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>We can prove that the worst-case time for groups of $3$ is $\Omega(n\lg n)$. We do so by deriving a recurrence for a particular case that takes $\Omega(n\lg n)$ time.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>In counting up the number of elements greater than $x$ (and similarly, the number less than $x$), consider the particular case in which there are exactly $\Big\lceil \frac{1}{2} \Big\lceil \frac{n}{3} \Big\rceil\Big\rceil$ groups with medians $\ge x$ and in which the &ldquo;leftover&rdquo; group does contribute 2 elements greater than $x$. Then the number of elements greater than $x$ is exactly $2\Big(\Big\lceil \frac{1}{2} \Big\lceil \frac{n}{3} \Big\rceil\Big\rceil - 1\Big) + 1$ (the $-1$ discounts $x$&rsquo;s group, as usual, and the $+1$ is contributed by $x$&rsquo;s group) $= 2\lceil n / 6 \rceil - 1$, and the recursive step for elements $\le x$ has $n - (2 \lceil n / 6 \rceil - 1) \ge n - (2(n / 6 + 1) - 1) = 2n / 3 - 1$ elements. Observe also that the $O(n)$ term in the recurrence is really $\Theta(n)$, since the partitioning in step 4 takes $\Theta(n)$ (not just $O(n)$) time. Thus, we get the recurrence</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<div>
+$$
+\begin{aligned}
+T(n) & \ge T(\lceil n / 3 \rceil) + T(2n / 3 - 1) + \Theta(n) \\
+     & \ge T(n / 3) + T(2n / 3 - 1) + \Theta(n),
+\end{aligned}
+$$
+</div>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>from which you can show that $T(n) \ge cn\lg n$ by substitution. You can also see that $T(n)$ is nonlinear by noticing that each level of the recursion tree sums to $n$.</p>
+
+<p>_[In fact, any odd group size $\ge 5$ works in linear time.]_</p>
+
+<h2 id="9-3-2">9.3-2</h2>
+
+<blockquote>
+<p>Analyze $\text{SELECT}$ to show that if $n \ge 140$, then at least $\lceil n / 4 \rceil$ elements are greater than the median-of-medians $x$ and at least $\lceil n / 4 \rceil$ elements are less than $x$.</p>
+</blockquote>
+
+<div>
+$$
+\begin{aligned}
+\frac{3n}{10} - 6 & \ge \lceil \frac{n}{4} \rceil \\
+\frac{3n}{10} - 6 & \ge \frac{n}{4} + 1 \\
+        12n - 240 & \ge 10n + 40 \\
+                n & \ge 140.
+\end{aligned}
+$$
+</div>
+
+<h2 id="9-3-3">9.3-3</h2>
+
+<blockquote>
+<p>Show how quicksort can be made to run in $O(n\lg n)$ time in the worst case, assuming that all elements are distinct.</p>
+</blockquote>
+
+<p>A modification to quicksort that allows it to run in $O(n\lg n)$ time in the worst case uses the deterministic $\text{PARTITION}$ algorithm that was modified to take an element to partition around as an input parameter.</p>
+
+<p>$\text{SELECT}$ takes an array $A$, the bounds $p$ and $r$ of the subarray in $A$, and the rank $i$ of an order statistic, and in time linear in the size of the subarray $A[p..r]$ it returns the ith smallest element in $A[p..r]$.</p>
+
+<pre><code class="language-cpp">BEST-CASE-QUICKSORT(A, p, r)
+    if p &lt; r
+        i = floor((r - p + 1) / 2)
+        x = SELECT(A, p, r, i)
+        q = PARTITION(x)
+        BEST-CASE-QUICKSORT(A, p, q - 1)
+        BEST-CASE-QUICKSORT(A, q + 1, r)
+</code></pre>
+
+<p>For an $n$-element array, the largest subarray that $\text{BEST-CASE-QUICKSORT}$ recurses on has $n / 2$ elements. This situation occurs when $n = r - p + 1$ is even; then the subarray $A[q + 1..r]$ has $n / 2$ elements, and the subarray $A[p..q - 1]$ has $n / 2 - 1$ elements.</p>
+
+<p>Because $\text{BEST-CASE-QUICKSORT}$ always recurses on subarrays that are at most half the size of the original array, the recurrence for the worst-case running time is $T(n) \le 2T(n / 2) + \Theta(n) = O(n\lg n)$.</p>
+
+<h2 id="9-3-4-star">9.3-4 $\star$</h2>
+
+<blockquote>
+<p>Suppose that an algorithm uses only comparisons to find the $i$th smallest element in a set of $n$ elements. Show that it can also find the $i - 1$ smaller elements and $n - i$ larger elements without performing additional comparisons.</p>
+</blockquote>
+
+<p>Create a graph with $n$ vertices and draw a directed edge from vertex $i$ to vertex $j$ if the $i$th and $j$th elements of the array are compared in the algorithm and we discover that $A[i] \ge A[j]$. Observe that $A[i]$ is one of the $i - 1$ smaller elements if there exists a path from $x$ to $i$ in the graph, and $A[i]$ is one of the $n - i$ larger elements if there exists a path from $i$ to $x$ in the graph. Every vertex $i$ must either lie on a path to or from $x$ because otherwise the algorithm can&rsquo;t distinguish between $i \le x$ and $i \ge x$. Moreover, if a vertex $i$ lies on both a path to $x$ and a path from $x$, then it must be such that $x \le A[i] \le x$,so $x = A[i]$. In this case, we can break ties arbitrarily.</p>
+
+<h2 id="9-3-5">9.3-5</h2>
+
+<blockquote>
+<p>Suppose that you have a &ldquo;black-box&rdquo; worst-case linear-time median subroutine. Give a simple, linear-time algorithm that solves the selection problem for an arbitrary order statistic.</p>
+</blockquote>
+
+<p>We assume that are given a procedure $\text{MEDIAN}$ that takes as parameters an array $A$ and subarray indices $p$ and $r$, and returns the value of the median element of $A[p..r]$ in $O(n)$ time in the worst case.</p>
+
+<p>Given $\text{MEDIAN}$, here is a linear-time algorithm $\text{SELECT}^\prime$ for finding the $i$th smallest element in $A[p..r]$. This algorithm uses the deterministic $\text{PARTITION}$ algorithm that was modified to take an element to partition around as an input parameter.</p>
+
+<pre><code class="language-cpp">SELECT'(A, p, r, i)
+    if p == r
+        return A[p]
+    x = MEDIAN(A, p, r)
+    q = PARTITION(x)
+    k = q - p + 1
+    if i == k
+        return A[q]
+    else if i &lt; k
+        return SELECT'(A, p, q - 1, i)
+    else return SELECT'(A, q + 1, r, i - k)
+</code></pre>
+
+<p>Because $x$ is the median of $A[p..r]$, each of the subarrays $A[p..q - 1]$ and $A[q + 1..r]$ has at most half the number of elements of $A[p..r]$. The recurrence for the worst-case running time of $\text{SELECT}^\prime$ is $T(n) \le T(n / 2) + O(n) = O(n)$.</p>
+
+<h2 id="9-3-6">9.3-6</h2>
+
+<blockquote>
+<p>The $k$th <strong><em>quantiles</em></strong> of an $n$-element set are the $k - 1$ order statistics that divide the sorted set into $k$ equal-sized sets (to within $1$). Give an $O(n\lg k)$-time algorithm to list the $k$th quantiles of a set.</p>
+</blockquote>
+
+<p>Pre-calculate the positions of the quantiles in $O(k)$, we use the $O(n)$ select algorithm to find the $\lfloor k / 2 \rfloor$th position, after that the elements are divided into two sets by the pivot the $\lfloor k / 2 \rfloor$th position, we do it recursively in the two sets to find other positions. Since the maximum depth is $\lceil \lg k \rceil$, the total running time is $O(n\lg k)$.</p>
+
+<pre><code class="language-cpp">PARTITION(A, p, r)
+    x = A[r]
+    i = p
+    for k = p to r
+        if A[k] &lt; x
+            i = i + 1
+            swap(A[i], A[k])
+    i = i + 1
+    swap(a[i], a[r])
+    return i
+</code></pre>
+
+<pre><code class="language-cpp">RANDOMIZED-PARTITION(A, p, r)
+    x = rand(p, r)
+    swap(A[x], A[r])
+    return PARTITION(A, p, r)
+</code></pre>
+
+<pre><code class="language-cpp">RANDOMIZED-SELECT(A, p, r, i)
+    while TRUE
+        if p == r
+            return p, A[p]
+        q = RANDOMIZED-PARTITION(A, p, r)
+        k = q - p + 1
+        if i == k
+            return q, A[q]
+        if i &lt; k
+            r = q
+        else
+            p = q + 1
+            i = i - k
+</code></pre>
+
+<pre><code class="language-cpp">k-QUANTITLES-SUB(A, p, r, pos, f, e, quantiles)
+    if f + 1 &gt; e
+        return
+    mid = (f + e) / 2
+    q, val = RANDOMIZED-SELECT(A, p, r, pos[mid)
+    quantiles[mid] = val
+    k = q - p + 1
+    for i = mid + 1 to e
+        pos[i] = pos[i] - k
+    k-QUANTILES-SUB(A, q + 1, r, pos, mid + 1, e, quantiles)
+</code></pre>
+
+<pre><code class="language-cpp">k-QUANTITLES(A, k)
+    num = A.size() / k
+    mod = A.size() % k
+    pos = num[1..k]
+    for i = 1 to mod
+        pos[i] = pos[i] + 1
+    for i = 1 to k
+        pos[i] = pos[i] + pos[i - 1]
+    quantiles = [1..k]
+    k-QUANTITLES-SUB(A, 0, A.length, pos, 0, pos.size(), quantiles)
+    return quantiles
+</code></pre>
+
+<h2 id="9-3-7">9.3-7</h2>
+
+<blockquote>
+<p>Describe an $O(n)$-time algorithm that, given a set $S$ of $n$ distinct numbers and a positive integer $k \le n$, determines the $k$ numbers in $S$ that are closest to the median of $S$.</p>
+</blockquote>
+
+<p>Find the median in $O(n)$; create a new array, each element is the absolute value of the original value subtract the median; find the $k$th smallest number in $O(n)$,  then the desired values are the elements whose absolute difference with the median is less than or equal to the $k$th smallest number in the new array.</p>
+
+<h2 id="9-3-8">9.3-8</h2>
+
+<blockquote>
+<p>Let $X[1..n]$ and $Y[1..n]$ be two arrays, each containing $n$ numbers already in sorted order. Give an $O(\lg n)$-time algorithm to find the median of all $2n$ elements in arrays $X$ and $Y$.</p>
+</blockquote>
+
+<p>Let&rsquo;s start out by supposing that the median (the lower median, since we know we have an even number of elements) is in $X$. Let&rsquo;s call the median value $m$, and let&rsquo;s suppose that it&rsquo;s in $X[k]$. Then $k$ elements of $X$ are less than or equal to $m$ and $n - k$ elements of X are greater than or equal to m. We know that in the two arrays combined, there must be $n$ elements less than or equal to $m$ and $n$ elements greater than or equal to $m$, and so there must be $n - k$ elements of $Y$ that are less than or equal to $m$ and $n - (n - k)=k$ elements of $Y$ that are greater than or equal to $m$.</p>
+
+<p>Thus, we can check that $X[k]$ is the lower median by checking whether $Y[n - k] \le X[k] \le Y[n - k + 1]$. A boundary case occurs for $k = n$. Then $n - k = 0$, and there is no array entry $Y[0]$; we only need to check that $X[n] \le Y[1]$.</p>
+
+<p>Now, if the median is in $X$ but is not in $X[k]$, then the above condition will not hold. If the median is in $X[k^\prime]$ , where $k^\prime &lt; k$, then $X[k]$ is above the median, and $Y[n - k + 1] &lt; X[k]$. Conversely, if the median is in $X[k^{\prime\prime}]$, where $k^{\prime\prime} &gt; k$, then $X[k]$ is below the median, and $X[k] &lt; Y[n - k]$.</p>
+
+<p>Thus, we can use a binary search to determine whether there is an $X[k]$ such that either $k &lt; n$ and $X[n - k] \le Y[k] \le X[n - k + 1]$ or $k = n$ and $X[k] \le Y[n - k + 1]$; if we find such an $X[k]$, then it is the median. Otherwise, we know that the median is in $Y$, and we use a binary search to find a $Y[k]$ such that either $k &lt; n$ and $X[n - k] \le Y[k] \le X[n - k + 1]$ or $k = n$ is the median. Since each binary search takes $O(\lg n)$ time, we spend a total of $O(\lg n)$ time.</p>
+
+<p>Here&rsquo;s how we write the algorithm in pseudocode:</p>
+
+<pre><code class="language-cpp">TWO-ARRAY-MEDIAN(X, Y)
+    n = X.length        // n also equals Y.length
+    median = FIND-MEDIAN(X, Y, n, 1, n)
+    if median == NOT-FOUND
+        median = FIND-MEDIAN(Y, X, n, 1, n)
+    return median
+</code></pre>
+
+<pre><code class="language-cpp">FIND-MEDIAN(A, B, n, low, hign)
+    if low &gt; high
+        return NOT-FOUND
+    else k = floor((low + high) / 2)
+        if k == n and A[n] ≤ B[1]
+            return A[n]
+        else if k &lt; n and B[n - k] ≤ A[k] ≤ B[n - k + 1]
+            return A[k]
+        else A[k] &gt; B[n - k + 1]
+            return FIND-MEDIAN(A, B, n, low, k - 1)
+        else return FIND-MEDIAN(A, B, n, k + 1, high)
+</code></pre>
+
+<h2 id="9-3-9">9.3-9</h2>
+
+<blockquote>
+<p>Professor Olay is consulting for an oil company, which is planning a large pipeline running east to west through an oil field of $n$ wells. The company wants to connect a spur pipeline from each well directly to the main pipeline along a shortest route (either north or south), as shown in Figure 9.2. Given the $x$- and $y$-coordinates of the wells, how should the professor pick the optimal location of the main pipeline, which would be the one that minimizes the total length of the spurs? Show how to determine the optimal location in linear time.</p>
+</blockquote>
+
+<p>In order to find the optimal placement for Professor Olay&rsquo;s pipeline, we need only find the median(s) of the $y$-coordinates of his oil wells, as the following proof explains.</p>
+
+<p><strong><em>Claim</em></strong></p>
+
+<p>The optimal $y$-coordinate for Professor Olay&rsquo;s east-west oil pipeline is as follows:</p>
+
+<ul>
+<li>If $n$ is even, then on either the oil well whose $y$-coordinate is the lower median or the one whose $y$-coordinate is the upper median, or anywhere between them.</li>
+<li>If $n$ is odd, then on the oil well whose $y$-coordinate is the median.</li>
+</ul>
+
+<p><strong><em>Proof</em></strong></p>
+
+<p>We examine various cases. In each case, we will start out with the pipeline at a particular $y$-coordinate and see what happens when we move it. We&rsquo;ll denote by $s$ the sum of the north-south spurs with the pipeline at the starting location, and $s^\prime$ will denote the sum after moving the pipeline.</p>
+
+<p>We start with the case in which n is even. Let us start with the pipeline somewhere on or between the two oil wells whose $y$-coordinates are the lower and upper medians. If we move the pipeline by a vertical distance $d$ without crossing either of the median wells, then $n / 2$ of the wells become $d$ farther from the pipeline and $n / 2$ become $d$ closer, and so $s^\prime = s + dn / 2 - dn / 2 = s$; thus, all locations on or between the two medians are equally good.</p>
+
+<p>Now suppose that the pipeline goes through the oil well whose $y$-coordinate is the upper median. What happens when we increase the $y$-coordinate of the pipeline by $d &gt; 0$ units, so that it moves above the oil well that achieves the upper median? All oil wells whose $y$-coordinates are at or below the upper median become d units farther from the pipeline, and there are at least $n / 2 + 1$ such oil wells (the upper median, and every well at or below the lower median). There are at most $n / 2 - 1$ oil wells whose $y$-coordinates are above the upper median, and each of these oil wells becomes at most d units closer to the pipeline when it moves up. Thus, we have a lower bound on $s^\prime$ of $s^\prime \ge s + d(n / 2 + 1) - d(n / 2 - 1) = s + 2d &gt; s$. We conclude that moving the pipeline up from the oil well at the upper median increases the total spur length. A symmetric argument shows that if we start with the pipeline going through the oil well whose $y$-coordinate is the lower median and move it down, then the total spur length increases.</p>
+
+<p>We see, therefore, that when $n$ is even, an optimal placement of the pipeline is anywhere on or between the two medians.</p>
+
+<p>Now we consider the case when $n$ is odd. We start with the pipeline going through the oil well whose $y$-coordinate is the median, and we consider what happens when we move it up by $d &gt; 0$ units. All oil wells at or below the median become $d$ units farther from the pipeline, and there are at least $(n + 1) / 2$ such wells (the one at the median and the $(n - 1) / 2$ at or below the median. There are at most $(n - 1) / 2$ oil wells above the median, and each of these becomes at most d units closer to the pipeline. We get a lower bound on $s^\prime$ of $s^\prime \ge s + d(n + 1) / 2 - d(n - 1) / 2 = s + d &gt; s$, and we conclude that moving the pipeline up from the oil well at the median increases the total spur length. A symmetric argument shows that moving the pipeline down from the median also increases the total spur length, and so the optimal placement of the pipeline is on the median. (claim)</p>
+
+<p>Since we know we are looking for the median, we can use the linear-time median-finding algorithm.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9540,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9555,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9803,6 +10125,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9817,6 +10140,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9849,6 +10175,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9866,6 +10193,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14793,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap09/9.2/" title="9.2 Selection in expected linear time"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap09/problems/" title="Chap 9 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

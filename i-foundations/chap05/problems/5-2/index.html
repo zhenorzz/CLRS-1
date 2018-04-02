@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>5-2 Searching an unsorted array :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap05/problems/5-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -953,7 +953,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap05/" title="5 Probabilistic Analysis and Randomized Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1056,7 +1056,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap05/problems/" title="Chap 5 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1099,7 +1099,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap05/problems/5-2/" title="5-2 Searching an unsorted array" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap05/problems/5-2/" title="5-2 Searching an unsorted array" class="dd-item active">
         <a href="/CLRS/i-foundations/chap05/problems/5-2/">
         Problem 5-2
         
@@ -8374,56 +8374,159 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap05/Problems/5-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap05/'>5 Probabilistic Analysis and Randomized Algorithms</a> > <a href='/CLRS/i-foundations/chap05/problems/'>Chap 5 Problems</a> > 5-2 Searching an unsorted array
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>5-2 Searching an unsorted array</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>The problem examines three algorithms for searching for a value $x$ in an unsorted array $A$ consisting for $n$ elements.</p>
+
+<p>Consider the following randomized strategy: pick a random index $i$ into $A$. If $A[i] = x$, then we terminate; otherwise, we continue the search by picking a new random index into $A$. We continue picking random indices into $A$ until we find an index $j$ such that $A[j] = x$ or until we have checked every element of $A$. Note that we pick from the whole set of indices each time, so that we may examine a given element more than once.</p>
+
+<p><strong>a.</strong> Write pseudocode for a procedure $\text{RANDOM-SEARCH}$ to implement the strategy above. Be sure that your algorithm terminates when all indices into $A$ have been picked.</p>
+
+<p><strong>b.</strong> Suppose that there is exactly one index $i$ such that $A[i] = x$. What is the expected number of indices into $A$ that we must pick before we find $x$ and $\text{RANDOM-SEARCH}$ terminates?</p>
+
+<p><strong>c.</strong> Generalizing your solution to part (b), suppose that there are $k \ge 1$ indices $i$ such that $A[i] = x$. What is the expected number of indices into $A$ that we must pick before we find $x$ and $\text{RANDOM-SEARCH}$ terminates? Your answer should be a function of $n$ and $k$.</p>
+
+<p><strong>d.</strong> Suppose that there are no indices $i$ such that $A[i] = x$. What is the expected number of indices into $A$ that we must pick before we have checked all elements of $A$ and $\text{RANDOM-SEARCH}$ terminates?</p>
+
+<p>Now consider a deterministic linear search algorithm, which we refer to as $\text{DETERMINISTIC-SEARCH}$. Specifically, the algorithm searches $A$ for $x$ in order, considering $A[1], A[2], A[3], \ldots, A[n]$ until either it finds $A[i] = x$ or it reaches the end of the array. Assume that possible permutations of the input array are equally likely.</p>
+
+<p><strong>e.</strong> Suppose that there is exactly one index $i$ such that $A[i] = x$. What is the average-case running time of $\text{DETERMINISTIC-SEARCH}$? What is the worst-case running time of $\text{DETERMINISTIC-SEARCH}$?</p>
+
+<p><strong>f.</strong> Generalizing your solution to part (e), suppose that there are $k \ge 1$ indices $i$ such that $A[i] = x$. What is the average-case running time of $\text{DETERMINISTIC-SEARCH}$? What is the worst-case running time of $\text{DETERMINISTIC-SEARCH}$? Your answer should be a function of $n$ and $k$.</p>
+
+<p><strong>g.</strong> Suppose that there are no indices $i$ such that $A[i] = x$. What is the average-case running time of $\text{DETERMINISTIC-SEARCH}$? What is the worst-case running time of $\text{DETERMINISTIC-SEARCH}$?</p>
+
+<p>Finally, consider a randomized algorithm $\text{SCRAMBLE-SEARCH}$ that works by first randomly permuting the input array and then running the deterministic linear search given above on the resulting permuting array.</p>
+
+<p><strong>h.</strong> Letting $k$ be the number of indices $i$ such that $A[i] = x$, give the worst-case and expected running time of $\text{SCRAMBLE-SEARCH}$ for the cases in which $k = 0$ and $k = 1$. Generalizing your solution to handle the case in which $k \ge 1$.</p>
+
+<p><strong>i.</strong> Which of the three searching algorithms would you use? Explain your answer.</p>
+</blockquote>
+
+<p><strong>a.</strong></p>
+
+<pre><code class="language-cpp">RANDOM-SEARCH(x, A, n)
+    v = ∅
+    while |∅| != n
+        i = RANDOM(1, n)
+        if A[i] = x
+            return i
+        else
+            v = v ∩ i
+    return NIL
+</code></pre>
+
+<p>$v$ can be implemented in multiple ways: a hash table, a tree or a bitmap. The last one would probabily perform best and consume the least space.</p>
+
+<p><strong>b.</strong> $\text{RANDOM-SEARCH}$ is well-modelled by Bernoulli trials. The expected number of picks is $n$.</p>
+
+<p><strong>c.</strong> In similar fashion, the expected number of picks is $n / k$.</p>
+
+<p><strong>d.</strong> This is modelled by the balls and bins problem, explored in section 5.4.2. The answer is $n(\ln n + O(1))$.</p>
+
+<p><strong>e.</strong> The worst-case running time is $n$. The average-case is $(n + 1) / 2$ (obviously).</p>
+
+<p><strong>f.</strong> The worst-case running time is $n - k + 1$. The average-case running time is $(n + 1) / (k + 1)$. Let $X_i$ be an indicator random variable that the $i$th element is a match. $\Pr\{X_i\} = 1 / (k + 1)$. Let $Y$ be an indicator random variable that we have found a match after the first $n - k + 1$ elements ($\Pr\{Y\} = 1$). Thus,</p>
+
+<div>
+$$
+\begin{aligned}
+\text E[X]
+    & = \text E[X_1 + X_2 + \ldots + X_{n - k} + Y] \\
+    & = 1 + \sum_{i = 1}^{n - k}\text E[X_i] = 1 + \frac{n - k}{k + 1} \\
+    & = \frac{n + 1}{k + 1}.
+\end{aligned}
+$$
+</div>
+
+<p><strong>g.</strong> Both the worst-case and average case is $n$.</p>
+
+<p><strong>h.</strong> It&rsquo;s the same as $\text{DETERMINISTIC-SEARCH}$, only we replace &ldquo;average-case&rdquo; with &ldquo;expected&rdquo;.</p>
+
+<p><strong>i.</strong> Definitelly $\text{DETERMINISTIC-SEARCH}$. $\text{SCRAMBLE-SEARCH}$ gives better expected results, but for the cost of randomly permuting the array, which is a linear operation. In the same time we could have scanned the full array and reported a result.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8558,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8573,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9088,6 +9192,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9103,6 +9208,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9168,6 +9276,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9180,6 +9289,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9197,6 +9309,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9221,6 +9334,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14579,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap05/problems/5-1/" title="5-1 Probabilstic counting"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14592,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

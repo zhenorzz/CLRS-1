@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>2-4 Inversions :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap02/problems/2-4/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -230,7 +230,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap02/" title="2 Getting Started" class="dd-item 
-        
+        parent
         
         
         ">
@@ -314,7 +314,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap02/problems/" title="Chap 2 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -395,7 +395,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap02/problems/2-4/" title="2-4 Inversions" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap02/problems/2-4/" title="2-4 Inversions" class="dd-item active">
         <a href="/CLRS/i-foundations/chap02/problems/2-4/">
         Problem 2-4
         
@@ -8374,56 +8374,158 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap02/Problems/2-4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap02/'>2 Getting Started</a> > <a href='/CLRS/i-foundations/chap02/problems/'>Chap 2 Problems</a> > 2-4 Inversions
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>2-4 Inversions</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Let $A[1..n]$ be an array of $n$ distinct numbers. If $i &lt; j$ and $A[i] &gt; A[j]$, then the pair $(i, j)$ is called an <strong><em>inversion</em></strong> of $A$.</p>
+
+<p><strong>a.</strong> List the five inversions in the array $\langle 2, 3, 8, 6, 1 \rangle$.</p>
+
+<p><strong>b.</strong> What array with elements from the set ${1, 2, \ldots, n}$ has the most inversions? How many does it have?</p>
+
+<p><strong>c.</strong> What is the relationship between the running time of insertion sort and the number of inversions in the input array? Justify your answer.</p>
+
+<p><strong>d.</strong> Give an algorithm that determines the number of inversions in any permutation of $n$ elements in $\Theta(n\lg n)$ worst-case time. ($\textit{Hint:}$ Modify merge sort).</p>
+</blockquote>
+
+<p><strong>a.</strong> The inversions are $(1,5)$, $(2,5)$, $(3,4)$, $(3,5)$, $(4,5)$. (Remember that inversions are specified by indices rather than by the values in the array.)</p>
+
+<p><strong>b.</strong> The array with elements from ${1, 2, \ldots, n}$ with the most inversions is $\langle n, n - 1, n - 2, \ldots, 2, 1 \rangle$. For all $1 \le i &lt; j \le n$, there is an inversion $(i, j)$. The number of such inversions is $\binom{n}{2} = n(n - 1) / 2$.</p>
+
+<p><strong>c.</strong> Suppose that the array $A$ starts out with an inversion $(k, j)$. Then $k &lt; j$ and $A[k] &gt; A[j]$. At the time that the outer <strong>for</strong> loop of lines 1–8 sets $key = A[j]$, the value that started in $A[k]$ is still somewhere to the left of $A[j]$. That is, it&rsquo;s in $A[i]$, where $1 \le i &lt; j$, and so the inversion has become $(i, j)$. Some iteration of the <strong>while</strong> loop of lines 5–7 moves $A[i]$ one position to the right. Line 8 will eventually drop $key$ to the left of this element, thus eliminating the inversion. Because line 5 moves only elements that are greater than $key$, it moves only elements that correspond to inversions. In other words, each iteration of the <strong>while</strong> loop of lines 5–7 corresponds to the elimination of one inversion.</p>
+
+<p><strong>d.</strong> We follow the hint and modify merge sort to count the number of inversions in $\Theta(n\lg n)$ time.</p>
+
+<p>To start, let us define a <strong><em>merge-inversion</em></strong> as a situation within the execution of merge sort in which the $\text{MERGE}$ procedure, after copying $A[p..q]$ to $L$ and $A[q + 1..r]$ to $R$, has values $x$ in $L$ and $y$ in $R$ such that $x &gt; y$. Consider an inversion $(i, j)$, and let $x = A[i]$ and $y = A[j]$ , so that $i &lt; j$ and $x &gt; y$. We claim that if we were to run merge sort, there would be exactly one mergeinversion involving $x$ and $y$. To see why, observe that the only way in which array elements change their positions is within the $\text{MERGE}$ procedure. Moreover, since $\text{MERGE}$ keeps elements within $L$ in the same relative order to each other, and correspondingly for $R$, the only way in which two elements can change their ordering relative to each other is for the greater one to appear in $L$ and the lesser one to appear in $R$. Thus, there is at least one merge-inversion involving $x$ and $y$. To see that there is exactly one such merge-inversion, observe that after any call of $\text{MERGE}$ that involves both $x$ and $y$, they are in the same sorted subarray and will therefore both appear in $L$ or both appear in $R$ in any given call thereafter. Thus, we have proven the claim.</p>
+
+<p>We have shown that every inversion implies one merge-inversion. In fact, the correspondence between inversions and merge-inversions is one-to-one. Suppose we have a merge-inversion involving values $x$ and $y$, where $x$ originally was $A[i]$ and $y$ was originally $A[j]$. Since we have a merge-inversion, $x &gt; y$. And since $x$ is in $L$ and $y$ is in $R$, $x$ must be within a subarray preceding the subarray containing $y$. Therefore $x$ started out in a position $i$ preceding $y$&rsquo;s original position $j$, and so $(i, j)$ is an inversion.</p>
+
+<p>Having shown a one-to-one correspondence between inversions and mergeinversions, it suffices for us to count merge-inversions.</p>
+
+<p>Consider a merge-inversion involving $y$ in $R$. Let $z$ be the smallest value in $L$ that is greater than $y$. At some point during the merging process, $z$ and $y$ will be the &ldquo;exposed&rdquo; values in $L$ and $R$, i.e., we will have $z = L[i]$ and $y = R[j]$ in line 13 of $\text{MERGE}$. At that time, there will be merge-inversions involving $y$ and $L[i], L[i + 1], L[i + 2], \ldots, L[n_1]$, and these $n_1 - i + 1$ merge-inversions will be the only ones involving $y$. Therefore, we need to detect the first time that $z$ and $y$ become exposed during the $\text{MERGE}$ procedure and add the value of $n_1 - i + 1$ at that time to our total count of merge-inversions.</p>
+
+<p>The following pseudocode, modeled on merge sort, works as we have just described. It also sorts the array $A$.</p>
+
+<pre><code class="language-cpp">COUNT-INVERSIONS(A, p, r)
+    inversions = 0
+    if p &lt; r
+        q = floor((p + r) / 2)
+        inversions = inversions + COUNT-INVERSIONS(A, p, q)
+        inversions = inversions + COUNT-INVERSIONS(A, q + 1, r)
+        inversions = inversions + MERGE-INVERSIONS(A, p, q, r)
+    return inversions
+</code></pre>
+
+<pre><code class="language-cpp">MERGE-INVERSIONS(A, p, q, r)
+    n1 = q - p + 1
+    n2 = r - q
+    let L[1..n1 + 1] and R[1..n2 + 1] be new arrays
+    for i = 1 to n1
+        L[i] = A[p + i - 1]
+    for j = 1 to n2
+        R[j] = A[q + j]
+    L[n1 + 1] = ∞
+    L[n2 + 1] = ∞
+    i = 1
+    j = 1
+    inversions = 0
+    for k = p to r
+        if R[j] &lt; L[i]
+            inversions = inversions + n1 - i + 1
+            A[k] = R[j]
+            j = j + 1
+        else A[k] = L[i]
+            i = i + 1
+    return inversions
+</code></pre>
+
+<p>The initial call is $\text{COUNT-INVERSIONS}(A, 1, n)$.</p>
+
+<p>In $\text{MERGE-INVERSIONS}$, whenever $R[j]$ is exposed and a value greater than $R[j]$ becomes exposed in the $L$ array, we increase inersions by the number of remaining elements in $L$. Then because $R[j + 1]$ becomes exposed, $R[j]$ can never be exposed again. We don&rsquo;t have to worry about merge-inversions involving the sentinel $\infty$ in $R$, since no value in $L$ will be greater than $\infty$.</p>
+
+<p>Since we have added only a constant amount of additional work to each procedure call and to each iteration of the last <strong>for</strong> loop of the merging procedure, the total running time of the above pseudocode is the same as for merge sort: $\Theta(n\lg n)$.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8557,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8572,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8554,6 +8657,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8569,6 +8673,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8618,6 +8725,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8630,6 +8738,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8679,6 +8790,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8700,6 +8812,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14578,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap02/problems/2-3/" title="2-3 Correctness of Horner&#39;s rule"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap03/" title="3 Growth of Functions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14591,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

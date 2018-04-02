@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>4-3 More recurrence examples :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699597" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699597" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699597" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699597"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap04/problems/4-3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699597"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699597"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699597"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -655,7 +655,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap04/" title="4 Divide-and-Conquer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -796,7 +796,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap04/problems/" title="Chap 4 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -858,7 +858,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap04/problems/4-3/" title="4-3 More recurrence examples" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap04/problems/4-3/" title="4-3 More recurrence examples" class="dd-item active">
         <a href="/CLRS/i-foundations/chap04/problems/4-3/">
         Problem 4-3
         
@@ -8374,56 +8374,421 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap04/Problems/4-3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap04/'>4 Divide-and-Conquer</a> > <a href='/CLRS/i-foundations/chap04/problems/'>Chap 4 Problems</a> > 4-3 More recurrence examples
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>4-3 More recurrence examples</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Give asymptotic upper and lower bounds for $T(n)$ in each of the following recurrences. Assume that $T(n)$ is constant for sufficiently small $n$. Make your bounds as tight as possible, and justify your answers.</p>
+
+<p><strong>a.</strong> $T(n) = 4T(n / 3) + n\lg n$.</p>
+
+<p><strong>b.</strong> $T(n) = 3T(n / 3) + n / \lg n$.</p>
+
+<p><strong>c.</strong> $T(n) = 4T(n / 2) + n^2\sqrt n$.</p>
+
+<p><strong>d.</strong> $T(n) = 3T(n / 3 - 2) + n / 2$.</p>
+
+<p><strong>e.</strong> $T(n) = 2T(n / 2) + n / \lg n$.</p>
+
+<p><strong>f.</strong> $T(n) = T(n / 2) + T(n / 4) + T(n / 8) + n$.</p>
+
+<p><strong>g.</strong> $T(n) = T(n - 1) + 1 / n$.</p>
+
+<p><strong>h.</strong> $T(n) = T(n - 1) + \lg n$.</p>
+
+<p><strong>i.</strong> $T(n) = T(n - 2) + 1 / \lg n$.</p>
+
+<p><strong>j.</strong> $T(n) = \sqrt nT(\sqrt n) + n$</p>
+</blockquote>
+
+<p><em>[This problem is solved only for parts a, c, e, f, g, h, and i.]</em></p>
+
+<p><strong>a.</strong> $T(n) = 3T(n / 2) + n\lg n$<br />
+We have $f(n) = n\lg n$ and $n^{\log_b a} = n^{\lg 3} \approx n^{1.585}$. Since $n\lg n = O(n^{\lg 3 - \epsilon})$ for any $0 &lt; \epsilon \le 0.58$, by case 1 of the master theorem, we have $T(n) = \Theta(n^{\lg 3})$.</p>
+
+<p><strong>b.</strong> $\Theta(n\lg\lg n)$. Check subtask 5 for the reasoning.</p>
+
+<p><strong>c.</strong> $T(n) = 4T(n / 2) + n^2 \sqrt n$<br />
+We have $f(n) = n^2 \sqrt n = n^{5 / 2}$ and $n^{\log_b a} = n^{\log_2 4} = n^2$. Since $n^{5 / 2} = \Omega(n^{2 + \epsilon})$ for $\epsilon = 1 / 2$, we look at the regularity condition in case 3 of the master theorem. We have</p>
+
+<div>
+$$
+af(n / b) = 4(n / 2)^2 \sqrt{n / 2} = n^{5 / 2} / \sqrt 2 \le cn^{5 / 2}
+$$
+</div>
+
+<p>for $1 / \sqrt 2 \le c &lt; 1$. Case 3 applies, and we have $T(n) = \Theta(n^2 \sqrt n)$.</p>
+
+<p><strong>d.</strong> $\Theta(n\lg n)$ by the master method.</p>
+
+<p><strong>e.</strong> $T(n) = 2T(n / 2) + n / \lg n$<br />
+We can get a guess by means of a recursion tree:</p>
+
+<p><img src="https://i.imgur.com/Pn2CdhU.png?width=40rem" alt="" /></p>
+
+<p>We get the sum on each level by observing that at depth $i$, we have $2^i$ nodes, each with a numerator of $n / 2^i$ and a denominator of $\lg(n / 2^i) = \lg n - i$, so that the cost at depth $i$ is</p>
+
+<div>
+$$
+2^i \cdot \frac{n / 2^i}{\lg n - i} = \frac{n}{\lg n - i}.
+$$
+</div>
+
+<p>The sum for all levels is</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{i = 0}^{\lg n - 1} \frac{n}{\lg n - i}
+    & = n \sum_{i = 1}^{\lg n} \frac{n}{i} \\
+    & = n \sum_{i = 1}^{\lg n} 1 / i \\
+    & = n \cdot \Theta(\lg\lg n) & \text{(by equation (A.7), the harmonic series)} \\
+    & = \Theta(n\lg\lg n).
+\end{aligned}
+$$
+</div>
+
+<p>We can use this analysis as a guess that $T(n) = \Theta(n\lg\lg n)$. If we were to do a straight substitution proof, it would be rather involved. Instead, we will show by substitution that $T(n) \le n(1 + H_{\lfloor \lg n \rfloor})$ and $T(n) \ge n \cdot H_{\lceil \lg n \rceil}$, where $H_k$ is the $k$th harmonic number: $H_k = 1 / 1 + 1 / 2 + 1 / 3 + \cdots + 1 / k$. We also define $H_0 = 0$. Since $H_k = \Theta(\lg k)$, we have that $H_{\lfloor \lg n \rfloor} = \Theta(\lg \lfloor \lg n \rfloor) = \Theta(\lg\lg n)$ and $H_{\lceil \lg n \rceil} = \Theta(\lg \lceil \lg n \rceil) = \Theta(\lg\lg n)$. Thus, we will have that $T(n) = \Theta(n\lg\lg n)$.</p>
+
+<p>The base case for the proof is for $n = 1$, and we use $T(1) = 1$. Here, $\lg n = 0$, so that $\lg n = \lfloor \lg n \rfloor = \lceil \lg n \rceil$. Since $H_0 = 0$, we have $T(1) = 1 \le 1(1 + H_0)$ and $T(1) = 1 \ge 0 = 1 \cdot H_0$.</p>
+
+<p>For the upper bound of $T(n) \le n(1 + H_{\lfloor \lg n \rfloor})$, we have</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & =   2T(n / 2) + n / \lg n \\
+     & \le 2((n / 2)(1 + H_{\lfloor \lg (n / 2) \rfloor})) + n / \lg n \\
+     & =   n(1 + H_{\lfloor \lg n - 1 \rfloor}) + n / \lg n \\
+     & =   n(1 + H_{\lfloor \lg n \rfloor - 1} + 1 / \lg n) \\
+     & \le n(1 + H_{\lfloor \lg n \rfloor - 1} + 1 / \lfloor \lg n \rfloor) \\
+     & =   n(1 + H_{\lfloor \lg n \rfloor}),
+\end{aligned}
+$$
+</div>
+
+<p>where the last line follows from the identity $H_k = H_{k - 1} + 1 / k$.</p>
+
+<p>The upper bound of $T(n) \ge n \cdot H_{\lceil \lg n \rceil}$ is similar:</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & =   2T(n / 2) + n / \lg n \\
+     & \ge 2((n / 2) \cdot H_{\lceil \lg (n / 2) \rceil}) + n / \lg n \\
+     & =   n \cdot (H_{\lceil \lg n - 1 \rceil}) + n / \lg n \\
+     & =   n \cdot (H_{\lceil \lg n \rceil - 1} + 1 / \lg n) \\
+     & \ge n \cdot (H_{\lceil \lg n \rceil - 1} + 1 / \lceil \lg n \rceil) \\
+     & =   n \cdot (H_{\lceil \lg n \rceil}).
+\end{aligned}
+$$
+</div>
+
+<p>Thus, $T(n) = \Theta(n\lg\lg n)$.</p>
+
+<p><strong>f.</strong> $T(n) = T(n / 2) + T(n / 4) + T(n / 8) + n$<br />
+Using the recursion tree shown below, we get a guess of $T(n) = \Theta(n)$.</p>
+
+<p><img src="https://i.imgur.com/UW5kRiR.png?width=40rem" alt="" /></p>
+
+<p>We use the substitution method to prove that $T(n) = O(n)$. Our inductive hypothesis is that $T(n) \le cn$ for some constant $c &gt; 0$. We have</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & =   T(n / 2) + T(n / 4) + T(n / 8) + n \\
+     & \le cn / 2 + cn / 4 + cn / 8 + n \\
+     & =   7 cn / 8 + n \\
+     & =   (1 + 7c / 8) n \\
+     & \le cn \quad \text{if $c \ge 8$}.
+\end{aligned}
+$$
+</div>
+
+<p>Therefore, $T(n) = O(n)$.</p>
+
+<p>Showing that $T(n) = \Omega(n)$ is easy:</p>
+
+<div>
+$$
+T(n) = T(n / 2) + T(n / 4) + T(n / 8) + n \ge n.
+$$
+</div>
+
+<p>Since $T(n) = O(n)$ and $T(n) = \Omega(n)$, we have that $T(n) = \Theta(n)$.</p>
+
+<p><strong>g.</strong> $T(n) = T(n - 1) + 1 / n$<br />
+This recurrence corresponds to the harmonic series, so that $T(n) = H_n$, where $H_n = 1 / 1 + 1 / 2 + 1 / 3 + \cdots + 1 / n$. For the base case, we have $T(1) = 1 = H_1$. For the inductive step, we assume that $T(n - 1) = H_{n - 1}$, and we have</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & = T(n - 1) + 1 / n \\
+     & = H_{n - 1} + 1 / n \\
+     & = H_n.
+\end{aligned}
+$$
+</div>
+
+<p>Since $H_n = \Theta(\lg n)$ by equation $\text{(A.7)}$, we have that $T(n) = \Theta(\lg n)$.</p>
+
+<p><strong>h.</strong> $T(n) = T(n - 1) + \lg n$<br />
+We guess that $T(n) = \Theta(n\lg n)$. To prove the upper bound, we will show that $T(n) = O(n\lg n)$. Our inductive hypothesis is that $T(n) \le cn\lg n$ for some constant $c$. We have</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & =   T(n - 1) + \lg n \\
+     & \le c(n - 1) \lg(n - 1) + \lg n \\
+     & =   cn\lg(n - 1) - c \lg(n - 1) + \lg n \\
+     & \le cn\lg(n - 1) - c \lg(n / 2) + \lg n & \text{(since $\lg(n - 1) \ge \lg(n / 2)$ for $n \ge 2$)} \\
+     & =   cn\lg(n - 1) - c \lg n + c + \lg n \\
+     & <   cn\lg n - c \lg n + c + \lg n \\
+     & \le cn\lg n,
+\end{aligned}
+$$
+</div>
+
+<p>if $-c \lg n + c + \lg n \le 0$. Equivalently,</p>
+
+<div>
+$$
+\begin{aligned}
+-c \lg n + c + \lg n & \le 0 \\
+                   c & \le (c - 1) \lg n \\
+               \lg n & \ge c / (c - 1).
+\end{aligned}
+$$
+</div>
+
+<p>This works for $c = 2$ and all $n \ge 4$.</p>
+
+<p>To prove the lower bound, we will show that $T(n) = \Omega(n\lg n)$. Our inductive hypothesis is that $T(n) \ge cn\lg n + dn$ for constants $c$ and $d$. We have</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & =   T(n - 1) + \lg n \\
+     & \ge c(n - 1) \lg(n - 1) + d(n - 1) + \lg n \\
+     & =   cn\lg(n - 1) - c \lg(n - 1) + dn - d + \lg n \\
+     & \ge cn\lg(n / 2) - c \lg(n - 1) + dn - d + \lg n & \text{(since $\lg(n - 1) \ge \lg(n / 2)$ for $n \ge 2$)} \\
+     & =   cn\lg n - cn - c \lg(n - 1) + dn - d + \lg n \\
+     & \ge cn\lg n,
+\end{aligned}
+$$
+</div>
+
+<p>if $-cn - c \lg(n - 1) + dn - d + \lg n \ge 0$. Since</p>
+
+<div>
+$$
+-cn - c \lg(n - 1) + dn - d + \lg n > -cn - c\lg(n - 1) + dn - d + \lg(n - 1),
+$$
+</div>
+
+<p>it suffices to find conditions in which $-cn - c\lg(n - 1) + dn - d + \lg(n - 1) \ge 0$. Equivalently,</p>
+
+<div>
+$$
+\begin{aligned}
+-cn - c \lg(n - 1) + dn - d + \lg(n - 1) & \ge 0 \\
+                                (d - c)n & \ge (c - 1)\lg(n - 1) + d.
+\end{aligned}
+$$
+</div>
+
+<p>This works for $c = 1$, $d = 2$, and all $n \ge 2$.</p>
+
+<p>Since $T(n) = O(n\lg n)$ and $T(n) = \Omega(n\lg n)$, we conclude that $T(n) = \Theta(n\lg n)$.</p>
+
+<p><strong>i.</strong> $T(n) = T(n - 2) + 2\lg n$<br />
+We guess that $T(n) = \Theta(n\lg n)$. We show the upper bound of $T(n) = O(n\lg n)$ by means of the inductive hypothesis $T(n) \le cn\lg n$ for some constant $c &gt; 0$. We have</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & =   T(n - 2) + 2\lg n \\
+     & \le c(n - 2)\lg(n - 2) + 2\lg n \\
+     & \le c(n - 2)\lg n + 2\lg n \\
+     & =   (cn - 2c + 2)\lg n \\
+     & =   cn\lg n + (2 - 2c)\lg n \\
+     & \le cn\lg n & \text{if $c > 1$}.
+\end{aligned}
+$$
+</div>
+
+<p>Therefore, $T(n) = O(n\lg n)$.</p>
+
+<p>For the lower bound of $T(n) = \Omega(n\lg n)$, we&rsquo;ll show that $T(n) \ge cn\lg n + dn$, for constants $c, d &gt; 0$ to be chosen. We assume that $n \ge 4$, which implies that</p>
+
+<ol>
+<li>$\lg(n - 2) \ge \lg(n / 2)$,</li>
+<li>$n / 2 \ge \lg n$, and</li>
+<li>$n / 2 \ge 2$.</li>
+</ol>
+
+<p>(We&rsquo;ll use these inequalities as we go along.) We have</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & \ge c(n - 2)\lg(n - 2) + d(n - 2) + 2\lg n \\
+     & =   cn\lg(n - 2) - 2c\lg(n - 2) + dn - 2d + 2\lg n \\
+     & >   cn\lg(n - 2) - 2c\lg n + dn - 2d + 2\lg n & \text{(since $-\lg n < -\lg(n - 2)$)} \\
+     & =   cn\lg(n - 2) - 2(c - 1)\lg n + dn - 2d & \text{(by inequality (1) above)} \\
+     & =   cn\lg n - cn - 2(c - 1)\lg n + dn - 2d \\
+     & \ge cn\lg n,
+\end{aligned}
+$$
+</div>
+     
+
+<p>if $-cn - 2(c - 1)\lg n + dn - 2d \ge 0$ or, equivalently, $dn \ge cn + 2(c - 1)\lg n + 2d$. Pick any constant $c &gt; 1 / 2$, and then pick any constant $d$ such that</p>
+
+<div>
+$$
+d \ge 2(2c - 1).
+$$
+</div>
+
+<p>(The requirement that $c &gt; 1 / 2$ means that $d$ is positive.) Then</p>
+
+<div>
+$$
+d / 2 \ge 2c - 1 = c + (c - 1),
+$$
+</div>
+
+<p>and adding $d / 2$ to both sides, we have</p>
+
+<div>
+$$
+d \ge c + (c - 1) + d / 2.
+$$
+</div>
+
+<p>Multiplying by $n$ yields</p>
+
+<div>
+$$
+dn \ge cn + (c - 1)n + dn / 2,
+$$
+</div>
+
+<p>and then both multiplying and dividing the middle term by $2$ gives</p>
+
+<div>
+$$
+dn \ge cn + 2(c - 1)n / 2 + dn / 2.
+$$
+</div>
+
+<p>Using inequalities (2) and (3) above, we get</p>
+
+<div>
+$$
+dn \ge cn + 2(c - 1)\lg n + 2d,
+$$
+</div>
+
+<p>which is what we needed to show. Thus $T(n) = \Omega(n\lg n)$. Since $T(n) = O(n\lg n)$ and $T(n) = \Omega(n\lg n)$, we conclude that $T(n) = \Theta(n\lg n)$.</p>
+
+<p><strong>j.</strong> $T(n) = \sqrt nT(\sqrt n) + n$<br />
+We guess $T(n) \le cn\lg\lg n$,</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & \le \sqrt nc\sqrt n\lg\lg\sqrt n + n \\
+     & =   cn\lg\lg\sqrt n + n \\
+     & =   cn\lg\frac{\lg n}{2} + n \\
+     & =   cn\lg\lg n - cn\lg 2 + n \\
+     & =   cn\lg\lg n + (1 - c)n & (c > 1) \\
+     & \le cn\lg\lg n. & = \Theta(n\lg\lg n)
+\end{aligned}
+$$
+</div>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8820,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8835,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8862,6 +9228,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8877,6 +9244,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8974,6 +9344,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8986,6 +9357,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9019,6 +9393,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9034,6 +9409,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14841,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap04/problems/4-2/" title="4-2 Parameter-passing costs"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap04/problems/4-4/" title="4-4 Fibonacci numbers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14854,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699597"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699597"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699597"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699597"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699597"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699597"></script>
+    <script src="/CLRS/js/learn.js?1522699597"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699597"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699597" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

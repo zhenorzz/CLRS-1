@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>12.4 Randomly built binary search trees :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap12/12.4/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2613,7 +2613,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap12/" title="12 Binary Search Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2696,7 +2696,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap12/12.4/" title="12.4 Randomly built binary search trees" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap12/12.4/" title="12.4 Randomly built binary search trees" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap12/12.4/">
         12.4 Randomly built binary search trees
         
@@ -8374,56 +8374,295 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap12/12.4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap12/'>12 Binary Search Trees</a> > 12.4 Randomly built binary search trees
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#12-4-1">12.4-1</a></li>
+<li><a href="#12-4-2">12.4-2</a></li>
+<li><a href="#12-4-3">12.4-3</a></li>
+<li><a href="#12-4-4">12.4-4</a></li>
+<li><a href="#12-4-5-star">12.4-5 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>12.4 Randomly built binary search trees</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="12-4-1">12.4-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Prove equation $\text{(12.3)}$.</p>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\sum_{i = 0}^{n - 1} \binom{i + 3}{3} = \binom{n + 3}{4}. \tag{12.3}
+$$
+</div>
+<div>
+$$
+\begin{aligned}
+\sum_{i = 0}^{n - 1} \binom{i + 3}{3}
+    & =  \sum_{i = 0}^{n - 1} \frac{(i + 3)(i + 2)(i + 1)}{6} \\
+    & =  \frac{1}{6} \sum_{i = 0}^{n - 1} i^3 + 6i^2 + 11i + 6 \\
+    & =  \frac{1}{6} (\frac{(n - 1)^2 n^2}{4} + \frac{6(n - 1)n(2n - 1)}{6} + \frac{11n(n - 1)}{2} + 6n) \\
+    & =  \frac{n(n + 1)(n + 2)(n + 3)}{24} \\
+    & =  \binom{n + 3}{4}.
+\end{aligned}
+$$
+</div>
+</blockquote>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="12-4-2">12.4-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Describe a binary search tree on n nodes such that the average depth of a node in the tree is $\Theta(\lg n)$ but the height of the tree is $\omega(\lg n)$. Give an asymptotic upper bound on the height of an $n$-node binary search tree in which the average depth of a node is $\Theta(\lg n)$.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>We will answer the second part first. We shall show that if the average depth of a p node is $\Theta(\lg n)$, then the height of the tree is $O(n\lg n)$. Then we will answer the first part by exhibiting that this bound is tight: there is a binary search tree with p average node depth $\Theta(\lg n)$ and height $\Theta(\sqrt{n\lg n}) = \omega(\lg n)$.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<p><strong><em>Lemma</em></strong></p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>If the average depth of p a node in an $n$-node binary search tree is $\Theta(\lg n)$, then the height of the tree is $O(\sqrt{n\lg n})$.</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p><strong><em>Proof</em></strong></p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Suppose that an $n$-node binary search tree has average depth $\Theta(\lg n)$ and height $h$. Then there exists a path from the root to a node at depth $h$, and the depths of the nodes on this path are $0, 1, \ldots, h$. Let $P$ be the set of nodes on this path and $Q$ be all other nodes. Then the average depth of a node is</p>
 
-<h1 id="more-informations">More Informations</h1>
+<div>
+$$
+\begin{aligned}
+\frac{1}{n} \Big(\sum_{x \in P} \text{depth($x$)} + \sum_{y \in Q} \text{depth($y$)}\Big)
+    & \ge \frac{1}{n} \sum_{x \in P} \text{depth($x$)} \\
+    & =   \frac{1}{n} \sum_{d = 0}^h d \\
+    & =   \frac{1}{n} \cdot \Theta(h^2).
+\end{aligned}
+$$
+</div>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>For the purpose of contradiction, suppose that $h$ is not $O(\sqrt{n\lg n})$, so that $h = \omega(\sqrt{n\lg n})$. Then we have</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<div>
+$$
+\begin{aligned}
+\frac{1}{n} \cdot \Theta(h^2)
+    & = \frac{1}{n} \cdot \omega(n\lg n) \\
+    & = \omega(\lg n),
+\end{aligned}
+$$
+</div>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>which contradicts the assumption that the average depth is $\Theta(\lg n)$. Thus, the height is $O(\sqrt{n\lg n})$.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>Here is an example of an $n$-node binary search tree with average node depth $\Theta(\lg n)$ but height $\omega(\lg n)$:</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p><img src="https://i.imgur.com/fHpe1vR.png?width=40rem" alt="" /></p>
+
+<p>In this tree, $n - \sqrt{n\lg n}$ nodes are a complete binary tree, and the other $\sqrt{n\lg n}$ nodes protrude from below as a single chain. This tree has height</p>
+
+<div>
+$$
+\begin{aligned}
+\Theta(\lg(n - \sqrt{n\lg n})) + \sqrt{n\lg n}
+    & = \Theta(\sqrt{n\lg n}) \\
+    & = \omega(\lg n).
+\end{aligned}
+$$
+</div>
+
+<p>To compute an upper bound on the average depth of a node, we use $O(\lg n)$ as an upper bound on the depth p of each of the $n - \sqrt{n\lg n}$ nodes in the complete binary tree part and $O(\lg n + \sqrt{n\lg n})$ as an upper bound on the depth of each of the $\sqrt{n\lg n}$ nodes in the protruding chain. Thus, the average depth of a node is bounded from above by</p>
+
+<div>
+$$
+\begin{aligned}
+\frac{1}{n} \cdot O(\sqrt{n\lg n}(\lg n + \sqrt{n\lg n}) + (n - \sqrt{n\lg n})\lg n)
+    & = \frac{1}{n} \cdot O(n\lg n) \\
+    & = O(\lg n).
+\end{aligned}
+$$
+</div>
+
+<p>To bound the average depth of a node from below, observe that the bottommost level of the complete binary tree part has $\Theta(n - \sqrt{n - \lg n})$ nodes, and each of these nodes has depth $\Theta(\lg n)$. Thus, the average node depth is at least</p>
+
+<div>
+$$
+\begin{aligned}
+\frac{1}{n} \cdot \Theta((n - \sqrt{n - \lg n})\lg n)
+    & = \frac{1}{n} \cdot \Omega(n\lg n) \\
+    & = \Omega(\lg n).
+\end{aligned}
+$$
+</div>
+
+<p>Because the average node depth is both $O(\lg n)$ and $\Omega(\lg n)$, it is $\Theta(\lg n)$.</p>
+
+<h2 id="12-4-3">12.4-3</h2>
+
+<blockquote>
+<p>Show that the notion of a randomly chosen binary search tree on $n$ keys, where each binary search tree of $n$ keys is equally likely to be chosen, is different from the notion of a randomly built binary search tree given in this section. ($\textit{Hint:}$ List the possibilities when $n = 3$.)</p>
+</blockquote>
+
+<p>For $n = 3$, there are $5$ binary search trees. However, if we build the trees will a random permutation, the first tree will built twice.</p>
+
+<h2 id="12-4-4">12.4-4</h2>
+
+<blockquote>
+<p>Show that the function $f(x) = 2^x$ is convex.</p>
+</blockquote>
+
+<p>We&rsquo;ll go one better than showing that the function $2^x$ is convex. Instead, we&rsquo;ll show that the function $c^x$ is convex, for any positive constant $c$. According to the definition of convexity on page 1199 of the text, a function $f(x)$ is convex if for all $x$ and $y$ and for all $0 \le \lambda \le 1$, we have $f(\lambda x + (1 - \lambda)y) \le \lambda f(x) + (1 - \lambda)f(y)$. Thus, we need to show that for all $0 \le \lambda \le 1$, we have $c^{\lambda x + (1 - \lambda)y} \le \lambda c^x + (1 - \lambda)c^y$.</p>
+
+<p>We start by proving the following lemma.</p>
+
+<p><strong><em>Lemma</em></strong></p>
+
+<p>For any real numbers $a$ and $b$ and any positive real number $c$,</p>
+
+<div>
+$$
+c^a \ge c^b + (a - b)c^b\ln c.
+$$
+</div>
+
+<p><strong><em>Proof</em></strong></p>
+
+<p>We first show that for all real $r$, we have $c^r \ge 1 + r\ln c$. By equation $\text{(3.12)}$ from the text, we have $e^x \ge 1 + x$ for all real $x$. Let $x = r\ln c$, so that $e^x = e^{r\ln c} = (e^{\ln c})^r = c^r$. Then we have $c^r = e^{r\ln c} \ge 1 + r\ln c$.</p>
+
+<p>Substituting $a - b$ for $r$ in the above inequality, we have $c^{a - b} \ge 1 + (a - b)\ln c$. Multiplying both sides by $c^b$ gives $c^a \ge c^b + (a - b)c^b\ln c$.  (lemma)</p>
+
+<p>Now we can show that $c^{\lambda x + (1 - \lambda)y} \le \lambda c^x + (1 - \lambda)c^y$ for all $0 \le \lambda \le 1$. For convenience, let $z = \lambda x + (1 - \lambda)y$.</p>
+
+<p>In the inequality given by the lemma, substitute $x$ for $a$ and $z$ for $b$, giving</p>
+
+<div>
+$$
+c^x \ge c^z + (x - z)c^z\ln c.
+$$
+</div>
+
+<p>Also substitute $y$ for $a$ and $z$ for $b$, giving</p>
+
+<div>
+$$
+c^y \ge c^z + (y - z)c^z\ln c.
+$$
+</div>
+
+<p>If we multiply the first inequality by $\lambda$ and the second by $1 - \lambda$ and then add the resulting inequalities, we get</p>
+
+<div>
+$$
+\begin{aligned}
+\lambda c^x + (1 - \lambda)c^y
+    & \ge \lambda(c^z + (x - z)c^z\ln c) + (1 - \lambda)(c^z + (y - z)c^z\ln c) \\
+    & =   \lambda c^z + \lambda x c^z\ln c - \lambda z c^z\ln c + (1 - \lambda)c^z + (1 - \lambda)yc^z\ln c - (1 - \lambda)zc^z\ln c \\
+    & =   (\lambda + (1 - \lambda))c^z + (\lambda x + (1 - \lambda)y)c^z\ln c - (\lambda + (1 - \lambda))zc^z\ln c \\
+    & =   c^z + zc^z\ln c - zc^z\ln c \\
+    & =   c^z \\
+    & =   c^{\lambda x + (1 - \lambda)y},
+\end{aligned}
+$$
+</div>
+
+<p>as we wished to show.</p>
+
+<h2 id="12-4-5-star">12.4-5 $\star$</h2>
+
+<blockquote>
+<p>Consider $\text{RANDOMIZED-QUICKSORT}$ operating on a sequence of $n$ distinct input numbers. Prove that for any constant $k &gt; 0$, all but $O(1 / n^k)$ of the $n!$ input permutations yield an $O(n\lg n)$ running time.</p>
+</blockquote>
+
+<p>Let $A(n)$ denote the probability that when quicksorting a list of length $n$, some pivot is selected to not be in the middle $n^{1 - k / 2}$ of the numberes. This doesn&rsquo;t happen with probability $\frac{1}{n^{k / 2}}$. Then, we have that the two subproblems are of size $n_1, n_2$ with $n_1 + n_2 = n - 1$, then</p>
+
+<div>
+$$
+A(n) \le \frac{1}{n^{k / 2}} + T(n_1)+T(n_2).
+$$
+</div>
+
+<p>Since we bounded the depth by $O(1 / \lg n)$ let ${a_{i, j}}_i$ be all the subproblem sizes left at depth $j$,</p>
+
+<div>
+$$
+A(n) \le \frac{1}{n^{k / 2}} \sum_j\sum_i \frac{1}{a}.
+$$
+</div>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10191,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10206,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10291,6 +10534,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10305,6 +10549,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10353,6 +10600,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10370,6 +10618,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14714,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap12/12.3/" title="12.3 Insertion and deletion"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap12/problems/" title="Chap 12 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14727,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

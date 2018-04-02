@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>25.3 Johnson&#39;s algorithm for sparse graphs :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap25/25.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5677,7 +5677,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap25/" title="25 All-Pairs Shortest Paths" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5741,7 +5741,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap25/25.3/" title="25.3 Johnson&#39;s algorithm for sparse graphs" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap25/25.3/" title="25.3 Johnson&#39;s algorithm for sparse graphs" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap25/25.3/">
         25.3 Johnson&#39;s algorithm for sparse graphs
         
@@ -8374,56 +8374,207 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap25/25.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap25/'>25 All-Pairs Shortest Paths</a> > 25.3 Johnson's algorithm for sparse graphs
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#25-3-1">25.3-1</a></li>
+<li><a href="#25-3-2">25.3-2</a></li>
+<li><a href="#25-3-3">25.3-3</a></li>
+<li><a href="#25-3-4">25.3-4</a></li>
+<li><a href="#25-3-5">25.3-5</a></li>
+<li><a href="#25-3-6">25.3-6</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>25.3 Johnson&#39;s algorithm for sparse graphs</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="25-3-1">25.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Use Johnson&rsquo;s algorithm to find the shortest paths between all pairs of vertices in the graph of Figure 25.2. Show the values of $h$ and $\hat w$ computed by the algorithm.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\begin{array}{c|c}
+v & h(v) \\
+1 & -5 \\
+2 & -3 \\
+3 &  0 \\
+4 & -1 \\
+5 & -6 \\
+6 & -8
+\end{array}
+$$
+</div>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<div>
+$$
+\begin{array}{ccc|ccc}
+u & v & \hat w(u, v) & u & v & \hat w(u, v) \\
+1 & 2 & \text{NIL} & 4 & 1 & 0          \\
+1 & 3 & \text{NIL} & 4 & 2 & \text{NIL} \\
+1 & 4 & \text{NIL} & 4 & 3 & \text{NIL} \\
+1 & 5 & 0          & 4 & 5 & 8          \\
+1 & 6 & \text{NIL} & 4 & 6 & \text{NIL} \\
+2 & 1 & 3          & 5 & 1 & \text{NIL} \\
+2 & 3 & \text{NIL} & 5 & 2 & 4          \\
+2 & 4 & 0          & 5 & 3 & \text{NIL} \\
+2 & 5 & \text{NIL} & 5 & 4 & \text{NIL} \\
+2 & 6 & \text{NIL} & 5 & 6 & \text{NIL} \\
+3 & 1 & \text{NIL} & 6 & 1 & \text{NIL} \\
+3 & 2 & 5          & 6 & 2 & 0          \\
+3 & 4 & \text{NIL} & 6 & 3 & 18         \\
+3 & 5 & \text{NIL} & 6 & 4 & \text{NIL} \\
+3 & 6 & 0          & 6 & 5 & \text{NIL} \\
+\end{array}
+$$
+</div>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<p>So, the $d_{ij}$ values that we get are</p>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<div>
+$$
+\begin{pmatrix}
+ 0 &  6 & \infty &  8 & -1 & \infty \\
+-2 &  0 & \infty &  2 & -3 & \infty \\
+-5 & -3 &      0 & -1 & -6 &     -8 \\
+-4 &  2 & \infty &  0 & -5 & \infty \\
+ 5 &  7 & \infty &  9 &  0 & \infty \\
+ 3 &  5 &     10 &  7 &  2 &      0
+\end{pmatrix}
+$$
+</div>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="25-3-2">25.3-2</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>What is the purpose of adding the new vertex $s$ to $V^\prime$, yielding $V^\prime$?</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>This is only important when there are negative-weight cycles in the graph. Using a dummy vertex gets us around the problem of trying to compute $-\infty + \infty$ to find $\hat w$. Moreover, if we had instead used a vertex $v$ in the graph instead of the new vertex $s$, then we run into trouble if a vertex fails to be reachable from $v$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="25-3-3">25.3-3</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Suppose that $w(u, v) \ge 0$ for all edges $(u, v) \in E$. What is the relationship between the weight functions $w$ and $\hat w$?</p>
+</blockquote>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>If all the edge weights are nonnegative, then the values computed as the shortest distances when running Bellman-Ford will be all zero. This is because when constructing $G^\prime$ on the first line of Johnson&rsquo;s algorithm, we place an edge of weight zero from s to every other vertex. Since any path within the graph has no negative edges, its cost cannot be negative, and so, cannot beat the trivial path that goes straight from $s$ to any given vertex. Since we have that $h(u) = h(v)$ for every $u$ and $v$, the reweighting that occurs only adds and subtracts $0$, and so we have that $w(u, v) = \hat w(u, v)$</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="25-3-4">25.3-4</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Professor Greenstreet claims that there is a simpler way to reweight edges than the method used in Johnson&rsquo;s algorithm. Letting $w^* = \min_{(u, v) \in E} \{w(u, v)\}$, just define $\hat w(u, v) = w(u, v) - w^*$ for all edges $(u, v) \in E$. What is wrong with the professor&rsquo;s method of reweighting?</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>It changes shortest paths. Consider the following graph. $V = \{s, x, y, z\}$, and there are 4 edges: $w(s, x) = 2$, $w(x, y) = 2$, $w(s, y) = 5$, and $w(s, z) = -10$. So we&rsquo;d add $10$ to every weight to make $\hat w$. With $w$, the shortest path from $s$ to $y$ is $s \to x \to y$, with weight $4$. With $\hat w$, the shortest path from $s$ to $y$ is $s \to y$, with weight $15$. (The path $s \to x \to y$ has weight $24$.) The problem is that by just adding the same amount to every edge, you penalize paths with more edges, even if their weights are low.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<h2 id="25-3-5">25.3-5</h2>
+
+<blockquote>
+<p>Suppose that we run Johnson&rsquo;s algorithm on a directed graph $G$ with weight function $w$. Show that if $G$ contains a $0$-weight cycle $c$, then $\hat w(u, v) = 0$ for every edge $(u, v)$ in $c$.</p>
+</blockquote>
+
+<p>If $\delta(s, v) - \delta(s, u) \le w(u, v)$, we have</p>
+
+<div>
+$$
+\delta(s, u) \le \delta(s, v) + (0 - w(u, v)) < \delta(s, u) + w(u, v) - w(u, v) = \delta(s, u),
+$$
+</div>
+
+<p>which is impossible, thus $\delta(s, v) - \delta(s, u) = w(u, v)$, $\hat w(u, v) = w(u, v) + \delta(s, u) - \delta(s, v) = 0$.</p>
+
+<h2 id="25-3-6">25.3-6</h2>
+
+<blockquote>
+<p>Professor Michener claims that there is no need to create a new source vertex in line 1 of $\text{JOHNSON}$. He claims that instead we can just use $G^\prime = G$ and let $s$ be any vertex. Give an example of a weighted, directed graph $G$ for which incorporating the professor&rsquo;s idea into $\text{JOHNSON}$ causes incorrect answers. Then show that if $G$ is strongly connected (every vertex is reachable from every other vertex), the results returned by $\text{JOHNSON}$ with the professor&rsquo;s modification are correct.</p>
+</blockquote>
+
+<p>In this solution, we assume that $\infty - \infty$ is undefined, in particular, it&rsquo;s not $0$.</p>
+
+<p>Let $G = (V, E)$, where $V = {s, u}$, $E = \{(u, s)\}$, and $w(u, s) = 0$. There is only one edge, and it enters $s$. When we run Bellman-Ford from $s$, we get $h(s) = \delta(s, s) = 0$ and $h(u) = \delta(s, u) = \infty$. When we reweight, we get $\hat w(u, s) = 0 + \infty - 0 = \infty$. We compute $\hat\delta(u, s) = \infty$, and so we compute $d_{us} = \infty + 0 - \infty \ne 0$. Since $\delta(u, s) = 0$, we get an incorrect answer.</p>
+
+<p>If the graph $G$ is strongly connected, then we get $h(v) = \delta(s, v) &lt; \infty$ for all vertices $v \in V$. Thus, the triangle inequality says that $h(v) \le h(u) + w(u, v)$ for all edges $(u, v) \in E$, and so $\hat w(u, v) = w(u, v) + h(u) - h(v) \ge 0$. Moreover, all edge weights $\hat w(u, v)$ used in Lemma 25.1 are finite, and so the lemma holds. Therefore, the conditions we need in order to use Johnson&rsquo;s algorithm hold: that reweighting does not change shortest paths, and that all edge weights $\hat w(u, v)$ are nonnegative. Again relying on $G$ being strongly connected, we get that $\hat\delta(u, v) &lt; \infty$ for all edges $(u, v) \in E$, which means that $d_{uv} = \hat\delta(u, v) + h(v) - h(u)$ is finite and correct.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12133,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12148,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12515,6 +12670,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12529,6 +12685,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12561,6 +12720,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12578,6 +12738,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14626,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap25/25.2/" title="25.2 The Floyd-Warshall algorithm"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap25/problems/" title="Chap 25 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14639,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

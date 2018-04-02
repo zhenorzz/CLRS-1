@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>8.4 Bucket sort :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap08/8.4/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1653,7 +1653,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/" title="8 Sorting in Linear Time" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1736,7 +1736,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/8.4/" title="8.4 Bucket sort" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap08/8.4/" title="8.4 Bucket sort" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap08/8.4/">
         8.4 Bucket sort
         
@@ -8374,56 +8374,182 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap08/8.4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap08/'>8 Sorting in Linear Time</a> > 8.4 Bucket sort
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#8-4-1">8.4-1</a></li>
+<li><a href="#8-4-2">8.4-2</a></li>
+<li><a href="#8-4-3">8.4-3</a></li>
+<li><a href="#8-4-4-star">8.4-4 $\star$</a></li>
+<li><a href="#8-4-5-star">8.4-5 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>8.4 Bucket sort</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="8-4-1">8.4-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Using Figure 8.4 as a model, illustrate the operation of $\text{BUCKET-SORT}$ on the array $A = \langle .79, .13, .16, .64, .39, .20, .89, .53, .71, .42 \rangle$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\begin{array}{cl}
+R &         \\
+0 &         \\
+1 & .13 .16 \\
+2 & .20     \\
+3 & .39     \\
+4 & .42     \\
+5 & .53     \\
+6 & .64     \\
+7 &         \\
+8 & .79 .71 \\
+9 & .89     \\
+\end{array}
+$$
+</div>
+<div>
+$$
+A = \langle.13, .16, .20, .39, .42, .53, .64, .71, .79, .89 \rangle.
+$$
+</div>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="8-4-2">8.4-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Explain why the worst-case running time for bucket sort is $\Theta(n^2)$. What simple change to the algorithm preserves its linear average-case running time and makes its worst-case running time $O(n\lg n)$?</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>The worst-case running time for the bucket-sort algorithm occurs when the assumption of uniformly distributed input does not hold. If, for example, all the input ends up in the first bucket, then in the insertion sort phase it needs to sort all the input, which takes $O(n^2)$.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>A simple change that will preserve the linear expected running time and make the worst-case running time $O(n\lg n)$ is to use a worst-case $O(n\lg n)$-time algorithm, such as merge sort, instead of insertion sort when sorting the buckets.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<h2 id="8-4-3">8.4-3</h2>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<blockquote>
+<p>Let $X$ be a random variable that is equal to the number of heads in two flips of a fair coin. What is $\text E[X^2]$? What is $\text E^2[X]$?</p>
+</blockquote>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<div>
+$$
+\begin{aligned}
+  \text E[X] & = 2 \cdot \frac{1}{4} + 1 \cdot \frac{1}{2} + 0 \cdot \frac{1}{4} = 1 \\
+\text E[X^2] & = 4 \cdot \frac{1}{4} + 1 \cdot \frac{1}{2} + 0 \cdot \frac{1}{4} = 1.5 \\
+\text E^2[X] & = \text E[X] \cdot \text E[X] = 1 \cdot 1 = 1.
+\end{aligned}
+$$
+</div>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="8-4-4-star">8.4-4 $\star$</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>We are given $n$ points in the unit circle, $p_i = (x_i, y_i)$, such that $0 &lt; x_i^2 + y_i^2 \le 1$ for $i = 1, 2, \ldots, n$. Suppose that the points are uniformly distributed; that is, the probability of finding a point in any region of the circle is proportional to the area of that region. Design an algorithm with an average-case running time of $\Theta(n)$ to sort the $n$ points by their distances $d_i = \sqrt{x_i^2 + y_i^2}$ from the origin. ($\textit{Hint:}$ Design the bucket sizes in $\text{BUCKET-SORT}$ to reﬂect the uniform distribution of the points in the unit circle.)</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>Bucket sort by radius,</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<div>
+$$
+\begin{aligned}
+\pi r_i^2 & = \frac{i}{10} \cdot \pi 1^2 \\
+r_i & = \sqrt{\frac{i}{10}}.
+\end{aligned}
+$$
+</div>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<h2 id="8-4-5-star">8.4-5 $\star$</h2>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<blockquote>
+<p>A <strong><em>probability distribution function</em></strong> $P(x)$ for a random variable $X$ is defined by $P(x) = \Pr{X \le x}$. Suppose that we draw a list of $n$ random variables $X_1, X_2, \ldots, X_n$ from a continuous probability distribution function $P$ that is computable in $O(1)$ time. Give an algorithm that sorts these numbers in linear average-case time.</p>
+</blockquote>
+
+<p>Bucket sort by $p_i$,</p>
+
+<div>
+$$
+P(p_i) = \frac{i}{10}.
+$$
+</div>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9348,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9363,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9593,6 +9723,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9607,6 +9738,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9655,6 +9789,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9672,6 +9807,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14601,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap08/8.3/" title="8.3 Radix sort"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap08/problems/" title="Chap 8 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

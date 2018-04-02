@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>26.5 The relabel-to-front algorithm :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap26/26.5/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5842,7 +5842,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/" title="26 Maximum Flow" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5944,7 +5944,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/26.5/" title="26.5 The relabel-to-front algorithm" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap26/26.5/" title="26.5 The relabel-to-front algorithm" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap26/26.5/">
         26.5 The relabel-to-front algorithm
         
@@ -8374,56 +8374,165 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap26/26.5.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap26/'>26 Maximum Flow</a> > 26.5 The relabel-to-front algorithm
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#26-5-1">26.5-1</a></li>
+<li><a href="#26-5-2-star">26.5-2 $\star$</a></li>
+<li><a href="#26-5-3">26.5-3</a></li>
+<li><a href="#26-5-4-star">26.5-4 $\star$</a></li>
+<li><a href="#26-5-5">26.5-5</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>26.5 The relabel-to-front algorithm</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="26-5-1">26.5-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Illustrate the execution of $\text{RELABEL-TO-FRONT}$ in the manner of Figure 26.10 for the flow network in Figure 26.1(a). Assume that the initial ordering of vertices in $L$ is $\langle v_1, v_2, v_3, v_4 \rangle$ and that the neighbor lists are</p>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\begin{aligned}
+v_1.N & = \langle s, v_2, v_3 \rangle, \\
+v_2.N & = \langle s, v_1, v_3, v_4 \rangle, \\
+v_3.N & = \langle v_1, v_2, v_4, t \rangle, \\
+v_4.N & = \langle v_2, v_3, t \rangle.
+\end{aligned}
+$$
+</div>
+</blockquote>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>When we initialize the preflow, we have $26$ units of flow leaving $s$. Then, we consider $v_1$ since it is the first element in the $L$ list. When we discharge it, we increase it&rsquo;s height to $1$ so that it can dump $12$ of it&rsquo;s excess along its edge to vertex $v_3$, to discharge the rest of it, it has to increase it&rsquo;s height to $|V| + 1$ to discharge it back to $s$. It was already at the front, so, we consider $v_2$. We increase its height to $1$. Then, we send all of its excess along its edge to $v_4$. We move it to the front, which means we next consider $v_1$, and do nothing because it is not overflowing. Up next is vertex $v_3$. After increasing its height to $1$, it can send all of its excess to $t$. This puts $v_3$ at the front, and we consider the non-overflowing vertices $v_2$ and $v_1$. Then, we consider $v_4$, it increases its height to $1$, then sends $4$ units to $t$. Since it still has an excess of $10$ units, it increases its height once again. Then it becomes valid for it to send flow back to $v_2$ or to $v_3$. It considers $v_4$ first because of the ordering of its neighbor list. This means that $10$ units of flow are pushed back to $v_2$. Since $v_4.h$ increased, it moves to the front of the list Then, we consider $v_2$ since it is the only still overflowing vertex. We increase its height to $3$. Then, it is overflowing by $10$ so it increases its height to $3$ to send $6$ units to $v_4$. It&rsquo;s height increased so it goes to the  of the list. Then, we consider $v_4$, which is overflowing. it increases its height to $3$, then it sends $6$ units to $v_3$. Again, it goes to the front of the list. Up next is $v_2$ which is not overflowing, $v_3$ which is, so it increases it&rsquo;s height by $1$ to send $4$ units of flow to $t$. Then sends $2$ units to $v_4$ after increasing in height. The excess flow keeps bobbing around the four vertices, each time requiring them to increase their height a bit to discharge to a neighbor only to have that neighbor increase to discharge it back until $v_2$ has increased in height enough to send all of it&rsquo;s excess back to s, this completes and gives us a maximum flow of $23$.</p>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<h2 id="26-5-2-star">26.5-2 $\star$</h2>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<blockquote>
+<p>We would like to implement a push-relabel algorithm in which we maintain a firstin, first-out queue of overflowing vertices. The algorithm repeatedly discharges the vertex at the head of the queue, and any vertices that were not overflowing before the discharge but are overflowing afterward are placed at the end of the queue. After the vertex at the head of the queue is discharged, it is removed. When the queue is empty, the algorithm terminates. Show how to implement this algorithm to compute a maximum flow in $O(V^3)$ time.</p>
+</blockquote>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>Initially, the vertices adjacent to $s$ are the only ones which are overflowing. The implementation is as follows:</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<pre><code>PUSH-RELABEL-QUEUE(G, s)
+    INITIALIZE-PREFLOW(G, s)
+    Initialize an empty queue q
+    for v ∈ G.Adj[s]
+        q.push(v)
+    while q.head != NIL
+        DISCHARGE(q.head)
+        q.pop()
+</code></pre>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>Note that we need to modify the $\text{DISCHARGE}$ algorithm to push vertices $v$ onto the queue if $v$ was not overflowing before a discharge but is overflowing after one.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>Between lines 7 and 8 of $\text{DISCHARGE}(u)$, add the line &ldquo;if $v.e &gt; 0$, $q.push(v)$.&rdquo; This is an implementation of the generic push-relabel algorithm, so we know it is correct. The analysis of runtime is almost identical to that of Theorem 26.30. We just need to verify that there are at most $|V|$ calls to $\text{DISCHARGE}$ between two consecutive relabel operations. Observe that after calling $\text{PUSH}(u, v)$, Corollary 26.28 tells us that no admissible edges are entering $v$. Thus, once $v$ is put into the queue because of the push, it can&rsquo;t be added again until it has been relabeled. Thus, at most $|V|$ vertices are added to the queue between relabel operations.</p>
 
-<h1 id="more-informations">More Informations</h1>
+<h2 id="26-5-3">26.5-3</h2>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<blockquote>
+<p>Show that the generic algorithm still works if $\text{RELABEL}$ updates $u.h$ by simply computing $u.h = u.h + 1$. How would this change affect the analysis of $\text{RELABEL-TO-FRONT}$?</p>
+</blockquote>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p>If we change relabel to just increment the value of $u$, we will not be ruining the correctness of the Algorithm. This is because since it only applies when $u.h \le v.h$, we won&rsquo;t be every creating a graph where $h$ ceases to be a height function, since $u.h$ will only ever be increasing by exactly $1$ whenever relabel is called, ensuring that $u.h + 1 \le v.h$. This means that Lemmatae 26.15 and 26.16 will still hold. Even Corollary 26.21 holds since all it counts on is that relabel causes some vertex&rsquo;s $h$ value to increase by at least $1$, it will still work when we have all of the operations causing it to increase by exactly $1$. However, Lemma 26.28 will no longer hold. That is, it may require more than a single relabel operation to cause an admissible edge to appear, if for example, $u.h$ was strictly less than the $h$ values of all its neighbors. However, this lemma is not used in the proof of Exercise 26.4-3, which bounds the number of relabel operations. Since the number of relabel operations still have the same bound, and we know that we can simulate the old relabel operation by doing (possibly many) of these new relabel operations, we have the same bound as in the original algorithm with this different relabel operation.</p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<h2 id="26-5-4-star">26.5-4 $\star$</h2>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<blockquote>
+<p>Show that if we always discharge a highest overflowing vertex, we can make the</p>
+</blockquote>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p>We&rsquo;ll keep track of the heights of the overflowing vertices using an array and a series of doubly linked lists. In particular, let $A$ be an array of size $|V|$, and let $A[i]$ store a list of the elements of height $i$. Now we create another list $L$, which is a list of lists. The head points to the list containing the vertices of highest height. The next pointer of this list points to the next nonempty list stored in $A$, and so on. This allows for constant time insertion of a vertex into $A$, and also constant time access to an element of largest height, and because all lists are doubly linked, we can add and delete elements in constant time. Essentially, we are implementing the algorithm of Exercise 26.5-2, but with the queue replaced by a priority queue with constant time operations. As before, it will suffice to show that there are at most $|V|$ calls to discharge between consecutive relabel operations.</p>
+
+<p>Consider what happens when a vertex $v$ is put into the priority queue. There must exist a vertex $u$ for which we have called $\text{PUSH}(u, v)$. After this, no ad- missible edge is entering $v$, so it can&rsquo;t be added to the priority queue again until after a relabel operation has occurred on $v$. Moreover, every call to $\text{DISCHARGE}$ terminates with a $\text{PUSH}$, so for every call to $\text{DISCHARGE}$ there is another vertex which can&rsquo;t be added until a relabel operation occurs. After $|V|$ $\text{DISCHARGE}$ operations and no relabel operations, there are no remaining valid $\text{PUSH}$ operations, so either the algorithm terminates, or there is a valid relabel operation which is performed. Thus, there are $O(V^3)$ calls to $\text{DISCHARGE}$. By carrying out the rest of the analysis of Theorem 26.30, we conclude that the runtime is $O(V^3)$.</p>
+
+<h2 id="26-5-5">26.5-5</h2>
+
+<blockquote>
+<p>Suppose that at some point in the execution of a push-relabel algorithm, there exists an integer $0 &lt; k \le |V| - 1$ for which no vertex has $v.h = k$. Show that all vertices with $v.h &gt; k$ are on the source side of a minimum cut. If such a $k$ exists, the <strong><em>gap heuristic</em></strong> updates every vertex $v \in V - {s}$ for which $v.h &gt; k$, to set $v.h = \max(v.h, |V| + 1)$. Show that the resulting attribute $h$ is a height function. (The gap heuristic is crucial in making implementations of the push-relabel method perform well in practice.)</p>
+</blockquote>
+
+<p>Suppose to try and obtain a contradiction that there were some minimum cut for which a vertex that had $v.h &gt; k$ were on the sink side of that cut. For that minimum cut, there is a residual flow network for which that cut is saturated. Then, if there were any vertices that were also on the sink side of the cut which had an edge going to $v$ in this residual flow network, since it&rsquo;s $h$ value cannot be equal to $k$, we know that it must be greater than $k$ since it could be only at most one less than $v$. We can continue in this way to let $S$ be the set of vertices on the sink side of the graph which have an $h$ value greater than $k$. Suppose that there were some simple path from a vertex in $S$ to $s$. Then, at each of these steps, the height could only decrease by at most $1$, since it cannot get from above $k$ to $0$ without going through $k$, we know that there is no path in the residual flow network going from a vertex in $S$ to $s$. Since a minimal cut corresponds to disconnected parts of the residual graph for a maximum flow, and we know there is no path from $S$ to $s$, there is a minimum cut for which $S$ lies entirely on the source side of the cut. This was a contradiction to how we selected $v$, and so have shown the first claim.</p>
+
+<p>Now we show that after updating the $h$ values as suggested, we are still left with a height function. Suppose we had an edge $(u, v)$ in the residual graph. We knew from before that $u.h \le v.h + 1$. However, this means that if $u.h &gt; k$, so must be $v.h$. So, if both were above $k$, we would be making them equal, causing the inequality to still hold. Also, if just $v.k$ were above $k$, then we have not decreased it&rsquo;s $h$ value, meaning that the inequality also still must hold. Since we have not changed the value of $s.h$, and $t.h$, we have all the required properties to have a height function after modifying the $h$ values as described.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12091,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12106,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12629,6 +12742,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12643,6 +12757,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12707,6 +12824,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12724,6 +12842,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14584,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap26/26.4/" title="26.4 Push-relabel algorithms"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap26/problems/" title="Chap 26 Problems" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14597,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

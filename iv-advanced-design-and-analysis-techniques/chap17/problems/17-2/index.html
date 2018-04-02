@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>17-2 Making binary search dynamic :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3909,7 +3909,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/" title="17 Amortized Analysis" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4012,7 +4012,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/" title="Chap 17 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4055,7 +4055,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-2/" title="17-2 Making binary search dynamic" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-2/" title="17-2 Making binary search dynamic" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-2/">
         Problem 17-2
         
@@ -8374,56 +8374,165 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap17/Problems/17-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap17/'>17 Amortized Analysis</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/'>Chap 17 Problems</a> > 17-2 Making binary search dynamic
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>17-2 Making binary search dynamic</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Binary search of a sorted array takes logarithmic search time, but the time to insert a new element is linear in the size of the array. We can improve the time for insertion by keeping several sorted arrays.</p>
+
+<p>Specifically, suppose that we wish to support $\text{SEARCH}$ and $\text{INSERT}$ on a set of $n$ elements. Let $k = \lceil \lg(n + 1) \rceil$, and let the binary representation of $n$ be $\langle n_{k - 1}, n_{k - 2}, \ldots, n_0 \rangle$. We have $k$ sorted arrays $A_0, A_1, \ldots, A_{k - 1}$, where for $i = 0, 1, \ldots, k - 1$, the length of array $A_i$ is $2^i$. Each array is either full or empty, depending on whether $n_i = 1$ or $n_i = 0$, respectively. The total number of elements held in all $k$ arrays is therefore $\sum_{i = 0}^{k - 1} n_i 2^i = n$. Although each individual array is sorted, elements in different arrays bear no particular relationship to each other.</p>
+
+<p><strong>a.</strong> Describe how to perform the $\text{SEARCH}$ operation for this data structure. Analyze its worst-case running time.</p>
+
+<p><strong>b.</strong> Describe how to perform the $\text{INSERT}$ operation. Analyze its worst-case and amortized running times.</p>
+
+<p><strong>c.</strong> Discuss how to implement $\text{DELETE}$.</p>
+</blockquote>
+
+<p><strong>a.</strong> The $\text{SEARCH}$ operation can be performed by searching each of the individually sorted arrays. Since all the individual arrays are sorted, searching one of them using a binary search algorithm takes $O(\lg m)$ time, where $m$ is the size of the array. In an unsuccessful search, the time is $\Theta(\lg m)$. In the worst case, we may assume that all the arrays $A_0, A_1, \ldots, A_{k - 1}$ are full, $k = \lceil \lg(n + 1) \rceil$, and we perform an unsuccessful search. The total time taken is</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & = \Theta(\lg 2^{k - 1} + \lg 2^{k - 2} + \cdots + \lg 2^1 + \lg 2^0) \\
+     & = \Theta((k - 1) + (k - 2) + \cdots + 1 + 0) \\
+     & = \Theta(k(k - 1) / 2) \\
+     & = \Theta(\lceil \lg(n + 1)\rceil(\lceil \lg(n + 1) \rceil) - 1) / 2) \\
+     & = \Theta(\lg^2 n).
+\end{aligned}
+$$
+</div>
+
+<p>Thus, the worst-case running time is $\Theta(\lg^2 n)$.</p>
+
+<p><strong>b.</strong> We create a new sorted array of size $1$ containing the new element to be inserted. If array $A_0$ (which has size $1$) is empty, then we replace $A_0$ with the new sorted array. Otherwise, we merge sort the two arrays into another sorted array of size $2$. If $A_1$ is empty, then we replace $A_1$ with the new array; otherwise we merge sort the arrays as before and continue. Since array $A_i$ is of size $2^i$, if we merge sort two arrays of size $2^i$ each, we obtain one of size $2^{i + 1}$, which is the size of $A_{i + 1}$. Thus, this method will result in another list of arrays in the same structure that we had before.</p>
+
+<p>Let us analyze its worst-case running time. We will assume that merge sort takes $2m$ time to merge two sorted lists of size $m$ each. If all the arrays $A_0, A_1, \ldots, A_{k - 2}$ are full, then the running time to fill array $A_{k - 1}$ would be</p>
+
+<div>
+$$
+\begin{aligned}
+T(n) & = 2(2^0 + 2^1 + \cdots + 2^{k - 2}) \\
+     & = 2(2^{k - 1} - 1) \\
+     & = 2^k - 2 \\
+     & = \Theta(n).
+\end{aligned}
+$$
+</div>
+
+<p>Therefore, the worst-case time to insert an element into this data structure is $\Theta(n)$.</p>
+
+<p>However, let us now analyze the amortized running time. Using the aggregate method, we compute the total cost of a sequence of $n$ inserts, starting with the empty data structure. Let $r$ be the position of the rightmost $0$ in the binary representation $\langle n_{k - 1}, n_{k - 2}, \ldots, n_0 \rangle$ of $n$, so that $n_j = 1$ for $j = 0, 1, \ldots, r - 1$. The cost of an insertion when $n$ items have already been inserted is</p>
+
+<div>
+$$
+\sum_{j = 0}^{r - 1} 2 \cdot 2^j = O(2^r).
+$$
+</div>
+
+<p>Furthermore, $r = 0$ half the time, $r = 1$ a quarter of the time, and so on. There are at most $\lceil n / 2^r \rceil$ insertions for each value of $r$. The total cost of the $n$ operations is therefore bounded by</p>
+
+<div>
+$$
+O\Bigg(\sum_{r = 0}^{\lceil \lg(n + 1) \rceil} \bigg(\bigg\lceil \frac{n}{2^r} \bigg\rceil\bigg) 2^r \Bigg) = O(n\lg n).
+$$
+</div>
+
+<p>The amortized cost per $\text{INSERT}$ operation, therefore is $O(\lg n)$.</p>
+
+<p>We can also use the accounting method to analyze the running time. We can charge $k$ to insert an element. $\$1$ pays for the insertion, and we put $\$(k - 1)$ on the inserted item to pay for it being involved in merges later on. Each time it is merged, it moves to a higher-indexed array, i.e., from $A_i$ to $A_{i + 1}$. It can move to a higher-indexed array at most $k - 1$ times, and so the $\$(k - 1)$ on the item suffices to pay for all the times it will ever be involved in merges. Since $k = \Theta(\lg n)$, we have an amortized cost of $\Theta(\lg n)$ per insertion.</p>
+
+<p><strong>c.</strong> $\text{DELETE}(x)$ will be implemented as follows:</p>
+
+<ol>
+<li>Find the smallest $j$ for which the array $A_j$ with $2^j$ elements is full. Let $y$ be the last element of $A_j$.</li>
+<li>Let $x$ be in the array $A_i$. If necessary, find which array this is by using the search procedure.</li>
+<li>Remove $x$ from $A_i$ and put $y$ into $A_i$ . Then move $y$ to its correct place in $A_i$ .</li>
+<li>Divide $A_j$ (which now has $2^j - 1$ elements left): The first element goes into array $A_0$ , the next 2 elements go into array $A_1$ , the next 4 elements go into array $A_2$, and so forth. Mark array $A_j$ as empty. The new arrays are created already sorted.</li>
+</ol>
+
+<p>The cost of $\text{DELETE}$ is $\Theta(n)$ in the worst case, where $i = k - 1$ and $j = k - 2: \Theta(\lg n)$ to find $A_j$, $\Theta(\lg^2 n)$ to find $A_i$, $\Theta(2^i) = \Theta(n)$ to put $y$ in its correct place in array $A_i$, and $\Theta(2^j) = \Theta(n)$ to divide array $A_j$ . The following sequence of $n$ operations, where $n / 3$ is a power of $2$, yields an amortized cost that is no better: perform $n / 3$ $\text{INSERT}$ operations, followed by $n / 3$ pairs of $\text{DELETE}$ and $\text{INSERT}$. It costs $O(n\lg n)$ to do the first $n / 3$ $\text{INSERT}$ operations. This creates a single full array. Each subsequent $\text{DELETE}$/$\text{INSERT}$ pair costs $\Theta(n)$ for the $\text{DELETE}$ to divide the full array and another $\Theta(n)$ for the $\text{INSERT}$ to recombine it. The total is then $\Theta(n^2)$, or $\Theta(n)$ per operation.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10841,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10746,6 +10856,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11247,6 +11360,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11261,6 +11375,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11326,6 +11443,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11338,6 +11456,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11355,6 +11476,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11370,6 +11492,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14588,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-1/" title="17-1 Bit-reversed binary counter"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-3/" title="17-3 Amortized weight-balanced trees" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14601,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>15-2 Longest palindrome subsequence :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699594" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699594" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699594" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699594" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699594" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699594" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699594" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699594" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699594" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699594"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699594"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699594"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699594"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3256,7 +3256,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/" title="15 Dynamic Programming" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3378,7 +3378,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/" title="Chap 15 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3421,7 +3421,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-2/" title="15-2 Longest palindrome subsequence" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-2/" title="15-2 Longest palindrome subsequence" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-2/">
         Problem 15-2
         
@@ -8374,56 +8374,192 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap15/Problems/15-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/'>15 Dynamic Programming</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/'>Chap 15 Problems</a> > 15-2 Longest palindrome subsequence
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>15-2 Longest palindrome subsequence</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>A <strong><em>palindrome</em></strong> is a nonempty string over some alphabet that reads the same forward and backward. Examples of palindromes are all strings of length $1$, $\text{civic}$, $\text{racecar}$, and $\text{aibohphobia}$ (fear of palindromes).</p>
+
+<p>Give an efficient algorithm to find the longest palindrome that is a subsequence of a given input string. For example, given the input $\text{character}$, your algorithm should return $\text{carac}$. What is the running time of your algorithm?</p>
+</blockquote>
+
+<p>We solve the longest palindrome subsequence ($\text{LPS}$) problem in a manner similar to how we compute the longest common subsequence in Section 15.4.</p>
+
+<p><strong>Step 1: Characterizing a longest palindrome subsequence</strong></p>
+
+<p>The $\text{LPS}$ problem has an optimal-substructure property, where the subproblems correspond to pairs of indices, starting and ending, of the input sequence.</p>
+
+<p>For a sequence $X = \langle x_1, x_2, \ldots, x_n\rangle$, we denote the subsequence starting at $x_i$ and ending at $x_j$ by $X_{ij} = \langle x_i, x_{i + 1}, \ldots, x_j \rangle$.</p>
+
+<p><strong><em>Theorem (Optimal substructure of an LPS)</em></strong></p>
+
+<p>Let $X = \langle x_1, x_2, \ldots, x_n \rangle$ be the input sequence, and let $Z = \langle z_1, z_2, \ldots, z_m \rangle$ be any $\text{LPS}$ of $X$.</p>
+
+<ol>
+<li>If $n = 1$, then $m = 1$ and $z_1 = x_1$.</li>
+<li>If $n = 2$ and $x_1 = x_2$, then $m = 2$ and $z_1 = z_2 = x_1 = x_2$.</li>
+<li>If $n = 2$ and $x_1 \ne x_2$, then $m = 1$ and $z_1$ is equal to either $x_1$ or $x_n$.</li>
+<li>If $n &gt; 2$ and $x_1 = x_n$, then $m &gt; 2$, $z_1 = z_m = x_1 = x_n$, and $Z_{2, m - 1}$ is an $\text{LPS}$ of $X_{2, n - 1}$.</li>
+<li>If $n &gt; 2$ and $x_1\ne x_n$, then $z_1 \ne x_1$ implies that $Z_{1, m}$ is an $\text{LPS}$ of $X_{2, n}$.</li>
+<li>If $n &gt; 2$ and $x_1\ne x_n$, then $z_m \ne x_n$ implies that $Z_{1, m}$ is an $\text{LPS}$ of $X_{1, n - 1}$.</li>
+</ol>
+
+<p><strong><em>Proof</em></strong></p>
+
+<p>Properties 1., 2., and 3. follow trivially from the definition of $\text{LPS}$.</p>
+
+<ol>
+<li>If $n &gt; 2$ and $x_1 = x_n$, then we can choose $x_1$ and $x_n$ as the ends of $Z$ and at least one more element of $X$ as part of $Z$. Thus, it follows that $m &gt; 2$. If $z_1 \ne x_1$, then we could append $x_1 = x_n$ to the ends of $Z$ to obtain a palindrome subsequence of $X$ with length $m + 2$, contradicting the supposition that $Z$ is a longest palindrome subsequence of $X$. Thus, we must have $z_1 = x_1 (= x_n = zm)$. Now, $Z_{2, m - 1}$ is a length-$(m - 2)$ palindrome subsequence of $X_{2, n - 1}$. We wish to show that it is an $\text{LPS}$. Suppose for the purpose of contradiction that there exists a palindrome subsequence $W$ of $X_{2, n - 1}$ with length greater than $m - 2$. Then, appending $x_1 = x_n$ to the ends of $W$ produces a palindrome subsequence of $X$ whose length is greater than $m$, which is a contradiction.</li>
+<li>If $z_1 \ne x_1$, then $Z$ is a palindrome subsequence of $X_{2, n}$. If there were a palindrome subsequence $W$ of $X_{2, n}$ with length greater than $m$, then $W$ would also be a palindrome subsequence of $X$, contradicting the assumption that $Z$ is an $\text{LPS}$ of $X$.</li>
+<li>The proof is symmetric to (2).</li>
+</ol>
+
+<p>The way that the theorem characterizes longest palindrome subsequences tells us that an $\text{LPS}$ of a sequence contains within it an $\text{LPS}$ of a subsequence of the sequence. Thus, the $\text{LPS}$ problem has an optimal-substructure property.</p>
+
+<p><strong>Step 2: A recursive solution</strong></p>
+
+<p>The theorem implies that we should examine either one or two subproblems when finding an $\text{LPS}$ of $X = \langle x_1, x_2, \ldots, x_n \rangle$, depending on whether $x_1 = x_n$.</p>
+
+<p>Let us define $p[i, j]$  to be the length of an $\text{LPS}$ of the subsequence $X_{ij}$. If $i = j$, the $\text{LPS}$ has length $1$. If $j = i + 1$, then the $\text{LPS}$ has length either $1$ or $2$, depending on whether $x_i = x_j$. The optimal substructure of the $\text{LPS}$ problem gives the following recursive formula:</p>
+
+<div>
+$$
+p[i, j] =
+\begin{cases}
+1                   & \text{if $i = j$}, \\
+2                   & \text{if $j = i + 1$ and $x_i = x_j$}, \\
+1                   & \text{if $j = i + 1$ and $x_i \ne x_j$}, \\
+p[i + 1, j - 1] + 2 & \text{if $j > i + 1$ and $x_i = x_j$}, \\
+\max(p[i, j - 1], p[i + 1, j]) & \text{if $j > i + 1$ and $x_i \ne x_j$}.
+\end{cases}
+$$
+</div>
+
+<p><strong>Step 3: Computing the length of an LPS</strong></p>
+
+<p>Procedure $\text{LONGEST-PALINDROME}$ takes a sequence $X = \langle x_1, x_2, \ldots, x_n \rangle$ as input. The procedure fills cells $p[i, i]$, where $1 \le i \le n$, and $p[i, i + 1]$, where $1 \le i \le n - 1$, as the base cases. It then starts filling cells $p[i, j]$, where $j &gt; i + 1$. The procedure fills the $p$ table row by row, starting with row $n - 2$ and moving toward row $1$. (Rows $n - 1$ and $n$ are already filled as part of the base cases.) Within each row, the procedure fills the entries from left to right. The procedure also maintains the table $b[1..n, 1..n]$ to help us construct an optimal solution. Intuitively, $b[i, j]$ points to the table entry corresponding to the optimal subproblem solution chosen when computing $p[i, j]$. The procedure returns the $b$ and $p$ tables, $p[1, n]$ contains the length of an $\text{LPS}$ of $X$. The running time of $\text{LONGEST-PALINDROME}$ is clearly $\Theta(n^2)$.</p>
+
+<pre><code class="language-cpp">LONGEST-PALINDROME(X)
+    n = X.length
+    let b[1..n, 1..n] and p[0..n, 0..n] be new tables
+    for i = 1 to n - 1
+        p[i, i] = 1
+        j = i + 1
+        if xi == xj
+            p[i, j] = 2
+            b[i, j] = &quot;↙&quot;
+        else p[i, j] = 1
+            b[i, j] = &quot;↓&quot;
+    p[n, n] = 1
+    for i = n - 2 downto 1
+        for j = i + 2 to n
+            if xi == xj
+                p[i, j] = p[i + 1, j - 1] + 2
+                b[i, j] = &quot;↙&quot;
+            else if p[i + 1, j] ≥ p[i, j - 1]
+                p[i, j] = p[i + 1, j]
+                b[i, j] = &quot;↓&quot;
+            else p[i, j] = p[i, j - 1]
+                b[i, j] = &quot;←&quot;
+    return p and b
+</code></pre>
+
+<p><strong>Step 4: Constructing an LPS</strong></p>
+
+<p>The $b$ table returned by $\text{LONGEST-PALINDROME}$ enables us to quickly construct an $\text{LPS}$ of $X = \langle x_1, x_2, \ldots, x_m\rangle$. We simply begin at $b[1, n]$ and trace through the table by following the arrows. Whenever we encounter a &ldquo;$\swarrow$&rdquo; in entry $b[i, j]$, it implies that $x_i = y_j$ are the first and last elements of the $\text{LPS}$ that $\text{LONGEST-PALINDROME}$ found. The following recursive procedure returns a sequence $S$ that contains an $\text{LPS}$ of $X$. The initial call is $\text{GENERATE-LPS}(b, X, 1, X.length, \langle \rangle)$, where $\langle\rangle$ denotes an empty sequence. Within the procedure, the symbol $||$ denotes concatenation of a symbol and a sequence.</p>
+
+<pre><code class="language-cpp">GENERATE-LPS(b, X, i, j, S)
+    if i &gt; j
+        return S
+    else if i == j
+        return S || xi
+    else if b[i, j] == &quot;↙&quot;
+        return xi || GENERATE-LPS(b, X, i + 1, j - 1, S) || xi
+    else if b[i, j] == &quot;↓&quot;
+        return GENERATE-LPS(b, X, i + 1, j, S)
+    else return GENERATE-LPS(b, X, i, j - 1, S)
+</code></pre>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10868,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10747,6 +10884,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10761,6 +10899,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10842,6 +10983,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10854,6 +10996,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10870,6 +11015,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10887,6 +11033,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14612,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-1/" title="15-1 Longest simple path in a directed acyclic graph"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-3/" title="15-3 Bitonic euclidean" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14625,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699594"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699594"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699594"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699594"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699594"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699594"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699594"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699594"></script>
+    <script src="/CLRS/js/learn.js?1522699594"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699594"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699594" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699594"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>21.3 Disjoint-set forests :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/v-advanced-data-structures/chap21/21.3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4157,7 +4157,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4736,7 +4736,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap21/" title="21 Data Structures for Disjoint Sets" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4800,7 +4800,7 @@
  
   
     
-      <li data-nav-id="/CLRS/v-advanced-data-structures/chap21/21.3/" title="21.3 Disjoint-set forests" class="dd-item ">
+      <li data-nav-id="/CLRS/v-advanced-data-structures/chap21/21.3/" title="21.3 Disjoint-set forests" class="dd-item active">
         <a href="/CLRS/v-advanced-data-structures/chap21/21.3/">
         21.3 Disjoint-set forests
         
@@ -8374,56 +8374,171 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/V%20Advanced%20Data%20Structures/Chap21/21.3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/v-advanced-data-structures/'>V Advanced Data Structures</a> > <a href='/CLRS/v-advanced-data-structures/chap21/'>21 Data Structures for Disjoint Sets</a> > 21.3 Disjoint-set forests
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#21-3-1">21.3-1</a></li>
+<li><a href="#21-3-2">21.3-2</a></li>
+<li><a href="#21-3-3">21.3-3</a></li>
+<li><a href="#21-3-4">21.3-4</a></li>
+<li><a href="#21-3-5-star">21.3-5 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>21.3 Disjoint-set forests</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="21-3-1">21.3-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Redo Exercise 21.2-2 using a disjoint-set forest with union by rank and path compression.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p><img src="https://i.imgur.com/9jxMIwn.png?width=30rem" alt="" /></p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="21-3-2">21.3-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Write a nonrecursive version of $\text{FIND-SET}$ with path compression.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>To implement $\text{FIND-SET}$ nonrecursively, let $x$ be the element we call the function on. Create a linked list $A$ which contains a pointer to $x$. Each time we most one element up the tree, insert a pointer to that element into $A$. Once the root $r$ has been found, use the linked list to find each node on the path from the root to $x$ and update its parent to $r$.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="21-3-3">21.3-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Give a sequence of $m$ $\text{MAKE-SET}$, $\text{UNION}$, and $\text{FIND-SET}$ operations, $n$ of which are $\text{MAKE-SET}$ operations, that takes $\Omega(m\lg n)$ time when we use union by rank only.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>You need to find a sequence of $m$ operations on $n$ elements that takes $\Omega(m\lg n)$ time. Start with $n$ $\text{MAKE-SET}$s to create singleton sets ${x_1}, {x_2}, \ldots, {x_n}$. Next perform the $n - 1$ $\text{UNION}$ operations shown below to create a single set whose tree has depth $\lg n$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<div>
+$$\begin{array}{ll}
+\text{UNION($x_1, x_2$)} & \text{$n / 2$ of these} \\
+\text{UNION($x_3, x_4$)} &       \\
+\text{UNION($x_5, x_6$)} &       \\
+\vdots                           \\
+\text{UNION($x_{n - 1}, x_n$)} & \\
+\text{UNION($x_2, x_4$)} & \text{$n / 4$ of these} \\
+\text{UNION($x_6, x_8$)} &       \\
+\text{UNION($x_{10}, x_{12}$)} & \\
+\vdots                           \\
+\text{UNION($x_{n - 2}, x_n$)} & \\
+\text{UNION($x_4, x_8$)} & \text{$n / 2$ of these} \\
+\text{UNION($x_{12}, x_{16}$)} & \\
+\text{UNION($x_{20}, x_{24}$)} & \\
+\vdots                           \\
+\text{UNION($x_{n - 4}, x_n$)} & \\
+\vdots                           \\
+\text{UNION($x_{n / 2}, x_n$)} & \text{$1$ of these} \\
+\end{array}
+$$
+</div>
 
-<h1 id="more-informations">More Informations</h1>
+<p>Finally, perform $m - 2n + 1$ $\text{FIND-SET}$ operations on the deepest element in the tree. Each of these $\text{FIND-SET}$ operations takes $\Omega(\lg n)$ time. Letting $m \ge 3n$, we have more than $m / 3$ $\text{FIND-SET}$ operations, so that the total cost is $\Omega(m\lg n)$.</p>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<h2 id="21-3-4">21.3-4</h2>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<blockquote>
+<p>Suppose that we wish to add the operation $\text{PRINT-SET}(x)$, which is given a node $x$ and prints all the members of $x$&rsquo;s set, in any order. Show how we can add just a single attribute to each node in a disjoint-set forest so that $\text{PRINT-SET}(x)$ takes time linear in the number of members of $x$&rsquo;s set and the asymptotic running times of the other operations are unchanged. Assume that we can print each member of the set in $O(1)$ time.</p>
+</blockquote>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>Maintain a circular, singly linked list of the nodes of each set. To print, just follow the list until you get back to node $x$, printing each member of the list. The only other operations that change are $\text{FIND-SET}$, which sets $x.next = x$, and $\text{LINK}$, which exchanges the pointers $x.next$ and $y.next$.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<h2 id="21-3-5-star">21.3-5 $\star$</h2>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<blockquote>
+<p>Show that any sequence of $m$ $\text{MAKE-SET}$, $\text{FIND-SET}$, and $\text{LINK}$ operations, where all the $\text{LINK}$ operations appear before any of the $\text{FIND-SET}$ operations, takes only $O(m)$ time if we use both path compression and union by rank. What happens in the same situation if we use only the path-compression heuristic?</p>
+</blockquote>
+
+<p>With the path-compression heuristic, the sequence of $m$ $\text{MAKE-SET}$, $\text{FIND-SET}$, and $\text{LINK}$ operations, where all the $\text{LINK}$ operations take place before any of the $\text{FIND-SET}$ operations, runs in $O(m)$ time. The key observation is that once a node $x$ appears on a find path, $x$ will be either a root or a child of a root at all times thereafter.</p>
+
+<p>We use the accounting method to obtain the $O(m)$ time bound. We charge a $\text{MAKE-SET}$ operation two dollars. One dollar pays for the $\text{MAKE-SET}$, and one dollar remains on the node $x$ that is created. The latter pays for the first time that $x$ appears on a find path and is turned into a child of a root.</p>
+
+<p>We charge one dollar for a $\text{LINK}$ operation. This dollar pays for the actual linking of one node to another.</p>
+
+<p>We charge one dollar for a $\text{FIND-SET}$. This dollar pays for visiting the root and its child, and for the path compression of these two nodes, during the $\text{FIND-SET}$. All other nodes on the find path use their stored dollar to pay for their visitation and path compression. As mentioned, after the $\text{FIND-SET}$, all nodes on the find path become children of a root (except for the root itself), and so whenever they are visited during a subsequent $\text{FIND-SET}$, the $\text{FIND-SET}$ operation itself will pay for them.</p>
+
+<p>Since we charge each operation either one or two dollars, a sequence of $m$ operations is charged at most $2m$ dollars, and so the total time is $O(m)$.</p>
+
+<p>Observe that nothing in the above argument requires union by rank. Therefore, we get an $O(m)$ time bound regardless of whether we use union by rank.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11428,6 +11543,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11442,6 +11558,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11833,6 +11952,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11847,6 +11967,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11879,6 +12002,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11896,6 +12020,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14590,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/v-advanced-data-structures/chap21/21.2/" title="21.2 Linked-list representation of disjoint sets"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/v-advanced-data-structures/chap21/21.4/" title="21.4 Analysis of union by rank with path compression" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14603,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>14.2 How to augment a data structure :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap14/14.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3057,7 +3057,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap14/" title="14 Augmenting Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3102,7 +3102,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap14/14.2/" title="14.2 How to augment a data structure" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap14/14.2/" title="14.2 How to augment a data structure" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap14/14.2/">
         14.2 How to augment a data structure
         
@@ -8374,56 +8374,215 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap14/14.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap14/'>14 Augmenting Data Structures</a> > 14.2 How to augment a data structure
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#14-2-1">14.2-1</a></li>
+<li><a href="#14-2-2">14.2-2</a></li>
+<li><a href="#14-2-3-star">14.2-3 $\star$</a></li>
+<li><a href="#14-2-4-star">14.2-4 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>14.2 How to augment a data structure</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="14-2-1">14.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Show, by adding pointers to the nodes, how to support each of the dynamic-set queries $\text{MINIMUM}$, $\text{MAXIMUM}$, $\text{SUCCESSOR}$, and $\text{PREDECESSOR}$ in $O(1)$worstcase time on an augmented order-statistic tree. The asymptotic performance of other operations on order-statistic trees should not be affected.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<ul>
+<li><strong>MINIMUM:</strong> A pointer points to the minimum node, if the node is being deleted, move the pointer to its successor.</li>
+<li><strong>MAXIMUM:</strong> Similar to $\text{MINIMUM}$.</li>
+<li><strong>SUCCESSOR:</strong> Every node records its successor, the insertion and deletion is similar to that in linked list.</li>
+<li><strong>PREDECESSOR:</strong> Similar to $\text{MAXIMUM}$.</li>
+</ul>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="14-2-2">14.2-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Can we maintain the black-heights of nodes in a red-black tree as attributes in the nodes of the tree without affecting the asymptotic performance of any of the redblack tree operations? Show how, or argue why not. How about maintaining the depths of nodes?</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>Yes, we can maintain black-heights as attributes in the nodes of a red-black tree without affecting the asymptotic performance of the red-black tree operations. We appeal to Theorem 14.1, because the black-height of a node can be computed from the information at the node and its two children. Actually, the black-height can be computed from just one child&rsquo;s information: the black-height of a node is the black-height of a red child, or the black height of a black child plus one. The second child does not need to be checked because of property 5 of red-black trees.</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>Within the $\text{RB-INSERT-FIXUP}$ and $\text{RB-DELETE-FIXUP}$ procedures are color changes, each of which potentially cause $O(\lg n)$ black-height changes. Let us show that the color changes of the fixup procedures cause only local black-height changes and thus are constant-time operations. Assume that the black-height of each node $x$ is kept in the attribute $x.bh$.</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>For $\text{RB-INSERT-FIXUP}$, there are 3 cases to examine.</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p><strong>Case 1:</strong> $z$&rsquo;s uncle is red.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p><img src="https://i.imgur.com/rr7tQNC.png?width=45rem" alt="" /></p>
 
-<h1 id="more-informations">More Informations</h1>
+<ul>
+<li>Before color changes, suppose that all subtrees $\alpha$, $beta$, $\gamma$, $\delta$, $\epsilon$ have the same black-height $k$ with a black root, so that nodes $A$, $B$, $C$, and $D$ have blackheights of $k + 1$.</li>
+<li>After color changes, the only node whose black-height changed is node $C$. To fix that, add $z.p.p.bh = z.p.p.bh + 1$ after line 7 in $\text{RB-INSERT-FIXUP}$.</li>
+<li>Since the number of black nodes between $z.p.p$ and $z$ remains the same, nodes above $z.p.p$ are not affected by the color change.</li>
+</ul>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p><strong>Case 2:</strong> $z$&rsquo;s uncle $y$ is black, and $z$ is a right child.<br />
+<strong>Case 3:</strong> $z$&rsquo;s uncle $y$ is black, and $z$ is a left child.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<p><img src="https://i.imgur.com/UoqU0C0.png?width=45rem" alt="" /></p>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<ul>
+<li>With subtrees $\alpha$, $beta$, $\gamma$, $\delta$, $\epsilon$ of black-height $k$, we see that even with color changes and rotations, the black-heights of nodes $A$, $B$, and $C$ remain the same $(k + 1)$.</li>
+</ul>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>Thus, $\text{RB-INSERT-FIXUP}$ maintains its original $O(\lg n)$ time.<br />
+For $\text{RB-DELETE-FIXUP}$, there are 4 cases to examine.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<p><strong>Case 1:</strong> $x$&rsquo;s sibling $w$ is red.</p>
+
+<p><img src="https://i.imgur.com/r2aoYGf.png?width=45rem" alt="" /></p>
+
+<ul>
+<li>Even though case 1 changes colors of nodes and does a rotation, blackheights are not changed.</li>
+<li>Case 1 changes the structure of the tree, but waits for cases 2, 3, and 4 to deal with the &ldquo;extra black&rdquo; on x.</li>
+</ul>
+
+<p><strong>Case 2:</strong> $x$&rsquo;s sibling $w$ is black, and both of $w$&rsquo;s children are black.</p>
+
+<p><img src="https://i.imgur.com/3bphvRO.png?width=45rem" alt="" /></p>
+
+<ul>
+<li>$w$ is colored red, and $x$&rsquo;s &ldquo;extra&rdquo; black is moved up to $x.p$.</li>
+<li>Now we can add $x.p.bh = x.bh$ after line 10 in $\text{RB-DELETE-FIXUP}$.</li>
+<li>This is a constant-time update. Then, keep looping to deal with the extra black on $x.p$.</li>
+</ul>
+
+<p><strong>Case 3:</strong> $x$&rsquo;s sibling w is black, $w$&rsquo;s left child is red, and $w$&rsquo;s right child is black.</p>
+
+<p><img src="https://i.imgur.com/4TYq4Bv.png?width=45rem" alt="" /></p>
+
+<ul>
+<li>Regardless of the color changes and rotation of this case, the black-heights don&rsquo;t change.</li>
+<li>Case 3 just sets up the structure of the tree, so it can fall correctly into case 4.</li>
+</ul>
+
+<p><strong>Case 4:</strong> $x$&rsquo;s sibling $w$ is black, and $w$&rsquo;s right child is red.</p>
+
+<p><img src="https://i.imgur.com/mOILrVt.png?width=45rem" alt="" /></p>
+
+<ul>
+<li>Nodes $A$, $C$, and $E$ keep the same subtrees, so their black-heights don&rsquo;t change.</li>
+<li>Add these two constant-time assignments in $\text{RB-DELETE-FIXUP}$ after line 20:</li>
+
+<li><div>
+$$
+\begin{aligned}
+  x.p.bh & = x.bh + 1 \\
+x.p.p.bh & = x.p.bh + 1
+\end{aligned}
+$$
+</div></li>
+
+<li><p>The extra black is taken care of. Loop terminates.</p></li>
+</ul>
+
+<p>Thus, $\text{RB-DELETE-FIXUP}$ maintains its original $O(\lg n)$ time.</p>
+
+<p>Therefore, we conclude that black-heights of nodes can be maintained as attributes in red-black trees without affecting the asymptotic performance of red-black tree operations.</p>
+
+<p>For the second part of the question, no, we cannot maintain node depths without affecting the asymptotic performance of red-black tree operations. The depth of a node depends on the depth of its parent. When the depth of a node changes, the depths of all nodes below it in the tree must be updated. Updating the root node causes $n - 1$ other nodes to be updated, which would mean that operations on the tree that change node depths might not run in $O(n\lg n)$ time.</p>
+
+<h2 id="14-2-3-star">14.2-3 $\star$</h2>
+
+<blockquote>
+<p>Let $\otimes$ be an associative binary operator, and let $a$ be an attribute maintained in each node of a red-black tree. Suppose that we want to include in each node $x$ an additional attribute $f$ such that $x.f = x_1.a \otimes x_2.a \otimes \cdots \otimes x_m.a$, where $x_1, x_2, \ldots ,x_m$ is the inorder listing of nodes in the subtree rooted at $x$. Show how to update the $f$ attributes in $O(1)$ time after a rotation. Modify your argument slightly to apply it to the $size$ attributes in order-statistic trees.</p>
+</blockquote>
+
+<p>$x.f = x.left.f \otimes x.a \otimes x.right.f$.</p>
+
+<h2 id="14-2-4-star">14.2-4 $\star$</h2>
+
+<blockquote>
+<p>We wish to augment red-black trees with an operation $\text{RB-ENUMERATE}(x, a, b)$ that outputs all the keys $k$ such that $a \le k \le b$ in a red-black tree rooted at $x$. Describe how to implement $\text{RB-ENUMERATE}$ in $\Theta(m+\lg n)$ time, where $m$ is the number of keys that are output and $n$ is the number of internal nodes in the tree. ($\textit{Hint:}$ You do not need to add new attributes to the red-black tree.)</p>
+</blockquote>
+
+<ul>
+<li>$\Theta(\lg n)$: Find the smallest key that larger than or equal to $a$.</li>
+<li>$\Theta(m)$: Based on Exercise 14.2-1, find the $m$ successor.</li>
+</ul>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10111,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10126,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10615,6 +10778,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10629,6 +10793,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10645,6 +10812,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10662,6 +10830,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14634,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap14/14.1/" title="14.1 Dynamic order statistics"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap14/14.3/" title="14.3 Interval trees" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14647,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

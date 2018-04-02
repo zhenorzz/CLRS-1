@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>13-1 Persistent dynamic sets :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap13/problems/13-1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2835,7 +2835,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap13/" title="13 Red-Black Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2938,7 +2938,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap13/problems/" title="Chap 13 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2962,7 +2962,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap13/problems/13-1/" title="13-1 Persistent dynamic sets" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap13/problems/13-1/" title="13-1 Persistent dynamic sets" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap13/problems/13-1/">
         Problem 13-1
         
@@ -8374,56 +8374,197 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap13/Problems/13-1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap13/'>13 Red-Black Trees</a> > <a href='/CLRS/iii-data-structures/chap13/problems/'>Chap 13 Problems</a> > 13-1 Persistent dynamic sets
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>13-1 Persistent dynamic sets</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>During the course of an algorithm, we sometimes find that we need to maintain past versions of a dynamic set as it is updated. We call such a set <strong><em>persistent</em></strong>. One way to implement a persistent set is to copy the entire set whenever it is modified, but this approach can slow down a program and also consume much space. Sometimes, we can do much better.</p>
+
+<p>Consider a persistent set $S$ with the operations $\text{INSERT}$, $\text{DELETE}$, and $\text{SEARCH}$, which we implement using binary search trees as shown in Figure 13.8(a). We maintain a separate root for every version of the set. In order to insert the key $5$ into the set, we create a new node with key $5$. This node becomes the left child of a new node with key $7$, since we cannot modify the existing node with key $7$. Similarly, the new node with key $7$ becomes the left child of a new node with key $8$ whose right child is the existing node with key $10$. The new node with key $8$ becomes, in turn, the right child of a new root $r^\prime$ with key $4$ whose left child is the existing node with key $3$. We thus copy only part of the tree and share some of the nodes with the original tree, as shown in Figure 13.8(b).</p>
+
+<p>Assume that each tree node has the attributes $key$, $left$, and $right$ but no parent. (See also Exercise 13.3-6.)</p>
+
+<p><strong>a.</strong> For a general persistent binary search tree, identify the nodes that we need to change to insert a key $k$ or delete a node $y$.</p>
+
+<p><strong>b.</strong> Write a procedure $\text{PERSISTENT-TREE-INSERT}$ that, given a persistent tree $T$ and a key $k$ to insert, returns a new persistent tree $T^\prime$ that is the result of inserting $k$ into $T$.</p>
+
+<p><strong>c.</strong> If the height of the persistent binary search tree $T$ is $h$, what are the time and space requirements of your implementation of $\text{PERSISTENT-TREE-INSERT}$? (The space requirement is proportional to the number of new nodes allocated.)</p>
+
+<p><strong>d.</strong> Suppose that we had included the parent attribute in each node. In this case, $\text{PERSISTENT-TREE-INSERT}$ would need to perform additional copying. Prove that $\text{PERSISTENT-TREE-INSERT}$ would then require $\Omega(n)$ time and space, where $n$ is the number of nodes in the tree.</p>
+
+<p><strong>e.</strong> Show how to use red-black trees to guarantee that the worst-case running time and space are $O(\lg n)$ per insertion or deletion.</p>
+</blockquote>
+
+<p><strong>a.</strong> When inserting key $k$, all nodes on the path from the root to the added node (a new leaf) must change, since the need for a new child pointer propagates up from the new node to all of its ancestors.</p>
+
+<p>When deleting a node, let $y$ be the node actually removed and $z$ be the node given to the delete procedure.</p>
+
+<ul>
+<li>If $z$ has at most one child, it will be spliced out, so that all ancestors of $z$ swill be changed. (As with insertion, the need for a new child pointer propagates up from the removed node.)</li>
+<li>If $z$ has two children, then its successor $y$ will be spliced out and moved to $z$&rsquo;s position. Therefore all ancestors of both $z$and $y$ must be changed. Because $z$is an ancestor of $y$, we can just say that all ancestors of $y$ must be changed.</li>
+</ul>
+
+<p>In either case, $y$&rsquo;s children (if any) are unchanged, because we have assumed that there is no parent attribute.</p>
+
+<p><strong>b.</strong> We assume that we can call two procedures:</p>
+
+<ul>
+<li>$\text{MAKE-NEW-NODE}(k)$ creates a new node whose $key$ attribute has value $k$ and with $left$ and $right$ attributes $\text{NIL}$, and it returns a pointer to the new node.</li>
+<li>$\text{COPY-NODE}(x)$ creates a new node whose $key$, $left$, and $right$ attributes have the same values as those of node $x$, and it returns a pointer to the new node.</li>
+</ul>
+
+<p>Here are two ways to write $\text{PERSISTENT-TREE-INSERT}$. The first is a version of $\text{TREE-INSERT}$, modified to create new nodes along the path to where the new node will go, and to not use parent attributes. It returns the root of the new tree.</p>
+
+<pre><code class="language-cpp">PERSISTENT-TREE-INSERT(T, k)
+    z = MAKE-NEW-NODE(k)
+    new-root = COPY-NODE(T.root)
+    y = NIL
+    x = new-root
+    while x != NIL
+        y = x
+        if z.key &lt; x.key
+            x = COPY-NODE(x.left)
+            y.left = x
+        else x = COPY-NODE(x.right)
+            y.right = x
+    if y == NIL
+        new-root = z
+    else if z.key &lt; y.key
+        y.left = z
+    else y.right = z
+    return new-root
+</code></pre>
+
+<p>The second is a rather elegant recursive procedure. The initial call should have $T.root$ as its first argument. It returns the root of the new tree.</p>
+
+<pre><code class="language-cpp">PERSISTENT-TREE-INSERT(r, k)
+    if r == NIL
+        x = MAKE-NEW-NODE(k)
+    else x = COPY-NODE(r)
+        if k &lt; r.key
+            x.left = PERSISTENT-TREE-INSERT(r.left, k)
+        else x.right = PERSISTENT-TREE-INSERT(r.right, k)
+    return x
+</code></pre>
+
+<p><strong>c.</strong> Like $\text{TREE-INSERT}$, $\text{PERSISTENT-TREE-INSERT}$ does a constant amount of work at each node along the path from the root to the new node. Since the length of the path is at most $h$, it takes $O(h)$ time.</p>
+
+<p>Since it allocates a new node (a constant amount of space) for each ancestor of the inserted node, it also needs $O(h)$ space.</p>
+
+<p><strong>d.</strong> If there were parent attributes, then because of the new root, every node of the tree would have to be copied when a new node is inserted. To see why, observe that the children of the root would change to point to the new root, then their children would change to point to them, and so on. Since there are n nodes, this change would cause insertion to create $\Omega(n)$ new nodes and to take $\Omega(n)$ time.</p>
+
+<p><strong>e.</strong> From parts (a) and (c), we know that insertion into a persistent binary search tree of height $h$, like insertion into an ordinary binary search tree, takes worst-case time $O(h)$. A red-black tree has $h = O(\lg n)$, so insertion into an ordinary red-black tree takes $O(\lg n)$ time. We need to show that if the red-black tree is persistent, insertion can still be done in $O(\lg n)$ time. To do this, we will need to show two things:</p>
+
+<ul>
+<li>How to still find the parent pointers we need in $O(1)$ time without using a parent attribute. We cannot use a parent attribute because a persistent tree with parent attributes uses $\Omega(n)$ time for insertion (by part (d)).</li>
+<li>That the additional node changes made during red-black tree operations (by rotation and recoloring) don&rsquo;t cause more than $O(\lg n)$ additional nodes to change.</li>
+</ul>
+
+<p>Each parent pointer needed during insertion can be found in $O(1)$ time without having a parent attribute as follows:</p>
+
+<p>To insert into a red-black tree, we call $\text{RB-INSERT}$, which in turn calls $\text{RB-INSERT-FIXUP}$. Make the same changes to $\text{RB-INSERT}$ as we made to $\text{TREE-INSERT}$ for persistence. Additionally, as $\text{RB-INSERT}$ walks down the tree to find the place to insert the new node, have it build a stack of the nodes it traverses and pass this stack to $\text{RB-INSERT-FIXUP}$. $\text{RB-INSERT-FIXUP}$ needs parent pointers to walk back up the same path, and at any given time it needs parent pointers only to find the parent and grandparent of the node it is working on. As $\text{RB-INSERT-FIXUP}$ moves up the stack of parents, it needs only parent pointers that are at known locations a constant distance away in the stack. Thus, the parent information can be found in $O(1)$ time, just as if it were stored in a parent attribute.</p>
+
+<p>Rotation and recoloring change nodes as follows:</p>
+
+<ul>
+<li>$\text{RB-INSERT-FIXUP}$ performs at most $2$ rotations, and each rotation changes the child pointers in $3$ nodes (the node around which we rotate, that node&rsquo;s parent, and one of the children of the node around which we rotate). Thus, at most 6 nodes are directly modified by rotation during $\text{RB-INSERT-FIXUP}$. In a persistent tree, all ancestors of a changed node are copied, so $\text{RB-INSERT-FIXUP}$&rsquo;s rotations take $O(\lg n)$ time to change nodes due to rotation. (Actually, the changed nodes in this case share a single $O(\lg n)$-length path of ancestors.)</li>
+<li>$\text{RB-INSERT-FIXUP}$ recolors some of the inserted node&rsquo;s ancestors, which are being changed anyway in persistent insertion, and some children of ancestors (the &ldquo;uncles&rdquo; referred to in the algorithm description). There are at most $O(\lg n)$ ancestors, hence at most $O(\lg n)$ color changes of uncles. Recoloring uncles doesn&rsquo;t cause any additional node changes due to persistence, because the ancestors of the uncles are the same nodes (ancestors of the inserted node) that are being changed anyway due to persistence. Thus, recoloring does not affect the $O(\lg n)$ running time, even with persistence.</li>
+</ul>
+
+<p>We could show similarly that deletion in a persistent tree also takes worst-case time $O(h)$.</p>
+
+<ul>
+<li>We already saw in part (a) that $O(h)$ nodes change.</li>
+<li>We could write a persistent $\text{RB-DELETE}$ procedure that runs in $O(h)$ time, analogous to the changes we made for persistence in insertion. But to do so without using parent pointers we need to walk down the tree to the node to be deleted, to build up a stack of parents as discussed above for insertion. This is a little tricky if the set&rsquo;s keys are not distinct, because in order to find the path to the node to delete—a particular node with a given key—we have to make some changes to how we store things in the tree, so that duplicate keys can be distinguished. The easiest way is to have each key take a second part that is unique, and to use this second part as a tiebreaker when comparing keys.</li>
+</ul>
+
+<p>Then the problem of showing that deletion needs only $O(\lg n)$ time in a persistent red-black tree is the same as for insertion.</p>
+
+<ul>
+<li>As for insertion, we can show that the parents needed by $\text{RB-DELETE-FIXUP}$ can be found in $O(1)$ time (using the same technique as for insertion).</li>
+<li>Also, $\text{RB-DELETE-FIXUP}$ performs at most 3 rotations, which as discussed above for insertion requires $O(\lg n)$ time to change nodes due to persistence. It also does $O(\lg n)$ color changes, which (as for insertion) take only $O(\lg n)$ time to change ancestors due to persistence, because the number of copied nodes is $O(\lg n)$.</li>
+</ul>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10093,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10108,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10452,6 +10597,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10467,6 +10613,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10532,6 +10681,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10544,6 +10694,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10561,6 +10712,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14617,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap13/problems/" title="Chap 13 Problems"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap13/problems/13-2/" title="13-2 Join operation on red-black trees" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14630,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

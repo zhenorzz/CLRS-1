@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>15-11 Inventory planning :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-11/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3256,7 +3256,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/" title="15 Dynamic Programming" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3378,7 +3378,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/" title="Chap 15 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3592,7 +3592,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-11/" title="15-11 Inventory planning" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-11/" title="15-11 Inventory planning" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-11/">
         Problem 15-11
         
@@ -8374,56 +8374,182 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap15/Problems/15-11.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/'>15 Dynamic Programming</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/'>Chap 15 Problems</a> > 15-11 Inventory planning
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>15-11 Inventory planning</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>The Rinky Dink Company makes machines that resurface ice rinks. The demand for such products varies from month to month, and so the company needs to develop a strategy to plan its manufacturing given the fluctuating, but predictable, demand. The company wishes to design a plan for the next $n$ months. For each month $i$, the company knows the demand $d_i$, that is, the number of machines that it will sell. Let $D = \sum_{i = 1}^n d_i$ be the total demand over the next $n$ months. The company keeps a full-time staff who provide labor to manufacture up to $m$ machines per month. If the company needs to make more than $m$ machines in a given month, it can hire additional, part-time labor, at a cost that works out to $c$ dollars per machine. Furthermore, if, at the end of a month, the company is holding any unsold machines, it must pay inventory costs. The cost for holding $j$ machines is given as a function $h(j)$ for $j = 1, 2, \ldots, D$, where $h(j) \ge 0$ for $1 \le j \le D$ and $h(j) \le h(j + 1)$ for $1 \le j \le D - 1$.</p>
+
+<p>Give an algorithm that calculates a plan for the company that minimizes its costs while fulfilling all the demand. The running time should be polyomial in $n$ and $D$.</p>
+</blockquote>
+
+<p>We state the subproblem $(k, s)$ as &ldquo;What is the cheapest way to satisfy all the demands of months $k, \ldots, n$ when we start with a surplus of s before the $k$th month?&rdquo; A plan for the subproblem $(k, s)$ would specify the number of machines to manufacture for each month $k, \ldots, n$ such that demands are satisfied.</p>
+
+<p>In some optimal plan $P$ to $(k, s)$, let $f^*$  machines be maufactured in month $k$. Thus, the surplus $s^\prime$ in month $k + 1$ is $s + f^* - d_k$. Let $P^\prime$ be the part of the plan $P$ for months $k + 1, \ldots, n$. We claim that $P^\prime$ is an optimal plan for the subproblem $(k + 1, s^\prime)$. Why? Suppose $P^\prime$ were not an optimal plan and let $P^{\prime\prime}$ be an optimal plan for $(k + 1, s^\prime)$. If we modify plan $P$ by cutting out $P^\prime$ and pasting in $P^{\prime\prime}$ (i.e., by using plan $P^{\prime\prime}$ for months $k + 1, \ldots, n$), we obtain another plan for $(k, s)$ which is cheaper than plan $P$ . Thus, we obtain a contradiction to the assumption that plan $P$ was optimal.</p>
+
+<p>Let $cost[k, s]$ denote the cost of an optimal plan for $(k, s)$, and let $f$ denote the number of machines that can be manufactured in month $k$. The bounds for $f$ are as follows:</p>
+
+<ul>
+<li><p>At least the number of machines so that (along with surplus $s$) there are enough machines to satisfy the current month&rsquo;s demand. Let us denote this lower bound by $L(k, s)$. We have</p>
+
+<div>
+$$
+L(k, s) = \max(d_k - s, 0).
+$$
+</div></li>
+
+<li><p>At most the number of machines such that there are enough machines to satisfy the demands of all the following months. Let us denote this upper bound by $U(k, s)$. We have</p>
+
+<div>
+$$
+U(k, s) = \Bigg(\sum_{i = k}^n d_i \Bigg) - s.
+$$
+</div></li>
+</ul>
+
+<p>For the last month, we need only manufacture the minimum required number of machines, given by $L(n, s)$. For other months, we examine the costs of manufacturing all feasible numbers of machines and see which choice gives us the cheapest plan. We can now write the recurrence for cost as the following:</p>
+
+<div>
+$$
+cost[k, s] =
+\begin{cases}
+c \cdot \max(L(n, s) - m, 0) + h(s + L(n, s) - d_n) & \text{if $k = n$}, \\
+\min\limits_{L(k, s) \le f \le U(k, s)} \Big\{cost[k + 1, s + f - d_k] + c \cdot \max(f - m, 0) + h(s + f - d_k)\Big\} & \text{if $0 < k < n$}.
+\end{cases}
+$$
+</div>
+
+<p>The recurrence suggests how to build an optimal plan in a bottom-up fashion. We now present the algorithm for constructing an optimal plan.</p>
+
+<pre><code class="language-cpp">INVERTORY-PLANNING(n, m, c, D, d, h)
+    let cost[1..n, 0..D] and make[1..n, 0..D] be new tables
+    // Compute cost[n, 0..D] and make[n, 0..D]
+    for s = 0 to D
+        f = max(dn - s, 0)
+        cost[n, s] = c * max(f - m, 0) + h(s + f - dn)
+        make[n, s] = f
+    // Compute cost[1..n - 1, 0..D] and make[1..n - 1, 0..D].
+    U = dn
+    for k = n - 1 downto 1
+        U = U + dk
+        for s = 0 to D
+            cost[k, s] = ∞
+            for f = max(dk - s, 0) to U - s
+                val = cost[k + 1, s + f - dk] + c * max(f - m, 0) + h(s + f - dk)
+                if val &lt; cost[k, s]
+                    cost[k, s] = val
+                    make[k, s] = f
+    print cost[1, 0]
+    PRINT-PLAN(make, n, d)
+</code></pre>
+
+<pre><code class="language-cpp">PRINT-PLAN(make, n, d)
+    s = 0
+    for k = 1 to n
+        print &quot;For month &quot; k &quot;manufacture &quot; make[k, s] &quot;machines&quot;
+        s = s + make[k, s] - dk
+</code></pre>
+
+<p>In $\text{INVENTORY-PLANNING}$, we build the solution month by month, starting from month $n$, moving backward toward month $1$. First, we solve the subproblem for the last month, for all surpluses. Then, for each month and for each surplus entering that month, we calculate the cheapest way to satisfy demand for that month based on the solved subproblems of the next month.</p>
+
+<ul>
+<li>$f$ is the number of machines that we try to manufacture in month $k$.</li>
+<li>$cost[k, s]$ holds the cheapest way to satisfy demands of months $k, \ldots, n$, with a net surplus of s left over at the beginning of month $k$.</li>
+<li>$make[k, s]$ holds the number of machines to manufacture in month $k$ and the surplus $s$ of an optimal plan. We will use this table to reconstruct the optimal plan.</li>
+</ul>
+
+<p>We first initialize the base cases, which are the cases for month $n$ starting with surplus $s$, for $s = 0, \ldots, D$. If $d_n &gt; s$, it suffices to manufacture $d_n - s$ machines, since we need not keep any surplus after month $n$. If $d_n \le s$, we need not manufacture any machines at all.</p>
+
+<p>We then calculate the total cost for month $n$ as the sum of hiring extra labor $c \cdot \max(f - m, 0)$ and the inventory costs for leftover surplus $h(s + f - d_n)$, which can be nonzero if we had started out with a large surplus.</p>
+
+<p>The outer <strong>for</strong> loop of the next block of code runs down from month $n - 1$ to $1$, thus ensuring that when we consider month $k$, we have already solved the subproblems of month $k + 1$.</p>
+
+<p>The next inner <strong>for</strong> loop iterates through all possible values of $f$ as described.</p>
+
+<p>For every choice of $f$ for a given month $k$, the total cost of $(k, s)$ is given by the cost of extra labor (if any) plus the cost of inventory (if there is a surplus) plus the cost of the subproblem $(k + 1, s + f - d_k)$. This value is checked and updated. Finally, the required answer is the answer to the subproblem $(1, 0)$, which appears in $cost[1, 0]$. That is, it is the cheapest way to satisfy all the demands of months $1, \ldots, n$ when we start with a surplus of $0$.</p>
+
+<p>The running time of $\text{INVENTORY-PLANNING}$ is clearly $O(nD^2)$. The space requirement is $O(nD)$. We can improve upon the space requirement by noting that we need only store the solution to subproblems of the next month. With this observation, we can construct an algorithm that uses $O(n + D)$ space.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10858,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10747,6 +10874,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10761,6 +10889,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10842,6 +10973,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10854,6 +10986,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11014,6 +11149,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11031,6 +11167,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14602,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-10/" title="15-10 Planning an investment strategy"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-12/" title="15-12 Signing free-agent baseball players" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14615,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

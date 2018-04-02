@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>6-3 Young tableaus :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-3/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1171,7 +1171,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/" title="6 Heapsort" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1293,7 +1293,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/problems/" title="Chap 6 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1355,7 +1355,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-3/" title="6-3 Young tableaus" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-3/" title="6-3 Young tableaus" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-3/">
         Problem 6-3
         
@@ -8374,56 +8374,142 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap06/Problems/6-3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap06/'>6 Heapsort</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap06/problems/'>Chap 6 Problems</a> > 6-3 Young tableaus
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>6-3 Young tableaus</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>An $m \times n$ Young tableau is an $m \times n$ matrix such that the entries of each row are in sorted order from left to right and the entries of each column are in sorted order from top to bottom. Some of the entries of a Young tableau may be $\infty$, which we treat as nonexistent elements. Thus, a Young tableau can be used to hold $r \le mn$ finite numbers.</p>
+
+<p><strong>a.</strong> Draw $4 \times 4$ tableau containing the elements ${9, 16, 3, 2, 4, 8, 5, 14, 12}$.</p>
+
+<p><strong>b.</strong> Argue that an $m \times n$ Young tableau $Y$ is empty if $Y[1, 1] = \infty$. Argue that $Y$ is full (contains $mn$ elements) if $Y[m, n] &lt; \infty$.</p>
+
+<p><strong>c.</strong> Give an algorithm to implement $\text{EXTRACT-MIN}$ on a nonempty $m \times n$ Young tableau that runs in $O(m + n)$ time. Your algorithm should use a recursive subroutine that solves an $m \times n$ problem by recursively solving either an $(m - 1) \times n$ or an $m \times (n - 1)$ subproblem. ($\textit{Hint:}$ Think about $\text{MAX-HEAPIFY}$.) Define $T(p)$ where $p = m + n$, to be the maximum running time of $\text{EXTRACT-MIN}$ on any $m \times n$ Young tableau. Give and solve a recurrence relation for $T(p)$ that yields the $O(m + n)$ time bound.</p>
+
+<p><strong>d.</strong> Show how to insert a new element into a nonfull $m \times n$ Young tableau in $O(m + n)$ time.</p>
+
+<p><strong>e.</strong> Using no other sorting method as a subroutine, show how to use an $n \times n$ Young tableau to sort $n^2$ numbers in $O(n^3)$ time.</p>
+
+<p><strong>f.</strong> Give an $O(m + n)$-time algorithm to determine whether a given number is stored in a given $m \times n$ Young tableau.</p>
+</blockquote>
+
+<p><strong>a.</strong></p>
+
+<div>
+$$
+\begin{matrix}
+     2 &      3 &     12 & 14 \\
+     4 &      8 &     16 & \infty \\
+     5 &      9 & \infty & \infty \\
+\infty & \infty & \infty & \infty
+\end{matrix}
+$$
+</div>
+
+<p><strong>b.</strong> If the top left element is $\infty$, then all the elements on the first row need to be $\infty$. But if this is the case, all other elements need to be $\infty$ because they are larger than the first element on their column.</p>
+
+<p>If the bottom right element is smaller than $\infty$, all the elements on the bottom row need to be smaller than $\infty$. But so are the other elements in the tableau, because each is smaller than the bottom element of its column.</p>
+
+<p><strong>c.</strong> The $A[1, 1]$ is the smallest elemnt. We store it, so we can return it later and then replace is with $\infty$. This breaks the Young tableau property and we need to perform a procedure, similar to $\text{MAX-HEAPIFY}$ to restore it.</p>
+
+<p>We compare $A[i, j]$ with each of its neighbours and exchange it with the smallest. This restores the property for $A[i, j]$ but reduces the problem to either $A[i, j + 1]$ or $A[i + 1, j]$. We terminate when $A[i, j]$ is smaller than its neighbours.</p>
+
+<p>The relation in question is</p>
+
+<div>
+$$
+T(p) = T(p - 1) + O(1) = T(p - 2) + O(1) + O(1) = \cdots = O(p).
+$$
+</div>
+
+<p><strong>d.</strong> The algorithm is very similar to the previous, except that we start with the bottom right element of the tableau and move it upwards and leftwards to the correct position. The asymptotic analysis is the same.</p>
+
+<p><strong>e.</strong> We can sort by starting with an empty tableau and inserting all the $n^2$ elements in it. Each insertion is $O(n + n) = O(n)$. The complexity is $n^2O(n) = O(n^3)$. Afterwards we can take them one by one and put them back in the original array which has the same complexity. In total, its $O(n^3)$.</p>
+
+<p>We can also do it in place if we allow for &ldquo;partial&rdquo; tableaus where only a portion of the top rows (and a portion of the last of them) is in the tableau. Then we can build the tableau in place and then start putting each minimal element to the end. This would be asymptotically equal, but use constant memory. It would also sort the array in reverse.</p>
+
+<p><strong>f.</strong> We from the lower-left corner. We check the current element $current$ with the one we&rsquo;re looking for $key$ and move up if $current &gt; key$ and right if $current &lt; key$. We declare success if $current = key$ and otherwise terminate if we walk off the tableau.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9308,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9237,6 +9324,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9251,6 +9339,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9332,6 +9423,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9344,6 +9436,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9376,6 +9471,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -9399,6 +9495,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14562,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap06/problems/6-2/" title="6-2 Analysis of $d$-ary heaps"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap07/" title="7 Quicksort" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

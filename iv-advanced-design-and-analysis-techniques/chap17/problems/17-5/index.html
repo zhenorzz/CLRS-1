@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>17-5 Competitive analysis of self-organizing lists with move-to-front :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-5/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3909,7 +3909,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/" title="17 Amortized Analysis" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4012,7 +4012,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/" title="Chap 17 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4112,7 +4112,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-5/" title="17-5 Competitive analysis of self-organizing lists with move-to-front" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-5/" title="17-5 Competitive analysis of self-organizing lists with move-to-front" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-5/">
         Problem 17-5
         
@@ -8374,56 +8374,182 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap17/Problems/17-5.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap17/'>17 Amortized Analysis</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/'>Chap 17 Problems</a> > 17-5 Competitive analysis of self-organizing lists with move-to-front
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>17-5 Competitive analysis of self-organizing lists with move-to-front</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>A <strong><em>self-organizing</em></strong> list is a linked list of $n$ elements, in which each element has a unique key. When we search for an element in the list, we are given a key, and we want to find an element with that key.</p>
+
+<p>A self-organizing list has two important properties:</p>
+
+<ol>
+<li>To find an element in the list, given its key, we must traverse the list from the beginning until we encounter the element with the given key. If that element is the $k$th element from the start of the list, then the cost to find the element is $k$.</li>
+<li>We may reorder the list elements after any operation, according to a given rule with a given cost. We may choose any heuristic we like to decide how to reorder the list.</li>
+</ol>
+
+<p>Assume that we start with a given list of $n$ elements, and we are given an access sequence $\sigma = \langle \sigma_1, \sigma_2, \ldots, \sigma_m \rangle$ of keys to find, in order. The cost of the sequence is the sum of the costs of the individual accesses in the sequence.</p>
+
+<p>Out of the various possible ways to reorder the list after an operation, this problem focuses on transposing adjacent list elements-switching their positions in the list—with a unit cost for each transpose operation. You will show, by means of a potential function, that a particular heuristic for reordering the list, move-to-front, entails a total cost no worse than 4 times that of any other heuristic for maintaining the list order—even if the other heuristic knows the access sequence in advance! We call this type of analysis a <strong><em>competitive analysis</em></strong>.</p>
+
+<p>For a heuristic $H$ and a given initial ordering of the list, denote the access cost of sequence $\sigma$ by $C_H(\sigma)$ Let $m$ be the number of accesses in $\sigma$.</p>
+
+<p><strong>a.</strong> Argue that if heuristic $H$ does not know the access sequence in advance, then the worst-case cost for $H$ on an access sequence $\sigma$ is $C_H(\sigma) = \Omega(mn)$.</p>
+
+<p>With the <strong><em>move-to-front</em></strong> heuristic, immediately after searching for an element $x$, we move $x$ to the first position on the list (i.e., the front of the list).</p>
+
+<p>Let $\text{rank}_L(x)$ denote the rank of element $x$ in list $L$, that is, the position of $x$ in list $L$. For example, if $x$ is the fourth element in $L$, then $\text{rank}_L(x) = 4$. Let $c_i$ denote the cost of access $\sigma_i$ using the move-to-front heuristic, which includes the cost of finding the element in the list and the cost of moving it to the front of the list by a series of transpositions of adjacent list elements.</p>
+
+<p><strong>b.</strong> Show that if $\sigma_i$ accesses element $x$ in list $L$ using the move-to-front heuristic, then $c_i = 2 \cdot \text{rank}_L(x) - 1$.</p>
+
+<p>Now we compare move-to-front with any other heuristic $\text H$ that processes an access sequence according to the two properties above. Heuristic $\text H$ may transpose elements in the list in any way it wants, and it might even know the entire access sequence in advance.</p>
+
+<p>Let $L_i$ be the list after access $\sigma_i$ using move-to-front, and let $L_i^*$ be the list after access $\sigma_i$ using heuristic $\text H$. We denote the cost of access $\sigma_i$ by $c_i$ for move-to-front and by $c_i^*$ for heuristic $\text H$. Suppose that heuristic $\text H$ performs $t_i^*$ transpositions during access $\sigma_i$.</p>
+
+<p><strong>c.</strong> In part (b), you showed that $c_i = 2 \cdot \text{rank}_{L_{i - 1}}(x) - 1$. Now show that $c_i^* = \text{rank}_{L_{i - 1}^*}(x) + t_i^*$.</p>
+
+<p>We define an <strong><em>inversion</em></strong> in list $L_i$ as a pair of elements $y$ and $z$ such that $y$ precedes $z$ in $L_i$ and $z$ precedes $y$ in list $L_i^*$. Suppose that list $L_i$ has $q_i$ inversions after processing the access sequence $\langle \sigma_1, \sigma_2, \ldots, \sigma_i \rangle$. Then, we define a potential function $\Phi$ that maps $L_i$ to a real number by $\Phi(L_i) = 2q_i$. For example, if $L_i$ has the elements $\langle e, c, a, d, b \rangle$ and $L_i^*$ has the elements $\langle c, a, b, d, e \rangle$, then $L_i$ has 5 inversions $((e, c), (e, a), (e, d), (e, b), (d, b))$, and so $\Phi(L_i) = 10$. Observe that $\Phi(L_i) \ge 0$ for all $i$ and that, if move-to-front and heuristic $\text H$ start with the same list $L_0$, then $\Phi(L_0) = 0$.</p>
+
+<p><strong>d.</strong> Argue that a transposition either increases the potential by $2$ or decreases the potential by $2$.</p>
+
+<p>Suppose that access $\sigma_i$ finds the element $x$. To understand how the potential changes due to $\sigma_i$, let us partition the elements other than $x$ into four sets, depending on where they are in the lists just before the $i$th access:</p>
+
+<ul>
+<li>Set $A$ consists of elements that precede $x$ in both $L_{i - 1}$ and $L_{i - 1}^*$.</li>
+<li>Set $B$ consists of elements that precede $x$ in $L_{i - 1}$ and follow $x$ in $L_{i - 1}^*$.</li>
+<li>Set $C$ consists of elements that follow $x$ in $L_{i - 1}$ and precede $x$ in $L_{i - 1}^*$.</li>
+<li>Set $D$ consists of elements that follow $x$ in both $L_{i - 1}$ and $L_{i - 1}^*$.</li>
+</ul>
+
+<p><strong>e.</strong> Argue that $\text{rank}_{L_{i - 1}}(x) = |A| + |B| + 1$ and $\text{rank}_{L_{i - 1}^*}(x) = |A| + |C| + 1$.</p>
+
+<p><strong>f.</strong> Show that access $\sigma_i$ causes a change in potential of</p>
+
+<div>
+$$
+\Phi(L_i) - \Phi(L_{i - 1}) \le 2(|A| - |B| + t_i^*),
+$$
+</div>
+
+<p>where, as before, heuristic $\text H$ performs $t_i^*$ transpositions during access $\sigma_i$.</p>
+
+<p>Define the amortized cost $\hat c_i$ of access $\sigma_i$ by $\hat c_i = c_i + \Phi(L_i) - \Phi(L_{i - 1})$.</p>
+
+<p><strong>g.</strong> Show that the amortized cost $\hat c_i$ of access $\sigma_i$ is bounded from above by $4c_i^*$.</p>
+
+<p><strong>h.</strong> Conclude that the cost $C_{\text{MTF}}(\sigma)$ of access sequence $\sigma$ with move-to-front is at most $4$ times the cost $C_H(\sigma)$ of $\sigma$ withany other heuristic $\text H$, assuming that both heuristics start with the same list.</p>
+</blockquote>
+
+<p><strong>a.</strong> Since the heuristic is picked in advance, given any sequence of requests given so far, we can simulate what ordering the heuristic will call for, then, we will pick our next request to be whatever element will of been in the last position of the list. Continuing until all the requests have been made, we have that the cost of this sequence of accesses is $= mn$.</p>
+
+<p><strong>b.</strong> The cost of finding an element is $= \text{rank}_L(x)$ and since it needs to be swapped with all the elements before it, of which there are $\text{rank}_L(x) - 1$, the total cost is $2 \cdot \text{rank}_L(x) - 1$.</p>
+
+<p><strong>c.</strong> Regardless of the heuristic used, we first need to locate the element, which is left where ever it was after the previous step, so, needs $\text{rank}_{L_{i - 1}}(x)$. After that, by definition, there are $t_i$ transpositions made, so, $c^*_i = \text{rank}_{L_{i - 1}}(x) + t_i^*$.</p>
+
+<p><strong>d.</strong> If we perform a transposition of elements $y$ and $z$, where $y$ is towards the left. Then there are two cases. The first is that the final ordering of the list in $L_i^*$ is with $y$ in front of $z$, in which case we have just increased the number of inversions by $1$, so the potential increases by $2$. The second is that in $L_I^*z$ occurs before $y$, in which case, we have just reduced the number of inversions by one, reducing the potential by $2$.</p>
+
+<p>In both cases, whether or not there is an inversion between $y$ or $z$ and any other element has not changed, since the transposition only changed the relative ordering of those two elements.</p>
+
+<p><strong>e.</strong> By definition, $A$ and $B$ are the only two of the four categories to place elements that precede $x$ in $L_{i - 1}$, since there are $|A| + |B|$ elements preceding it, it&rsquo;s rank in $L_{i - 1}$ is $|A| + |B| + 1$. Similarly, the two categories in which an element can be if it precedes $x$ in $L^*_{i - 1}$ are $A$ and $C$, so, in $L^*_{i - 1}$, $x$ has $\text{rank} |A| + |C| + 1$.</p>
+
+<p><strong>f.</strong> We have from part d that the potential increases by $2$ if we transpose two elements that are being swapped so that their relative order in the final ordering is being screwed up, and decreases by two if they are begin placed into their correct order in $L^*_i$.</p>
+
+<p>In particular, they increase it by at most $2$, since we are keeping track of the number of inversions that may not be the direct effect of the transpositions that heuristic $H$ made, we see which ones the Move to front heuristic may of added. In particular, since the move to front heuristic only changed the relative order of $x$ with respect to the other elements, moving it in front of the elements that preceded it in $L_{i - 1}$, we only care about sets $A$ and $B$. For an element in $A$, moving it to be behind $A$ created an inversion, since that element preceded $x$ in $L^*_i$. However, if the element were in $B$, we are removing an inversion by placing $x$ in front of it.</p>
+
+<p><strong>g.</strong></p>
+
+<div>
+$$
+\begin{aligned}
+\hat c_i & \le 2(|A| + |B| + 1) - 1 + 2(|A| - |B| + t_i^*) \\
+         & =   4|A| + 1 + 2 t_i^* \\
+         & \le 4(|A| + |C| + 1 + t_i^*) \\
+         & =   4 c_i^*.
+\end{aligned}
+$$
+</div>
+
+<p><strong>h.</strong> We showed that the amortized cost of each operation under the move to front heuristic was at most four times the cost of the operation using any other heuristic. Since the amortized cost added up over all these operation is at most the total (real) cost, so we have that the total cost with movetofront is at most four times the total cost with an arbitrary other heuristic.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10858,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10746,6 +10873,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11247,6 +11377,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11261,6 +11392,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11326,6 +11460,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11338,6 +11473,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11403,6 +11541,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11427,6 +11566,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14605,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap17/problems/17-4/" title="17-4 The cost of restructuring red-black trees"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14618,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

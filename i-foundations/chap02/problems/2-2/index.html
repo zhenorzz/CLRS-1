@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>2-2 Correctness of bubblesort :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/i-foundations/chap02/problems/2-2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/" title="I Foundations" class="dd-item 
-        
+        parent
         
         
         ">
@@ -230,7 +230,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap02/" title="2 Getting Started" class="dd-item 
-        
+        parent
         
         
         ">
@@ -314,7 +314,7 @@
   
     
     <li data-nav-id="/CLRS/i-foundations/chap02/problems/" title="Chap 2 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -357,7 +357,7 @@
  
   
     
-      <li data-nav-id="/CLRS/i-foundations/chap02/problems/2-2/" title="2-2 Correctness of bubblesort" class="dd-item ">
+      <li data-nav-id="/CLRS/i-foundations/chap02/problems/2-2/" title="2-2 Correctness of bubblesort" class="dd-item active">
         <a href="/CLRS/i-foundations/chap02/problems/2-2/">
         Problem 2-2
         
@@ -8374,56 +8374,154 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/I%20Foundations/Chap02/Problems/2-2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/i-foundations/'>I Foundations</a> > <a href='/CLRS/i-foundations/chap02/'>2 Getting Started</a> > <a href='/CLRS/i-foundations/chap02/problems/'>Chap 2 Problems</a> > 2-2 Correctness of bubblesort
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>2-2 Correctness of bubblesort</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>Bubblesort is a popular, but inefficient, sorting algorithm. It works by repeatedly swapping adjacent elements that are out of order.</p>
+
+<pre><code class="language-cpp">BUBBLESORT(A)
+    for i = 1 to A.length - 1 
+        for j = A.length downto i + 1 
+            if A[j] &lt; A[j - 1]
+                exchange A[j] with A[j - 1]
+</code></pre>
+
+<p><strong>a.</strong> Let $A^\prime$ denote the output of $\text{BUBBLESORT}(A)$ To prove that $\text{BUBBLESORT}$ is correct, we need to prove that it terminates and that</p>
+
+<div>
+$$
+A^\prime[1] \le A^\prime[2] \le \cdots \le A^\prime[n], \tag{2.3}
+$$
+</div>
+
+<p>where $n = A.length$. In order to show that BUBBLESORT actually sorts, what else do we need to prove?</p>
+
+<p>The next two parts will prove inequality $\text{(2.3)}$.</p>
+
+<p><strong>b.</strong> State precisely a loop invariant for the <strong>for</strong> loop in lines 2–4, and prove that this loop invariant holds. Your proof should use the structure of the loop invariant proof presented in this chapter.</p>
+
+<p><strong>c.</strong> Using the termination condition of the loop invariant proved in part (b), state a loop invariant for the <strong>for</strong> loop in lines 1–4 that will allow you to prove inequality $\text{(2.3)}$. Your proof should use the structure of the loop invariant proof presented in this chapter.</p>
+
+<p><strong>d.</strong> What is the worst-case running time of bubblesort? How does it compare to the running time of insertion sort?</p>
+</blockquote>
+
+<p><strong>a.</strong> We need to show that the elements of $A^\prime$ form a permutation of the elements of $A$.</p>
+
+<p><strong>b.</strong> <strong>Loop invariant:</strong> At the start of each iteration of the <strong>for</strong> loop of lines 2–4, $A[j] = \min\{A[k]: j \le k \le n\}$ and the subarray $A[j..n]$ is a permutation of the values that were in $A[j..n]$ at the time that the loop started.</p>
+
+<p><strong>Initialization:</strong> Initially, $j = n$, and the subarray $A[j..n]$ consists of single element $A[n]$. The loop invariant trivially holds.</p>
+
+<p><strong>Maintenance:</strong> Consider an iteration for a given value of $j$. By the loop invariant, $A[j]$ is the smallest value in $A[j..n]$. Lines 3–4 exchange $A[j]$  and $A[j - 1]$ if $A[j]$ is less than $A[j - 1]$, and so $A[j - 1]$ will be the smallest value in $A[j - 1..n]$ afterward. Since the only change to the subarray $A[j - 1..n]$ is this possible exchange, and the subarray $A[j..n]$ is a permutation of the values that were in $A[j..n]$ at the time that the loop started, we see that $A[j - 1..n]$ is a permutation of the values that were in $A[j - 1..n]$ at the time that the loop started. Decrementing $j$ for the next iteration maintains the invariant.</p>
+
+<p><strong>Termination:</strong> The loop terminates when $j$ reaches $i$. By the statement of the loop invariant, $A[i] = \min{A[k]: i \le k \le n}$ and $A[i..n]$ is a permutation of the values that were in $A[i..n]$ at the time that the loop started.</p>
+
+<p><strong>c.</strong> <strong>Loop invariant:</strong> At the start of each iteration of the <strong>for</strong> loop of lines 1–4, the subarray $A[1..i - 1]$ consists of the $i - 1$ smallest values originally in $A[1..n]$, in sorted order, and $A[i..n]$ consists of the $n - i + 1$ remaining values originally in $A[1..n]$.</p>
+
+<p><strong>Initialization:</strong> Before the first iteration of the loop, $i = 1$. The subarray $A[1..i - 1]$ is empty, and so the loop invariant vacuously holds.</p>
+
+<p><strong>Maintenance:</strong> Consider an iteration for a given value of $i$. By the loop invariant, $A[1..i - 1]$ consists of the $i$ smallest values in $A[1..n]$, in sorted order. Part (b) showed that after executing the <strong>for</strong> loop of lines 2–4, $A[i]$ is the smallest value in $A[i..n]$, and so $A[1..i]$ is now the $i$ smallest values originally in $A[1..n]$, in sorted order. Moreover, since the <strong>for</strong> loop of lines 2–4 permutes $A[i..n]$, the subarray $A[i + 1..n]$ consists of the $n - i$ remaining values originally in $A[1..n]$.</p>
+
+<p><strong>Termination:</strong> The <strong>for</strong> loop of lines 1–4 terminates when $i = n$, so that $i - 1 = n - 1$. By the statement of the loop invariant, $A[1..i - 1]$ is the subarray $A[1..n - 1]$, and it consists of the $n - 1$ smallest values originally in $A[1..n]$, in sorted order. The remaining element must be the largest value in $A[1..n]$, and it is in $A[n]$. Therefore, the entire array $A[1..n]$ is sorted.</p>
+
+<p><strong><em>Note:</em></strong> Tn the second edition, the <strong>for</strong> loop of lines 1–4 had an upper bound of $A.length$. The last iteration of the outer <strong>for</strong> loop would then result in no iterations of the inner <strong>for</strong> loop of lines 1–4, but the termination argument would simplify: $A[1..i - 1]$ would be the entire array $A[1..n]$, which, by the loop invariant, is sorted.</p>
+
+<p><strong>d.</strong> The running time depends on the number of iterations of the <strong>for</strong> loop of lines 2–4. For a given value of $i$, this loop makes $n - i$ iterations, and $i$ takes on the values $1, 2, \ldots, n - 1$. The total number of iterations, therefore, is</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{i = 1}^{n - 1} (n - i) 
+    & = \sum_{i = 1}^{n - 1} - \sum_{i = 1}^{n - 1} i \\
+    & = n(n - 1) - \frac{n(n - 1)}{2} \\
+    & = \frac{n(n - 1)}{2} \\
+    & = \frac{n^2}{2} - \frac{n}{2}.
+\end{aligned}
+$$
+</div>
+
+<p>Thus, the running time of bubblesort is $\Theta(n^2)$ in all cases. The worst-case running time is the same as that of insertion sort.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -8455,8 +8553,6 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -8472,6 +8568,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8554,6 +8653,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -8569,6 +8669,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8618,6 +8721,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8630,6 +8734,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8647,6 +8754,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -8662,6 +8770,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14574,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/i-foundations/chap02/problems/2-1/" title="2-1 Insertion sort on small arrays in merge sort"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/i-foundations/chap02/problems/2-3/" title="2-3 Correctness of Horner&#39;s rule" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14587,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

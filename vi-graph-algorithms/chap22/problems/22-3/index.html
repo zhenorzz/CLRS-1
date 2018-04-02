@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>22-3 Euler tour :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap22/problems/22-3/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4973,7 +4973,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/" title="22 Elementary Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5095,7 +5095,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/problems/" title="Chap 22 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5157,7 +5157,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/problems/22-3/" title="22-3 Euler tour" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap22/problems/22-3/" title="22-3 Euler tour" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap22/problems/22-3/">
         Problem 22-3
         
@@ -8374,56 +8374,161 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap22/Problems/22-3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap22/'>22 Elementary Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap22/problems/'>Chap 22 Problems</a> > 22-3 Euler tour
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>22-3 Euler tour</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>An <strong><em>Euler tour</em></strong> of a strongly connected, directed graph $G = (V, E)$ is a cycle that traverses each edge of $G$ exactly once, although it may visit a vertex more than once.</p>
+
+<p><strong>a.</strong> Show that $G$ has an Euler tour if and only if $in\text-degree(v) = out\text-degree(v)$ for each vertex $v \in V$.</p>
+
+<p><strong>b.</strong> Describe an $O(E)$-time algorithm to find an Euler tour of $G$ if one exists. ($\textit{Hint:}$ Merge edge-disjoint cycles.)</p>
+</blockquote>
+
+<p><strong>a.</strong> An Euler tour is a single cycle that traverses each edge of $G$ exactly once, but it might not be a simple cycle. An Euler tour can be decomposed into a set of edge-disjoint simple cycles, however.</p>
+
+<p>If $G$ has an Euler tour, therefore, we can look at the simple cycles that, together, form the tour. In each simple cycle, each vertex in the cycle has one entering edge and one leaving edge. In each simple cycle, therefore, each vertex $v$ has $in\text-degree(v) = out\text-degree(v)$, where the degrees are either $1$ (if $v$ is on the simple cycle) or $0$ (if $v$ is not on the simple cycle). Adding the in- and out- degrees over all edges proves that if $G$ has an Euler tour, then $in\text-degree(v) = out\text-degree(v)$ for all vertices $v$.</p>
+
+<p>We prove the converse—that if $in\text-degree(v) = out\text-degree(v)$ for all vertices $v$, then $G$ has an Euler tour—in two different ways. One proof is nonconstructive, and the other proof will help us design the algorithm for part (b).</p>
+
+<p>First, we claim that if $in\text-degree(v) = out\text-degree(v)$ for all vertices $v$, then we can pick any vertex $u$ for which $in\text-degree(u) = out\text-degree(u) \ge 1$ and create a cycle (not necessarily simple) that contains $u$. To prove this claim, let us start by placing vertex $u$ on the cycle, and choose any leaving edge of $u$, say ($u, v$). Now we put $v$ on the cycle. Since $in\text-degree(v) = out\text-degree(v) \ge 1$, we can pick some leaving edge of $v$ and continue visiting edges and vertices. Each time we pick an edge, we can remove it from further consideration. At each vertex other than $u$, at the time we visit an entering edge, there must be an unvisited leaving edge, since $in\text-degree(v) = out\text-degree(v)$ for all vertices $v$. The only vertex for which there might not be an unvisited leaving edge is $u$, since we started the cycle by visiting one of $u$&rsquo;s leaving edges. Since there&rsquo;s always a leaving edge we can visit from all vertices other than $u$, eventually the cycle must return to $u$, thus proving the claim.</p>
+
+<p>The nonconstructive proof proves the contrapositive—that if $G$ does not have an Euler tour, then $in\text-degree(v) \ne out\text-degree(v)$ for some vertex $v$—by contradiction. Choose a graph $G = (V, E)$ that does not have an Euler tour but has at least one edge and for which $in\text-degree(v) = out\text-degree(v)$ for all vertices $v$, and let $G$ have the fewest edges of any such graph. By the above claim, $G$ contains a cycle. Let $C$ be a cycle of $G$ with the greatest number of edges, and let $V_C$ be the set of vertices visited by cycle $C$. By our assumption, $C$ is not an Euler tour, and so the set of edges $E^\prime = E - C$ is nonempty. If we use the set $V$ of vertices and the set $E^\prime$ of edges, we get the graph $G^\prime = (V, E^\prime)$; this graph has $in\text-degree(v) = out\text-degree(v)$ for all vertices $v$, since we have removed one entering edge and one leaving edge for each vertex on cycle $C$. Consider any component $G^{\prime\prime} = (V^{\prime\prime} , E^{\prime\prime})$ of $G^\prime$, and observe that $G^{\prime\prime}$ also has $in\text-degree(v) = out\text-degree(v)$ for all vertices $v$. Since $E^{\prime\prime} \subseteq E^\prime \subsetneq E$, it follows from how we chose $G$ that $G^{\prime\prime}$  must have an Euler tour, say $C&rsquo;$. Because the original graph G is connected, there must be some vertex $x \in V^{\prime\prime} \cup V_C$ and, without loss of generality, consider $x$ to be the first and last vertex on both $C$ and $C&rsquo;$. But then the cycle $C&rdquo;$ formed by first traversing $C$ and then traversing $C&rsquo;$ is a cycle of $G$ with more edges than $C$, contradicting our choice of $C$. We conclude that $C$ must have been an Euler tour.</p>
+
+<p>The constructive proof uses the same ideas. Let us start at a vertex $u$ and, via random traversal of edges, create a cycle. We know that once we take any edge entering a vertex $v \ne u$, we can find an edge leaving $v$ that we have not yet taken. Eventually, we get back to vertex $u$, and if there are still edges leaving $u$ that we have not taken, we can continue the cycle. Eventually, we get back to vertex $u$ and there are no untaken edges leaving $u$. If we have visited every edge in the graph $G$, we are done. Otherwise, since $G$ is connected, there must be some unvisited edge leaving a vertex, say $v$, on the cycle. We can traverse a new cycle starting at $v$, visiting only previously unvisited edges, and we can splice this cycle into the cycle we already know. That is, if the original cycle is $\langle u, \ldots, v, w, \ldots, u \rangle$, and the new cycle is $\langle v, x, \ldots, v\rangle$, then we can create the cycle $\langle u, \ldots, v, x, \ldots, v, w, \ldots, u \rangle$. We continue this process of finding a vertex with an unvisited leaving edge on a visited cycle, visiting a cycle starting and ending at this vertex, and splicing in the newly visited cycle, until we have visited every edge.</p>
+
+<p><strong>b.</strong> The algorithm is based on the idea in the constructive proof above.</p>
+
+<p>We assume that $G$ is represented by adjacency lists, and we work with a copy of the adjacency lists, so that as we visit each edge, we can remove it from its adjacency list. The singly linked form of adjacency list will suffice. The output of this algorithm is a doubly linked list $T$ of vertices which, read in list order, will give an Euler tour. The algorithm constructs $T$ by finding cycles (also represented by doubly linked lists) and splicing them into $T$. By using doubly linked lists for cycles and the Euler tour, splicing a cycle into the Euler tour takes constant time.</p>
+
+<p>We also maintain a singly linked list $L$, in which each list element consists of two parts:</p>
+
+<ol>
+<li>a vertex $v$, and</li>
+<li>a pointer to some appearance of $v$ in $T$.</li>
+</ol>
+
+<p>Initially, $L$ contains one vertex, which may be any vertex of $G$.</p>
+
+<p>Here is the algorithm.</p>
+
+<pre><code class="language-cpp">EULER-TOUR(G)
+    T = empty list
+    L = (any vertex v ∈ G.V, NIL)
+    while L is not empty
+        remore (v, location - in-T) from L
+        C = VISIT(G, L, v)
+        if location - in-T == NIL
+            T = C
+        else splice C into T just before location - in-T
+    return T
+</code></pre>
+
+<pre><code class="language-cpp">VISIT(G, L, v)
+    C = empty sequence of vertices
+    u = v
+    while out-degree(u) &gt; 0
+        let w be the first vertex in G.Adj[u]
+        remove w from G.Adj[u], decrementing out-degree(u)
+        add u onto the end of C
+        if out-degree(u) &gt; 0
+            add (u, u's location in C) to L
+        u = w
+    return C
+</code></pre>
+
+<p>The use of $\text{NIL}$ in the initial assignment to $L$ ensures that the first cycle $C$ returned by $\text{VISIT}$ becomes the current version of the Euler tour $T$. All cycles returned by $\text{VISIT}$ thereafter are spliced into $T$. We assume that whenever an empty cycle is returned by $\text{VISIT}$, splicing it into $T$ leaves $T$ unchanged.</p>
+
+<p>Each time that $\text{EULER-TOUR}$ removes a vertex $v$ from the list $L$, it calls $\text{VISIT}(G, L, v)$ to find a cycle $C$, possibly empty and possibly not simple, that starts and ends at $v$; the cycle $C$ is represented by a list that starts with $v$ and ends with the last vertex on the cycle before the cycle ends at $v$. $\text{EULER-TOUR}$ then splices this cycle $C$ into the Euler tour $T$ just before some appearance of $v$ in $T$.</p>
+
+<p>When $\text{VISIT}$ is at a vertex $u$, it looks for some vertex $w$ such that the edge $(u, w)$ has not yet been visited. Removing $w$ from $Adj[u]$ ensures that we will never visit $(u, w)$ again. $\text{VISIT}$ adds $u$ onto the cycle $C$ that it constructs. If, after removing edge $(u, w)$, vertex $u$ still has any leaving edges, then $u$, along with its location in $C$, is added to $L$. The cycle construction continues from $w$, and it ceases once a vertex with no unvisited leaving edges is found. Using the argument from part (a), at that point, this vertex must close up a cycle. At that point, therefore, the cycle $C$ is returned.</p>
+
+<p>It is possible that a vertex $u$ has unvisited leaving edges at the time it is added to list $L$ in $\text{VISIT}$, but that by the time that $u$ is removed from $L$ in $\text{EULER-TOUR}$, all of its leaving edges have been visited. In this case, the <strong>while</strong> loop of $\text{VISIT}$ executes $0$ iterations, and $\text{VISIT}$ returns an empty cycle.</p>
+
+<p>Once the list $L$ is empty, every edge has been visited. The resulting cycle $T$ is then an Euler tour.</p>
+
+<p>To see that $\text{EULER-TOUR}$ takes $O(E)$ time, observe that because we remove each edge from its adjacency list as it is visited, no edge is visited more than once. Since each edge is visited at some time, the number of times that a vertex is added to $L$, and thus removed from $L$, is at most $|E|$. Thus, the <strong>while</strong> loop in $\text{EULER-TOUR}$ executes at most $E$ iterations. The <strong>while</strong> loop in $\text{VISIT}$ executes one iteration per edge in the graph, and so it executes at most $E$ iterations as well. Since adding vertex $u$ to the doubly linked list $C$ takes constant time and splicing $C$ into $T$ takes constant time, the entire algorithm takes $O(E)$ time.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12087,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11997,6 +12103,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12011,6 +12118,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12092,6 +12202,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12104,6 +12215,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12136,6 +12250,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12153,6 +12268,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14581,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap22/problems/22-2/" title="22-2 Articulation points, bridges, and biconnected components"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap22/problems/22-4/" title="22-4 Reachability" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14594,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

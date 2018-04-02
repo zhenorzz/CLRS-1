@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>7-3 Alternative quicksort analysis :: Solutions</title>
     
     
     <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-3/">
     <nav id="sidebar" class="">
 
 
@@ -1144,7 +1144,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/" title="II Sorting and Order Statistics" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1393,7 +1393,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/" title="7 Quicksort" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1496,7 +1496,7 @@
   
     
     <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/problems/" title="Chap 7 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1558,7 +1558,7 @@
  
   
     
-      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-3/" title="7-3 Alternative quicksort analysis" class="dd-item ">
+      <li data-nav-id="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-3/" title="7-3 Alternative quicksort analysis" class="dd-item active">
         <a href="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-3/">
         Problem 7-3
         
@@ -8374,56 +8374,192 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/II%20Sorting%20and%20Order%20Statistics/Chap07/Problems/7-3.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/ii-sorting-and-order-statistics/'>II Sorting and Order Statistics</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap07/'>7 Quicksort</a> > <a href='/CLRS/ii-sorting-and-order-statistics/chap07/problems/'>Chap 7 Problems</a> > 7-3 Alternative quicksort analysis
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>7-3 Alternative quicksort analysis</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>An alternative analysis of the running time of randomized quicksort focuses on the expected running time of each individual recursive call to $\text{RANDOMIZED-QUICKSORT}$, rather than on the number of comparisons performed.</p>
+
+<p><strong>a.</strong> Argue that, given an array of size $n$, the probability that any particular element is chosen as the pivot is $1 / n$. Use this to define indicator random variables</p>
+
+<div>
+$$
+X_i = I\{i\text{th smallest element is chosen as the pivot}\}.
+$$
+</div>
+
+<p>What is $\text E[X_i]$?</p>
+
+<p><strong>b.</strong> Let $T(n)$ be a random variable denoting the running time of quicksort on an array of size $n$. Argue that</p>
+
+<div>
+$$
+\text E[T(n)] = \text E\bigg[\sum_{q = 1}^n X_q(T(q - 1) + T(n - q) + \Theta(n))\bigg]. \tag{7.5}
+$$
+</div>
+
+<p><strong>c.</strong> Show that we can rewrite equation $\text{(7.5)}$ as</p>
+
+<div>
+$$
+\text E[T(n)] = \frac{2}{n}\sum_{q = 2}^{n - 1}\text E[T(q)] + \Theta(n). \tag{7.6}
+$$
+</div>
+
+<p><strong>d.</strong> Show that</p>
+
+<div>
+$$
+\sum_{k = 2}^{n - 1}k\lg k \le \frac{1}{2}n^2\lg n - \frac{1}{8}n^2. \tag{7.7}
+$$
+</div>
+
+<p>($\textit{Hint:}$ Split the summation into two parts, one for $k = 2, 3, \ldots, \lceil n / 2 \rceil - 1$ and one for $k = \lceil n / 2 \rceil, \ldots, n - 1$.)</p>
+
+<p><strong>e.</strong> Using the bound from equation $\text{(7.7)}$, show that the recurrence in equation $\text{(7.6)}$ has the solution $\text E[T(n)] = \Theta(n\lg n)$. ($\textit{Hint:}$ Show, by substitution, that $\text E[T(n)] \le an\lg n$ for sufficiently large $n$ and for some positive constant $a$.)</p>
+</blockquote>
+
+<p><strong>a.</strong> Since the pivot is selected as a random element in the array, which has size $n$, the probabilities of any particular element being selected are all equal, and add to one, so, are all $\frac{1}{n}$. As such, $\text E[X_i] = \Pr\{i \text{ smallest is picked}\} = \frac{1}{n}$.</p>
+
+<p><strong>b.</strong> We can apply linearity of expectation over all of the events $X_i$. Suppose we have a particular $X_i$ be true, then, we will have one of the sub arrays be length $i - 1$, and the other be $n - i$, and will of course still need linear time to run the partition procedure. This corresponds exactly to the summand in equation $\text{(7.5)}$.</p>
+
+<p><strong>c.</strong></p>
+
+<div>
+$$
+\begin{aligned}
+& \text E\Bigg[\sum_{q = 1}^n X_q(T(q - 1) + T(n - q) + \Theta(n)) \Bigg] \\
+& = \sum_{q = 1}^n \text E[X_q(T(q - 1) + T(n - q) + \Theta(n))] \\
+& = \sum_{q = 1}^n(T(q - 1) + T(n - q) + \Theta(n))/n \\
+& = \Theta(n) + \frac{1}{n} \sum_{q = 1}^n(T(q - 1)+T(n - 1)) \\
+& = \Theta(n) + \frac{1}{n} \Big(\sum_{q = 1}^n T(q - 1) + \sum_{q = 1}^n T  (n - q) \Big) \\
+& = \Theta(n) + \frac{1}{n} \Big(\sum_{q = 1}^n T(q - 1) + \sum_{q = 1}^n T  (q - 1) \Big) \\
+& = \Theta(n) + \frac{2}{n} \sum_{q = 1}^n T(q - 1) \\
+& = \Theta(n) + \frac{2}{n} \sum_{q = 0}^{n - 1} T(q) \\
+& = \Theta(n) + \frac{2}{n} \sum_{q = 2}^{n - 1} T(q).
+\end{aligned}
+$$
+</div>
+
+<p><strong>d.</strong> We will prove this inequality in a different way than suggested by the hint. If
+we let $f(k) = k\lg k$ treated as a continuous function, then $f^\prime(k) = \lg k + 1$. Note now that the summation written out is the left hand approximation of the integral of $f(k)$ from $2$ to $n$ with step size $1$. By integration by parts, the anti-derivative of $k\lg k$ is</p>
+
+<div>
+$$
+\frac{1}{\lg 2}(\frac{k^2}{2}\ln k-\frac{k^2}{4}).
+$$
+</div>
+
+<p>So, plugging in the bounds and subtracting, we get $\frac{n^2\lg n}{2} - \frac{n^2}{4\ln 2} - 1$. Since $f$ has a positive derivative over the entire interval that the integral is being evaluated over, the left hand rule provides a underapproximation of the integral, so, we have that</p>
+
+<div>
+$$
+\begin{aligned}
+\sum_{k = 2}^{n - 1} k\lg k
+    & \le \frac{n^2\lg n}{2} - \frac{n^2}{4\ln 2} - 1 \\
+    & \le \frac{n^2\lg n}{2} - \frac{n^2}{8},
+\end{aligned}
+$$
+</div>
+
+<p>where the last inequality uses the fact that $\ln 2 &gt; 1 / 2$.</p>
+
+<p><strong>e.</strong> Assume by induction that $T(q) \le q \lg(q) + \Theta(n)$. Combining $\text{(7.6)}$ and $\text{(7.7)}$, we have</p>
+
+<div>
+$$
+\begin{aligned}
+\text E[T(n)]
+    & =   \frac{2}{n} \sum_{q = 2}^{n - 1} \text E[T(q)] + \Theta(n) \\
+    & \le \frac{2}{n} \sum_{q = 2}^{n - 1}(q\lg q + \Theta(n)) + \Theta(n) \\
+    & \le \frac{2}{n} \sum_{q = 2}^{n - 1}q\lg q + \frac{2}{n}\Theta(n) + \Theta(n) \\
+    & \le \frac{2}{n}(\frac{1}{2}n^2\lg n - \frac{1}{8}n^2) + \Theta(n) \\
+    & =   n\lg n -\frac{1}{4}n + \Theta(n) \\
+    & =   n\lg n+\Theta(n).
+\end{aligned}
+$$
+</div>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9222,6 +9358,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9236,6 +9373,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9399,6 +9539,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9413,6 +9554,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9478,6 +9622,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9490,6 +9635,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -9523,6 +9671,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9538,6 +9687,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14615,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-2/" title="7-2 Quicksort with equal element values"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/ii-sorting-and-order-statistics/chap07/problems/7-4/" title="7-4 Stack depth for quicksort" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

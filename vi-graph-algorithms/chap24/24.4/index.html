@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>24.4 Difference constraints and shortest paths :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/vi-graph-algorithms/chap24/24.4/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4946,7 +4946,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/" title="VI Graph Algorithms" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5398,7 +5398,7 @@
   
     
     <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/" title="24 Single-Source Shortest Paths" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5481,7 +5481,7 @@
  
   
     
-      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/24.4/" title="24.4 Difference constraints and shortest paths" class="dd-item ">
+      <li data-nav-id="/CLRS/vi-graph-algorithms/chap24/24.4/" title="24.4 Difference constraints and shortest paths" class="dd-item active">
         <a href="/CLRS/vi-graph-algorithms/chap24/24.4/">
         24.4 Difference constraints and shortest paths
         
@@ -8374,56 +8374,355 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/VI%20Graph%20Algorithms/Chap24/24.4.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/vi-graph-algorithms/'>VI Graph Algorithms</a> > <a href='/CLRS/vi-graph-algorithms/chap24/'>24 Single-Source Shortest Paths</a> > 24.4 Difference constraints and shortest paths
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#24-4-1">24.4-1</a></li>
+<li><a href="#24-4-2">24.4-2</a></li>
+<li><a href="#24-4-3">24.4-3</a></li>
+<li><a href="#24-4-4">24.4-4</a></li>
+<li><a href="#24-4-5">24.4-5</a></li>
+<li><a href="#24-4-6">24.4-6</a></li>
+<li><a href="#24-4-7">24.4-7</a></li>
+<li><a href="#24-4-8-star">24.4-8 $\star$</a></li>
+<li><a href="#24-4-9-star">24.4-9 $\star$</a></li>
+<li><a href="#24-4-10">24.4-10</a></li>
+<li><a href="#24-4-11">24.4-11</a></li>
+<li><a href="#24-4-12-star">24.4-12 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>24.4 Difference constraints and shortest paths</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="24-4-1">24.4-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Find a feasible solution or determine that no feasible solution exists for the following system of difference constraints:</p>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<div>
+$$
+\begin{aligned}
+x_1 - x_2 & \le & 1,  \\
+x_1 - x_4 & \le & -4, \\
+x_2 - x_3 & \le & 2,  \\
+x_2 - x_5 & \le & 7,  \\
+x_2 - x_6 & \le & 5,  \\
+x_3 - x_6 & \le & 10, \\
+x_4 - x_2 & \le & 2,  \\
+x_5 - x_1 & \le & -1, \\
+x_5 - x_4 & \le & 3,  \\
+x_6 - x_3 & \le & 8   \\
+\end{aligned}
+$$
+</div>
+</blockquote>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<p>Our vertices of the constraint graph will be</p>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<div>
+$$
+\{v_0, v_1, v_2, v_3, v_4, v_5, v_6\}.
+$$
+</div>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<p>The edges will be</p>
 
-<h1 id="getting-started">Getting Started</h1>
+<div>
+$$
+(v_0, v_1), (v_0, v_2), (v_0, v_3), (v_0, v_4), (v_0, v_5), (v_0, v_6), (v_2, v_1), (v_4, v_1), (v_3, v_2), (v_5, v_2), (v_6, v_2), (v_6, v_3),
+$$
+</div>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<p>with edge weights</p>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<div>
+$$
+0, 0, 0, 0, 0, 0, 1, -4, 2, 7, 5, 10, 2, -1, 3, -8
+$$
+</div>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<p>respectively. Then, computing</p>
 
-<h1 id="more-informations">More Informations</h1>
+<div>
+$$
+(\delta(v_0, v_1), \delta(v_0, v_2), \delta(v_0, v_3), \delta(v_0, v_4), \delta(v_0, v_5), \delta(v_0, v_6)),
+$$
+</div>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>we get</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<div>
+$$
+(-5, -3, 0, -1, -6, -8),
+$$
+</div>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<p>which is a feasible solution by Theorem 24.9.</p>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<h2 id="24-4-2">24.4-2</h2>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<blockquote>
+<p>Find a feasible solution or determine that no feasible solution exists for the following system of difference constraints:</p>
+
+<div>
+$$
+\begin{aligned}
+x_1 - x_2 & \le &4, \\
+x_1 - x_5 & \le &5, \\
+x_2 - x_4 & \le &-6, \\
+x_3 - x_2 & \le &1, \\
+x_4 - x_1 & \le &3, \\
+x_4 - x_3 & \le &5, \\
+x_4 - x_5 & \le &10, \\
+x_5 - x_3 & \le &-4, \\
+x_5 - x_4 & \le &-8. 
+\end{aligned}
+$$
+</div>
+</blockquote>
+
+<p>There is no feasible solution because the constraint graph contains a negative-weight cycle: $(v_1, v_4, v_2, v_3, v_5, v_1)$ has weight $-1$.</p>
+
+<h2 id="24-4-3">24.4-3</h2>
+
+<blockquote>
+<p>Can any shortest-path weight from the new vertex $v_0$ in a constraint graph be positive? Explain.</p>
+</blockquote>
+
+<p>No, it cannot be positive. This is because for every vertex $v \ne v_0$, there is an edge $(v_0, v)$ with weight zero. So, there is some path from the new vertex to every other of weight zero. Since $\delta(v_0, v)$ is a minimum weight of all paths, it cannot be greater than the weight of this weight zero path that consists of a single edge.</p>
+
+<h2 id="24-4-4">24.4-4</h2>
+
+<blockquote>
+<p>Express the single-pair shortest-path problem as a linear program.</p>
+</blockquote>
+
+<p>Let $\delta(u)$ be the shortest-path weight from $s$ to $u$. Then we want to find $\delta(t)$. $\delta$ must satisfy</p>
+
+<div>
+$$
+\begin{aligned}
+            \delta(s) & =   0 \\
+\delta(v) - \delta(u) & \le w(u, v) \text{ for all $(u, v) \in E$} & \text{(Lemma 24.10)},
+\end{aligned}
+$$
+</div>
+
+<p>where $w(u, v)$ is the weight of edge $(u, v)$.</p>
+
+<p>Thus $x_v = \delta(v)$ is a solution to</p>
+
+<div>
+$$
+\begin{aligned}
+      x_s & = 0 \\
+x_v - x_u & \le w(u, v).
+\end{aligned}
+$$
+</div>
+
+<p>To turn this into a set of inequalities of the required form, replace $x_s = 0$ by $x_s \le 0$ and $-x_s \le 0$ (i.e., $x_s \ge$). The constraints are now</p>
+
+<div>
+$$
+\begin{aligned}
+      x_s & \le 0, \\
+     -x_s & \le 0. \\
+x_v - x_u & \le w(u, v),
+\end{aligned}
+$$
+</div>
+
+<p>which still has $x_v = \delta(v)$ as a solution.</p>
+
+<p>However, $\delta$ isn&rsquo;t the only solution to this set of inequalities. (For example, if all edge weights are nonnegative, all $x_i = 0$ is a solution.) To force $x_t = \delta(t)$ as required by the shortest-path problem, add the requirement to maximize (the objective function) $x_t$. This is correct because</p>
+
+<ul>
+<li>$\max(x_t) \ge \delta(t)$ because $x_t = \delta(t)$ is part of one solution to the set of inequalities,</li>
+
+<li><p>$\max(x_t) \le \delta(t)$ can be demonstrated by a technique similar to the proof of Theorem 24.9:<br />
+Let $p$ be a shortest path from $s$ to $t$. Then by definition,</p>
+
+<div>
+$$
+\delta(t) = \sum_{(u, v) \in p} w(u, v).
+$$
+</div>
+    
+
+<p>But for each edge $(u, v)$ we have the inequality $x_v - x_u \le w(u, v)$, so</p>
+
+<div>
+$$
+\delta(t) = \sum_{(u, v) \in p} w(u, v) \ge \sum_{(u, v) \in p} (x_v - x_u) = x_t - x_s.
+$$
+</div>
+    
+
+<p>But $x_s = 0$, so $x_t \le \delta(t)$.</p></li>
+</ul>
+
+<p>Note: Maximizing $x_t$ subject to the above inequalities solves the single-pair shortest-path problem when $t$ is reachable from $s$ and there are no negative-weight cycles. But if there&rsquo;s a negative-weight cycle, the inequalities have no feasible solution (as demonstrated in the proof of Theorem 24.9); and if $t$ is not reachable from $s$, then $x_t$ is unbounded.</p>
+
+<h2 id="24-4-5">24.4-5</h2>
+
+<blockquote>
+<p>Show how to modify the Bellman-Ford algorithm slightly so that when we use it to solve a system of difference constraints with $m$ inequalities on $n$ unknowns, the running time is $O(nm)$.</p>
+</blockquote>
+
+<p>We can follow the advice of problem 14.4-7 and solve the system of constraints on a modified constraint graph in which there is no new vertex $v_0$. This is simply done by initializing all of the vertices to have a $d$ value of $0$ before running the iterated relaxations of Bellman Ford. Since we don&rsquo;t add a new vertex and the $n$ edges going from it to to vertex corresponding to each variable, we are just running Bellman Ford on a graph with $n$ vertices and $m$ edges, and so it will have a runtime of $O(mn)$.</p>
+
+<h2 id="24-4-6">24.4-6</h2>
+
+<blockquote>
+<p>Suppose that in addition to a system of difference constraints, we want to handle <strong><em>equality constraints</em></strong> of the form $x_i = x_j + b_k$. Show how to adapt the Bellman-Ford algorithm to solve this variety of constraint system.</p>
+</blockquote>
+
+<p>To obtain the equality constraint $x_i = x_j + b_k$ we simply use the inequalities $x_i - x_j \le b_k$ and $x_j - x_i \le -bk$, then solve the problem as usual.</p>
+
+<h2 id="24-4-7">24.4-7</h2>
+
+<blockquote>
+<p>Show how to solve a system of difference constraints by a Bellman-Ford-like algorithm that runs on a constraint graph without the extra vertex $v_0$.</p>
+</blockquote>
+
+<p>Observe that after the first pass, all $d$ values are at most $0$, and that relaxing edges $(v_0, v_i)$ will never again change a $d$ value. Therefore, we can eliminate $v_0$ by running the Bellman-Ford algorithm on the constraint graph without the $v_0$ vertex but initializing all shortest path estimates to $0$ instead of $\infty$.</p>
+
+<h2 id="24-4-8-star">24.4-8 $\star$</h2>
+
+<blockquote>
+<p>Let $Ax \le b$ be a system of $m$ difference constraints in $n$ unknowns. Show that the Bellman-Ford algorithm, when run on the corresponding constraint graph, maximizes $\sum_{i = 1}^n x_i$ subject to $Ax \le b$ and $x_i \le 0$ for all $x_i$.</p>
+</blockquote>
+
+<p>Bellman-Ford correctly solves the system of difference constraints so $Ax \le b$ is always satisfied. We also have that $x_i = \delta(v_0, v_i) \le w(v_0, v_i) = 0$ so $x_i \le 0$ for all $i$. To show that $\sum x_i$ is maximized, we&rsquo;ll show that for any feasible solution $(y_1, y_2, \ldots, y_n)$ which satisfies the constraints we have $yi \le \delta(v_0, v_i) = x_i$. Let $v_0, v_{i_1}, \ldots, v_{i_k}$ be a shortest path from $v_0$ to $v_i$ in the constraint graph. Then we must have the constraints $y_{i_2} - y_{i_1} \le w(v_{i_1}, v_{i_2}), \ldots, y_{i_k} - y_{i_{k - 1}} \le w(v_{i_{k - 1}},v_{i_k})$. Summing these up we have</p>
+
+<div>
+$$
+y_i \le y_i - y_1 \le \sum_{m = 2}^k w(v_{i_m}, v_{i_{m - 1}}) = \delta(v_0, v_i) = x_i.
+$$
+</div>
+
+<h2 id="24-4-9-star">24.4-9 $\star$</h2>
+
+<blockquote>
+<p>Show that the Bellman-Ford algorithm, when run on the constraint graph for a system $Ax \le b$ of difference constraints, minimizes the quantity $(\max{x_i} - \min{x_i})$ subject to $Ax \le b$. Explain how this fact might come in handy if the algorithm is used to schedule construction jobs.</p>
+</blockquote>
+
+<p>We can see that the Bellman-Ford algorithm run on the graph whose construction is described in this section causes the quantity $\max{x_i} - \min{x_i}$ to be minimized. We know that the largest value assigned to any of the vertices in the constraint graph is a $0$. It is clear that it won&rsquo;t be greater than zero, since just the single edge path to each of the vertices has cost zero. We also know that we cannot have every vertex having a shortest path with negative weight. To see this, notice that this would mean that the pointer for each vertex has it&rsquo;s $p$ value going to some other vertex that is not the source. This means that if we follow the procedure for reconstructing the shortest path for any of the vertices, we have that it can never get back to the source, a contradiction to the fact that it is a shortest path from the source to that vertex.</p>
+
+<p>Next, we note that when we run Bellman-Ford, we are maximizing $\min{x_i}$. The shortest distance in the constraint graphs is the bare minimum of what is required in order to have all the constraints satisfied, if we were to increase any of the values we would be violating a constraint.</p>
+
+<p>This could be in handy when scheduling construction jobs because the quantity $\max{x_i} - \min{x_i}$ is equal to the difference in time between the last task and the first task. Therefore, it means that minimizing it would mean that the total time that all the jobs takes is also minimized. And, most people want the entire process of construction to take as short of a time as possible.</p>
+
+<h2 id="24-4-10">24.4-10</h2>
+
+<blockquote>
+<p>Suppose that every row in the matrix $A$ of a linear program $Ax \le b$ corresponds to a difference constraint, a single-variable constraint of the form $x_i \le b_k$, or a singlevariable constraint of the form $-x_i \le b_k$. Show how to adapt the Bellman-Ford algorithm to solve this variety of constraint system.</p>
+</blockquote>
+
+<p>To allow for single-variable constraints, we add the variable $x_0$ and let it correspond to the source vertex $v_0$ of the constraint graph. The idea is that, if there are no negative-weight cycles containing $v_0$, we will find that $\delta(v_0, v_0) = 0$. In this case, we set $x_0 = 0$, and so we can treat any single-variable constraint using $x_i$ as if it were a $2$-variable constraint with $x_0$ as the other variable.</p>
+
+<p>Specifically, we treat the constraint $x_i \le b_k$ as if it were $x_i - x_0 \le b_k$, and we add the edge $(v_0, v_i)$ with weight $b_k$ to the constraint graph. We treat the constraint $-x_i \le b_k$ as if it were $x_0 - x_i \le b_k$, and we add the edge $(v_i, v_0)$ with weight $b_k$ to the constraint graph.</p>
+
+<p>Once we find shortest-path weights from $v_0$, we set $x_i = \delta(v_0, v_i)$ for all $i = 0, 1, \ldots, n$; that is, we do as before but also include $x_0$ as one of the variables that we set to a shortest-path weight. Since $v_0$ is the source vertex, either $x_0 = 0$ or $x_0 &lt; 0$.</p>
+
+<p>If $\delta(v_0, v_0) = 0$, so that $x_0 = 0$, then setting $x_i = \delta(v_0, v_i)$ for all $i = 0, 1, \ldots, n$ gives a feasible solution for the system. The only new constraints beyond those in the text are those involving $x_0$. For constraints $x_i \le b_k$, we use $x_i - x_0 \le b_k$. By the triangle inequality, $\delta(v_0, v_i) \le \delta(v_0, v_0) + w(v_0, v_i) = b_k$, and so $x_i \le b_k$. For constraints $x_i \le b_k$, we use $x_0 - x_i \le b_k$. By the triangle inequality, $0 = \delta(v_0, v_0) \le \delta(v_0, v_i) + w(v_i, v_0)$; thus, $0 \le x_i + b_k$ or, equivalently, $-x_i \le b_k$.</p>
+
+<p>If $\delta(v_0, v_0) &lt; 0$, so that $x_0 &lt; 0$, then there is a negative-weight cycle containing $v_0$. The portion of the proof of Theorem 24.9 that deals with negative-weight cycles carries through but with $v_0$ on the negative-weight cycle, and we see that there is no feasible solution.</p>
+
+<h2 id="24-4-11">24.4-11</h2>
+
+<blockquote>
+<p>Give an efficient algorithm to solve a system $Ax \le b$ of difference constraints when all of the elements of $b$ are real-valued and all of the unknowns $x_i$ must be integers.</p>
+</blockquote>
+
+<p>To do this, just take the floor of (largest integer that is less than or equal to) each of the $b$ values and solve the resulting integer difference problem. These modified constraints will be admitting exactly the same set of assignments since we required that the solution have integer values assigned to the variables. This is because since the variables are integers, all of their differences will also be integers. For an integer to be less than or equal to a real number, it is necessary and sufficient for it to be less than or equal to the floor of that real number.</p>
+
+<h2 id="24-4-12-star">24.4-12 $\star$</h2>
+
+<blockquote>
+<p>Give an efficient algorithm to solve a system $Ax \le b$ of difference constraints when all of the elements of $b$ are real-valued and a specified subset of some, but not necessarily all, of the unknowns $x_i$ must be integers.</p>
+</blockquote>
+
+<p>To solve the problem of $Ax \le b$ where the elements of $b$ are real-valued we carry out the same procedure as before, running Bellman-Ford, but allowing our edge weights to be real-valued. To impose the integer condition on the $x_i$&rsquo;s, we modify the $\text{RELAX}$ procedure. Suppose we call $\text{RELAX}(v_i, v_j, w)$ where $v_j$ is required to be integral valued. If $v_j.d &gt; \lfloor v_i.d + w(v_i, v_j) \rfloor$, set $v_j.d = \lfloor v_i.d + w(v_i, v_j) \rfloor$. This guarantees that the condition that $v_j.d - v_i.d \le w(v_i, v_j)$ as desired. It also ensures that $v_j$ is integer valued. Since the triangle inequality still holds, $x = (v_1.d, v_2.d, \ldots, v_n.d)$ is a feasible solution for the system, provided that $G$ contains no negative weight cycles.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11982,6 +12281,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11996,6 +12296,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12305,6 +12608,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -12319,6 +12623,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -12367,6 +12674,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -12384,6 +12692,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14774,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/vi-graph-algorithms/chap24/24.3/" title="24.3 Dijkstra&#39;s algorithm"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/vi-graph-algorithms/chap24/24.5/" title="24.5 Proofs of shortest-paths properties" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14787,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

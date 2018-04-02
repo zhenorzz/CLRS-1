@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>14.1 Dynamic order statistics :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iii-data-structures/chap14/14.1/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -2142,7 +2142,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/" title="III Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3057,7 +3057,7 @@
   
     
     <li data-nav-id="/CLRS/iii-data-structures/chap14/" title="14 Augmenting Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3083,7 +3083,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iii-data-structures/chap14/14.1/" title="14.1 Dynamic order statistics" class="dd-item ">
+      <li data-nav-id="/CLRS/iii-data-structures/chap14/14.1/" title="14.1 Dynamic order statistics" class="dd-item active">
         <a href="/CLRS/iii-data-structures/chap14/14.1/">
         14.1 Dynamic order statistics
         
@@ -8374,56 +8374,221 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/III%20Data%20Structures/Chap14/14.1.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iii-data-structures/'>III Data Structures</a> > <a href='/CLRS/iii-data-structures/chap14/'>14 Augmenting Data Structures</a> > 14.1 Dynamic order statistics
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#14-1-1">14.1-1</a></li>
+<li><a href="#14-1-2">14.1-2</a></li>
+<li><a href="#14-1-3">14.1-3</a></li>
+<li><a href="#14-1-4">14.1-4</a></li>
+<li><a href="#14-1-5">14.1-5</a></li>
+<li><a href="#14-1-6">14.1-6</a></li>
+<li><a href="#14-1-7">14.1-7</a></li>
+<li><a href="#14-1-8-star">14.1-8 $\star$</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>14.1 Dynamic order statistics</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="14-1-1">14.1-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Show how $\text{OS-SELECT}(T.root, 10)$ operates on the red-black tree $T$ of Figure 14.1.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<ul>
+<li>$26: r = 13, i = 10$, go left.</li>
+<li>$17: r =  8, i = 10$, go right.</li>
+<li>$21: r =  3, i =  2$, go left.</li>
+<li>$19: r =  1, i =  2$, go right.</li>
+<li>$20: r =  1, i =  1$, choose $20$.</li>
+</ul>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="14-1-2">14.1-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Show how $\text{OS-RANK}(T, x)$ operates on the red-black tree $T$ of Figure 14.1 and the node $x$ with $x.key = 35$.</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<ul>
+<li>$35: r = 1$.</li>
+<li>$38: r = 1$.</li>
+<li>$30: r = r + 2 = 3$.</li>
+<li>$41: r = 3$.</li>
+<li>$26: r = r + 13 = 16$.</li>
+</ul>
 
-<h1 id="getting-started">Getting Started</h1>
+<h2 id="14-1-3">14.1-3</h2>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<blockquote>
+<p>Write a nonrecursive version of $\text{OS-SELECT}$.</p>
+</blockquote>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<pre><code class="language-cpp">OS-SELECT(x, i)
+    r = left[x] + 1
+    while r != i
+        if i &lt; r
+            x = left[x]
+        else x = right[x]
+            i = i - r
+        r = left[x] + 1
+</code></pre>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="14-1-4">14.1-4</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Write a recursive procedure $\text{OS-KEY-RANK}(T, k)$ that takes as input an order-statistic tree $T$ and a key $k$ and returns the rank of $k$ in the dynamic set represented by $T$. Assume that the keys of $T$ are distinct.</p>
+</blockquote>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<pre><code class="language-cpp">OS-KEY-RANK(T, k)
+    if k == key[root[T]]
+        return size[left[root[T]]] + 1
+    else if key[root[T]] &gt; k
+        return OS-KEY-RANK(left[T], k)
+    else return size[left[root[T]]] + 1 + OS-KEY-RANK(right[T], k)
+</code></pre>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="14-1-5">14.1-5</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Given an element $x$ in an $n$-node order-statistic tree and a natural number $i$, how can we determine the $i$th successor of $x$ in the linear order of the tree in $O(\lg n)$ time?</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>Given an element $x$ in an $n$-node order-statistic tree $T$ and a natural number $i$, the following procedure retrieves the $i$th successor of $x$ in the linear order of $T$:</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<pre><code class="language-cpp">OS-SUCCESSOR(T, x, i)
+    r = OS-RANK(T, x)
+    s = r + i
+    return OS-SELECT(T.root, s)
+</code></pre>
+
+<p>Since $\text{OS-RANK}$ and $\text{OS-SELECT}$ each take $O(\lg n)$ time, so does the procedure $\text{OS-SUCCESSOR}$.</p>
+
+<h2 id="14-1-6">14.1-6</h2>
+
+<blockquote>
+<p>Observe that whenever we reference the size attribute of a node in either $\text{OS-SELECT}$ or $\text{OS-RANK}$, we use it only to compute a rank. Accordingly, suppose we store in each node its rank in the subtree of which it is the root. Show how to maintain this information during insertion and deletion. (Remember that these two operations can cause rotations.)</p>
+</blockquote>
+
+<p>When inserting node $z$, we search down the tree for the proper place for $z$. For each node $x$ on this path, add $1$ to $x.rank$ if $z$ is inserted within $x$&rsquo;s left subtree, and leave $x.rank$ unchanged if $z$ is inserted within $x$&rsquo;s right subtree. Similarly when deleting, subtract $1$ from $x.rank$ whenever the spliced-out node had been in $x$&rsquo;s left subtree.</p>
+
+<p>We also need to handle the rotations that occur during the fixup procedures for insertion and deletion. Consider a left rotation on node $x$, where the pre-rotation right child of $x$ is $y$ (so that $x$ becomes $y$&rsquo;s left child after the left rotation). We leave $x.rank$ unchanged, and letting $r = y.rank$ before the rotation, we set $y.rank = r + x.rank$. Right rotations are handled in an analogous manner.</p>
+
+<h2 id="14-1-7">14.1-7</h2>
+
+<blockquote>
+<p>Show how to use an order-statistic tree to count the number of inversions (see Problem 2-4) in an array of size $n$ in time $O(n\lg n)$.</p>
+</blockquote>
+
+<p>Let $A[1..n]$ be the array of $n$ distinct numbers.</p>
+
+<p>One way to count the inversions is to add up, for each element, the number of larger elements that precede it in the array:</p>
+
+<div>
+$$
+\#\text{of inversions} = \sum_{j = 1}^n |Inv(j)|,
+$$
+</div>
+
+<p>where $Inv(j) = {i: i &lt; j \text{ and } A[i] &gt; A[j]}$.</p>
+
+<p>Note that $|Inv(j)|$ is related to $A[j]$&rsquo;s rank in the subarray $A[1..j]$ because the elements in $Inv(j)$ are the reason that $A[j]$ is not positioned according to its rank. Let $r(j)$ be the rank of $A[j]$ in $A[1..j]$. Then $j = r(j) + |Inv(j)|$, so we can compute</p>
+
+<div>
+$$
+|Inv(j)| = j - r(j)
+$$
+</div>
+
+<p>by inserting $A[1], \ldots, A[n]$ into an order-statistic tree and using $\text{OS-RANK}$ to find the rank of each $A[j]$ in the tree immediately after it is inserted into the tree. (This $\text{OS-RANK}$ value is $r(j)$.)</p>
+
+<p>Insertion and $\text{OS-RANK}$ each take $O(\lg n)$ time, and so the total time for $n$ elements is $O(n\lg n)$.</p>
+
+<h2 id="14-1-8-star">14.1-8 $\star$</h2>
+
+<blockquote>
+<p>Consider $n$ chords on a circle, each defined by its endpoints. Describe an $O(n\lg n)$-time algorithm to determine the number of pairs of chords that intersect inside the circle. (For example, if the $n$ chords are all diameters that meet at the center, then the correct answer is $\binom{n}{2}$.) Assume that no two chords share an endpoint.</p>
+</blockquote>
+
+<p>Sort the vertices in clock-wise order, and assign a unique value to each vertex. For each chord its two vertices are $u_i$, $v_i$ and $u_i &lt; v_i$. Add the vertices one by one in clock-wise order, if we meet a $u_i$, we add it to the order-statistic tree, if we meet a $v_i$, we calculate how many nodes are larger than $u_i$ (which is the number of intersects with chord $i$), and remove $u_i$.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -9952,6 +10117,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -9966,6 +10132,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10614,6 +10783,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10630,6 +10800,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10645,6 +10816,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -14463,9 +14637,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iii-data-structures/chap14/" title="14 Augmenting Data Structures"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iii-data-structures/chap14/14.2/" title="14.2 How to augment a data structure" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14650,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

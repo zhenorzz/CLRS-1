@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>20.2 A recursive structure :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699596" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699596" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699596" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699596"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/v-advanced-data-structures/chap20/20.2/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699596"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699596"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699596"></script>
 
     
   </div>
@@ -4157,7 +4157,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/" title="V Advanced Data Structures" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4571,7 +4571,7 @@
   
     
     <li data-nav-id="/CLRS/v-advanced-data-structures/chap20/" title="20 van Emde Boas Trees" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4616,7 +4616,7 @@
  
   
     
-      <li data-nav-id="/CLRS/v-advanced-data-structures/chap20/20.2/" title="20.2 A recursive structure" class="dd-item ">
+      <li data-nav-id="/CLRS/v-advanced-data-structures/chap20/20.2/" title="20.2 A recursive structure" class="dd-item active">
         <a href="/CLRS/v-advanced-data-structures/chap20/20.2/">
         20.2 A recursive structure
         
@@ -8374,56 +8374,232 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/V%20Advanced%20Data%20Structures/Chap20/20.2.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/v-advanced-data-structures/'>V Advanced Data Structures</a> > <a href='/CLRS/v-advanced-data-structures/chap20/'>20 van Emde Boas Trees</a> > 20.2 A recursive structure
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#20-2-1">20.2-1</a></li>
+<li><a href="#20-2-2">20.2-2</a></li>
+<li><a href="#20-2-3">20.2-3</a></li>
+<li><a href="#20-2-4">20.2-4</a></li>
+<li><a href="#20-2-5">20.2-5</a></li>
+<li><a href="#20-2-6">20.2-6</a></li>
+<li><a href="#20-2-7">20.2-7</a></li>
+<li><a href="#20-2-8">20.2-8</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>20.2 A recursive structure</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
 
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
+<h2 id="20-2-1">20.2-1</h2>
 
-<p>Many a little makes a mickle.</p>
+<blockquote>
+<p>Write pseudocode for the procedures $\text{PROTO-vEB-MAXIMUM}$ and $\text{PROTO-vEB-PREDECESSOR}$.</p>
+</blockquote>
 
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
+<p>See the two algorithms, $\text{PROTO-vEB-MAXIMUM}$ and $\text{PROTO-vEB-PREDECESSOR}$.</p>
 
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
+<h2 id="20-2-2">20.2-2</h2>
 
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
+<blockquote>
+<p>Write pseudocode for $\text{PROTO-vEB-DELETE}$. It should update the appropriate summary bit by scanning the related bits within the cluster. What is the worst-case running time of your procedure?</p>
+</blockquote>
 
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
+<pre><code class="language-cpp">PROTO-vEB-DELETE(V, x)
+    if V.u == 2
+        V.A[x] = 0
+    else
+        PROTO-vEB-DELETE(V.cluster[high(x)], low(x))
+        inCluster = FALSE
+        for i = high(x)．sqrt(u) to (high(x) + 1)．sqrt(u) - 1
+            if PROTO-vEB-MEMBER(V.cluster[high(x)], i)
+                inCluster = TRUE
+                break
+        if inCluster == FALSE
+            PROTO-vEB-DELETE(V.summary, high(x))
+</code></pre>
 
-<h1 id="getting-started">Getting Started</h1>
+<p>When we delete a key, we need to check membership of all keys of that cluster to know how to update the summary structure. There are $\sqrt u$ of these, and each membership takes $O(\lg\lg u)$ time to check. With the recursive calls, recurrence for running time is</p>
 
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
+<div>
+$$
+T(u) = T(\sqrt u) + O(\sqrt u\lg\lg u).
+$$
+</div>
 
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
+<p>We make the substitution $m = \lg u$ and $S(m) = T(2^m)$. Then we apply the Master Theorem, using case 3, to solve the recurrence. Substituting back, we find that the runtime is $T(u) = O(\sqrt u\lg\lg u)$.</p>
 
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
+<h2 id="20-2-3">20.2-3</h2>
 
-<h1 id="more-informations">More Informations</h1>
+<blockquote>
+<p>Add the attribute $n$ to each $\text{proto-vEB}$ structure, giving the number of elements currently in the set it represents, and write pseudocode for $\text{PROTO-vEB-DELETE}$ that uses the attribute $n$ to decide when to reset summary bits to $0$. What is the worst-case running time of your procedure? What other procedures need to change because of the new attribute? Do these changes affect their running times?</p>
+</blockquote>
 
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
+<p>We would keep the same as before, but insert immediately after the else, a check of whether $n = 1$. If it doesn&rsquo;t continue as usual, but if it does, then we can just immediately set the summary bit to $0$, null out the pointer in the table, and be done immediately. This has the upside that it can sometimes save up to $\lg\lg u$. The procedure has the big downside that the number of elements that are in the set could be as high as $\lg(\lg u)$, in which case $\lg u$ many bits are needed to store $n$.</p>
 
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
+<h2 id="20-2-4">20.2-4</h2>
 
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
+<blockquote>
+<p>Modify the $\text{proto-vEB}$ structure to support duplicate keys.</p>
+</blockquote>
 
-<p>By Jay Chen on Jan 19, 2017.</p>
+<p>The array $A$ found in a proto van Emde Boas structure of size $2$ should now support integers, instead of just bits. All other pats of the structure will remain the same. The integer will store the number of duplicates at that position. The modifications to insert, delete, minimum, successor, etc will be minor. Only the base cases will need to be updated.</p>
 
-<p>Updated to this new site on Feb 7, 2018.</p>
+<pre><code class="language-cpp">PROTO-vEB-DELETE(V, x)
+    if V.u == 2
+        V.A[x] = 0
+    else
+        PROTO-vEB-DELETE(V.cluster[high(x)], low(x))
+        inCluster = FALSE
+        for i = high(x) * sqrt(u) to (high(x) + 1) * sqrt(u) - 1
+            if PROTO-vEB-MEMBER(V.cluster[high(x)], i)
+                inCluster = TRUE
+                break
+        if inCluster = FALSE
+            PROTO-vEB-DELETE(V.summary,high(x))
+</code></pre>
+
+<h2 id="20-2-5">20.2-5</h2>
+
+<blockquote>
+<p>Modify the $\text{proto-vEB}$ structure to support keys that have associated satellite data.</p>
+</blockquote>
+
+<p>The only modification necessary would be for the $u = 2$ trees. They would need to also include a length two array that had pointers to the corresponding satellite data which would be populated in case the corresponding entry in $A$ were $1$.</p>
+
+<h2 id="20-2-6">20.2-6</h2>
+
+<blockquote>
+<p>Write pseudocode for a procedure that creates a $\text{proto-vEB}(u)$ structure.</p>
+</blockquote>
+
+<p>This algorithm recursively allocates proper space and appropriately initializes attributes for a proto van Emde Boas structure of size $u$.</p>
+
+<pre><code class="language-cpp">MAKE-PROTO-vEB(u)
+    V = allocate-node()
+    V.u = u
+    if u == 2
+        let A be an array of size 2
+        V.A[1] = V.A[0] = 0
+    else
+        V.summary = MAKE-PROTO-vEB(sqrt(u))
+        for i = 0 to sqrt(u) - 1
+            V.cluster[i] = MAKE-PROTO-vEB(sqrt(u))
+</code></pre>
+
+<h2 id="20-2-7">20.2-7</h2>
+
+<blockquote>
+<p>Argue that if line 9 of $\text{PROTO-vEB-MINIMUM}$ is executed, then the $\text{proto-vEB}$ structure is empty.</p>
+</blockquote>
+
+<p>For line 9 to be executed, we would need that in the summary data, we also had a $\text{NIL}$ returned. This could of either happened through line 9, or 6. Eventually though, it would need to happen in line 6, so, there must be some number of summarizations that happened of $V$ that caused us to get an empty $u = 2$ $\text{vEB}$. However, a summarization has an entry of one if any of the corresponding entries in the data structure are one. This means that there are no entries in $V$, and so, we have that $V$ is empty.</p>
+
+<h2 id="20-2-8">20.2-8</h2>
+
+<blockquote>
+<p>Suppose that we designed a $\text{proto-vEB}$ structure in which each <em>cluster</em> array had only $u^{1 / 4}$ elements. What would the running times of each operation be?</p>
+</blockquote>
+
+<p>There are $u^{3 / 4}$ clusters in each $\text{proto-vEB}$.</p>
+
+<ul>
+<li><strong>MEMBER/INSERT:</strong>
+<div>
+$$
+T(u) = T(u^{1 / 4}) + O(1) = \Theta(\lg\log_4 u) = \Theta(\lg\lg u).
+$$
+</div></li>
+<li><strong>MINIMUM/MAXIMUM:</strong>
+<div>
+$$
+T(u) = T(u^{1 / 4}) + T(u^{3 / 4}) + O(1) = \Theta(\lg u).
+$$
+</div></li>
+<li><strong>SUCCESSOR/PREDECESSOR/DELETE:</strong>
+<div>
+$$
+T(u) = T(u^{1 / 4}) + T(u^{3 / 4}) + \Theta(\lg u^{1 / 4}) = \Theta(\lg u \lg\lg u).
+$$
+</div></li>
+</ul>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -11428,6 +11604,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11442,6 +11619,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11719,6 +11899,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -11733,6 +11914,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -11749,6 +11933,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -11766,6 +11951,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14651,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/v-advanced-data-structures/chap20/20.1/" title="20.1 Preliminary approaches"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/v-advanced-data-structures/chap20/20.3/" title="20.3 The van Emde Boas tree" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14664,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699596"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699596"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699596"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699596"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699596"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699596"></script>
+    <script src="/CLRS/js/learn.js?1522699596"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699596"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699596" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

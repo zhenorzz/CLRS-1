@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/CLRS/images/favicon.png" type="image/x-icon" />
-    <title>CLRS :: Solutions</title>
+    <title>15-8 Image compression by seam carving :: Solutions</title>
     
     
-    <link href="/CLRS/css/nucleus.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/font-awesome.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hybrid.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/featherlight.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/auto-complete.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/theme.css?1522699598" rel="stylesheet">
-    <link href="/CLRS/css/hugo-theme.css?1522699598" rel="stylesheet">
+    <link href="/CLRS/css/nucleus.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/font-awesome.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hybrid.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/featherlight.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/perfect-scrollbar.min.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/auto-complete.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/theme.css?1522699595" rel="stylesheet">
+    <link href="/CLRS/css/hugo-theme.css?1522699595" rel="stylesheet">
     
-      <link href="/CLRS/css/theme-nippon2.css?1522699598" rel="stylesheet">
+      <link href="/CLRS/css/theme-nippon2.css?1522699595" rel="stylesheet">
     
 
-    <script src="/CLRS/js/jquery-2.x.min.js?1522699598"></script>
+    <script src="/CLRS/js/jquery-2.x.min.js?1522699595"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -34,7 +34,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha256-uXNHy6FK52Pb83SmU45mVAg7YECmr9Lwwu1zOz31j5c=" crossorigin="anonymous" />
   </head>
-  <body class="" data-url="/CLRS/">
+  <body class="" data-url="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-8/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699598"></script>
-<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/lunr.min.js?1522699595"></script>
+<script type="text/javascript" src="/CLRS/js/auto-complete.js?1522699595"></script>
 <script type="text/javascript">
     
         var baseurl = '\/CLRS';
     
 </script>
-<script type="text/javascript" src="/CLRS/js/search.js?1522699598"></script>
+<script type="text/javascript" src="/CLRS/js/search.js?1522699595"></script>
 
     
   </div>
@@ -3229,7 +3229,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/" title="IV Advanced Design and Analysis Techniques" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3256,7 +3256,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/" title="15 Dynamic Programming" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3378,7 +3378,7 @@
   
     
     <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/" title="Chap 15 Problems" class="dd-item 
-        
+        parent
         
         
         ">
@@ -3535,7 +3535,7 @@
  
   
     
-      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-8/" title="15-8 Image compression by seam carving" class="dd-item ">
+      <li data-nav-id="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-8/" title="15-8 Image compression by seam carving" class="dd-item active">
         <a href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-8/">
         Problem 15-8
         
@@ -8374,56 +8374,196 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/walkccc/CLRS/edit/master/content/IV%20Advanced%20Design%20and%20Analysis%20Techniques/Chap15/Problems/15-8.md" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/CLRS/'>CLRS</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/'>IV Advanced Design and Analysis Techniques</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/'>15 Dynamic Programming</a> > <a href='/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/'>Chap 15 Problems</a> > 15-8 Image compression by seam carving
+          
+         
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>15-8 Image compression by seam carving</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<blockquote>
+<p>We are given a color picture consisting of an $m \times n$ array $A[1..m, 1..n]$ of pixels, where each pixel specifies a triple of red, green, and blue (RGB) intensities. Suppose that we wish to compress this picture slightly. Specifically, we wish to remove one pixel from each of the $m$ rows, so that the whole picture becomes one pixel narrower. To avoid disturbing visual effects, however, we require that the pixels removed in two adjacent rows be in the same or adjacent columns; the pixels removed form a &ldquo;seam&rdquo; from the top row to the bottom row where successive pixels in the seam are adjacent vertically or diagonally.</p>
+
+<p><strong>a.</strong> Show that the number of such possible seams grows at least exponentially in $m$, assuming that $n &gt; 1$.</p>
+
+<p><strong>b.</strong> Suppose now that along with each pixel $A[i, j]$, we have calculated a real-valued disruption measure $d[i, j]$, indicating how disruptive it would be to remove pixel $A[i, j]$. Intuitively, the lower a pixel&rsquo;s disruption measure, the more similar the pixel is to its neighbors. Suppose further that we define the disruption measure of a seam to be the sum of the disruption measures of its pixels.</p>
+
+<p>Give an algorithm to find a seam with the lowest disruption measure. How efficient is your algorithm?</p>
+</blockquote>
+
+<p><strong>a.</strong>  Let us set up a recurrence for the number of valid seams as a function of $m$. Suppose we are in the process of carving out a seam row by row, starting from the first row. Let the last pixel carved out be $A[i, j]$. How many choices do we have for the pixel in row $i + 1$ such that the pixel continues the seam? If the last pixel $A[i, j]$ were on the column boundary ($i = 1$ or $i = n$), then there would be two choices for the next pixel. For example, when $i = 1$, the two choices for the next pixel are $A[i + 1, j]$ and $A[i + 1, j + 1]$. Otherwise, there would be three choices for the next pixel: $A[i + 1, j - 1], A[i + 1, j], A[i + 1, j + 1]$. Thus, for a general pixel $A[i, j]$, there are at least two possible choices for a pixel $p$ in the next row such that $p$ continues a seam ending in $A[i, j]$. Let $T(i)$ denote the number of possible seams from row $1$ to row $i$. Then, for $i = 1$, we have $T(i) = n$, and for $i &gt; 1$,</p>
+
+<div>
+$$
+T(i) \ge 2T(i - 1).
+$$
+</div>
+
+<p>It is easy to guess that $T(i) \ge n2^{n - 1}$, which we verify by direct substitution. For $i = 1$, we have $T(i) = n \ge n \cdot 2^0$. For $i &gt; 1$, we have</p>
+
+<div>
+$$
+\begin{aligned}
+T(i) & \ge 2T(i - 1) \\
+     & \ge 2 \cdot n 2^{i - 1} \\
+     & =   n 2^{i - 1}.
+\end{aligned}
+$$
+</div>
+
+<p>Thus, the total number $T(m)$ of seams is at least $n2^{m - 1}$. We conclude that the number of seams grows at least exponentially in $m$.</p>
+
+<p><strong>b.</strong> As proved in the previous part, it is infeasible to systematically check every seam, since the number of possible seams grows exponentially.</p>
+
+<p>The structure of the problem allows us to build the solution row by row. Consider a pixel $A[i, j]$. We ask the question: &lsquo;If $i$ were the first row of the picture, what is the minimum disruptive measure of seams that start with the pixel $A[i, j]$?&rsquo;</p>
+
+<p>Let $S^*$ be a seam of minimum disruptive measure among all seams that start with pixel $A[i, j]$. Let $A[i + 1, p]$, where $p \in {j - 1, j, j + 1}$, be the pixel of $S^*$ in the next row. Let $S^\prime$ be the sub-seam of $S^*$ that starts with $A[i + 1, p]$. We claim that $S^\prime$ has the minimum disruptive measure among seams that start with $A[i + 1, p]$. Why? Suppose there exists another seam $S^{\prime\prime}$ that starts with $A[i + 1, p]$ and has disruptive measure less than that of $S^\prime$. By using $S^{\prime\prime}$ as the sub-seam instead of $S^\prime$, we can obtain another seam that starts with $A[i, j]$ and has a disruptive measure which is less than that of $S^*$. Thus, we obtain a contradiction to our assumption that $S^*$ is a seam of minimum disruptive measure.</p>
+
+<p>Let $disr[i, j]$ be the value of the minimum disruptive measure among all seams that start with pixel $A[i, j]$. For row $m$, the seam with the minimum disruptive measure consists of just one point. We can now state a recurrence for $disr[i, j]$  as follows. In the base case, $disr[m, j] = d[m, j]$ for $j = 1, 2, \ldots, n$. In the recursive case, for $j = 1, 2, \ldots, n$,</p>
+
+<div>
+$$
+disr[i, j] = d[i, j] + \min_{k \in K}{dist[i + i, j + k]},
+$$
+</div>
+
+<p>where the set $K$ of index offsets is</p>
+
+<div>
+$$
+K =
+\begin{cases}
+{0, 1}     & \text{if $j = 1$}, \\
+{-1, 0, 1} & \text{if $1 < j < m$}, \\
+{-1, 0}    & \text{if $j = n$}.
+\end{cases}
+$$
+</div>
+
+<p>Since every seam has to start with a pixel of the first row, we simply find the minimum $disr[1, j]$ for pixels in the first row to obtain the minimum disruptive measure.</p>
+
+<pre><code class="language-cpp">COMPRESS-IMAGE(d)
+    m = d.rows
+    n = d.columns
+    let disr[1..m, 1..n] and next[1..m, 1..n] be new tables
+    for j = 1 to n
+        disr[m, j] = d[m, j]
+    for i = m - 1 downto 1
+        for j = 1 to n
+            low = max(-1, 1 - j)
+            high = min(1, n - j)
+            disr[i, j] = ∞
+            for k = low to high
+                if disr[i + 1, j + k] &lt; disr[i, j]
+                    disr[i, j] = disr[i + 1, j + k]
+                    next[i, j] = j + k
+            disr[i, j] = disr[i, j] + d[i, j]
+    val = ∞
+    start = 1
+    for j = 1 to n
+        if disr[1, j] &lt; val
+            val = disr[1, j]
+            start = j
+    print &quot;The minimum value of the disruptive measure is&quot; val
+    for i = 1 to m
+        print &quot;cup point at&quot; (i, start)
+        start = next[i, start]
+</code></pre>
+
+<p>The procedure $\text{COMPRESS-IMAGE}$ is simply an implementation of this recurrence in a bottom-up fashion.</p>
+
+<p>We first carry out the initialization of the base cases, which are the cases when row $i = m$. The minimum disruptive measure for the base cases is simply $d[m, j]$.</p>
+
+<p>The next <strong>for</strong> loop runs down from $m - 1$ to $1$. Thus, $disr[i + 1, j]$ is already available before computing $dist[i, j]$ for pixels of row $i$.</p>
+
+<p>The assignments to $low$ and $high$ allow the index offset $k$ to range over the correct set $K$ from above. We set $low$ to $0$ when $j = 1$ and to $-1$ when $j &gt; 1$, and we set $high$ to $0$ when $j = n$ and to $1$ when $j &lt; n$. The innermost <strong>for</strong> loop sets $dist[i, j]$ to the minimum value of $disr[i + 1, j + k]$ for all $k \in K$, and the line that follows this loop adds in $d[i, j]$.</p>
+
+<p>We use the $next$ table to reconstruct the actual seam. For a given pixel, it records which pixel was used as the next pixel. Specifically, for a pixel $A[i, j]$, if $next[i, j] = p$, where $p \in {j - 1, j, j + 1}$, then the next pixel of the seam is $A[i + 1, p]$.</p>
+
+<p>The last line of the <strong>for</strong> loop adds the disruptive measure of the current pixel to the disruptive measure of the seam.</p>
+
+<p>The next <strong>for</strong> loop finds the minimum disruptive measure of pixels in the first row. We print the minimum disruptive measure as the answer.</p>
+
+<p>The rest of the code reconstructs the actual seam, using the information stored in the $next$ array.</p>
+
+<p>Noting that the innermost <strong>for</strong> loop runs over at most three values of $k$, we see that the running time of $\text{COMPRESS-IMAGE}$ is $O(mn)$. The space requirement is also $O(mn)$. We can improve upon the space requirement by observing that row $i$ of the $disr$ table depends on only row $i + 1$. Therefore, we can store just two rows at any time. Thus, we can improve the space requirement of $\text{COMPRESS-IMAGE}$ to $O(n)$.</p>
 
 
-<h1 id="solutions-to-introduction-to-algorithms-3rd">Solutions to Introduction to Algorithms 3rd</h1>
-
-<p>Hope to <em>re-sort</em> solutions to help more people and myself study algorithms.
-By using .md files, it&rsquo;s much more readable in portable devices now.</p>
-
-<p>Many a little makes a mickle.</p>
-
-<p>Thanks to: the Instructor&rsquo;s Manual by Thomas H. Cormen, @skanev, @cyberzhg, @yinyanghu, @irobot0, @ajl213, etc.</p>
-
-<p>Please don&rsquo;t hesitate to give me your feedback if any adjustment is needed with the sorted-solutions. You can simply press the &ldquo;Edit this page&rdquo; button in the upper right corner to edit the contents.</p>
-
-<h1 id="working-on-following-exercises">Working on following exercises:</h1>
-
-<p>18.2-1, 19.2-1, 27.2-1, 27.3-4, 27-3.</p>
-
-<h1 id="getting-started">Getting Started</h1>
-
-<p>Thanks to <a href="https://gohugo.io"><strong>Hugo</strong></a> and <a href="https://themes.gohugo.io/theme/hugo-theme-learn/en"><strong>Hugo Learn Theme</strong></a>!</p>
-
-<p>The <a href="https://github.com/Khan/KaTeX"><strong>KaTeX</strong></a> is now correctly working and speedy.</p>
-
-<p>I add <a href="https://www.w3schools.com/cssref/css3_pr_overflow-x.asp">overflow-x: auto</a>, so you can scroll horizontally in the math display equations.</p>
-
-<h1 id="more-informations">More Informations</h1>
-
-<p>For more informations please visit <a href="https://github.com/walkccc"><strong>my github site</strong></a>.</p>
-
-<p>My blog: <a href="https://walkccc.github.io"><strong>Jay&rsquo;s Blog</strong></a></p>
-
-<p>Mail to: <a href="mailto:walkccray@gmail.com"><strong>walkccray@gmail.com</strong></a></p>
-
-<p>By Jay Chen on Jan 19, 2017.</p>
-
-<p>Updated to this new site on Feb 7, 2018.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -10732,6 +10872,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10747,6 +10888,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10761,6 +10903,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10842,6 +10987,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                    
                 
                 
 
@@ -10854,6 +11000,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -10966,6 +11115,7 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
             
                 
+                    
                     
                 
                 
@@ -10983,6 +11133,9 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -14463,9 +14616,11 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
         
 
 
+        
+            <a class="nav nav-prev" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-7/" title="15-7 Viterbi algorithm"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/CLRS/i-foundations/" title="I Foundations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/CLRS/iv-advanced-design-and-analysis-techniques/chap15/problems/15-9/" title="15-9 Breaking a string" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -14474,20 +14629,20 @@ By using .md files, it&rsquo;s much more readable in portable devices now.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/CLRS/js/clipboard.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699598"></script>
-    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699598"></script>
-    <script src="/CLRS/js/jquery.sticky.js?1522699598"></script>
-    <script src="/CLRS/js/featherlight.min.js?1522699598"></script>
-    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699598"></script>
-    <script src="/CLRS/js/highlight.pack.js?1522699598"></script>
+    <script src="/CLRS/js/clipboard.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.min.js?1522699595"></script>
+    <script src="/CLRS/js/perfect-scrollbar.jquery.min.js?1522699595"></script>
+    <script src="/CLRS/js/jquery.sticky.js?1522699595"></script>
+    <script src="/CLRS/js/featherlight.min.js?1522699595"></script>
+    <script src="/CLRS/js/html5shiv-printshiv.min.js?1522699595"></script>
+    <script src="/CLRS/js/highlight.pack.js?1522699595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/CLRS/js/modernizr.custom.71422.js?1522699598"></script>
-    <script src="/CLRS/js/learn.js?1522699598"></script>
-    <script src="/CLRS/js/hugo-learn.js?1522699598"></script>
+    <script src="/CLRS/js/modernizr.custom.71422.js?1522699595"></script>
+    <script src="/CLRS/js/learn.js?1522699595"></script>
+    <script src="/CLRS/js/hugo-learn.js?1522699595"></script>
 
-    <link href="/CLRS/mermaid/mermaid.css?1522699598" type="text/css" rel="stylesheet" />
-    <script src="/CLRS/mermaid/mermaid.js?1522699598"></script>
+    <link href="/CLRS/mermaid/mermaid.css?1522699595" type="text/css" rel="stylesheet" />
+    <script src="/CLRS/mermaid/mermaid.js?1522699595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
